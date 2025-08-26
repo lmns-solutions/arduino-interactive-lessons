@@ -73,7 +73,7 @@ This is awesome! Can embed code directly! If this works, it should embed the cod
 
 Update: [gist-it.appspot.com](https://gist-it.appspot.com/)appears to be down.
 
-![](assets/images/gist-it.appspot.com-down.png)
+![[]({{ "/assets/images/gist-it.appspot.com-down.png" | relative_url }})
 
 ### Using `emgithub.com` to embed code directly from GitHub
 Alternatively, as it seems like [gist-it.appspot.com](https://gist-it.appspot.com/) is down, we could use [emgithub.com](https://emgithub.com/)
@@ -134,7 +134,7 @@ Use tickmarks
 ### Option 4: Custom CSS
 But if we want to do something more complicated, it's going to take custom css. For example, I quite like the call-out boxes on Boser's Berkeley teaching page [IoT49](https://people.eecs.berkeley.edu/~boser/courses/49_sp_2019/N_gpio.html):
 
-![Screenshot of call out boxes from the Boser website](assets/images/BoserIoT49Webpage.png)
+![Screenshot of call out boxes from the Boser website[]({{ "/assets/images/BoserIoT49Webpage.png" | relative_url }})
 
 This would take some experimentation and custom css to get right, however.
 

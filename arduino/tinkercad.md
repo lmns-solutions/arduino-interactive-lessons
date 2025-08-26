@@ -28,17 +28,17 @@ Here's how to get setup in Tinkercad:
 
 Visit [tinkercad.com](https://www.tinkercad.com/) and login (if you already have an Autodesk account) or register if not. We are not using any of the "In School" features, so create a personal account:
 
-![Screenshot of Tinkercad's registration page](assets/images/Tinkercad_RegistrationPage.png)
+![Screenshot of Tinkercad's registration page[]({{ "/assets/images/Tinkercad_RegistrationPage.png" | relative_url }})
 
 #### Step 2: Create a new circuit
 
 In your dashboard, click on "Circuits":
 
-![Screenshot of Tinkercad's dashboard](assets/images/Tinkercad_ClickOnCircuits.png)
+![Screenshot of Tinkercad's dashboard[]({{ "/assets/images/Tinkercad_ClickOnCircuits.png" | relative_url }})
 
 Then click on "Create new Circuit":
 
-![Screenshot of Tinkercad's dashboard with "create new circuit button"](assets/images/Tinkercad_CreateNewCircuit.png)
+![Screenshot of Tinkercad's dashboard with "create new circuit button"[]({{ "/assets/images/Tinkercad_CreateNewCircuit.png" | relative_url }})
 
 #### Step 3: Aquaint yourself with Tinkercad
 
@@ -46,5 +46,5 @@ Tinkercad works by dragging and dropping components from the right sidebar menu 
 
 If you've dragged over an Arduino, you can also click on the "Code" button and write code either in `C/C++` or in a visual, block-based language. The simulator even has a "Serial Monitor", "Serial Plotter", and, wait for it, a simplistic debugger with breakpoint support!
 
-![Screenshot of Tinkercad's primary UI](assets/images/Tinkercad_MainInterface.png)
+![Screenshot of Tinkercad's primary UI[]({{ "/assets/images/Tinkercad_MainInterface.png" | relative_url }})
 An example of the [multi-rate blinking lesson](led-blink3.md) created in Tinkercad. [Try it out](https://www.tinkercad.com/things/kAq7G2p4QQ6)!

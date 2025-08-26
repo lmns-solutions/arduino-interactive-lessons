@@ -21,7 +21,7 @@ usetocbot: true
 
 In the [previous lesson](led-blink.md), we learned how to turn on and off an LED using [`digitalWrite`](https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/)—which worked by alternatively setting Pin 3 to 5V (`HIGH`) and 0V (`LOW`). In this lesson, we'll learn how to programmatically control the output voltage at finer gradations using [`analogWrite`](https://www.arduino.cc/reference/en/language/functions/analog-io/analogwrite/). More specifically, we will gradually fade an LED on and off like the animation below illustrates.
 
-![Animation showing the LED on Pin 3 gradually fading on and off](assets/movies/Arduino_LEDFade_Pin3.gif)
+![Animation showing the LED on Pin 3 gradually fading on and off[]({{ "/assets/movies/Arduino_LEDFade_Pin3.gif" | relative_url }})
 This illustrative animation doesn't show current (the yellow circles) only due to my limited animation skills. But hopefully you can visualize (in your mind) how the LED varies in brightness with current just the same. :)
 {: .fs-1 }
 
@@ -39,21 +39,21 @@ You will use the same materials as [before](led-blink.md), including the [Arduin
 
 As noted in the ["Intro to Digital Output" lesson](./led-blink.md), the Arduino Uno has **20 general-purpose input/output** ([GPIO](https://en.wikipedia.org/wiki/General-purpose_input/output)) pins that can be used for digital input/output (I/O) using [`digitalRead()`](https://www.arduino.cc/reference/en/language/functions/digital-io/digitalread/) and [`digitalWrite()`](https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/), respectively.
 
-![Close-up image of the 20 digital I/O pins on the Arduino Uno](assets/images/ArduinoUno_DigitalIOPins.png)
+![Close-up image of the 20 digital I/O pins on the Arduino Uno[]({{ "/assets/images/ArduinoUno_DigitalIOPins.png" | relative_url }})
 
 However, **6** of the 20 I/O pins can **also** be used for **"analog" output**—voltage output that is not just `HIGH` (5V) or `LOW` (0V) but between these two extremes. These analog output pins are indicated by the tilde (`~`) printed next to the pin on the Arduino (silkscreened directly on the Arduino's PCB).
 
-![Close up of the Arduino Uno highlighting the six analog output pins](assets/images/ArduinoUno_CloseUp_AnalogOutputPins.png)
+![Close up of the Arduino Uno highlighting the six analog output pins[]({{ "/assets/images/ArduinoUno_CloseUp_AnalogOutputPins.png" | relative_url }})
 
 So, for this lesson, we **don't** have to change our circuit at all! You can keep the same circuit as the [LED blink lesson](led-blink.md). Indeed, this is the reason why we selected Pin 3 in the first place.
 
-![Wiring diagram showing LED cathode wired to GND and LED anode wired to a 220 Ohm resistor and then to Pin 3](assets/images/Arduino_LEDFade_Pin3Circuit.png)
+![Wiring diagram showing LED cathode wired to GND and LED anode wired to a 220 Ohm resistor and then to Pin 3[]({{ "/assets/images/Arduino_LEDFade_Pin3Circuit.png" | relative_url }})
 
 ### A common confusion: analog I/O pins are different!
 
 A common confusion amongst beginners is mixing up the analog **output** pins and the analog **input** pins. For digital I/O, the input and output pins are the same and configurable to `INPUT` or `OUTPUT` using the [`pinMode`](https://www.arduino.cc/reference/en/language/functions/digital-io/pinmode/) command, the analog I/O pins are different! See the figure below:
 
-![Annotated image of an Arduino Uno showing the difference between analog input and output pins](assets/images/ArduinoUno_AnalogInputAndOutputPinsAreDifferent.png)
+![Annotated image of an Arduino Uno showing the difference between analog input and output pins[]({{ "/assets/images/ArduinoUno_AnalogInputAndOutputPinsAreDifferent.png" | relative_url }})
 
 We'll learn about analog output in this lesson (using [`analogWrite`](https://www.arduino.cc/reference/en/language/functions/analog-io/analogwrite/)). In a future lesson, we will learn about analog input (using [`analogRead`](https://www.arduino.cc/reference/en/language/functions/analog-io/analogread/))
 
@@ -67,7 +67,7 @@ Despite its name, the Arduino Uno, Leonardo, Nano, Mega, and many other Arduino 
 
 To understand PWM, let's first remind ourselves of the characteristics of a square waveform: there is the length of time for one full cycle (period), the frequency (how often the cycle occurs per second), the amplitude (a measure from the top to the bottom of the waveform; in this case, 5V), and the duty cycle (the amount of time the waveform is HIGH *vs.* LOW in a period).
 
-![An example square wave](assets/images/SquareWaveWithDutyCycle.png)
+![An example square wave[]({{ "/assets/images/SquareWaveWithDutyCycle.png" | relative_url }})
 
 And then take a look at [this video](https://www.youtube.com/watch?v=YmPziPfaByw) by Afrotechmods:
 
@@ -75,9 +75,9 @@ And then take a look at [this video](https://www.youtube.com/watch?v=YmPziPfaByw
 
 So, what does the [`analogWrite`](https://www.arduino.cc/reference/en/language/functions/analog-io/analogwrite/) function do, exactly? It simply varies the **duty cycle** of the output pin. That is, the 8-bit value (0-255) directly controls how long a 5V value is applied to the output pin during one "analog write" period. So, `analogWrite(<pin>, 127)` would output a 5V value for half the period (because 127/255 = ~50%) and `analogWrite(<pin>, 191)` would output a 5V for 75% of the period (because 191/255 = ~75%). This fraction of the time the signal is `HIGH` is called the duty cycle.
 
-![Examples of pulse width modulation](assets/images/PulseWidthModulationSlide_ByJonEFroehlich.png)
+![Examples of pulse width modulation[]({{ "/assets/images/PulseWidthModulationSlide_ByJonEFroehlich.png" | relative_url }})
 
-<!-- ![Pulse-width modulation duty cycle graphic](assets/images/PulseWidthModulation_FromSparkfun.jpg)
+<!-- ![Pulse-width modulation duty cycle graphic[]({{ "/assets/images/PulseWidthModulation_FromSparkfun.jpg" | relative_url }})
 
 Pulse-width modulation duty cycle graph from Sparkfun's [PWM Tutorial](https://learn.sparkfun.com/tutorials/pulse-width-modulation/all)
 {: .fs-1 } -->
@@ -88,7 +88,7 @@ Why does the Arduino Uno only have six PWM outputs? Because the ATmega328 microc
 
 The Arduino Leonardo has seven PWM pins (one more than the Uno) because it has four hardware timers (the new one is called `timer4`). See the pinout diagrams below.
 
-![Pin out diagram showing the six PWM pins on the Uno and seven on the Leonardo](assets/images/ArduinoUnoVsLeonardo_PWM_PinOuts_ByJonEFroehlich.png)
+![Pin out diagram showing the six PWM pins on the Uno and seven on the Leonardo[]({{ "/assets/images/ArduinoUnoVsLeonardo_PWM_PinOuts_ByJonEFroehlich.png" | relative_url }})
 
 ### What is the frequency of the PWM outputs?
 
@@ -96,7 +96,7 @@ On the Uno and Leonardo, PWM outputs are either 490Hz or 980Hz (depending on the
 
 See the image below (and [Arduino Docs](https://www.arduino.cc/reference/en/language/functions/analog-io/analogwrite/)).
 
-![Pin out diagram showing the six PWM pins on the Uno and seven on the Leonardo along with their frequencies](assets/images/ArduinoUnoVsLeonardo_PWM_PinOutFrequencies_ByJonEFroehlich.png)
+![Pin out diagram showing the six PWM pins on the Uno and seven on the Leonardo along with their frequencies[]({{ "/assets/images/ArduinoUnoVsLeonardo_PWM_PinOutFrequencies_ByJonEFroehlich.png" | relative_url }})
 
 ### Manually implementing PWM
 
@@ -120,7 +120,7 @@ OK, so let's write some code!
 
 Start a new sketch in the Arduino IDE:
 
-![Screenshot of the Arduino IDE showing a new empty sketch](assets/images/ArduinoIDE_FreshSketch.png)
+![Screenshot of the Arduino IDE showing a new empty sketch[]({{ "/assets/images/ArduinoIDE_FreshSketch.png" | relative_url }})
 
 ### Step 2: Write initialization code
 
@@ -196,7 +196,7 @@ In addition to visualizing the **actual** voltage output from `analogWrite` (the
 In the video below, we see a simulation of our [fade code](https://github.com/jonfroehlich/arduino/blob/master/Basics/analogWrite/FadeOnAndOffForLoop/FadeOnAndOffForLoop.ino) + circuit running in Tinkercad. On the right side, in the [Serial Monitor](https://www.programmingelectronics.com/using-the-print-function-with-arduino-part-1/) window, we are printing and graphing out the real-time effective voltages output on Pin 3.
 
 <video controls="controls">
-  <source src="assets/movies/Arduino_LEDFadeWithGraph_Pin3.mp4" type="video/mp4">
+  <source src="{{ "/assets/movies/Arduino_LEDFadeWithGraph_Pin3.mp4" | relative_url }}" type="video/mp4">
 </video>
 
 ## Calculating the current through our LED

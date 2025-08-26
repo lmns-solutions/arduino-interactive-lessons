@@ -31,24 +31,24 @@ To install both, follow the instructions below:
 
 Open your Arduino IDE, then go to `Tools -> Manage Libraries`.
 
-![](assets/images/ArduinoIDE_ManageLibrariesScreenshot.png)
+![[]({{ "/assets/images/ArduinoIDE_ManageLibrariesScreenshot.png" | relative_url }})
 
 ## Step 2: Search for Adafruit SSD1306
 
 In the Library Manager, search for "Adafruit SSD1306". There are other SSD1306 libraries so make sure you find the one by Adafruit. In this screenshot, the current version is 2.4.4 but as of April 2024, they are on [release 2.5.9](https://github.com/adafruit/Adafruit_SSD1306/releases).
 
-![](assets/images/ArduinoIDE_LibraryManager_SearchForAdafruitSSD1306.png)
+![[]({{ "/assets/images/ArduinoIDE_LibraryManager_SearchForAdafruitSSD1306.png" | relative_url }})
 
 ## Step 3: Install Adafruit SSD1306 library
 Click on the `Install` button.
 
-![](assets/images/ArduinoIDE_LibraryManager_ClickInstallAdafruitSSD1306.png)
+![[]({{ "/assets/images/ArduinoIDE_LibraryManager_ClickInstallAdafruitSSD1306.png" | relative_url }})
 
 ## Step 4: Install all dependencies
 
 The Adafruit SSD1306 library depends on two other libraries, which we also need to install. Fortunately, the Library Manager detects this and explicitly asks about dependencies. So, select `Install all`.
 
-![](assets/images/ArduinoIDE_LibraryManager_AdafruitSSD1306Dependencies.png)
+![[]({{ "/assets/images/ArduinoIDE_LibraryManager_AdafruitSSD1306Dependencies.png" | relative_url }})
 
 <!-- The Arduino IDE Library Manager let's library designers to identify other library dependencies in their metadata. This allows the IDE to ask users about dependencies automatically.  -->
 
@@ -56,7 +56,7 @@ The Adafruit SSD1306 library depends on two other libraries, which we also need 
 
 If the SSD1306 library was correctly installed, you should see a teal "INSTALLED" label next to it as we do below:
 
-![](assets/images/ArduinoIDE_LibraryManager_SSD1306Installed.png)
+![[]({{ "/assets/images/ArduinoIDE_LibraryManager_SSD1306Installed.png" | relative_url }})
 
 ## Library installation folder location on OS
 
@@ -69,7 +69,7 @@ Depending on your OS, you can view the installed Arduino `libraries` folder on y
 
 | Arduino Library directory on Windows | Arduino Library directory on Mac |
 |:------------------------------------:|:--------------------------------:|
-| ![](assets/images/Arduino_LibraryDirectory_Windows.png) | ![](assets/images/Arduino_LibraryDirectory_Mac.png) |
+| ![[]({{ "/assets/images/Arduino_LibraryDirectory_Windows.png" | relative_url }}) | ![[]({{ "/assets/images/Arduino_LibraryDirectory_Mac.png" | relative_url }}) |
 
 You'll note that the `libraries` folder contains raw source and **not** pre-compiled binaries. The Arduino IDE compiles the underlying library files differently depending on the selected board.
 

@@ -35,7 +35,7 @@ So, what is voltage, current, and resistance?
 
 In short, **voltage** "pushes" **electrons** through conductive material (*e.g.,* a wire). The amount of **electron flow** is called **current** (measured in amps). Some materials are better at conducting current than others. Resistors are specially formulated to *resist* the flow of electrons (the **resistance** is measured in ohms).
 
-![A humorous depiction of the relationship between voltage, current, and resistance. Three cartoon characters are shown: the "volt" character is trying to push the "amp" character through a wire but the "ohm" character is resisting the "amp" character by restricting the girth of the wire with a tightening rope.](assets/images/OhmsLawCartoon_ShowingRelationshipBetweenVoltsAmpsAndResistance.png)
+![A humorous depiction of the relationship between voltage, current, and resistance. Three cartoon characters are shown: the "volt" character is trying to push the "amp" character through a wire but the "ohm" character is resisting the "amp" character by restricting the girth of the wire with a tightening rope.[]({{ "/assets/images/OhmsLawCartoon_ShowingRelationshipBetweenVoltsAmpsAndResistance.png" | relative_url }})
 {: .mx-auto .align-center }
 
 **Figure.** A humorous but helpful depiction of the relationship between voltage (measured in volts), current (measured in amps), and resistance (measured in ohms). The yellow "volt" character is trying to push the green "amp" character through a tube (*i.e.,* a wire) but the red "ohm" character is impeding this by restricting the size of the tube (by tightening a rope, reducing its girth). The image source is unknown but there are many examples and alternatives [online](https://www.google.com/search?q=ohm%27s+law+cartoon&tbm=isch&sxsrf=ALeKk01Bq3GWclp6ij6yQ6Kn3yWKh1GXxA%3A1616617564907&source=hp&biw=1280&bih=1248&ei=XKBbYMb0NLXV9APPhL3ABA&oq=ohm%27s+law+cartoon&gs_lcp=CgNpbWcQAzICCAAyAggAOgQIIxAnOgUIABCxAzoGCAAQCBAeUMMBWPoVYNkXaABwAHgAgAHAA4gBrBKSAQk3LjguMC4xLjGYAQCgAQGqAQtnd3Mtd2l6LWltZw&sclient=img&ved=0ahUKEwjGksTd4cnvAhW1Kn0KHU9CD0gQ4dUDCAc&uact=5).
@@ -65,7 +65,7 @@ Just as a wider water pipe can carry more water, so too can a thicker conductive
 | Resistance | Resistance, *ohm (volts/amp)*  | Resistance, *psi/gpm*                    |
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/WaterCircuitAnalogy_Trimmed_ByJonFroehlich.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/WaterCircuitAnalogy_Trimmed_ByJonFroehlich.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Figure.** Here's a slightly different hydraulic analogy than the water plumbing system one described above. Here, we have a water tank filled with water with a hole at the bottom: as the water level increases, the pressure (voltage) on the water at the bottom of the tank also increases, which commensurately increases the amount of water flowing out of the hole. If we increase the hole size (decreasing resistance), more water (current) will flow. Note: the animation direction is showing *conventional current*. The water diagram based on an illustration in [Platt's *Make: Electronics* book](https://learning.oreilly.com/library/view/make-electronics-2nd/9781680450255/).
 {: .fs-1 }
@@ -74,7 +74,7 @@ Let's dive into each of these concepts more deeply, starting with current.
 
 ## What is current?
 
-![An animated gif showing current flowing in a simple circuit out of the positive terminal of a 9V battery through an LED and resistor and then back to the negative terminal of the 9V battery](assets/gifs/CurrentFlow_EngineeringMindset.gif)
+![An animated gif showing current flowing in a simple circuit out of the positive terminal of a 9V battery through an LED and resistor and then back to the negative terminal of the 9V battery[]({{ "/assets/gifs/CurrentFlow_EngineeringMindset.gif" | relative_url }})
 **Figure.** **[Current](https://en.wikipedia.org/wiki/Electric_current)** is the flow of charged particles—in this case, electrons—through a conductor. In the animation above, we are illustrating "electron flow" as a dotted green line, which flows from the negative terminal of the 9V battery, through an LED and resistor, and then back to the 9V battery to its positive terminal. Note that this is actually opposite from *conventional current* flow, but we'll get to that below. Animation from [The Engineering Mindset](https://youtu.be/kcL2_D33k3o).
 {: .fs-1 }
 
@@ -94,7 +94,7 @@ $$1 A = 1 C / s$$
 
 Though you'll not need to do this when prototyping circuits, you could, of course, use these formulations to calculate the number of electrons passing through a cross-section of wire over time $$t$$. We do so below in the image simply for illustrative purposes: How many electrons pass a given point in 3s if a conductor is carrying 2A of current? Answer: $$6C$$ (6 coloumbs) or $$3.74 × 10^{19}$$ electrons.
 
-![An illustrative diagram showing how electrons flow through a conductor and how to calculate how many electrons pass through a point using I = change in Q divided by change in t](assets/images/ElectricCurrentDefinitionAndDiagram_ScherzAndMonk4thEditionpng.png)
+![An illustrative diagram showing how electrons flow through a conductor and how to calculate how many electrons pass through a point using I = change in Q divided by change in t[]({{ "/assets/images/ElectricCurrentDefinitionAndDiagram_ScherzAndMonk4thEditionpng.png" | relative_url }})
 Using the formulas above, we can calculate the amount of electrons that pass through a cross-section of wire in three seconds if the wire is carrying 2A of current. Image from [Chapter 2](https://learning.oreilly.com/library/view/practical-electronics-for/9781259587559/xhtml/13_Chapter_02.xhtml) of Scherz and Monk's *Practical Electronics for Inventors* .
 {: .fs-1 }
 
@@ -106,7 +106,7 @@ Importantly, just like your home plumbing system, where water flows instantly ou
 
 This is similar to current in a circuit—atoms are tightly packed in a material with orbiting electrons. When a voltage is applied, these electrons start to "hop" from one atom to another through a conductor but do not instantly travel from A to B (see [video](https://youtu.be/OGa_b26eK2c?t=472)).
 
-![An animated gif showing electrons hopping from atom to atom propelled by an applied voltage](assets/gifs/ElectronsFlowingFromAtomToAtomToMakeCurrent.gif)
+![An animated gif showing electrons hopping from atom to atom propelled by an applied voltage[]({{ "/assets/gifs/ElectronsFlowingFromAtomToAtomToMakeCurrent.gif" | relative_url }})
 {: .mx-auto .align-center }
 
 A animation of charges (electrons) hopping from atom-to-atom propelled by an applied voltage. This is simplified model showing a wire (conductor) that is only a single atom thick but helps illustrate the cascading movement of electrons in current flow. Image from [What is Electricity?](https://learn.sparkfun.com/tutorials/what-is-electricity) by [Sparkfun.com](https://www.sparkfun.com/). 
@@ -114,7 +114,7 @@ A animation of charges (electrons) hopping from atom-to-atom propelled by an app
 
 Another way to think about current flow is like that of a tube filled end-to-end with marbles. If a marble is inserted on the left, another marble will immediately exit the tube on the right. Even though each marble travels only a short distance, the transfer of motion is nearly instantaneous. With electricity, the overall effect from one end of a conductor to the other is at the speed of light; however, each individual electron travels through the conductor at a much slower pace. Indeed, the average speed at which electrons move through a wire due to an applied electric field such as from a battery is on the order of centimeters per hour (called the [drift velocity](https://en.wikipedia.org/wiki/Speed_of_electricity#Electric_drift))!
 
-![An image showing a tightly packed tube of single-file marbles. When a marble is inserted into the left side of the tube, a marble on the right side instantly exits.](assets/images/ElectronFlowMarbleTube_FromAllAboutCircuits.png)
+![An image showing a tightly packed tube of single-file marbles. When a marble is inserted into the left side of the tube, a marble on the right side instantly exits.[]({{ "/assets/images/ElectronFlowMarbleTube_FromAllAboutCircuits.png" | relative_url }})
 {: .mx-auto .align-center }
 
 **Figure.** You can think of electrons flowing through a circuit like marbles tightly packed in a tube. A marble does not need to traverse the entire tube to create motion. Instead, when a marble is inserted into the left side of the tube, a marble on the right side instantly exits. Image from [All About Circuits](https://www.allaboutcircuits.com/textbook/direct-current/chpt-1/conductors-insulators-electron-flow/). See also, [this video](https://youtu.be/8gvJzrjwjds?t=74) by Afrotechmods.
@@ -124,12 +124,12 @@ Another way to think about current flow is like that of a tube filled end-to-end
 
 ### What's conventional current vs. electron flow?
 
-<!-- ![An animated gif showing the true direction of negative charges (electrons) in a circuit from the negative terminal of a battery to the positive vs. the conventional current direction which is just the opposite. Here, charge flow is modeled as going from positive to negative.](assets/gifs/ConventionalCurrentVsElectronFlow_EngineeringMindset-Optimized.gif)
+<!-- ![An animated gif showing the true direction of negative charges (electrons) in a circuit from the negative terminal of a battery to the positive vs. the conventional current direction which is just the opposite. Here, charge flow is modeled as going from positive to negative.[]({{ "/assets/gifs/ConventionalCurrentVsElectronFlow_EngineeringMindset-Optimized.gif" | relative_url }})
 **Figure.** In electric circuits, we model the flow of charges (electrons) as if they move from positive to negative terminals in a battery (or voltage source)—this is called "*conventional current*"—see right side of image. However, it is a historic artifact (blame Benjamin Franklin). Instead, because electrons are negatively charged, they actually flow from negative to positive (called "*electron flow*")—see left side of figure. Animation from [The Engineering Mindset](https://youtu.be/kcL2_D33k3o).
 {: .fs-1 } -->
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/ElectronFlowVsConventionalCurrent_PhetSimulation_ByJonFroehlich.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/ElectronFlowVsConventionalCurrent_PhetSimulation_ByJonFroehlich.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Figure.** In the animation above, we are showing the **same** two electrical circuits but the difference between *electron flow* and *current flow*. In circuits, negatively charged particles (electrons) move from the negative terminals of a battery (or voltage source) to the positive—this is called *electron flow*; however, when we model circuits (and use circuit formulas), we use *conventional current*, which moves in the opposite direction.
 {: .fs-1 }
@@ -138,7 +138,7 @@ In electric circuits, we use *conventional current* to model the flow of charge 
 
 Why? Blame [Benjamin Franklin](https://hackaday.com/2017/07/17/conventional-current-vs-electron-current/). In early experiments (mid 1740s), Franklin determined that electricity appears to "flow" as if a liquid in solid material. He assumed that the flowing charges had positive signs and moved from positive to negative. It was not until 1897, however, that Sir Joseph Thomson determined that the real charge carrier in a wire was the electron and that electrons move from cathode (negative) to anode (positive).
 
-![An image of Thomson and Franklin thinking about how charge move in a conductor with Thomson actually getting it right: electrons are negatively charged and move from the negative source to the positive source.](assets/images/ConventionalCurrentVsElectronFlow_SherzAndMonk4thEdition.png)
+![An image of Thomson and Franklin thinking about how charge move in a conductor with Thomson actually getting it right: electrons are negatively charged and move from the negative source to the positive source.[]({{ "/assets/images/ConventionalCurrentVsElectronFlow_SherzAndMonk4thEdition.png" | relative_url }})
 
 **Figure.** Franklin thought that positive charge carriers moved in a conductor from positive to negative. This is called the *conventional current* direction, which is still used today. Instead, as Thomson discovered, it's electrons that move in a conductor (which are negatively charged) and they move from negative to positive. This is called *electron flow*. Image from [Chapter 2](https://learning.oreilly.com/library/view/practical-electronics-for/9781259587559/xhtml/13_Chapter_02.xhtml) of Scherz and Monk's *Practical Electronics for Inventors* .
 {: .fs-1 }
@@ -158,7 +158,7 @@ Most USB ports supply 5V of electricity with a maximum current of 0.5A (500 mA).
 ## What is voltage?
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/VoltageElectromotiveForce_EngineeringMindset.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/VoltageElectromotiveForce_EngineeringMindset.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Figure.** You can think of *voltage* as what "pushes" electrons around a circuit. Animation from the [Voltage Explained](https://youtu.be/w82aSjLuD_8) video by The Engineering Mindset.
 {: .fs-1 }
@@ -193,7 +193,7 @@ $$1\ V = 1\ joule\ (of\ work) / 1\ coulomb\ (of\ charge)$$
 As joule is a unit of *energy*, voltage introduces a very important and necessary concept: the potential to do *work* (*e.g.,* to power a light bulb, spin a motor)!
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/VoltagePotentialWaterWheelCircuitAnalogy_TrimmedAndCropped_ByJonFroehlich.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/VoltagePotentialWaterWheelCircuitAnalogy_TrimmedAndCropped_ByJonFroehlich.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Figure.** An animation showing an analogy between an electrical circuit and a "water" circuit. In a battery, the electric potential of charges increase as they move to the positive terminal (higher voltage)—this potential drops as work is performed (*e.g.,* flowing through a resistor). Similarly, water molecules being pumped to higher elevations have *higher potential* to do work; this potential decreases as the water flows to lower elevations or is used to perform work (*e.g.,* spin a turbine). Note that no charges (or water molecules) are lost in these systems—but the potential energy of these particles is transformed to other forms (*e.g.,* kinetic, heat).
 {: .fs-1 }
@@ -264,7 +264,7 @@ For more on electrical safety, see this [write-up on AllAboutCircuits.com](https
 You can also watch [this video](https://youtu.be/hp97GjuULX8) by popular YouTuber [ElectroBOOM](https://www.youtube.com/channel/UCJ0-OtVpF0wOKEqT2Z1HEtA), which examines his pain tolerance between AC and DC.
 
 
-<!-- Returning to the [water tank analogy](assets/videos/WaterCircuitAnalogy_Trimmed_ByJonFroehlich.mp4) from the Introduction, how much potential to do work does water have once it's flowed out of the hole and onto the ground? None! It's lost all of its energy. Likewise, when an electric charge reaches ground, it no longer has electric potential for work. -->
+<!-- Returning to the [water tank analogy[]({{ "/assets/videos/WaterCircuitAnalogy_Trimmed_ByJonFroehlich.mp4" | relative_url }}) from the Introduction, how much potential to do work does water have once it's flowed out of the hole and onto the ground? None! It's lost all of its energy. Likewise, when an electric charge reaches ground, it no longer has electric potential for work. -->
 
 ### How can we increase pressure?
 
@@ -273,7 +273,7 @@ A battery has an imbalanced electric charge built up between its positive and ne
 If you connect two batteries in series (*i.e.,* stack them), you increase their ability to "push" electrons—indeed, you sum the battery voltages together. So, two standard alkaline 1.5V AA batteries in series will have a 3V potential difference, which can "push" more electrons around a circuit—see the animation below. 
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/VoltageBatteriesInSeries_CroppedAndTrimmed2_EngineeringMindset.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/VoltageBatteriesInSeries_CroppedAndTrimmed2_EngineeringMindset.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Figure.** When you connect batteries in series, you increase the "pushing" force—indeed, you sum the battery voltages together (so, 1.5V + 1.5V = 3V in total). More voltage, more pressure. More pressure, more electrons are "pushed" through the circuit. Animation from the [Voltage Explained](https://youtu.be/w82aSjLuD_8?t=183) video by The Engineering Mindset.
 {: .fs-1 }
@@ -293,7 +293,7 @@ As you learn and begin analyzing electrical circuits, it's important to pay atte
 ## What is electrical resistance?
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/CopperVsIronWireResistanceElectronFlow_EngineeringMindset.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/CopperVsIronWireResistanceElectronFlow_EngineeringMindset.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Figure.** As electrons move through a material, they may collide with some atoms or other electrons. These collisions create a resistance. In the animation above, notice how the iron wire has more collisions than the copper wire. Iron is ~17% as conductive as copper. At 20° C, Iron has an electrical resistivity of 96.1 nanoohm-meters while Copper has a resitivity of 16.8 nanoohm-meters. Notice the halo around the Iron wire: this is to illustrate how some of the "kinetic"  or movement energy of electrons gets converted into heat or light through those collisions. Indeed, this is how incandescent lightbulbs, toaster ovens, and electric spaceheaters work! Animation from the [How Electricity Works](https://youtu.be/mc979OhitAg?t=322) video by The Engineering Mindset.
 {: .fs-1 }
@@ -308,7 +308,7 @@ Depending on their atomic composition, some materials have lower resistance than
 
 The SI unit of electrical resistance is the ohm (Ω). The direct inverse of resistance is *conductance*. Materials with low resistance are called *conductors*. In contrast, materials such as glass, rubber, and air have high resistance and poor conductivity ("low electron mobility")—these materials are called *insulators*.
 
-![This image shows PVC insulated wire with two annotations: the annotation on the left points to the internal part of the wire, which is highly conductive and made of copper. The annotation on the right points to the insulation around the wire, which has low conductivity and is made of PVC](assets/images/PVCWrappedWire-ConductorVsInsulator.png)
+![This image shows PVC insulated wire with two annotations: the annotation on the left points to the internal part of the wire, which is highly conductive and made of copper. The annotation on the right points to the insulation around the wire, which has low conductivity and is made of PVC[]({{ "/assets/images/PVCWrappedWire-ConductorVsInsulator.png" | relative_url }})
 **Figure.** The image shows PVC-insulated copper wire.
 {: .fs-1 }
 
@@ -325,7 +325,7 @@ With enough voltage (pressure), almost any material can conduct electrical curre
 
 To help illustrate this idea visually, [Professor Squier](http://people.cs.georgetown.edu/~squier/Teaching/ComputerSystemsArchitecture/520-2013-CourseDocuments/Lec-1-electricityPrimer.pdf) created some helpful sketches—see the caption for more details:
 
-![Image shows a water analogy for electricity. There are two pipes visible: one filled with gravel (less resistance) and one filled with clay (more resistance). There is an equal amount of water pressure (voltage) "pushing" water through both pipes. The pipe with less resistance (gravel) will have more water flow (current).](assets/images/ElectricityPrimer_WaterAnalogy_SquierGeorgetown.png)
+![Image shows a water analogy for electricity. There are two pipes visible: one filled with gravel (less resistance) and one filled with clay (more resistance). There is an equal amount of water pressure (voltage) "pushing" water through both pipes. The pipe with less resistance (gravel) will have more water flow (current).[]({{ "/assets/images/ElectricityPrimer_WaterAnalogy_SquierGeorgetown.png" | relative_url }})
 **Figure.** Continuing our water analogies: imagine two pipes filled with resistive materials, one with gravel (less resistance) and one filled with clay (more resistance). Both pipes have an equal amount of water pressure (voltage) "pushing" water through them. The pipe with less resistance (gravel) will have more water flow (current). Image from Professor Richard Squier's [Electricity Primer](http://people.cs.georgetown.edu/~squier/Teaching/ComputerSystemsArchitecture/520-2013-CourseDocuments/Lec-1-electricityPrimer.pdf).
 {: .fs-1 }
 
@@ -370,7 +370,7 @@ As noted above, we can *increase* the conductance of a wire by *increasing* its 
 
 Because wire diameter is so important to current capacity, there is a standardized system for measurement. In the US, we use the [American Wire Gauge](https://en.wikipedia.org/wiki/American_wire_gauge) or AWG system. A wire with a diameter of 5.2mm (AWG 4) has a current capacity of 59.6A. In comparison, a standard circuit prototyping wire (0.64mm or AWG 22)—see Figure below—has a current capacity of 0.9A. 
 
-![A picture of a box of AWG circuit prototyping wire and a complementary image showing that wire being used in a breadboard](assets/images/StandardSolidCorePrototypingWireOf22AWG.png)
+![A picture of a box of AWG circuit prototyping wire and a complementary image showing that wire being used in a breadboard[]({{ "/assets/images/StandardSolidCorePrototypingWireOf22AWG.png" | relative_url }})
 **Figure.** Example AWG solid-core wire commonly used in circuit prototyping. The box of wire on the left is $29.95 for ten 25ft spools from [Adafruit](https://www.adafruit.com/product/3174). 
 {: .fs-1 }
 
@@ -379,7 +379,7 @@ Counterintuitively, *increasing* AWG numbers denote *decreasing* wire diameters 
 If we pass more current through a wire than its capacity, it will start to heat up and eventually burn. Indeed, this is how fuses are *designed* to work! Fuses contain thin wires that protect your circuit from damagingly high current and "burn up" to instantly disconnect your circuit (creating an "open circuit") if a high current is applied. You can then replace the fuse, which is far cheaper and easier than replacing your electrical device or appliance. There are lots of great videos of this online, including [here](https://youtu.be/V-lhVTDWjwY?t=120) and [here](https://youtu.be/qgz1lskyYDU?t=70).
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/BlowingFuses_RobinsonsAuto.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/BlowingFuses_RobinsonsAuto.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Figure.** If we attempt to push large amounts of current through a wire and exceed its carrying capacity (by hooking up a large voltage supply, for example), then the wire will heat up and could start a fire. This can happen almost instantly, which is the operating principle behind a fuse (shown above). A fuse is *designed* to burn up thereby disconnecting your circuit when a damagingly large current is supplied. Video from [Robinson Auto](https://youtu.be/V-lhVTDWjwY).
 {: .fs-1 }
@@ -394,7 +394,7 @@ Could have posille's law here? -->
 
 ### What are resistors?
 
-![An animated gif showing how resistors can be placed in a circuit to resist current flow.](assets/gifs/ResistorCurrentFlow_EngineeringMindset-Optimized.gif)
+![An animated gif showing how resistors can be placed in a circuit to resist current flow.[]({{ "/assets/gifs/ResistorCurrentFlow_EngineeringMindset-Optimized.gif" | relative_url }})
 **Figure.** This animation shows how a resistor can be placed between two wires to reduce current flow. Notice how electrons flow freely through the copper wire. With the resistor, these electrons "collide" with other atoms and themselves, which restricts electron flow (and also transforms some energy as heat). Animation from [The Engineering Mindset](https://youtu.be/kcL2_D33k3o?t=891).
 {: .fs-1 }
 
@@ -415,7 +415,7 @@ TODO! -->
 ### What's a short circuit?
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/ShortCircuitExample_PhetScreenRecording-Cropped2_ByJonFroehlich.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/ShortCircuitExample_PhetScreenRecording-Cropped2_ByJonFroehlich.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Figure.** A **short circuit** is when there is a zero-resistance path back to your power source. It's never good! Animation made in the [Phet Simulation Environment](https://phet.colorado.edu/sims/html/circuit-construction-kit-dc-virtual-lab/latest/circuit-construction-kit-dc-virtual-lab_en.html).
 {: .fs-1 }
@@ -435,7 +435,7 @@ When a circuit breaker triggers, it creates an *open circuit*, which we describe
 While a **closed** circuit is a complete circuit (a "circle" for current flow), an **open** circuit is an *incomplete* circuit. For example, when there is no path from the positive terminal of a battery to the negative. This might happen intentionally (*e.g.,* due to a switch opening) or unintionally (*e.g.,* circuit shuts off due to a fuse blowing).
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/ClosedVsOpenCircuit-Cropped_PhetRecording_ByJonFroehlich.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/ClosedVsOpenCircuit-Cropped_PhetRecording_ByJonFroehlich.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Figure.** A closed circuit is when **no path** exists between the positive and negative terminals of your power source. It is an incomplete circuit. Animation made in the [Phet Simulation Environment](https://phet.colorado.edu/sims/html/circuit-construction-kit-dc-virtual-lab/latest/circuit-construction-kit-dc-virtual-lab_en.html).
 {: .fs-1 }
@@ -450,7 +450,7 @@ There are lots of great videos on YouTube explaining the difference between AC a
 
 To gain a better understanding of common operating voltages/currents, we would like you to document the  AC input voltages/current and the DC output voltages/current of devices of your home. Select five devices and take a picture of the device and its AC-to-DC adapter with the operating AC/DC information visible (if you can't find this sticker, it may be on the device itself, which is also fine). In your prototyping journals, include these pictures along with a table of operating input/output voltages/current and a brief summary of what you found.
 
-![](assets/images/InputOutputVoltages_ThreeDevices_ByJonFroehlich.png)
+![[]({{ "/assets/images/InputOutputVoltages_ThreeDevices_ByJonFroehlich.png" | relative_url }})
 
 **Figure.** Here's an example of the AC input and DC output of three devices in my home.
 {: .fs-1 }

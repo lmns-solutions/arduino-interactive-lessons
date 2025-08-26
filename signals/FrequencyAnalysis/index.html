@@ -13465,7 +13465,7 @@ $( document ).ready(function(){
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="The-composition-of-periodic-signals">The composition of periodic signals<a class="anchor-link" href="#The-composition-of-periodic-signals">&#182;</a></h1><p>In the early 1800s, Fourier claimed that any continuous periodic signal could be represented by the sum of appropriately selected sinusoidal waves (<a href="http://www.dspguide.com/CH8.PDF">Smith, Chapter 8</a>). And though there are a few nuances—how to represent signals with strong corners like square waves—he was right!</p>
 <p>Check out the animation below from <a href="http://www.jezzamon.com/fourier/index.html">Jez Swanson</a>, which shows a square wave (in dark blue) being approximated by summing a large number of sinusoidal waves. Understanding this concept will give you intuition for how a Fourier transform works, which extracts the underlyin frequencies from periodic signals.</p>
-<p><img src="assets/movies/SignalComposition_SquareWaves_Jezzamon_optimized.gif" width=400 alt="Animation shows a square wave being approximated by sinusoidal waves"/></p>
+<p><img src="{{ "/assets/movies/SignalComposition_SquareWaves_Jezzamon_optimized.gif" | relative_url }}" width=400 alt="Animation shows a square wave being approximated by sinusoidal waves"/></p>
 <center>A square wave (in dark blue) being approximated by summing sinusoidal waves. From <a href="http://www.jezzamon.com/fourier/index.html">Jez Swanson</a></center><p>As another example, watch this <a href="https://youtu.be/fCAZ7jcO-vc?t=685">video</a> by Professor Van Veen, which shows how to analyze and then synthesize a saxophone simply by summing sinusoidal waveforms consiting of a saxophone's frequency components.</p>
 
 </div>
@@ -17233,7 +17233,7 @@ Length: 7.5 secs
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The DFT takes in an $N$-point input signal and outputs <strong>two</strong> $N/2 + 1$ output signals, which contain the <em>amplitudes</em> of the component sine and cosine waves. The input signal is oftened referred to as in the <strong>time domain</strong> while the output signal is in the <strong>frequency domain</strong>.</p>
-<center><img src="assets/images/Figure8-3_TheDiscreteFourierTransform_StevenWSmithDSPGuide.png" width=700 alt="A diagram showing a time domain signal being transformed into two frequency domain signals corresponding to the amplitudes of the component sine and cosine waves in the time domain signal" style="margin: 10px"></center>
+<center><img src="{{ "/assets/images/Figure8-3_TheDiscreteFourierTransform_StevenWSmithDSPGuide.png" | relative_url }}" width=700 alt="A diagram showing a time domain signal being transformed into two frequency domain signals corresponding to the amplitudes of the component sine and cosine waves in the time domain signal" style="margin: 10px"></center>
 <center style="margin-left: 40px; margin-right: 40px"><small>A diagram showing a time domain signal being transformed into two frequency domain signals corresponding to the amplitudes of the component sine and cosine waves in the time domain signal. From <a href="http://www.dspguide.com/CH8.PDF">Smith's DSP Guide, Chapter 8: The Discrete Fourier Transform</a></small></center>
 </div>
 </div>

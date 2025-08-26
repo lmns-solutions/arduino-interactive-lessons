@@ -22,7 +22,7 @@ In this lesson, we'll show how to use [PWM](https://www.arduino.cc/en/Tutorial/P
 
 Importantly, the [`analogWrite`](https://www.arduino.cc/reference/en/language/functions/analog-io/analogwrite/) method—which was always a misnomer in the Arduino library because it output a pulse-width modulation (PWM) waveform rather than a true analog voltage—is not implemented in the ESP32 Arduino library. Instead, there is a set of PWM methods, which provide additional control but at a cost of complexity. So, it's good that, by now, you understand PWM. If you want a refresher, see our description and watch the videos [here](../arduino/led-fade.md#Pulse-width-modulation-PWM).
 
-![Animation of Fade on the ESP32](assets/movies/Huzzah32_Fade-optimized.gif)
+![Animation of Fade on the ESP32[]({{ "/assets/movies/Huzzah32_Fade-optimized.gif" | relative_url }})
 
 ## Materials
 
@@ -45,7 +45,7 @@ The LEDC library was written primarily to control LEDs but can also be used for 
 
 Unlike all the other I/O we've done thus far with the Arduino, the LEDC library works on **channels** rather than individual **pins**. To apply a PWM wave to a pin, first setup a channel with a PWM waveform frequency and duty cycle and then subscribe or "attach" that pin to this channel. Multiple pins can attach to the same channel and will receive the same PWM waveform. The ESP32 has 16 channels in total, each which can generate an independent waveform. So, while all 18 GPIO pins support PWM, we can only drive 16 of them at once with **unique** waveforms. However, we can attach all 18 GPIO pins to a single channel (or divide them across channels). In the animation below, we've attached all 18 GPIO pins to channel 0.
 
-![Animation of all 18 GPIO output pins fading in and out](assets/movies/Huzzah32_GPIOFadeTestAllPinsSimultaneously-Optimized3.gif)
+![Animation of all 18 GPIO output pins fading in and out[]({{ "/assets/movies/Huzzah32_GPIOFadeTestAllPinsSimultaneously-Optimized3.gif" | relative_url }})
 
 All 18 GPIO pins are subscribed to the same PWM channel.
 {: .fs-1 } 
@@ -126,9 +126,9 @@ Here's a visual example that, hopefully, further clarifies the concept. Here, yo
 
 So, for example, if we want to set a PWM resolution of 5 bits running at 1MHz, then we need a clock running at least 32MHz. If we want a resolution of 6 bits at 1MHz, then we exceed our 40MHz clock speed.
 
-![A figure showing the relationship between frequency and duty cycle resolution for PWM](assets/images/PWM_FrequencyAndDutyCycleRelationship.png)
+![A figure showing the relationship between frequency and duty cycle resolution for PWM[]({{ "/assets/images/PWM_FrequencyAndDutyCycleRelationship.png" | relative_url }})
 
-For more PWM examples, see this [PDF](assets/images/PWM_FrequencyAndDutyCycle.pdf) that we made.
+For more PWM examples, see this [PDF[]({{ "/assets/images/PWM_FrequencyAndDutyCycle.pdf" | relative_url }}) that we made.
 
 #### So what PWM frequency and resolution should I use?
 
@@ -159,13 +159,13 @@ Let's make an ESP32-based LED fader.
 
 We can use the same circuit as before:
 
-![Circuit showing LED connected to GPIO #21 via a current limiting resistor](assets/images/Huzzah32_Blink_CircuitDiagramAndSchematic_Fritzing.png)
+![Circuit showing LED connected to GPIO #21 via a current limiting resistor[]({{ "/assets/images/Huzzah32_Blink_CircuitDiagramAndSchematic_Fritzing.png" | relative_url }})
 
 ### The Code
 
 We'll walk you through the code just as we did for some of the original Arduino [Intro to Output lessons](../arduino/intro-output.md). While our code is different, you may want to also access ESP32's official fade example in the Arduino IDE by clicking on File -> Examples -> ESP32 -> AnalogOut -> LEDCSoftwareFade. It's also open source and on [github](https://github.com/espressif/arduino-esp32/blob/master/libraries/ESP32/examples/AnalogOut/LEDCSoftwareFade/LEDCSoftwareFade.ino).
 
-![Screenshot of accessing ESP32's official fade example in the Arduino IDE by clicking on File -> Examples -> ESP32 -> AnalogOut -> LEDCSoftwareFade](assets/images/ArduinoIDE_ESP32Example_LEDCSoftwareFade_Screenshot.png)
+![Screenshot of accessing ESP32's official fade example in the Arduino IDE by clicking on File -> Examples -> ESP32 -> AnalogOut -> LEDCSoftwareFade[]({{ "/assets/images/ArduinoIDE_ESP32Example_LEDCSoftwareFade_Screenshot.png" | relative_url }})
 You can also access ESP32's official fade example in the Arduino IDE by clicking on File -> Examples -> ESP32 -> AnalogOut -> LEDCSoftwareFade.
 {: .fs-1 } 
 
@@ -237,7 +237,7 @@ void loop() {
 
 That's it, you can run the program! Try experimenting with different frequency and resolution values, what happens?
 
-![Animation of Fade on the ESP32](assets/movies/Huzzah32_Fade-optimized.gif)
+![Animation of Fade on the ESP32[]({{ "/assets/movies/Huzzah32_Fade-optimized.gif" | relative_url }})
 
 <!-- TODO: insert workbench video -->
 

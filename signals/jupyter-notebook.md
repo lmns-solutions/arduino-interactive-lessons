@@ -20,7 +20,7 @@ usetocbot: true
 
 We will be using [Jupyter Notebook](https://jupyter.org/index.html) for the signal processing and machine learning portion of our course. Jupyter Notebook is a popular data science platform for analyzing, processing, classifying, modeling, and visualizing data. While Notebook supports multiple languages (like R, Julia), we'll be using Python (specifically, Python 3). 
 
-![Screenshot of Jupyter Notebook](assets/images/JupyterNotebook_Screenshot.png)
+![Screenshot of Jupyter Notebook[]({{ "/assets/images/JupyterNotebook_Screenshot.png" | relative_url }})
 
 ## Jupyter Notebook installation and configuration
 
@@ -48,7 +48,7 @@ We strongly recommend installing the [`jupyter_contrib_nbextensions`](https://ju
 
 TOC2 provides two primary benefits: first, it auto-generates (and updates in real-time) a clickable table of contents based on the header markdown in the Notebook, which greatly simplifies navigation (you will **want** this). Second, it shows, which cells are queued for execution (in yellow in the navigation pane) and which cells are executing (in red).
 
-![Screenshot of the Jupyter Notebook extension called Table of Contents (2)](assets/images/JupyterNotebook_TOC2_Screenshot.png)
+![Screenshot of the Jupyter Notebook extension called Table of Contents (2)[]({{ "/assets/images/JupyterNotebook_TOC2_Screenshot.png" | relative_url }})
 
 Screenshot of a Jupyter Notebook with the nbextension called Table of Contents (2), which auto-generates a navigation pane based on markdown headers.
 {: .fs-1 }
@@ -67,13 +67,13 @@ To install the `nbextensions`, open your terminal (on linux or Mac) or the Anaco
 
 Restart Jupyter Notebook and you should see a tab called `Nbextensions` on the home screen. Click on that tab and then you should see all nbextensions. Click on `Table of Contents (2)` to configure and Enable it. See screenshots below.
 
-![](assets/images/JupyterNotebook_TOC2_ConfigurableNbextensions_TOC2.png)
+![[]({{ "/assets/images/JupyterNotebook_TOC2_ConfigurableNbextensions_TOC2.png" | relative_url }})
 
 #### Step 3: Try out TOC
 
 Make some headers in markdown and then click on the `Table of Contents` button in the toolbar to see an auto-generated and clickable navigation sidebar. You can also access the TOC via the `Navigate` menu item.
 
-![Screenshot showing how to access Jupyter Notebook TOC navigation sidebar](assets/images/JupyterNotebook_TOC2Example_Screenshot.png)
+![Screenshot showing how to access Jupyter Notebook TOC navigation sidebar[]({{ "/assets/images/JupyterNotebook_TOC2Example_Screenshot.png" | relative_url }})
 
 Example of TOC running in Jupyter Notebook
 {: .fs-1 }

@@ -116,7 +116,7 @@ I think the key here is to remember that an ADC conversion represents a range of
 
 The [ATmega datasheet](https://www.sparkfun.com/datasheets/Components/SMD/ATMega328.pdf) says:
 
-![](assets/images/ATMegaDatasheet_ADCConversionResult.png)
+![[]({{ "/assets/images/ATMegaDatasheet_ADCConversionResult.png" | relative_url }})
 
 For most practical purposes, dividing by 1023 or 1024 won't matter. :)
 
@@ -158,7 +158,7 @@ In "Encyclopedia of Electronic Components Volume 3", Platt states that a "*succe
 
 The [ATmega328 datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061A.pdf) says that the analog input resistance is 100 megohms:
 
-![Screenshot of Table 29-16 in ATmega328 datasheet describing the ADC](assets/images/ATmega328_Datasheet_Screenshot_ADCCharacteristics.png)
+![Screenshot of Table 29-16 in ATmega328 datasheet describing the ADC[]({{ "/assets/images/ATmega328_Datasheet_Screenshot_ADCCharacteristics.png" | relative_url }})
 
 <!-- An additional in-depth thread describing this here: https://www.avrfreaks.net/forum/input-impedance-digital-ios-atmega328p -->
 

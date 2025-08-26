@@ -25,7 +25,7 @@ Magnet-based sensors such as [reed switches](https://en.wikipedia.org/wiki/Reed_
 
 A key benefit of a magnet-based sensors is that the magnet itself does not need to be powered and can even be fully encased in a moving part like a window, a wheel, a turbine, *etc.* For example, a bicycle tachometer works by affixing a magnet to the bike wheel (which spins) while a Hall Effect sensor or reed switch is attached to a wheel fork and used by a microcontroller to count revolutions. Magnet-based sensors are also commonly use to track rotations in DC electric motors, which already contain magnets to power the motor. 
 
-![Magnet-based sensors used in bike tachometers](assets/images/MagneticBikeTachometers2.png)
+![Magnet-based sensors used in bike tachometers[]({{ "/assets/images/MagneticBikeTachometers2.png" | relative_url }})
 Two example bike wheel tracking systems (left and middle) along with a bike speedometer. Typically, these systems are made with Hall effect sensors or reed switches to measure wheel revolutions, which are converted to distance and speed by a small computer with a display (often mounted on the handlebars). Note: to use this system, the bicyclist must first complete a calibration step by moving the wheel a set distance (thereby providing the necessary data to convert from revolutions to distance).
 {: .fs-1 }
 
@@ -57,7 +57,7 @@ In this [wonderful video](https://youtu.be/AcRCgyComEw) from the University of N
 
 [Hall effect sensors](https://en.wikipedia.org/wiki/Hall_effect_sensor) use the "Hall effect" to measure the magnitude of a proximal magnetic field. More precisely, Hall effect sensors measure "magnetic flux" ($$Φ$$), which is the total magnetic field $$\vec{B}$$ passing through a given area $$\vec{A}$$ (where A is the area of the sensing unit normal to the magnetic field): $$Φ = \vec{B} \cdot \vec{A}$$. While [inductive sensors](https://en.wikipedia.org/wiki/Inductive_sensor) respond to *changing* magnetic fields, one benefit of Hall effect sensors is that they work with static (non-changing) fields. So, a Hall effect sensor can respond to a magnet even if it's not moving.
 
-![Simulated magnetic flux of a NdFeB magnet from the DRV5055 datasheet](assets/images/HallEffectSensor_SimulatedMagneticFlux.png)
+![Simulated magnetic flux of a NdFeB magnet from the DRV5055 datasheet[]({{ "/assets/images/HallEffectSensor_SimulatedMagneticFlux.png" | relative_url }})
 Simulated magnetic flux of a NdFeB magnet. Image from the [DRV5055](http://www.ti.com/lit/ds/symlink/drv5055.pdf) Hall effect sensor datasheet.
 {: .fs-1 }
 
@@ -73,7 +73,7 @@ Hall effect sensors are used in a range of consumer and industrial applications 
 
 In their [handbook](https://sensing.honeywell.com/hallbook.pdf) for Hall effect sensors, Honeywell provides dozens of application ideas:
 
-![Hall effect sensing ideas from Honeywell including piston detection, throttle angle sensor](assets/images/ExampleHallEffectSensingIdeas_Honeywell.png)
+![Hall effect sensing ideas from Honeywell including piston detection, throttle angle sensor[]({{ "/assets/images/ExampleHallEffectSensingIdeas_Honeywell.png" | relative_url }})
 A subset of Hall effect sensor application ideas presented in the [Honeywell handbook](https://sensing.honeywell.com/hallbook.pdf).
 {: .fs-1 }
 
@@ -95,7 +95,7 @@ To produce a binary output, these Hall effect sensors have an additional interna
 
 ### Reed switches
 
-![Reed switch with contact detail](assets/images/Reed_switch_aka_Wikipedia.jpg)
+![Reed switch with contact detail[]({{ "/assets/images/Reed_switch_aka_Wikipedia.jpg" | relative_url }})
 Image from [Wikipedia](https://en.wikipedia.org/wiki/Reed_switch).
 {: .fs-1 }
 
@@ -110,7 +110,7 @@ The slow-motion activation video is from [Wikipedia](https://en.wikipedia.org/wi
 
 A reed switch is a passive sensor: its contacts will close in the presence of a magnetic field regardless of whether it's even hooked up in a circuit. Unlike Hall effect sensors, reed switches are not sensitive to magnetic field polarity; however, the magnetic field has to be parallel to the reeds—either north-to-south or south-to-north. See figure below.
 
-![Image showing proper orientation of magnets with a hall effect sensor and reed switch](assets/images/ReedswitchVsHallEffectSensor_MagneticPoles_KJMagnetics.png)
+![Image showing proper orientation of magnets with a hall effect sensor and reed switch[]({{ "/assets/images/ReedswitchVsHallEffectSensor_MagneticPoles_KJMagnetics.png" | relative_url }})
 With a Hall effect sensor, the magnetic flux density through the sensor is maximized when a magnetic pole is directly facing the sensor. With a reed switch, the magnetic poles should be parallel to the sensor. Image derived from [KJMagnetics](https://www.kjmagnetics.com/blog.asp?p=reed-switches-and-hall-effect-sensors).
 {: .fs-1 }
 
@@ -127,7 +127,7 @@ The DRV5055 can operate with both 3.3V and 5V power supplies (with +/- 10% toler
 
 Two packages are available: a surface-mount package SOT-23 (left diagram below) and a through hole package TO-92 (right). We will be using the through-hole package (TO-92). 
 
-![Two DRV5055 packages are available: a surface-mount package (left diagram) and a through hole package (right)](assets/images/HallEffectSensor_Package_DRV5055.png)
+![Two DRV5055 packages are available: a surface-mount package (left diagram) and a through hole package (right)[]({{ "/assets/images/HallEffectSensor_Package_DRV5055.png" | relative_url }})
 The two DRV5055 packages with pin configurations and Hall element location is labeled in red (at center of the sensor)
 {: .fs-1 }
 
@@ -137,11 +137,11 @@ To use the sensor, hook up Leg 1 to $$V_{CC}$$*, Leg 2 to $$GND$$, and Leg 3 to 
 
 *TI recommends connecting Leg 1 to a ceramic capacitor to ground with a value of at least 0.01 µF. This is called a **decoupling capacitor** (or bypass capacitor) and is a common addition to help smooth the voltage supply as the sensor is operating. See wiring diagram below. While not absolutely necessary—and some of you may not have access to ceramic capacitors—it's recommended (it will improve performance and reliability). To see the effect of adding a decoupling capacitor on a voltage supply to a chip, see this [video](https://youtu.be/UW_XFGGTh0I). Dave Jones at the EEVblog also provides a nice whiteboard lesson ([link](https://youtu.be/BcJ6UdDx1vg)). 
 
-![Wiring diagram for DRV5055 with ceramic capacitor](assets/images/HallEffectSensor_RecommendedWiringWithSchematic_DRV5055.png)
+![Wiring diagram for DRV5055 with ceramic capacitor[]({{ "/assets/images/HallEffectSensor_RecommendedWiringWithSchematic_DRV5055.png" | relative_url }})
 We've included two equivalent Arduino wirings. The left diagram includes a breadboard, which we felt may be a bit confusing to those still becoming familiar with breadboards. The middle diagram is the same wiring but without a breadboard. The schematic on the right is copy/pasted directly from the [DRV5055](http://www.ti.com/lit/ds/symlink/drv5055.pdf) datasheet.
 {: .fs-1 }
 
-![Screenshot of pin configurations from datasheet](assets/images/HallEffectSensor_PinConfigurations_DatasheetScreenshot.png)
+![Screenshot of pin configurations from datasheet[]({{ "/assets/images/HallEffectSensor_PinConfigurations_DatasheetScreenshot.png" | relative_url }})
 
 #### Sensor response to magnetic field
 
@@ -149,7 +149,7 @@ So, how does the DRV5055 output pin (Leg 3) respond to a magnetic field?
 
 When no magnetic field is present, the analog output drives **half** of $$V_{cc}$$. So, on an Arduino Uno, `analogRead(A0)` would return 512 (1023/2) in the default state (with no magnet present). The sensor's output will then change linearly with the applied magnetic flux density. If the south pole of the magnet is facing the sensor, the analog output will increase between $$V_{cc}/2$$ - $$V_{cc}$$. If the north pole faces the sensor, the output will decrease from $$V_{cc}/2$$) to 0V. See the magnetic response graph below and Section 7.3.2 of the [DRV5055](http://www.ti.com/lit/ds/symlink/drv5055.pdf) datasheet.
 
-![Magnetic response graph](assets/images/HallEffectSensor_MagneticResponse_DRV5055.png)
+![Magnetic response graph[]({{ "/assets/images/HallEffectSensor_MagneticResponse_DRV5055.png" | relative_url }})
 The magnetic response graph for the [DRV5055](http://www.ti.com/lit/ds/symlink/drv5055.pdf) Hall effect sensor. The diagram on the right shows a magnet's south pole orthogonal to the sensing surface, which would result in a positive $$\vec{B}$$ and an analog output voltage > $$V_{cc}/2$$. If the magnet's orientation is flipped such that the north pole is facing the sensor, then the $$\vec{B}$$ will be negative and the analog output voltage will range between 0 and $$V_{cc}/2$$.
 {: .fs-1 }
 
@@ -165,11 +165,11 @@ Even with this simple circuit, there are many creative possibilities: imagine a 
 
 The [DRV5055](http://www.ti.com/lit/ds/symlink/drv5055.pdf) datasheet states that the maximum continuous output current is 1mA. Using Ohm's Law, we can calculate a safe resistance value for the current-limiting resistor such that the LED does not pull too much current. $$I=\frac{V_{cc} - V_f}{R} \to 1mA=\frac{5V-2V}{R} \to R=\frac{3V}{0.001A} = 3,000Ω$$. So, we'll use a 3.3kΩ.
 
-![Screenshot of DRV5055 datasheet, which specifies the maximum continuous current of 1mA](assets/images/HallEffectSensor_RecommendedOperatingConditions_DatasheetScreenshot.png)
+![Screenshot of DRV5055 datasheet, which specifies the maximum continuous current of 1mA[]({{ "/assets/images/HallEffectSensor_RecommendedOperatingConditions_DatasheetScreenshot.png" | relative_url }})
 
 We've included two wiring diagrams: on the left, the suggested wiring by the DRV5055 datasheet with the decoupling capacitor and, on the right, the same wiring but without the capacitor. Both will work similarly for our purposes here, so if you don't have a capacitor handy, just make the circuit on the right.
 
-![Wiring diagram for Hall effect-based LED brightner](assets/images/HallEffectSensor_WiringDiagram_NoArduino.png)
+![Wiring diagram for Hall effect-based LED brightner[]({{ "/assets/images/HallEffectSensor_WiringDiagram_NoArduino.png" | relative_url }})
 
 ### Workbench video
 
@@ -193,7 +193,7 @@ Let's adapt our circuit to use the Arduino. We'll make one circuit to read the H
 
 Below, we provide two wiring diagrams: one with the decoupling capacitor (0.01 µF) and one without. The decoupling capacitor is necessary to ensure that the voltage supply is constant while the Hall effect sensor is operating; however, it's not absolutely necessary for simple prototyping and learning. 
 
-![Two wiring diagrams for Hall effect sensor: one with decoupling capacitor and other not](assets/images/ArduinoUno_HallEffectSensor_WiringDiagram.png)
+![Two wiring diagrams for Hall effect sensor: one with decoupling capacitor and other not[]({{ "/assets/images/ArduinoUno_HallEffectSensor_WiringDiagram.png" | relative_url }})
 
 ### The code
 

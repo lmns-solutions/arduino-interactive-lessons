@@ -23,7 +23,7 @@ In this lesson, you'll learn about [photoresistors](https://en.wikipedia.org/wik
 
 | Photoresistors | Schematic Symbol |
 | -------------- | ---------------- |
-| ![Three differently sized photoresistors with scale in mm](assets/images/Photoresistors_Wikipedia.png) | ![Schematic symbols for photoresistor](assets/images/Photoresistor_SchematicSymbol_PlattEncyclopediaOfElectronicVol3.png) |
+| ![Three differently sized photoresistors with scale in mm[]({{ "/assets/images/Photoresistors_Wikipedia.png" | relative_url }}) | ![Schematic symbols for photoresistor[]({{ "/assets/images/Photoresistor_SchematicSymbol_PlattEncyclopediaOfElectronicVol3.png" | relative_url }}) |
 | Three differently sized photoresistors with scale in mm. Image from [Wikipedia](https://en.wikipedia.org/wiki/Photoresistor). | There are six interchangeable photoresistor schematic symbols. Image from [Platt](https://learning.oreilly.com/library/view/encyclopedia-of-electronic/9781449334307) |
 
 A photoresistor—sometimes called a photocell or light-dependent resistor (LDR)—varies its resistance in response to light. They are small, inexpensive, and easy-to-use. Consequently, photoresistors are popular in children's toys (see example below), nightlights, clock radios, and other inexpensive gadgets. However, they are not particularly accurate so are best suited for measuring coarse-grain light levels (*e.g.,* the difference between a light and dark room) rather than precise illuminance. Other common light sensors include phototransistors and [photodiodes](https://en.wikipedia.org/wiki/Photodiode), both which are more accurate and responsive.
@@ -32,7 +32,7 @@ A photoresistor—sometimes called a photocell or light-dependent resistor (LDR)
 
 As one example use case in consumer toys, this Melissa and Doug wooden fire truck puzzle uses embedded photoresistors to detect when each puzzle piece has been placed and when the puzzle is complete. There is one embedded photoresistor per puzzle piece location. When the all pieces are placed (all photoresistors have been covered), the puzzle plays a rewarding "fire truck siren":
 
-![Picture showing the Melissa and Doug puzzle with embedded photoresistors](assets/images/Photoresistor_MelissaAndDougPuzzle.png)
+![Picture showing the Melissa and Doug puzzle with embedded photoresistors[]({{ "/assets/images/Photoresistor_MelissaAndDougPuzzle.png" | relative_url }})
 
 <iframe width="736" height="414" src="https://www.youtube.com/embed/ySJw510mVgs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 Each puzzle piece location has a respective embedded photoresistor, which is used to track whether a piece has been placed or not. When the puzzle is completed (and all photoresistors have been covered), the puzzle plays a fire truck siren. There are a few limitations to this sensing technique: while cheap, the "fire truck" siren can be triggered when the photoresistors are covered (either accidentally via an errant puzzle piece or hand or on purpose), occassionally the siren will be triggered before the puzzle is actually completed (just when the last puzzle piece is hovering over the remaining location), and, of course, the sensing method cannot tell whether a puzzle piece is in the correct position (which is fine if one just needs to infer when the puzzle is completed and not, for example, to help guide a child in completing the puzzle).
@@ -70,13 +70,13 @@ If you're unfamiliar with lux (as we once were), it's useful to provide some exa
 
 While finding a detailed datasheet on photoresistors is difficult, both [Sparkfun](https://cdn.sparkfun.com/datasheets/Sensors/LightImaging/SEN-09088.pdf) and [Adafruit](https://learn.adafruit.com/photocells/measuring-light) provide low-quality graphs of photoresistor resistance *vs.* lux on their websites.
 
-![Sparkfun and Adafruit resistance vs. illuminance graphs](assets/images/Photoresistor_ResistanceVsIllumination_SparkfunAndAdafruit.png)
+![Sparkfun and Adafruit resistance vs. illuminance graphs[]({{ "/assets/images/Photoresistor_ResistanceVsIllumination_SparkfunAndAdafruit.png" | relative_url }})
 Graphs from [Sparkfun](https://cdn.sparkfun.com/datasheets/Sensors/LightImaging/SEN-09088.pdf) and [Adafruit](https://learn.adafruit.com/photocells/measuring-light). Both are in log-log scale.
 {: .fs-1 }
 
 Using a professional light meter, David Williams at [All About Circuits](https://www.allaboutcircuits.com/projects/design-a-luxmeter-using-a-light-dependent-resistor/) also conducted their own experiments of photoresistance *vs.* illumination and found the same log-log relationship. We've used this data to graph both a linear version (which is easier to understand) and log-log version with annotations. Same data, just the scales are different.
 
-![All about Circuits resistance vs. illuminance graph](assets/images/Photoresistor_ResistanceVsIllumination_AllAboutCircuits.png)
+![All about Circuits resistance vs. illuminance graph[]({{ "/assets/images/Photoresistor_ResistanceVsIllumination_AllAboutCircuits.png" | relative_url }})
 
 In short, a photoresistor is most sensitive to light differences at lower lux levels (*i.e.,* in darker environments). This sensitivity drops exponentially as lux decreases. For example, photoresistance drops 65kΩ between $$lux=1$$ and $$lux=2$$ (~65kΩ per lux) and 54kΩ between $$lux=2$$ and $$lux=20$$ (~3kΩ per lux in this range). Between $$lux=900$$ and $$lux=~1300$$, however, the resistance only drops 140Ω (2.8Ω per lux).
 
@@ -89,7 +89,7 @@ Read more http://www.resistorguide.com/photoresistor/ -->
 
 Photoresistors are also not uniformly responsive to all wavelengths of light. Their sensitivity peaks between 500nm (green) and 700nm (red). See the relative spectral response graph below:
 
-![Graph of relative spectral response showing that CdS is most sensitive to wavelengths of light between 500-700nm](assets/images/Photoresistor_RelativeSpectralResponse_Adafruit.png)
+![Graph of relative spectral response showing that CdS is most sensitive to wavelengths of light between 500-700nm[]({{ "/assets/images/Photoresistor_RelativeSpectralResponse_Adafruit.png" | relative_url }})
 Graph from [Adafruit](https://learn.adafruit.com/photocells/measuring-light).
 {: .fs-1 }
 
@@ -133,7 +133,7 @@ Like the [FSR](../arduino/force-sensitive-resistors.md), the photoresistor is a 
 
 You might initially try to hook up the photoresistor in the same way as the [FSR](../arduino/force-sensitive-resistors.md): in-series with the LED. As we measured a minimum resistance of ~50-100Ω when an ultrabright LED flashlight was pointed directly at the photoresistor, in both wiring diagrams, we include a backup current limiting resistor.
 
-![Two wiring diagrams of a photocell connected to an LED: one with 9V battery; other powered by Arduino 5V pin](assets/images/Photoresistor_WiringDiagram_NoArduino_Fritzing.png)
+![Two wiring diagrams of a photocell connected to an LED: one with 9V battery; other powered by Arduino 5V pin[]({{ "/assets/images/Photoresistor_WiringDiagram_NoArduino_Fritzing.png" | relative_url }})
 
 Try making this circuit. What happens?
 
@@ -151,7 +151,7 @@ Let's try it.
 
 We are going to create an inverse relationship between ambient light levels and LED brightness by placing the LED in parallel with the photoresistor wired in a voltage divider configuration. Now, as the photoresistor resistance drops, the LED will get brighter. The key is in selecting an appropriate fixed resistor $$R$$. 
 
-![](assets/images/Photoresistor_WiringDiagramAndSchematicVoltageDivider_NoArduino_Fritzing.png)
+![[]({{ "/assets/images/Photoresistor_WiringDiagramAndSchematicVoltageDivider_NoArduino_Fritzing.png" | relative_url }})
 
 If $$R$$ is too small, the LED will still turn on even in ambient light. Through experimentation, we determined that $$R=4.7kΩ$$ resulted in the best performance: a 1.72V drop and 0.10mA through the LED with a **desk lamp off** and a 0.8V drop and 0mA through the LED with the **lamp on**. 
 
@@ -192,7 +192,7 @@ As a two-legged variable resistor, we can use the same voltage divider wiring as
 
 Below, we show two wiring options. On the left, the photoresistor is $$R_1$$ in the voltage divider configuration so $$V_{out}$$ will increase as light levels increase. On the right, the photoresistor is $$R_2$$ so $$V_{out}$$ will increase as light levels decrease (a "darkness" sensor, if you will).
 
-![Wiring diagram showing the photoresistor in a voltage divider configuration. On left diagram, photoresistor is the top resistor in the voltage divider, so Vout will increase as light levels increase. On the right diagram, the photoresistor is the bottom resistor, so Vout will increase as light levels decrease](assets/images/ArduinoUno_Photoresistor_WiringDiagramPlusSchematic.png)
+![Wiring diagram showing the photoresistor in a voltage divider configuration. On left diagram, photoresistor is the top resistor in the voltage divider, so Vout will increase as light levels increase. On the right diagram, the photoresistor is the bottom resistor, so Vout will increase as light levels decrease[]({{ "/assets/images/ArduinoUno_Photoresistor_WiringDiagramPlusSchematic.png" | relative_url }})
 Either wiring will work. They are functionally equivalent but have opposite behavior. 
 {: .fs-1 }
 
@@ -232,11 +232,11 @@ To help answer this, we can graph $$V_{out}$$ as a function of various fixed res
 
 <!-- TODO: in future, use equation for photoresistance as a function of lux to provide a graph where lux is x value rather than photoresistance -->
 
-![Graph of various Vout voltages for a voltage divider network with various fixed resistors (as R2) and the photoresistor as R1 (from 100 to 100kΩ)](assets/images/Photoresistor_VoltageDividerGraph_PhotoresistorAsR1.png)
+![Graph of various Vout voltages for a voltage divider network with various fixed resistors (as R2) and the photoresistor as R1 (from 100 to 100kΩ)[]({{ "/assets/images/Photoresistor_VoltageDividerGraph_PhotoresistorAsR1.png" | relative_url }})
 A graph of $$V_{out}$$ as a function of photoresistance values for various fixed resistors. In this configuration, the fixed resistor is $$R_1$$ and the photoresistor is $$R_2$$, so this matches the "lightness" sensor configuration in the wiring diagram (the left one). $$V_{out}$$ decreases as the light level increases.
 {: .fs-1 }
 
-![Graph of various Vout voltages for a voltage divider network with various fixed resistors (as R1) and the photoresistor as R2 (from 100 to 100kΩ)](assets/images/Photoresistor_VoltageDividerGraph_PhotoresistorAsR2.png)
+![Graph of various Vout voltages for a voltage divider network with various fixed resistors (as R1) and the photoresistor as R2 (from 100 to 100kΩ)[]({{ "/assets/images/Photoresistor_VoltageDividerGraph_PhotoresistorAsR2.png" | relative_url }})
 A graph of $$V_{out}$$ as a function of photoresistance values for various fixed resistors. In this configuration, the photoresistor is $$R_1$$ and the fixed resistor is $$R_2$$, so this matches the "darkness" sensor configuration in the wiring diagram (the right one). $$V_{out}$$ increases as the light level decreases.
 {: .fs-1 }
 
@@ -277,7 +277,7 @@ We need to make **two independent circuits**: one for the photoresistor and one 
 
 Below, we've wired the photoresistor using a voltage divider with a fixed resistor of 10kΩ in the $$R_1$$ position (so, the 'darkness' sensor configuration). The voltage divider output is connected to `A0`. For the LED circuit, we've wired the LED anode towards Pin 3 with a 220Ω current-limiting resistor. 
 
-![Wiring diagram for LED circuit with photoresistor](assets/images/ArduinoUno_PhotoresistorLEDCircuit_Fritzing.png)
+![Wiring diagram for LED circuit with photoresistor[]({{ "/assets/images/ArduinoUno_PhotoresistorLEDCircuit_Fritzing.png" | relative_url }})
 
 ### Write the code
 

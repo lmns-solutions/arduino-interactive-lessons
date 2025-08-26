@@ -20,7 +20,7 @@ usetocbot: true
 
 In this tutorial, we will use an RGB LED (RGB stands for Red, Green, Blue) to flash through a sequence of colors and learn about the difference between a Common Anode and Common Cathode RGB LED design.
 
-![Animation showing the RGB LED being set to various colors based on digital output on Pins 3, 5, and 6](assets/movies/Arduino_RGBLED_CommonCathode-Optimized.gif)
+![Animation showing the RGB LED being set to various colors based on digital output on Pins 3, 5, and 6[]({{ "/assets/movies/Arduino_RGBLED_CommonCathode-Optimized.gif" | relative_url }})
 
 ## Materials
 
@@ -56,7 +56,7 @@ You **cannot** tell whether you have a Common Anode or Common Cathode RGB LED by
 
 Here are two screenshots of supplier websites ([Sparkfun](https://sparkfun.com) and [Adafruit](https://adafruit.com)). Notice how the RGB LED type is clearly labeled.
 
-![Screenshots of Sparkfun and Adafruit websites showing RGB LEDs](assets/images/RgbLEDs_SparkfunAndAdafruitSupplierScreenshots.png)
+![Screenshots of Sparkfun and Adafruit websites showing RGB LEDs[]({{ "/assets/images/RgbLEDs_SparkfunAndAdafruitSupplierScreenshots.png" | relative_url }})
 
 ## Common Cathode
 
@@ -68,11 +68,11 @@ With a Common Cathode design, the 2nd leg needs to be hooked up to the `GND` pin
 
 Here's the wiring without a breadboard (not recommended but perhaps easier to see the circuit itself):
 
-![Circuit wiring for an RGB LED Common Cathode design where the cathode is hooked to GND](assets/images/ArduinoUno_RgbLEDCommonCathode_WiringDiagram.png)
+![Circuit wiring for an RGB LED Common Cathode design where the cathode is hooked to GND[]({{ "/assets/images/ArduinoUno_RgbLEDCommonCathode_WiringDiagram.png" | relative_url }})
 
 And here's the wiring with a breadboard (the schematic on the right is the same either way). Notice how the schematic highlights how the current flows from the I/O pins, through the resistors, into the RGB LED, and then down to ground.
 
-![Breadboard circuit wiring for an RGB LED Common Cathode design where the cathode is hooked to GND](assets/images/ArduinoUno_RgbLEDCommonCathode_WiringDiagramWithBreadboard.png)
+![Breadboard circuit wiring for an RGB LED Common Cathode design where the cathode is hooked to GND[]({{ "/assets/images/ArduinoUno_RgbLEDCommonCathode_WiringDiagramWithBreadboard.png" | relative_url }})
 
 ### Writing the code
 
@@ -188,7 +188,7 @@ The yogurt container is used to diffuse the light. Kleenex, white paper, or a pi
 Below, we show a video animation of the code executing and resulting circuit behavior. Pay close attention to the direction of current—it will flow in the opposite direction with the Common Anode design (covered next).
 
 <video controls="controls">
-  <source src="assets/movies/Arduino_RGBLED_CommonCathode_Animation.mp4" type="video/mp4">
+  <source src="{{ "/assets/movies/Arduino_RGBLED_CommonCathode_Animation.mp4" | relative_url }}" type="video/mp4">
 </video>
 
 ## Common Anode
@@ -208,11 +208,11 @@ Does this setup seem familiar? It should. With the Common Anode RGB LED, the dig
 
 As before, here's a circuit wiring diagram without a breadboard (which more cleanly shows connections but would be difficult, in practice, to reliably make):
 
-![Circuit wiring for an RGB LED Common Anode design where the cathode is hooked to GND](assets/images/ArduinoUno_RgbLEDCommonAnode_WiringDiagram.png)
+![Circuit wiring for an RGB LED Common Anode design where the cathode is hooked to GND[]({{ "/assets/images/ArduinoUno_RgbLEDCommonAnode_WiringDiagram.png" | relative_url }})
 
 And here's the more practical breadboarded version (again, the circuit diagram is the same in both the non-breadboard and breadboard version):
 
-![Breadboard circuit wiring for an RGB LED Common Anode design where the anode is hooked to 5V](assets/images/ArduinoUno_RgbLEDCommonAnode_WiringDiagramWithBreadboard.png)
+![Breadboard circuit wiring for an RGB LED Common Anode design where the anode is hooked to 5V[]({{ "/assets/images/ArduinoUno_RgbLEDCommonAnode_WiringDiagramWithBreadboard.png" | relative_url }})
 
 ### Writing the code
 
@@ -245,7 +245,7 @@ We will flash the same sequence as before but again our `HIGH`s and `LOW`s are f
 Here's an animation. Pay close attention to the current direction—it flows from 5V down through the LED, the current limiting resistors, and into the digital I/O pins.
 
 <video controls="controls">
-  <source src="assets/movies/Arduino_RGBLED_CommonAnode_Animation.mp4" type="video/mp4">
+  <source src="{{ "/assets/movies/Arduino_RGBLED_CommonAnode_Animation.mp4" | relative_url }}" type="video/mp4">
 </video>
 
 We're not going to include code specifically for the Common Anode RGB LED. Instead, we'll show how to adapt our previous Common Cathode code with only a few additional lines.

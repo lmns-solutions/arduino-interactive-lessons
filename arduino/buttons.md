@@ -27,7 +27,7 @@ Switches themselves are conceptually easy to understand—they are either "close
 
 For example, in the animation below, we show a button circuit with a pull-down resistor hooked up to Pin 2. Importantly, notice **where** the current flows when the button is pressed—perhaps surprisingly, it does **not** flow into Pin 2. In fact, (virtually) no current flows into Pin 2! Why not? We'll talk about this and more in this lesson!
 
-![Animation showing a Arduino Uno and a button hooked up to Pin 2 with a pull-down resistor configuration. When the button is pressed, the animation shows the current going from Vcc through the button and down through the pull-down resistor](assets/movies/Arduino_Button_InternalLED_Animation_Edited.gif)
+![Animation showing a Arduino Uno and a button hooked up to Pin 2 with a pull-down resistor configuration. When the button is pressed, the animation shows the current going from Vcc through the button and down through the pull-down resistor[]({{ "/assets/movies/Arduino_Button_InternalLED_Animation_Edited.gif" | relative_url }})
 Animation shows the Arduino's built-in LED illuminating when the button on Pin 2 is pressed. When the button is pressed, current flows from $$V_{CC}$$ through the pull-down resistor to GND. We'll learn more about this circuit in this lesson.
 {: .fs-1 }
 
@@ -35,13 +35,13 @@ Animation shows the Arduino's built-in LED illuminating when the button on Pin 2
 
 As noted above, switches are simple components: they're typically either "open" (disconnected) or "closed" (connected). There are lots of different types of switches from **momentary switches** (aka buttons) to **toggle** or **slide** switches (which maintain their state) to switches that activate based on environmental conditions like a **tilt switch** or a **reed switch**.
 
-![Picture showing a variety of digital inputs, including tactile buttons, arcade buttons, SMD push buttons, slide switches, rocker switches, reed switches, and tilt switches](assets/images/DigitalInput_ExampleGallery.png)
+![Picture showing a variety of digital inputs, including tactile buttons, arcade buttons, SMD push buttons, slide switches, rocker switches, reed switches, and tilt switches[]({{ "/assets/images/DigitalInput_ExampleGallery.png" | relative_url }})
 Prices and pictures are from Sparkfun.com, Jan 2020; parts can be cheaper in bulk from suppliers like [Digi-Key](https://www.digikey.com/) or [Mouser Electronics](https://www.mouser.com/).
 {: .fs-1 }
 
 In this lesson, we are going to use a **four-legged push button** (momentary switch), which look like:
 
-![Examples of four-legged buttons from Sparkfun and Adafruit](assets/images/FourLeggedButtonExamplesFromSparkfunAndAdafruit.png)
+![Examples of four-legged buttons from Sparkfun and Adafruit[]({{ "/assets/images/FourLeggedButtonExamplesFromSparkfunAndAdafruit.png" | relative_url }})
 <!-- TODO: in future, make this into a table with links for improved accessibility -->
 
 If you want to learn more about switches in general, see these articles by [Sparkfun](https://learn.sparkfun.com/tutorials/switch-basics/all) and [ITP NYU](https://itp.nyu.edu/physcomp/labs/labs-electronics/switches/).
@@ -67,14 +67,14 @@ We'll need the following materials:
 
 The four-leg push button is one of the most common button types for breadboarding circuits; however, it's also a bit funky and non-intuitive at first. You might be wondering: why **four legs** instead of two? How does this button work? See the diagram below.
 
-![Overview of four-legged tactile buttons showing which two sides are disconnected by default and how the connections are formed when the button is pressed](assets/images/FourLeggedTactileButtons_Overview.png)
+![Overview of four-legged tactile buttons showing which two sides are disconnected by default and how the connections are formed when the button is pressed[]({{ "/assets/images/FourLeggedTactileButtons_Overview.png" | relative_url }})
 
 The key thing to remember is that the two legs closest together (on the same side) are, somewhat unintuitively, **not** connected until you press the button. Upon button press, all four legs become connected (*i.e.,* the same node). We created the following animation to help explain further. Observe the *orientation* of the button and how the legs are connected.
 
-<!-- ![Animation showing how two sides of the button are disconnected until the button is pressed, creating a connection](assets/movies/FourLeggedTactileButtons_Animation.gif) -->
+<!-- ![Animation showing how two sides of the button are disconnected until the button is pressed, creating a connection[]({{ "/assets/movies/FourLeggedTactileButtons_Animation.gif" | relative_url }}) -->
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/movies/FourLeggedTactileButtons_Animation.mp4" type="video/mp4" />
+  <source src="{{ "/assets/movies/FourLeggedTactileButtons_Animation.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** Animation shows which two sides of a four-legged tactile button are disconnected until the button is pressed, creating a connection between all four legs.
 {: .fs-1 }
@@ -93,7 +93,7 @@ Below, we've included two wiring diagrams: one using an external power source li
 
 | With 9V Battery | With Arduino 5V Pin |
 |:-------------:|:-----------:|
-| ![Four-legged button circuit with 5V pin](assets/images/FourLeggedButtonCircuit_WithArduino_5VPin.png) | ![Four-legged button circuit with 9V battery](assets/images/FourLeggedButtonCircuit_With9VBattery.png) |
+| ![Four-legged button circuit with 5V pin[]({{ "/assets/images/FourLeggedButtonCircuit_WithArduino_5VPin.png" | relative_url }}) | ![Four-legged button circuit with 9V battery[]({{ "/assets/images/FourLeggedButtonCircuit_With9VBattery.png" | relative_url }}) |
 | Circuit powered by 9V battery | Circuit powered by 5V Arduino pin | 
 
 If you build the 9V battery circuit, then we suggest a 680Ω or 1kΩ resistor rather than a 220Ω resistor.
@@ -101,10 +101,10 @@ If you build the 9V battery circuit, then we suggest a 680Ω or 1kΩ resistor ra
 
 That's it! Once you've created the circuit, give it a try by pushing the button and the LED should turn on. See the animation below.
 
-<!-- ![Animation showing both the 9V battery and Arduino 5V power LED circuits with four-legged button working](assets/movies/FourLeggedTactileButton_LEDCircuitBreadboard_Animation.gif) -->
+<!-- ![Animation showing both the 9V battery and Arduino 5V power LED circuits with four-legged button working[]({{ "/assets/movies/FourLeggedTactileButton_LEDCircuitBreadboard_Animation.gif" | relative_url }}) -->
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/movies/Button_LEDCircuit_Breadboard_Animation-Edited-Cropped_Trim.mp4" type="video/mp4" />
+  <source src="{{ "/assets/movies/Button_LEDCircuit_Breadboard_Animation-Edited-Cropped_Trim.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** Animation showing two different voltage sources for a basic LED-based circuit with a four-legged button to control "on" and "off." When no button is pressed, there is no current flow and the LED is off.
 {: .fs-1 }
@@ -121,7 +121,7 @@ In our [Blink](led-blink.md) lesson, we introduced [digital I/O](led-blink.md#in
 
 Recall that the Arduino Uno and Leonardo have **20 general-purpose input/output** ([GPIO](https://en.wikipedia.org/wiki/General-purpose_input/output)) pins that can be used for digital input/output (I/O) using [`digitalRead()`](https://www.arduino.cc/reference/en/language/functions/digital-io/digitalread/) and [`digitalWrite()`](https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/), respectively.
 
-![Close-up image of the 20 digital I/O pins on the Arduino Uno](assets/images/ArduinoUno_DigitalIOPins.png)
+![Close-up image of the 20 digital I/O pins on the Arduino Uno[]({{ "/assets/images/ArduinoUno_DigitalIOPins.png" | relative_url }})
 
 As noted in our [Intro to Digital Output](led-blink.md) lesson, you can control any of these 20 digital I/O pins with three functions:
 
@@ -133,7 +133,7 @@ As noted in our [Intro to Digital Output](led-blink.md) lesson, you can control 
 
 Digital input is any input that can be considered either **on** (typically, `HIGH` or 5V) or **off** (typically, `LOW` or 0V). Simple, right? However, using digital input with microcontrollers can be confusing, at least at first.
 
-![A graph demonstrating digital input](assets/images/WhatIsDigitalInput_Graph_ByJonEFroehlich.png)
+![A graph demonstrating digital input[]({{ "/assets/images/WhatIsDigitalInput_Graph_ByJonEFroehlich.png" | relative_url }})
 
 The **most critical** concept to understand is that microcontrollers read voltage, not current. This directly (and dramatically) affects how we setup our input circuits.
 
@@ -149,7 +149,7 @@ As Lee describes in [his Arduino lecture notes](https://web.stanford.edu/class/a
 
 For the ATmega328, the input voltage needs to be at least $$0.6\cdot V_{CC}\to 0.6\cdot5 V=3V$$ to qualify as `HIGH` and between $$0$$ and $$0.3\cdot V_{CC}\to 0.3\cdot 5V=1.5V$$ to qualify as `LOW`. For the middle range $$0.3\cdot V_{CC}$$ to $$0.6\cdot V_{CC}$$, the behavior of the pin is undefined.
 
-![A graph showing what is considered HIGH or LOW by the ATmega328](assets/images/WhatIsHighOrLow_Graph_ByJonEFroehlich.png)
+![A graph showing what is considered HIGH or LOW by the ATmega328[]({{ "/assets/images/WhatIsHighOrLow_Graph_ByJonEFroehlich.png" | relative_url }})
 
 In general, this is unlikely to affect how you wire your digital input circuits with switches, buttons, or binary sensors (like reed switches)—because your two states will be 5V and 0V—but it may affect whether and how you hook up other sensors to a microcontroller, if you want to interpret them as digital input.
 
@@ -161,13 +161,13 @@ Let's walk through how one might try to hook up a button to a microcontroller. I
 
 Given how we built button-based circuits above—without a microcontroller—you might initially think to hook up your button like the following:
 
-![Initial digital input circuit with a button but there is a problem](assets/images/ArduinoUno_Button_SchematicAndDiagram_FloatingPin.png)
+![Initial digital input circuit with a button but there is a problem[]({{ "/assets/images/ArduinoUno_Button_SchematicAndDiagram_FloatingPin.png" | relative_url }})
 **Figure.** Button circuit for microcontroller hooked up similarly to our non-microcontroller version above. This circuit will "sort of" work but has a problem related to a "floating pin" when the switch is open.
 {: .fs-1 }
 
 However, if you do this, what will the digital input pin read when the switch is **open** (that is, when the button is **not** pressed)? Well, this is called a "floating pin" and it's not good. A floating pin is susceptible to randomly oscillating between `HIGH` and `LOW`. See the animation below. <!-- TODO: add in reasons why pin could oscillate -->
 
-![Animation showing a floating pin condition when a button is just hooked up to 5V without a pull-down resistor](assets/movies/Arduino_Button_SchematicsAndDiagrams_PullDownResistorWalkthrough_Animation-FloatingPin-Optimized.gif)
+![Animation showing a floating pin condition when a button is just hooked up to 5V without a pull-down resistor[]({{ "/assets/movies/Arduino_Button_SchematicsAndDiagrams_PullDownResistorWalkthrough_Animation-FloatingPin-Optimized.gif" | relative_url }})
 **Figure.** Animation of what happens when you press a button with the simple circuit configuration.
 {: .fs-1 }
 
@@ -192,7 +192,7 @@ void loop()
 Here's a quick video demonstration of what happens—the floating pin problem! Note: we are using a slightly modified version of this code where an LED is turned on if the button is pressed (*i.e.,* if `buttonVal == 1`). This just makes it easier to see the fluctuating button state.
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/movies/Arduino_Button_FloatingPinProblem720p.mp4" type="video/mp4" />
+  <source src="{{ "/assets/movies/Arduino_Button_FloatingPinProblem720p.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** Floating pins are digital input pins that are not tied to a specific input voltage (either 0V or 5V) and thus, are subject to electromagnetic interference. Here, the button state is oscillating between `HIGH` and `LOW` simply due to the electromagnetic interference from my body. Makes me feel like Dumbledore! The source code is [here](https://github.com/makeabilitylab/arduino/blob/master/Basics/digitalRead/ButtonPressedFloatingPin/ButtonPressedFloatingPin.ino).
 {: .fs-1 }
@@ -205,7 +205,7 @@ To solve the floating pin problem, we need to bias the digital input pin to a kn
 
 You might try to do this by adding `GND` to the other leg of the button like this:
 
-![Circuit diagram showing an incorrect hookup which causes a short circuit when the button is pressed](assets/images/ArduinoUno_Button_SchematicAndDiagram_ShortCircuit.png)
+![Circuit diagram showing an incorrect hookup which causes a short circuit when the button is pressed[]({{ "/assets/images/ArduinoUno_Button_SchematicAndDiagram_ShortCircuit.png" | relative_url }})
 **Figure.** Warning: Do **not** do this. When the switch closes, a short circuit occurs, which could damage your microcontroller or Arduino.
 {: .fs-1 }
 
@@ -213,7 +213,7 @@ And you're on the right track. Now, when the switch is open, the digital input p
 
 <!-- TODO: expand on why short circuits are bad? -->
 
-![Animation showing a button circuit without a pull-down resistor causing a short when the button is pressed](assets/movies/Arduino_Button_SchematicsAndDiagrams_PullDownResistorWalkthrough_Animation-ShortCircuit-Optimized.gif)
+![Animation showing a button circuit without a pull-down resistor causing a short when the button is pressed[]({{ "/assets/movies/Arduino_Button_SchematicsAndDiagrams_PullDownResistorWalkthrough_Animation-ShortCircuit-Optimized.gif" | relative_url }})
 **Figure.** Animation showing the effect of connecting `GND` without a resistor. A short circuit!
 {: .fs-1 }
 
@@ -225,13 +225,13 @@ To solve this problem, we can add in what's called a **pull-down resistor** befo
 
 Typically, this pull-down resistor value is 10kΩ, which is also what the official [Arduino docs](https://www.arduino.cc/en/Tutorial/DigitalPins) recommends. A small resistor is called a **strong** pull-down and a large resistor is called a **weak** pull-down. In a bit, we'll talk about **what** factors influence the pull-down resistor value (hint: use a 10kΩ) but the primary tradeoff is in power efficiency (low resistor values "waste" more current) and function (a large resistor may not always work properly as a pull-down).
 
-![Circuit diagram showing a correct pull-down resistor circuit with the 5V connection then the digital input pin then a 10K resistor then GND](assets/images/ArduinoUno_Button_SchematicAndDiagram_PullDownResistor.png)
+![Circuit diagram showing a correct pull-down resistor circuit with the 5V connection then the digital input pin then a 10K resistor then GND[]({{ "/assets/images/ArduinoUno_Button_SchematicAndDiagram_PullDownResistor.png" | relative_url }})
 The pull-down resistor is quite large: 10,000Ω (10kΩ)
 {: .fs-1 }
 
 Here's an animation showing how a pull-down resistor configuration works. Notice how (almost) none of the current goes into Pin 2. This is because, as stated above, the digital input pins “*are in a high-impedance state*” equivalent to a 100,000,000Ω (100MΩ) resistor (see [Arduino docs](https://docs.arduino.cc/learn/microcontrollers/digital-pins/)). And remember, microcontrollers read voltage, not current (so we don't need current into our input pin)!
 
-![Animation showing the correct operation of digital input with a pull-down resistor configuration](assets/movies/Arduino_Button_SchematicsAndDiagrams_PullDownResistorWalkthrough_Animation-PullDownResistor-Optimized.gif)
+![Animation showing the correct operation of digital input with a pull-down resistor configuration[]({{ "/assets/movies/Arduino_Button_SchematicsAndDiagrams_PullDownResistorWalkthrough_Animation-PullDownResistor-Optimized.gif" | relative_url }})
 
 And here's a video demonstrating the floating pin problem and fix:
 
@@ -252,13 +252,13 @@ Pull-up resistor configurations can be confusing because the `HIGH` and `LOW` va
 
 For convenience, here are side-by-side diagrams of a pull-down *vs.* pull-up resistor configuration:
 
-![Difference between a pull-down vs. pull-up resistor](assets/images/Arduino_Button_PullDownVsPullUpResistor.png) 
+![Difference between a pull-down vs. pull-up resistor[]({{ "/assets/images/Arduino_Button_PullDownVsPullUpResistor.png" | relative_url }}) 
 
 ### Internal pull-up resistors
 
 Finally, many microcontrollers include an internal pull-up resistor that can be activated with software. On the Arduino, we can configure an input pin to use its internal pull-up resistor with: `pinMode(<pin>, INPUT_PULLUP);`. This eliminates the need for any external resistors (thus simplifying your circuit).
 
-![Difference between a pull-down, pull-up, and internal pull-up resistor](assets/images/Arduino_Button_InternalPullUpResistor.png)
+![Difference between a pull-down, pull-up, and internal pull-up resistor[]({{ "/assets/images/Arduino_Button_InternalPullUpResistor.png" | relative_url }})
 
 Some microcontrollers have both internal pull-up *and* pull-down resistors. The popular ESP32 chip, for example, used in the [Adafruit Huzzah32](https://learn.adafruit.com/adafruit-huzzah32-esp32-feather/overview) has built-in pull-up and pull-down resistors on all GPIO pins except for GPIO34-GPIO39 (see [link](https://github.com/espressif/arduino-esp32/issues/316)). These can be enabled with either `pinMode(<pin>, INPUT_PULLUP);` or `pinMode(<pin>, INPUT_PULLDOWN);`
 
@@ -279,7 +279,7 @@ The following section detailing tradeoffs in selecting pull-up and pull-down res
 
 The longer answer: there are multiple factors to consider, but the primary tradeoff is in selecting a resistor that is small enough to "pull-up" the voltage to `HIGH` when the switch is open but large enough to not "waste" power due to too much current through the resistor when the switch is closed. Remember, a "strong" pull-up is a low-resistance value while a "weak" pull-up is a high-resistance value. Why? Let's read more below.
 
-![Two schematics showing pull-up resistor when switch is open and closed](assets/images/PullUpResistor_Schematics_CurrentLeakageAndPowerDissipation.png)
+![Two schematics showing pull-up resistor when switch is open and closed[]({{ "/assets/images/PullUpResistor_Schematics_CurrentLeakageAndPowerDissipation.png" | relative_url }})
 **Figure.** On the ATmega328, the digital input pin voltage ($$V_{pin}$$) needs to be greater than 3V to quality as `HIGH` and less than 1.5V to qualify as `LOW`. The in-between voltage range (1.5-3V) is undefined.  
 {: .fs-1 }
 
@@ -313,10 +313,10 @@ $$
 
 Below, we are graphing these two equations together for varying values of the pull-up resistor $$R$$. For convenience, we've marked the ATmega328 `HIGH` threshold for $$V_{pin}$$ and the 10kΩ $$R$$ value.  
 
-<!-- ![A graph of the tradeoff in selecting a resistance value for pull-up resistor](assets/images/PullUpResistor_VpinAndPowerDissipationGraph.png)
+<!-- ![A graph of the tradeoff in selecting a resistance value for pull-up resistor[]({{ "/assets/images/PullUpResistor_VpinAndPowerDissipationGraph.png" | relative_url }})
 Calculated using $$V_{in}=5V$$ -->
 
-![](assets/images/PullUpResistor_InputVoltageAndPowerDissipationGraph2_LinearAxes.png)
+![[]({{ "/assets/images/PullUpResistor_InputVoltageAndPowerDissipationGraph2_LinearAxes.png" | relative_url }})
 **Figure.** Graphing the input voltage $$V_{pin}$$ and the power dissipation $$P$$ as a function of pull-up resistor value. Both graphs are the same but differ in the x-axis: the right graph zooms in so that you can better see the 10kΩ pull-up value.
 {: .fs-1 }
 
@@ -334,7 +334,7 @@ Though beyond the scope of this class, there are other factors to consider as we
 
 What about pull-down resistors? The same tradeoffs and factors apply here. But instead of $$I_{IH}$$, we need to know the leakage current $$I_{IL}$$ from an input pin to ground. The [ATmega328 datasheet](../assets/datasheets/ATMega328.pdf) specifies the same leakage current for $$I_{IH}$$ and $$I_{IL}$$ as $$1µA$$. 
 
-![Two schematics showing a pull-down resistor when switch is open and closed and the amount of current and power](assets/images/PullDownResistor_Schematics_CurrentLeakageAndPowerDissipation.png)
+![Two schematics showing a pull-down resistor when switch is open and closed and the amount of current and power[]({{ "/assets/images/PullDownResistor_Schematics_CurrentLeakageAndPowerDissipation.png" | relative_url }})
 
 The above sub-sections were strongly informed by Section 12.6.9 entitled "Pullup and Pulldown Resistors" of Scherz and Monk's [Practical Electronics for Inventors](https://learning.oreilly.com/library/view/practical-electronics-for/9781259587559).
 
@@ -344,7 +344,7 @@ Whew, OK. We've now explained how to use four-legged tactile buttons, how to use
 
 It's time to make stuff. We're going to start with a button in a pull-down configuration before making circuits with external pull-up and internal pull-up configurations. Then, in the [next lesson](piano.md), we'll make a simple "piano" synthesizer that puts our skills to the test!
 
-![Screenshot of Tinkercad pull-down, pull-up, and internal pull-up circuits + code](assets/images/Tinkercad_ExternalPullDownAndUp_AndInternalPullUp_ByJonEFroehlich.png)
+![Screenshot of Tinkercad pull-down, pull-up, and internal pull-up circuits + code[]({{ "/assets/images/Tinkercad_ExternalPullDownAndUp_AndInternalPullUp_ByJonEFroehlich.png" | relative_url }})
 **Figure:** In Tinkercad, we created interactive demos of [external pull-down resistors](https://www.tinkercad.com/things/hlkxqsvSz2E-button-with-pull-down-resistor-no-breadboard), [external pull-up resistors](https://www.tinkercad.com/things/15Jim4uneb7-button-with-pull-up-resistor-no-breadboard), and [internal pull-up resistors](https://www.tinkercad.com/things/5AADEXC7R1o-button-with-internal-pull-up-resistor-no-breadboard). For simplicity, we built these *without* breadboards to allow you to really focus on the circuit and wiring. Click on the links to try them yourself!
 {: .fs-1 }
 
@@ -354,11 +354,11 @@ Let's begin with a pull-down resistor configuration.
 
 ### Pull-down resistor wiring diagram
 
-![Wiring diagram and schematic for a button with a pull-down resistor wired to digital I/O Pin 2](assets/images/ArduinoUno_Button_PullDownResistor_WiringDiagram.png)
+![Wiring diagram and schematic for a button with a pull-down resistor wired to digital I/O Pin 2[]({{ "/assets/images/ArduinoUno_Button_PullDownResistor_WiringDiagram.png" | relative_url }})
 
 As with any circuit, there are many ways to wire up a button with a pull-down resistor configuration. Here are some examples—all are functionally equivalent. I tend to use the wiring shown on the far left, which is the same one shown above.
 
-![Five separate wiring diagrams of a pull-down resistor configuration with a button wired to Pin 2 on the Arduino Uno](assets/images/ArduinoUno_Button_PullDownResistor_WiringDiagramGallery.png)
+![Five separate wiring diagrams of a pull-down resistor configuration with a button wired to Pin 2 on the Arduino Uno[]({{ "/assets/images/ArduinoUno_Button_PullDownResistor_WiringDiagramGallery.png" | relative_url }})
 
 To zoom in on this image, right-click and select 'Open image in a new tab.'
 {: .fs-1 }
@@ -388,7 +388,7 @@ void loop()
 
 As some of you may still find breadboards a bit confusing, here's a pull-down resistor version without a breadboard made in Tinkercad. We've also hooked up an external LED with a current limiting resistor to Pin 13 (`LED_BUILTIN` on the Uno and Leonardo).
 
-![Tinkercad Arduino circuit with pull-down resistor](assets/images/Tinkercad_PullDownResistor_WithLED_ByJonEFroehlich.png)
+![Tinkercad Arduino circuit with pull-down resistor[]({{ "/assets/images/Tinkercad_PullDownResistor_WithLED_ByJonEFroehlich.png" | relative_url }})
 
 You can [try this out on Tinkercad](https://www.tinkercad.com/things/hlkxqsvSz2E-button-with-pull-down-resistor-no-breadboard).
 
@@ -396,34 +396,34 @@ You can [try this out on Tinkercad](https://www.tinkercad.com/things/hlkxqsvSz2E
 
 Here's the wiring for a pull-up resistor configuration. Modify the code above to turn on the LED when the button is pressed.
 
-![Wiring diagram and schematic for a button with a pull-up resistor wired to digital I/O Pin 2](assets/images/ArduinoUno_Button_PullUpResistor_WiringDiagram.png)
+![Wiring diagram and schematic for a button with a pull-up resistor wired to digital I/O Pin 2[]({{ "/assets/images/ArduinoUno_Button_PullUpResistor_WiringDiagram.png" | relative_url }})
 
 ### Tinkercad external pull-up resistor example
 
 Here's the [interactive external pull-up resistor Tinkercad version](https://www.tinkercad.com/things/15Jim4uneb7-button-with-external-pull-up-resistor-no-breadboard) (sans breadboard).
 
-![Tinkercad version of external pull-up resistor](assets/images/Tinkercad_ExternalPullUpResistor_ByJonEFroehlich.png)
+![Tinkercad version of external pull-up resistor[]({{ "/assets/images/Tinkercad_ExternalPullUpResistor_ByJonEFroehlich.png" | relative_url }})
 
 ## Internal pull-up resistor configuration
 
 Now try it with the internal pull-up resistor.
 
-![Wiring diagram and schematic for a button with an internal pull-up resistor wired to digital I/O Pin 2](assets/images/ArduinoUno_Button_InternalPullUpResistor_WiringDiagram.png)
+![Wiring diagram and schematic for a button with an internal pull-up resistor wired to digital I/O Pin 2[]({{ "/assets/images/ArduinoUno_Button_InternalPullUpResistor_WiringDiagram.png" | relative_url }})
 
-The schematic is for illustrative purposes. The internal software controlled switch is a transistor so the actual circuit looks something like [this](assets/images/Arduino_InputPinWithPullUpResistor_Schematic.png) (from [Lee, Input/output pins on Arduino, Stanford ENGR40M](https://web.stanford.edu/class/archive/engr/engr40m.1178/slides_sp17/arduino-io.pdf))
+The schematic is for illustrative purposes. The internal software controlled switch is a transistor so the actual circuit looks something like [this[]({{ "/assets/images/Arduino_InputPinWithPullUpResistor_Schematic.png" | relative_url }}) (from [Lee, Input/output pins on Arduino, Stanford ENGR40M](https://web.stanford.edu/class/archive/engr/engr40m.1178/slides_sp17/arduino-io.pdf))
 {: .fs-1 }
 
 ### Tinkercad internal pull-up resistor example
 
 Here's the [interactive internal pull-up resistor Tinkercad version](https://www.tinkercad.com/things/5AADEXC7R1o-button-with-internal-pull-up-resistor-no-breadboard).
 
-![Tinkercad version of internal pull-up resistor](assets/images/Tinkercad_InternalPullUpResistor_ByJonEFroehlich.png)
+![Tinkercad version of internal pull-up resistor[]({{ "/assets/images/Tinkercad_InternalPullUpResistor_ByJonEFroehlich.png" | relative_url }})
 
 ## Putting it all together
 
 For your prototyping journals, make a circuit that has three buttons wired to digital input and three corresponding (external) LEDs wired to digital output. Use a different pull-down or pull-up configuration for each button. You must use your breadboards. Then write code to respond accordingly.
 
-![Workbench photo of three buttons with different pull-up and pull-down configurations](assets/images/ArduinoUno_ThreeButtonsWithDifferentResistorConfigurations_WorkbenchPhoto.png)
+![Workbench photo of three buttons with different pull-up and pull-down configurations[]({{ "/assets/images/ArduinoUno_ThreeButtonsWithDifferentResistorConfigurations_WorkbenchPhoto.png" | relative_url }})
 
 <!-- TODO: add code for this and a workbench video showing it working -->
 
@@ -431,7 +431,7 @@ For your prototyping journals, make a circuit that has three buttons wired to di
 
 To help you get started, here's an [initial version in Tinkercad](https://www.tinkercad.com/things/iVeBcYm6Pjp-pull-down-and-pull-up-resistor-demo-with-led-no-breadboard) (but without a breadboard) and it controls only one LED rather than three separate LEDs.
 
-![All three resistor configurations wired together](assets/images/Tinkercad_ExternalPullDownPullUpAndInternalPullUpOnSingleBoard_ByJonEFroehlich.png)
+![All three resistor configurations wired together[]({{ "/assets/images/Tinkercad_ExternalPullDownPullUpAndInternalPullUpOnSingleBoard_ByJonEFroehlich.png" | relative_url }})
 **Figure.** An example [Tinkercad circuit+code](https://www.tinkercad.com/things/iVeBcYm6Pjp-pull-down-and-pull-up-resistor-demo-with-led-no-breadboard) that shows how to wire up and use an external pull-down resistor, external pull-up resistor, and internal pull-up resistor. When you click on any of the three buttons, the LED turns on.
 {: .fs-1 }
 

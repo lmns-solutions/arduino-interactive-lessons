@@ -55,7 +55,7 @@ The baud rate specifies how fast data is sent over serial, which is expressed in
 
 Thus far, speed hasn't been a concern. We've typically used 9600 bps (or 9.6 kbps) for transmitting our debugging info. At 9600 bps, the transmitter transmits one new voltage pulse (*e.g.,* HIGH corresponding to +5V and LOW corresponding to 0V) every 1/9600th of a second, which is interpreted as a bit (a 1 or 0) by the receiver. Arduino recommends up to 115200 or 115.2 kbps, which is 12x faster than 9600 (but still slow by today's networking standards, of course).
 
-![](assets/images/SerialMonitorShowingBaudRate.png)
+![[]({{ "/assets/images/SerialMonitorShowingBaudRate.png" | relative_url }})
 {: .mx-auto .align-center }
 **Figure.** The Arduino IDE's [Serial Monitor](../arduino/serial-print.md), which has a drop down for baud rate. The baud rate used in `Serial.begin(<baud>)` must match this drop down menu setting or Serial Monitor will not properly communicate with Arduino.
 {: .fs-1 }
@@ -68,7 +68,7 @@ This will be microcontroller dependent. The Arduino Uno uses a ATmega328P microc
 
 The second function, `begin(unsigned long baud, byte config)`, allows for an optional argument that configures the serial transmission packet or frame. A serial transmission frame consists of three pieces: **data**, **parity**, and **synchronization bits** (start and stop). 
 
-![](assets/images/SerialFrame_FromSparkfun.png)
+![[]({{ "/assets/images/SerialFrame_FromSparkfun.png" | relative_url }})
 
 **Figure.** An asynchronous serial communication frame.
 {: .fs-1 }
@@ -83,13 +83,13 @@ Importantly, if the baud and config settings do not match between the Arduino an
 
 Only one computer program can open a serial port at a time. For example, if you attempt to open Serial Monitor on the same COM port that has been opened by another program, you will receive an error like this: `Error opening serial port 'COM7'. (Port busy)`.
 
-![](assets/images/SerialMonitorErrorOpeningSerialPort.png)
+![[]({{ "/assets/images/SerialMonitorErrorOpeningSerialPort.png" | relative_url }})
 **Figure.** A demonstration of what happens if you try to open Serial Monitor on a COM port that is already opened by another program. The Arduino IDE shows an error stating `Error opening serial port 'COM7'. (Port busy)`.
 {: .fs-1 }
 
 Similarly, if we attempt to access a previously opened serial port with [PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/overview), we receive `Access to the port 'COM7' is denied.`
 
-![](assets/images/PowerShellAccessToPortIsDenied.png)
+![[]({{ "/assets/images/PowerShellAccessToPortIsDenied.png" | relative_url }})
 **Figure.** Only one software program can access a serial port at a time.
 {: .fs-1 }
 
@@ -333,7 +333,7 @@ void loop() {
 
 And here's the corresponding circuit for the program above, which consists of a current-limiting resistor and LED attached to Pin 13. Of course, you could build almost any circuit to respond to serial input. But let's keep things simple!
 
-![](assets/images/SimpleSerialIn_LEDCircuit.png)
+![[]({{ "/assets/images/SimpleSerialIn_LEDCircuit.png" | relative_url }})
 **Figure.** The corresponding circuit for [SimpleSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SimpleSerialIn/SimpleSerialIn.ino). Made in Fritzing and PowerPoint.
 {: .fs-1}
 
@@ -341,7 +341,7 @@ And here's the corresponding circuit for the program above, which consists of a 
 
 Let's begin by using our now familiar Arduino IDE [Serial Monitor](../arduino/serial-print.md) tool. With [SimpleSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SimpleSerialIn/SimpleSerialIn.ino) loaded on your Arduino and your Arduino connected to your computer, open the Serial Monitor and send data to our Arduino. Make sure you've selected the same baud rate used in `Serial.begin(<baud rate>)`.
 
-![](assets/images/ArduinoIDESerialMonitor_AnnotatedScreenShot.png)
+![[]({{ "/assets/images/ArduinoIDESerialMonitor_AnnotatedScreenShot.png" | relative_url }})
 **Figure** An annotated screenshot the Arduino IDE's [Serial Monitor](../arduino/serial-print.md) tool for sending and receiving serial data. The data "echoed" back to our Arduino is shown in the autoscrolling textfield (where it says "Arduino received...").
 {: .fs-1}
 
@@ -350,7 +350,7 @@ Let's begin by using our now familiar Arduino IDE [Serial Monitor](../arduino/se
 Here's a video demonstration of sending ASCII-encoded text via [Serial Monitor](../arduino/serial-print.md) to the Arduino running [SimpleSerialInOLED.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SimpleSerialInOLED/SimpleSerialInOLED.ino). 
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/SimpleSerialIn-NoTalking-TrimmedAndSpedUp720p.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/SimpleSerialIn-NoTalking-TrimmedAndSpedUp720p.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** A video demonstrating using the Arduino IDE [Serial Monitor](../arduino/serial-print.md) tool to communicate with the Arduino running [SimpleSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SimpleSerialIn/SimpleSerialIn.ino). For this video, we are using a slightly modified program called [SimpleSerialInOLED.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SimpleSerialInOLED/SimpleSerialInOLED.ino) along with an [OLED display](../advancedio/oled.md). This allows you to more easily see the received values.
 {: .fs-1 }
@@ -427,7 +427,7 @@ PS> $port.Close()
 Here's a video demonstration:
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/SimpleSerialIn-NoTalking-WindowsPowerShell-TrimmedAndSpedUp720p.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/SimpleSerialIn-NoTalking-WindowsPowerShell-TrimmedAndSpedUp720p.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** A video demonstrating using [Windows PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/overview) to communicate with the Arduino running [SimpleSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SimpleSerialIn/SimpleSerialIn.ino). For this video, we are using a slightly modified program called [SimpleSerialInOLED.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SimpleSerialInOLED/SimpleSerialInOLED.ino) along with an [OLED display](../advancedio/oled.md). This allows you to more easily see the received values.
 {: .fs-1 }
@@ -518,7 +518,7 @@ And that's it! This code is available as [serial_demo.py](https://github.com/mak
 #### Video demo using Python
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/SimpleSerialIn-Python-NoTalking2-TrimmedAndSpedUp720p.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/SimpleSerialIn-Python-NoTalking2-TrimmedAndSpedUp720p.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** A video demonstrating using [Python3](https://www.python.org/downloads/) with [pySerial](https://pypi.org/project/pyserial/) to communicate with the Arduino running [SimpleSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SimpleSerialIn/SimpleSerialIn.ino). For this video, we are using a slightly modified program called [SimpleSerialInOLED.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SimpleSerialInOLED/SimpleSerialInOLED.ino) along with an [OLED display](../advancedio/oled.md). This allows you to more easily see the received values.
 {: .fs-1 }

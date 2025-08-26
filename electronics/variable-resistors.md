@@ -22,7 +22,7 @@ usetocbot: true
 
 In previous lessons, we worked with [fixed-value resistors](resistors.md). In this lesson, we'll learn about **variable resistors**—resistors that *change* their resistance based in response to some physical input (like potentiometers) or environmental input like thermistors (temperature), force-sensitive resistors (force), or photo-sensitive resistors (light). We've listed some examples below.
 
-![Grid of images showing different types of variable resistors, including: potentiometers, touch membranes, photocells, thermistors, force-sensitive resistors, and flex sensors](assets/images/VariableResistors_ExampleGallery.png)
+![Grid of images showing different types of variable resistors, including: potentiometers, touch membranes, photocells, thermistors, force-sensitive resistors, and flex sensors[]({{ "/assets/images/VariableResistors_ExampleGallery.png" | relative_url }})
 **Figure.** Many common **sensors** are actually variable resistors—they dynamically change their resistance in response to some human or environmental input. For example, thermistors change their resistance based on temperature, photocells based on light, force-sensitive resistors (FSRs) based on force. In fact, you have thermistors, photocells, and FSRs in your hardware kits! Prices and pictures are from Sparkfun.com; parts can often be cheaper in bulk from suppliers like [Digi-Key](https://www.digikey.com/) or [Mouser Electronics](https://www.mouser.com/).
 {: .fs-1 }
 
@@ -32,7 +32,7 @@ This is exciting! Physical computing is all about **interaction** and resistive 
 
 There are **two-leg** (or "two-terminal" or "two-lead") variable resistors like rheostats, photocells, and force-sensitive resistors and there are **three-leg** variable resistors, which are called potentiometers. Both types are orientation agnostic—just like regular resistors, they will work in either direction (non-polarized). See schematic symbols below.
 
-![](assets/images/SchematicSymbolsOfVariableResistors_ByJonFroehlich.png)
+![[]({{ "/assets/images/SchematicSymbolsOfVariableResistors_ByJonFroehlich.png" | relative_url }})
 **Figure.** Schematic symbols for some example two-leg and three-leg variable resistors. Notice how some schematic symbols are the *same* across variable resistor types.
 {: .fs-1 }
 
@@ -49,14 +49,14 @@ Potentiometers are probably the most common type of variable resistor and an imp
 A [potentiometer](https://en.wikipedia.org/wiki/Potentiometer) (or pot) is a three-terminal resistor with a sliding or rotating contact that can be used to dynamically vary resistance.  
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/Potentiometer_Overview_ByJonFroehlich.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/Potentiometer_Overview_ByJonFroehlich.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** This animation shows how the wiper can be used to vary resistance in a rotary potentiometer. The figure on the right is the formal electrical symbol. Animation by Jon Froehlich. Created in PowerPoint.
 {: .fs-1 }
 
 Potentiometers are truly ubiquitous electronic components found in everything from volume controls to analog joysticks. In our UW courses, we often provide 10kΩ potentiometers in our kits like the [10K panel mount potentiometer](https://www.adafruit.com/product/562) and [10K trim potentiometer](https://www.sparkfun.com/products/9806), shown below.
 
-![](assets/images/Potentiometers_TwoExamplesWithSchematicSymbol.png)
+![[]({{ "/assets/images/Potentiometers_TwoExamplesWithSchematicSymbol.png" | relative_url }})
 **Figure.** Two example potentiometers commonly included in our hardware kits: a 10kΩ panel mount and and a 10kΩ trim potentiometer.
 {: .fs-1 }
 
@@ -71,7 +71,7 @@ Potentiometers have three legs: the resistance between the outer two legs (Leg 1
 The power of a potentiometer is in that middle leg (Leg 2) whose resistance varies depending on the potentiometer's sliding or rotating contact (the wiper) position. It may help to think of a potentiometer as containing two interdependent resistors $$R_1$$ and $$R_2$$ that always sum to $$R_{Total}$$ (where $$R_{Total}$$ is the potentiometer's total value like 1kΩ or 10kΩ). As you move the slider contact, $$R_1$$'s resistance will increase as $$R_2$$'s resistance decreases. See animation below.
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/PotentiometerIntroduction_TrimmedAndCropped.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/PotentiometerIntroduction_TrimmedAndCropped.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** Animation by Jon Froehlich. Created in PowerPoint.
 {: .fs-1 }
@@ -79,7 +79,7 @@ The power of a potentiometer is in that middle leg (Leg 2) whose resistance vari
 Using two multimeters set to **measure resistances** across both Legs 1-2 and 2-3, we can examine this behavior directly. Notice how as you move the wiper, the resistance across Legs 1 and 2 ($$R_{1}$$) and Legs 2 and 3 ($$R_{2}$$) proportionally change but always sum to $$R_{total}$$. We are using a 10kΩ potentiometer so $$R_{total}=10kΩ$$
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/Tinkercad_PotentiometerWithMultimeters.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/Tinkercad_PotentiometerWithMultimeters.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** Using two multimeters, we can examine how the resistances change between Legs 1-2 and 2-3. Note that the resistance between the outer legs (Legs 1-3) will always sum to potentiometers total value. In this case, we're using a 10kΩ, so it would sum to 10kΩ. Try it out on [Tinkercad here](https://www.tinkercad.com/things/4Aqy2AnmmMy-potentiometer-with-multimeters-measuring-resistance).
 {: .fs-1 }
@@ -88,7 +88,7 @@ Using two multimeters set to **measure resistances** across both Legs 1-2 and 2-
 
 Potentiometers come in a range of sizes, power ratings, and physical designs. Some larger designs can handle several watts of power (capable of dissipating alot of heat) while smaller, surface-mounted designs are rated for only a fraction of a watt (just like the $$\frac{1}{4}$$ watt resistors in your kits). 
 
-![](assets/images/VarietyOfPotentiometers.png)
+![[]({{ "/assets/images/VarietyOfPotentiometers.png" | relative_url }})
 **Figure.** Potentiometers are ubiquitous input devices found in everything from cars to audio mixing boards. There are nearly infinite designs, so we're only showing a small sample above. Note that you cannot tell the resistance value of a potentiometer (or pot) simply by looking at it nor can you tell whether it is a linear taper or a logarithmic taper. Logarithmic potentiometers are common in audio applications (because the human ear senses loudness logarithmically). Images sources: the potentiometer pictures with dark backgrounds are from [Adafruit](https://www.adafruit.com). The others are from [digikey](https://www.digikey.com/).
 {: .fs-1 }
 
@@ -120,7 +120,7 @@ You have very likely interacted with potentiometers many times in your life; how
 
 There are a large diversity of knobs, which fit both panel-mount potentiometers and rotary encoders, used in a variety of user-facing applications like audio mixers, joysticks, and control panels. Take a look at some examples below:
 
-![](assets/images/ExamplePotentiometerKnobs_ImagesFromAdafruit.png)
+![[]({{ "/assets/images/ExamplePotentiometerKnobs_ImagesFromAdafruit.png" | relative_url }})
 **Figure.** Small sample of potentiometer and rotary encoder knobs. All images from [Adafruit](https://www.adafruit.com/). From left-to-right: [Soft Touch T18 - White](https://www.adafruit.com/product/2047), [Soft Touch T18 - Red](https://www.adafruit.com/product/2046), [Slim Metal Knob](https://www.adafruit.com/product/2058), [Machined Metal Knob](https://www.adafruit.com/product/2056), [Slide Pot with Plastic Knob](https://www.adafruit.com/product/4271)
 {: .fs-1 }
 
@@ -128,14 +128,14 @@ There are a large diversity of knobs, which fit both panel-mount potentiometers 
 
 A fun introductory 3D-printing exercise is to design, model, and print your own potentiometer knob. We typically do this activity at the beginning of our fabrication module in our physical computing course. Here are some simple example 3D-printable potentiometer knobs that we designed.
 
-![](assets/images/CustomPotentiometerKnobsCreatedInFusion360_ByJonFroehlich.png)
+![[]({{ "/assets/images/CustomPotentiometerKnobsCreatedInFusion360_ByJonFroehlich.png" | relative_url }})
 **Figure.** Three simple potentiometer knobs created in Fusion 360 (in 5-10 minutes each). The CAD designs take roughly 20 minutes to print on an Ultimaker 2+ 3D printer with 0.2mm layer height and no supports or plate adhesion (*e.g.,* brims). All designs by Jon Froehlich. You can see step-by-step tutorial videos [here](https://youtu.be/bF1hreNH_E0) and [here](https://youtu.be/1Yz9DDb4QnI).
 {: .fs-1 }
 
 Even more fun is to combine your custom 3D prints with a microcontroller and to build custom applications that create new interactive experiences
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/3DPrintedTrimPotKnobDemo2_TrimmedAndOptimized_ByJonFroehlich.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/3DPrintedTrimPotKnobDemo2_TrimmedAndOptimized_ByJonFroehlich.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** A short video demonstrating the custom 3D printed potentiometer knobs being used as custom game controllers with an Arduino Leonardo and custom [Processing](https://processing.org/) sketches. The code for the Arduino+Processing "Etch-a-sketch" is [here](https://github.com/makeabilitylab/arduino/tree/master/Processing/ArduinoEtchASketch) and the code for the Arduino+Processing "Pong" is [here](https://github.com/makeabilitylab/arduino/tree/master/Processing/ArduinoPong). All 3D CAD designs and code by Jon Froehlich.
 {: .fs-1 }
@@ -144,14 +144,14 @@ Even more fun is to combine your custom 3D prints with a microcontroller and to 
 
 Just as our 3D-printed designs hint at, potentiometers have a long history as game controllers. In our hardware kits, we often include a 2-axis joystick like [this one](https://learn.parallax.com/tutorials/language/propeller-c/propeller-c-simple-devices/joystick) from Parallax ([$6.95 on Adafruit](https://www.adafruit.com/product/245)), which contains two embedded 10kΩ potentiometers.
 
-![](assets/images/Parallax2AxisJoystickWithTwoEmbeddedPotentiometers.png)
+![[]({{ "/assets/images/Parallax2AxisJoystickWithTwoEmbeddedPotentiometers.png" | relative_url }})
 **Figure.** The [Parallax 2-Axis Joystick](https://learn.parallax.com/tutorials/language/propeller-c/propeller-c-simple-devices/joystick) has two embedded 10 kΩ potentiometers, one for each axis. You can see a video demo [here](https://youtu.be/SXtPGAu4MMw).
 {: .fs-1 }
 
 By moving the analog joystick, you independently control the two potentiometers in a voltage divider configuration. There is a $$V_{Out}$$ for the "Up/Down" potentiometer and a $$V_{Out}$$ for the "Left/Right" potentiometer. See the circuit diagram above.
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/Parallax_2-AxisJoystick_TrimmedAndMuted.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/Parallax_2-AxisJoystick_TrimmedAndMuted.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** A short snippet from this [official Parallax video](https://youtu.be/SXtPGAu4MMw) showing how physical movement of the joystick is translated into an electrical signal using two potentiometers.
 {: .fs-1 }
@@ -160,25 +160,25 @@ By moving the analog joystick, you independently control the two potentiometers 
 
 Potentiometers are actually conveniently packaged voltage dividers, which we first described in [Lesson 3](series-parallel.md): $$R_{1}$$ and $$R_{2}$$ divide the voltage as the potentiometer wiper moves.
 
-![](assets/images/PotentiometersAsVoltageDividers2_ByJonFroehlich.png)
+![[]({{ "/assets/images/PotentiometersAsVoltageDividers2_ByJonFroehlich.png" | relative_url }})
 **Figure.** A potentiometer is a compact voltage divider. Image made in PowerPoint.
 {: .fs-1 }
 
 As an example, let's hook up a potentiometer to 5V (Leg 1) and ground (Leg 3) and see the output voltage $$V_{out}$$ vary at the wiper leg (the signal at Leg 2):
 
-![](assets/images/PotentiometerHookedUpTo5VAndGnd_ByJonFroehlich.png)
+![[]({{ "/assets/images/PotentiometerHookedUpTo5VAndGnd_ByJonFroehlich.png" | relative_url }})
 **Figure.** Let's hookup the potentiometer to a 5V and ground. Image made in PowerPoint.
 {: .fs-1 }
 
 Now, let's see what happens as we change the wiper. Notice how $$V_{out}$$ changes according to $$V_{in} * \frac{R2}{(R1 + R2)}$$. In the video below, we are using a 1kΩ potentiometer but the function is the same.
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/PotentiometerIntroduction-VoltageDividerWithCircuitJS_ByJonFroehlich.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/PotentiometerIntroduction-VoltageDividerWithCircuitJS_ByJonFroehlich.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** A demonstration of how $$V_{out}$$ changes according to $$V_{in} * \frac{R2}{(R1 + R2)}$$. Animation made in PowerPoint and CircuitJS.
 {: .fs-1 }
 
-<!-- ![Image showing how you potentiometers can be thought of as voltage dividers](assets/images/PotentiometersAsVoltageDividers.png)
+<!-- ![Image showing how you potentiometers can be thought of as voltage dividers[]({{ "/assets/images/PotentiometersAsVoltageDividers.png" | relative_url }})
 A 10kΩ potentiometer split into two constituent resistors ($$R_{1}$$) and ($$R_{2}$$). In this case, the wiper is in the middle, so $$V_{A0}$$ equals 2.5V.
 {: .fs-1 } -->
 
@@ -195,7 +195,7 @@ When only two terminals (or legs) of the potentiometer are used—an outer leg a
 
 Whew, now we're ready to build stuff! Let's start by building a simple LED circuit with our potentiometer as a two-terminal variable resistor. Here, we will only use one outer leg (either Leg 1 or 3, it doesn't matter) and the signal leg (Leg 2). Let's take a look at the circuit diagram—is it what you expected? Why or why not?
 
-![](assets/images/HookingUpPotentiometerAsTwoTerminalVariableResistor_ByJonFroehlich.png)
+![[]({{ "/assets/images/HookingUpPotentiometerAsTwoTerminalVariableResistor_ByJonFroehlich.png" | relative_url }})
 **Figure.** An example of how to hook up a potentiometer as a variable resistor. Image made in [Fritzing](http://fritzing.org/) and PowerPoint. 
 {: .fs-1 }
 
@@ -204,7 +204,7 @@ Do you notice that additional fixed-value resistor in our circuit? Why do you th
 Answer: because many potentiometers go from 0Ω to their max value, we must use a "backup" resistor in **series** with our potentiometer. Otherwise, when we rotate the potentiometer to low resistance values, too much current will go through our LED. For example, with a typical red LED with $$V_f=2V$$ and a 9V battery, if we set the potentiometer to 50Ω, then we will have $$I=\frac{7V}{50Ω}=140mA$$, which is far beyond the 20-30mA threshold of the LED.
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/PotentiometerWithBackupResistor_TinkercadCircuits_Cropped_ByJonFroehlich.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/PotentiometerWithBackupResistor_TinkercadCircuits_Cropped_ByJonFroehlich.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** Here's an example of what would happen if you rotated the potentiometer to low resistance without a backup resistor. Boom, another blown out LED. Video made with [Tinkercad](https://www.tinkercad.com/things/d6wWCmUhl7g) and Camtasia. 
 {: .fs-1 }
@@ -215,7 +215,7 @@ You can, of course, also build a potentiometer-based circuit in [CircuitJS](http
 
 We'd like you to prototype two potentiometer-based LED circuits in Tinkercad Circuits: the first **without** a breadboard and the second **with** a breadboard. If you'd like, you can include a ammeter and voltmeter showing how the current and voltage drops change as you rotate the potentiometer knob. Here are two possible examples of potentiometer-based LED circuit. Make sure both the pictorial representations and circuit schematics make sense. Remember, we are only using **two** of the **three** legs of the potentiometer.
 
-![](assets/images/BreadboardingPotentiometerAsTwoTerminalVariableResistorWithLED_ByJonFroehlich.png)
+![[]({{ "/assets/images/BreadboardingPotentiometerAsTwoTerminalVariableResistorWithLED_ByJonFroehlich.png" | relative_url }})
 **Figure.** An example of how to hook up a potentiometer as a variable resistor with a breadboard. Many other possible functionally equivalent circuits exist. Image made in [Fritzing](http://fritzing.org/) and PowerPoint. 
 {: .fs-1 }
 
@@ -226,7 +226,7 @@ For both Tinkercad Circuits, include a screenshot in your prototyping journals a
 After you've built and simulated the circuits in Tinkercad, we'd like you to physically build the breadedboarded version with your hardware kits. Take a photo and a quick demo video of the circuit working and put them in your prototyping journals. Describe any challenges.
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/TrimPotentiometer-IMG_5685_Trim-Optimized.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/TrimPotentiometer-IMG_5685_Trim-Optimized.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** Here's one possible way to breadboard a trim potentiometer circuit with a backup resistor and red LED. What did you make? Please take a similar video for your prototyping journals.
 {: .fs-1 }
@@ -243,14 +243,14 @@ We provide two examples below.
 
 The force-sensitive resistor (FSR) responds to force or pressure. As an applied force increases, the resistance across the two terminals decreases. In the simple circuit below, the LED will receive more current (and emit more light as a result) as more pressure is applied to the FSR.
 
-![](assets/images/ForceSensitiveResistor_BasicLEDCircuit_ByJonFroehlich.png)
+![[]({{ "/assets/images/ForceSensitiveResistor_BasicLEDCircuit_ByJonFroehlich.png" | relative_url }})
 **Figure.** An example of how to hook-up a force-sensitive resistor for a simple LED circuit. Image made in [Fritzing](http://fritzing.org/) and PowerPoint. 
 {: .fs-1 }
 
 Here's a video demonstration:
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/FSR-TopDown9VCircuit-IMG_5683_Trimmed-Optimized.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/FSR-TopDown9VCircuit-IMG_5683_Trimmed-Optimized.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** A video demonstration of an FSR-based LED circuit.
 {: .fs-1 }
@@ -259,14 +259,14 @@ Here's a video demonstration:
 
 A light-dependent resistor (LDR)—sometimes called a photocell or photo-sensitive resistor—reduces its resistance in response to light. In the simple circuit below, you'll notice that the red LED illuminates brightly in response to a flashlight. Often, we want just the opposite behavior: brighten an LED inversely proportional to light.
 
-![](assets/images/LightDependentResistor_BasicLEDCircuit_ByJonFroehlich.png)
+![[]({{ "/assets/images/LightDependentResistor_BasicLEDCircuit_ByJonFroehlich.png" | relative_url }})
 **Figure.** An example light-dependent resistor (LDR) circuit with an LED. In this configuration, the LED brightness will increase in proportion to the amount of light cast on the LDR sensor. Image made in [Fritzing](http://fritzing.org/) and PowerPoint. 
 {: .fs-1 }
 
 And the video demonstration:
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/Photocell-IMG_5686_Trim-Optimized.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/Photocell-IMG_5686_Trim-Optimized.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** A video demonstration of an LDR-based LED circuit.
 {: .fs-1 }
@@ -290,7 +290,7 @@ For your prototyping journals, sketch out the circuit diagram for the DIY potent
 Here is an example DIY rotary potentiometer I made out of some cardboard, paper, a paper clip and a thumb tack (for the wiper), and a 12B pencil sketch (for the resistive material).
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/DIY_Rotary_Pot-Reversed_AdobePremiere_720p_ByJonFroehlich.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/DIY_Rotary_Pot-Reversed_AdobePremiere_720p_ByJonFroehlich.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** A lo-fi rotary potentiometer made out of some cardboard, paper, a paper clip and a thumb tack (for the wiper), and a 12B pencil sketch (for the resistive material).
 {: .fs-1 }
@@ -300,7 +300,7 @@ Here is an example DIY rotary potentiometer I made out of some cardboard, paper,
 Here is an example DIY slider potentiometer I made out of similar materials: cardboard, paper, a cardboard wiper with copper tape, and some 12B pencil sketch (for the resistive track).
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/DIY_Slider_Pot-720p-Optimized-ByJonFroehlich.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/DIY_Slider_Pot-720p-Optimized-ByJonFroehlich.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** A lo-fi slider potentiometer made out of some cardboard, paper, copper tape-wrapped cardboard (for the slider), and a 12B pencil sketch (for the resistive track).
 {: .fs-1 }

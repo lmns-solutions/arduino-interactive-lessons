@@ -43,7 +43,7 @@ Force-sensing (or force-sensitive) resistors (FSRs) are two-legged variable resi
 
 FSRs can differ in size, shape, and force sensing sensitivity. There are a variety form factors, including square and circular (which host the active sensor area). In our hardware kits, we typically purchase and provide the popular [Interlink FSR 402]({{ site.baseurl }}/assets/datasheets/ForceSensitiveResistor_InterlinkFSR402_2010-10-26-DataSheet-FSR402-Layout2.pdf) (either from [Sparkfun](https://www.sparkfun.com/products/9375) or [Adafruit](https://www.adafruit.com/product/166)), which is the product in the upper-left below.
 
-![Grid of example force sensitive resistors from Sparkfun's website](assets/images/ForceSensitiveResistors_Examples_Sparkfun.png)
+![Grid of example force sensitive resistors from Sparkfun's website[]({{ "/assets/images/ForceSensitiveResistors_Examples_Sparkfun.png" | relative_url }})
 Prices and products from [Sparkfun.com](https://learn.sparkfun.com/tutorials/force-sensitive-resistor-hookup-guide/all)
 {: .fs-1 }
 
@@ -67,7 +67,7 @@ While FSRs respond to force, they are not precision measurement instruments like
 
 How do FSRs actually work? Their construction is quite simple. There are three layers: the top and bottom layers are conductive and the middle layer provides a "thin air gap" that separates the two. When the two conductive layers are pressed together, electrical pathways are made. The harder you press, the more connections. And the more connections, the less resistance. See the FSR construction diagram from Interlink below:
 
-![FSR construction diagram from interlink showing three layers: top and bottom layer are conductive and middle layer is an "air gap" that separates the two.](assets/images/FSR_ConstructionDiagram_Interlink.png)
+![FSR construction diagram from interlink showing three layers: top and bottom layer are conductive and middle layer is an "air gap" that separates the two.[]({{ "/assets/images/FSR_ConstructionDiagram_Interlink.png" | relative_url }})
 Diagram from the Interlink FSR [Integration Guide]({{ site.baseurl }}/assets/datasheets/ForceSensitiveResistor_Interlink_IntegrationGuide.pdf)
 {: .fs-1 }
 
@@ -84,7 +84,7 @@ A graph of the force (g) vs. resistance (kΩ) of the FSR 402 is shown below (plo
 
 At the high-end of the force range (greater than 1000g), the FSR saturates and does not continue to drop resistance.
 
-![Graph of the resistance vs. force curve for the Interlink FSR 402 showing that resistance drops with applied pressure](assets/images/ForceSensitiveResistor_ResistanceForceCurve_InterlinkFSR402.png)
+![Graph of the resistance vs. force curve for the Interlink FSR 402 showing that resistance drops with applied pressure[]({{ "/assets/images/ForceSensitiveResistor_ResistanceForceCurve_InterlinkFSR402.png" | relative_url }})
 A graph of the force (g) vs. resistance (kΩ) plotted on a log-log scale for the Interlink FSR 402. Graph from the [Interlink FSR Integration Guide]({{ site.baseurl }}/assets/datasheets/ForceSensitiveResistor_Interlink_IntegrationGuide.pdf).
 {: .fs-1 }
 
@@ -98,7 +98,7 @@ To begin, just like we did with the [buttons](buttons.md) and [potentiometers](p
 
 Below, we show two possible wiring diagrams: the first (preferred) shows the FSR circuit powered by a 9V battery while the second shows power derived from the 5V and GND pins on the Arduino. (Again, we prefer the former just to further emphasize that at this point, we're not using microcontrollers!)
 
-![Two wiring diagrams of an FSR connected to an LED](assets/images/FSR_WiringDiagram_NoArduino_Fritzing.png)
+![Two wiring diagrams of an FSR connected to an LED[]({{ "/assets/images/FSR_WiringDiagram_NoArduino_Fritzing.png" | relative_url }})
 Two wiring options of an FSR using a breadboard. Like typical resistors, FSRs can be inserted into your circuits in either direction.
 {: .fs-1 }
 
@@ -110,13 +110,13 @@ For the 9V wiring, if we assume the red LED's $$V_f=2V$$ and the lowest FSR resi
 
 The two contact legs are 2.54mm apart (0.1"), so should fit snugly into your breadboard. Just like a traditional resistor, the FSR can be inserted in either direction.
 
-![FSR close-up of the two contact legs](assets/images/FSR_ContactLegs_Zoom_FromSparkfun.png)
+![FSR close-up of the two contact legs[]({{ "/assets/images/FSR_ContactLegs_Zoom_FromSparkfun.png" | relative_url }})
 Image from [Sparkfun.com](https://learn.sparkfun.com/tutorials/force-sensitive-resistor-hookup-guide/all#res).
 {: .fs-1 }
 
 If you want a more permanent connection, see this [fantastic guide](https://learn.sparkfun.com/tutorials/force-sensitive-resistor-hookup-guide/all#hardware-assembly) from Sparkfun on soldering FSRs (difficult) or using Amphenol FCI Clinchers (recommended):
 
-![Image showing Amphenol CFI clincher connectors installed on the FSR's legs](assets/images/FSR_Clinchers_Sparkfun.png)
+![Image showing Amphenol CFI clincher connectors installed on the FSR's legs[]({{ "/assets/images/FSR_Clinchers_Sparkfun.png" | relative_url }})
 Image from [Sparkfun.com](https://learn.sparkfun.com/tutorials/force-sensitive-resistor-hookup-guide/all#hardware-assembly) showing Amphenol CFI clincher connectors installed on the FSR's legs.
 {: .fs-1 }
 
@@ -135,7 +135,7 @@ OK, now that you've gained some experience with FSRs and understand how to use t
 
 First, like usual, we'll show you the wrong way to hook up a component to a microcontroller:
 
-![Incorrect Arduino wiring diagram and schematic for FSR](assets/images/ArduinoUno_FSR_Incorrect_SchematicAndDiagram.png)
+![Incorrect Arduino wiring diagram and schematic for FSR[]({{ "/assets/images/ArduinoUno_FSR_Incorrect_SchematicAndDiagram.png" | relative_url }})
 
 Why doesn't this work?
 
@@ -147,7 +147,7 @@ We had to do the same thing with the [potentiometer](potentiometers.md). The pot
 
 To use an FSR—or any variable resistor—with a microcontroller, you must add a fixed resistor to form a voltage divider like this:
 
-![Arduino wiring diagram and schematic for FSR](assets/images/ArduinoUno_FSR_SchematicAndDiagram.png)
+![Arduino wiring diagram and schematic for FSR[]({{ "/assets/images/ArduinoUno_FSR_SchematicAndDiagram.png" | relative_url }})
 
 That fixed resistor is like hooking up the third leg of a potentiometer. It's also similar to the pull-up or pull-down resistors for our switch circuits (and, indeed, when the FSR is **not** pressed, it acts like an open switch because its resistance is so high).
 
@@ -159,7 +159,7 @@ The [Interlink FSR Integration Guide]({{ site.baseurl }}/assets/datasheets/Force
 
 The guide provides a useful force *vs.* $$V_{out}$$ graph with different fixed resistor values ($$R_M$$). As can be observed from the graph, selecting a 10kΩ resistor for $$R_M$$ provides the most dynamic $$V_{out}$$ range for the full sensing force range of the FSR. Note also the two-phase relationship with the initial steep slope followed by a softer increase.
 
-![FSR force vs. Vout graph for different fixed resistor values from the Interlink FSR data sheet](assets/images/Voltage-divider-circuit-Interlink-FSR-402-Makerguides.png)
+![FSR force vs. Vout graph for different fixed resistor values from the Interlink FSR data sheet[]({{ "/assets/images/Voltage-divider-circuit-Interlink-FSR-402-Makerguides.png" | relative_url }})
 Graph originally from [Interlink FSR Integration Guide]({{ site.baseurl }}/assets/datasheets/ForceSensitiveResistor_Interlink_IntegrationGuide.pdf). Image above from [Makerguides](https://www.makerguides.com/fsr-arduino-tutorial).
 {: .fs-1 }
 
@@ -175,7 +175,7 @@ We're going to begin with a simple circuit to read the FSR and proportionally se
 
 Let's make a simple FSR circuit with the fixed resistor (10kΩ) in the pull-down position. In this configuration, the analog input A0 (VA0) will increase with increasing force and start at 0V when the FSR is not pressed.
 
-![FSR wiring diagram for Arduino Uno with FSR Leg 1 hooked to 5V, and Leg 2 hooked to a fixed resistor 10kΩ in the pull-down resistor position](assets/images/ArduinoUno_FSR_FixedResistorInPullDown_SchematicAndDiagram.png)
+![FSR wiring diagram for Arduino Uno with FSR Leg 1 hooked to 5V, and Leg 2 hooked to a fixed resistor 10kΩ in the pull-down resistor position[]({{ "/assets/images/ArduinoUno_FSR_FixedResistorInPullDown_SchematicAndDiagram.png" | relative_url }})
 
 ### FSR-based LED fade code
 
@@ -222,7 +222,7 @@ For our final creation, we're going to make a Jedi force instrument: the harder 
 
 Simply add in a piezo buzzer and connect it to a GPIO pin.
 
-![The FSR-based piezo instrument wiring diagram](assets/images/ArduinoUno_FSRPiezoInstrument_BreadboardDiagram.png)
+![The FSR-based piezo instrument wiring diagram[]({{ "/assets/images/ArduinoUno_FSRPiezoInstrument_BreadboardDiagram.png" | relative_url }})
 
 ### Jedi force code
 

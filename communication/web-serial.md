@@ -81,7 +81,7 @@ So, you can try the above command yourself. In the browser's dev tool console, t
 
 If your Arduino is plugged in, you should see something like this:
 
-![](assets/images/WebBrowserSerialDevicePermissionPrompt.png)
+![[]({{ "/assets/images/WebBrowserSerialDevicePermissionPrompt.png" | relative_url }})
 **Figure.** If I type `navigator.serial.requestPort()` into Chrome's dev console with my Arduino Leonardo plugged into my laptop's USB, I receive the prompt shown above.
 {: .fs-1 }
 
@@ -266,7 +266,7 @@ The `connectAndOpen()` method simply combines the two `connect()` and `open()` f
 
 We'll begin by running the same Arduino code ([SimpleSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SimpleSerialIn/SimpleSerialIn.ino)) with the same circuit as the [previous lesson](serial-intro.md). The circuit:
 
-![](assets/images/SimpleSerialIn_LEDCircuit.png)
+![[]({{ "/assets/images/SimpleSerialIn_LEDCircuit.png" | relative_url }})
 **Figure.** The corresponding circuit for [SimpleSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SimpleSerialIn/SimpleSerialIn.ino). Made in Fritzing and PowerPoint.
 {: .fs-1}
 
@@ -287,7 +287,7 @@ We're going to build a simple webpage with a slider that transmits a value betwe
 The full app experience should look like this:
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/SimpleSerialIn-JavaScript-SliderOut-Snippet720p.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/SimpleSerialIn-JavaScript-SliderOut-Snippet720p.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** Running the SliderOut demo ([live page](https://makeabilitylab.github.io/p5js/WebSerial/Basic/SliderOut), [code](https://github.com/makeabilitylab/p5js/tree/master/WebSerial/Basic/SliderOut)) with [SimpleSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SimpleSerialIn/SimpleSerialIn.ino) on the Arduino Leonardo.
 {: .fs-1 }
@@ -296,7 +296,7 @@ The full app experience should look like this:
 
 To begin, create a folder called `SliderOut` and an empty `index.html` file within it. Then, in VSCode select `File->Open Folder` and select `SliderOut`. With the `Explorer` view open in VSCode's left sidebar (`ctrl-shift-e`), double click on the `index.html` file to open it. Now, VSCode should look something like this:
 
-![](assets/images/VSCode_EmptyIndexHtmlFile.png)
+![[]({{ "/assets/images/VSCode_EmptyIndexHtmlFile.png" | relative_url }})
 
 In `index.html`, copy/paste this simple, minimalist html page:
 
@@ -319,11 +319,11 @@ There are three ways to launch Live Server—any will work! You can enlarge any 
 
 | 1. Right-click on file in Explorer View | 2. Right-click on file in Editor | 3. Click 'Go Live' Button |
 |----|----|----|
-| ![](assets/images/VSCode_LaunchLiveServer1-RightClickOnIndexHtml.png) | ![](assets/images/VSCode_LaunchLiveServer2-RightClickonFileInEditor.png) | ![](assets/images/VSCode_LaunchLiveServer3-ClickOnGoLiveButton.png) |
+| ![[]({{ "/assets/images/VSCode_LaunchLiveServer1-RightClickOnIndexHtml.png" | relative_url }}) | ![[]({{ "/assets/images/VSCode_LaunchLiveServer2-RightClickonFileInEditor.png" | relative_url }}) | ![[]({{ "/assets/images/VSCode_LaunchLiveServer3-ClickOnGoLiveButton.png" | relative_url }}) |
 
 Once launched, your default web browser will open to a web server running at `127.0.0.1` on port 5500 (Live Server's defaults). The webpage should look like this:
 
-![](assets/images/LiveServerLaunched_WebSerialDemoBlankPage.png)
+![[]({{ "/assets/images/LiveServerLaunched_WebSerialDemoBlankPage.png" | relative_url }})
 
 Now, let's add in a title header in an `<h1>` block and some descriptive text:
 
@@ -344,7 +344,7 @@ Now, let's add in a title header in an `<h1>` block and some descriptive text:
 
 If you hit `ctrl-s`, the website should automatically reload if you still have Live Server running. If not, just relaunch the webpage with Live Server (and keep it running as we build out).
 
-![](assets/images/WebSerialDemo_NowWithSimpleText.png)
+![[]({{ "/assets/images/WebSerialDemo_NowWithSimpleText.png" | relative_url }})
 
 #### Add a connect button
 
@@ -376,7 +376,7 @@ Because Web Serial requires explicit user permission to connect to a local seria
 
 Reload the webpage and open the dev console (which you should almost always keep open when web developing). Click on the "Connect via Serial Port" button and you should see the message "Connect button clicked!" printed to console.
 
-![](assets/images/WebSerialDemo_WithConnectButton.png)
+![[]({{ "/assets/images/WebSerialDemo_WithConnectButton.png" | relative_url }})
 
 #### Add and hook up serial.js
 
@@ -444,7 +444,7 @@ async function onConnectButtonClick() {
 Now save and reload. With your Arduino plugged into your computer, try clicking the `Connect via Serial Port` button. Once the button is clicked, the web browswer will enumerate all available serial devices and ask for user permission. It should look something like this:
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/SliderOutScreenRecording_ButtonJustHookedUp-Optimized.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/SliderOutScreenRecording_ButtonJustHookedUp-Optimized.mp4" | relative_url }}" type="video/mp4" />
 </video>
 
 #### Add and hook up a slider
@@ -471,7 +471,7 @@ async function onSliderValueChanged(src, event) {
 And that's it! A fully working Web Serial demo, which should look something like this:
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/SliderOutSuperBasic-Optimized.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/SliderOutSuperBasic-Optimized.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** Did I just tape my Arduino + breadboard to my computer screen to make this video? Yes I did!
 {: .fs-1 }
@@ -540,7 +540,7 @@ function onSerialConnectionOpened(eventSender) {
 Here's a full video demo of what it should look like:
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/SimpleSerialIn-JavaScript-SliderOut-TrimmedAndSpedUp720p.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/SimpleSerialIn-JavaScript-SliderOut-TrimmedAndSpedUp720p.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** Running the SliderOut demo ([live page](https://makeabilitylab.github.io/p5js/WebSerial/Basic/SliderOut), [code](https://github.com/makeabilitylab/p5js/tree/master/WebSerial/Basic/SliderOut)) with [SimpleSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SimpleSerialIn/SimpleSerialIn.ino) on the Arduino Leonardo.
 {: .fs-1 }
@@ -550,13 +550,13 @@ Here's a full video demo of what it should look like:
 For our second and final example, we will build a simple webpage that sends and receives text data via Web Serial. As you type in the provided textbox, the data is immediately transmitted over serial and displayed on the Arduino-connected OLED display. The Arduino echos back received data to the web app, which shows this text in the "Received from Arduino" block. The app looks like this:
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/DisplaySerialTextIn-QuickSnippet-Optimized.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/DisplaySerialTextIn-QuickSnippet-Optimized.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** Running the DisplayText demo ([live page](https://makeabilitylab.github.io/p5js/WebSerial/Basic/DisplayText/), [code](https://github.com/makeabilitylab/p5js/tree/master/WebSerial/Basic/DisplayText)) with [DisplayTextSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/DisplayTextSerialIn/DisplayTextSerialIn.ino) on the Arduino Leonardo.
 {: .fs-1 }
 
 For our circuit and wiring, we simply need an Arduino and [OLED display](../advancedio/oled.md).
-![](assets/images/ArduinoLeonardo_OLEDDisplayWiring.png)
+![[]({{ "/assets/images/ArduinoLeonardo_OLEDDisplayWiring.png" | relative_url }})
 
 #### Create new folder and index.html page
 
@@ -602,7 +602,7 @@ In the body, add in the connect button and initial interface:
 
 Save and open with Live Server. It should look like this:
 
-![](assets/images/DisplayTextWebPage_InitialUI.png)
+![[]({{ "/assets/images/DisplayTextWebPage_InitialUI.png" | relative_url }})
 
 #### Hook up connect button and serial
 
@@ -746,7 +746,7 @@ You did it! Now, play and experiment!
 #### Full DisplayText video demo
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/DisplaySerialTextIn-FullSpedUp-Optimized.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/DisplaySerialTextIn-FullSpedUp-Optimized.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** The full DisplayText demo ([live page](https://makeabilitylab.github.io/p5js/WebSerial/Basic/DisplayText/), [code](https://github.com/makeabilitylab/p5js/tree/master/WebSerial/Basic/DisplayText)) with [DisplayTextSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/DisplayTextSerialIn/DisplayTextSerialIn.ino) on the Arduino Leonardo.
 {: .fs-1 }

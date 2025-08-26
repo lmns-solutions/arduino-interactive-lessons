@@ -68,7 +68,7 @@ There are two basic classes of sensors: active and passive. **Active** sensors r
 
 Some active sensors transmit a signal and then analyze some reflected property of that signal for sensing. For example, an infrared (IR) proximity sensor like the [Sharp GP2Y0A21YK](https://www.sparkfun.com/products/242) contains both an infrared (IR) transmitter and IR receiver. The sensor calculates distance by transmitting an IR beam and measuring the reflection angle back on the IR receiver. Similarly, an ultrasonic distance sensor like the popular [HC-SR04](https://www.sparkfun.com/products/15569) transmits ultrasonic pings and listens for reflected ultrasonic waves. A connected microcontroller can than calculate the distance between the sensor to the sound-reflecting object by using the speed of sound through air.
 
-![Ultrasonic diagram](assets/images/UltrasonicDiagram_Wikipedia.png)
+![Ultrasonic diagram[]({{ "/assets/images/UltrasonicDiagram_Wikipedia.png" | relative_url }})
 Ultrasonic distance sensors are a type of **active** sensor consisting of both a transmitter and receiver. They work by transmitting an ultrasonic pulse, which is partially reflected back by objects in the sound wave path (if any). By measuring the time between the pulse transmission and the echo reception, distance can be determined.
 {: .fs-1 }
 
@@ -98,7 +98,7 @@ Because the LIS3DH supports a digital communication protocol (both I2C and SPI),
 
 | ADXL335 Accelerometer | LIS3DH Accelerometer |
 | --------------------- | -------------------- |
-| ![Picture of ADXL335 - 5V ready triple-axis accelerometer (+-3g analog out)](assets/images/ADXL335_Accelerometer_Adafruit.png) | ![Adafruit LIS3DH Triple-Axis Accelerometer (+-2g/4g/8g/16g)](assets/images/LIS3DH_Accelerometer_Adafruit.png) |
+| ![Picture of ADXL335 - 5V ready triple-axis accelerometer (+-3g analog out)[]({{ "/assets/images/ADXL335_Accelerometer_Adafruit.png" | relative_url }}) | ![Adafruit LIS3DH Triple-Axis Accelerometer (+-2g/4g/8g/16g)[]({{ "/assets/images/LIS3DH_Accelerometer_Adafruit.png" | relative_url }}) |
 
 <!--TODO: add a bit on advantages vs. disadvnatages of analog vs. digital sensors: for example, with a digital communication protocol like SPI, can have error correction, etc. -->
 
@@ -131,7 +131,7 @@ Let's examine the entire signal acquisition pipeline from raw physical signal to
 4. In Stage 4, an analog-to-digital converter (ADC) converts the electrical signal to bits (a process called quantization). 
 5. Finally, in Stage 5, we can process and analyze the digitized signal using digital signal processing (DSP) techniques and machine learning, woohoo!
 
-![Signal acquisition pipeline going from physical signal to sensor to signal conditioning to ADC to computer](assets/images/SignalAcquisitionPipeline_Wikipedia.png)
+![Signal acquisition pipeline going from physical signal to sensor to signal conditioning to ADC to computer[]({{ "/assets/images/SignalAcquisitionPipeline_Wikipedia.png" | relative_url }})
 Block diagram from Wikipedia ["Data acquisition"](https://en.wikipedia.org/wiki/Data_acquisition) article. [Direct link](https://en.wikipedia.org/wiki/File:DigitalDAQv2.pdf).
 {: .fs-1 }
 

@@ -20,7 +20,7 @@ nav_order: 2
 
 In this lesson, we'll rehash the ole [Blink lesson](../arduino/led-blink.md) from the [Intro to Output](../arduino/intro-output.md) series but with the **ESP32**.
 
-![Animation of Blink on the ESP32](assets/movies/Huzzah32_Blink-optimized.gif)
+![Animation of Blink on the ESP32[]({{ "/assets/movies/Huzzah32_Blink-optimized.gif" | relative_url }})
 
 ## Materials
 
@@ -35,7 +35,7 @@ All of our ESP32 examples will use the Huzzah32 but any ESP32 board will work as
 
 The ESP32 has a large number of pins and each can be used for multiple functions. So, it's important that you have the pin diagram easily available. We suggest printing it out (and typically give out pin diagrams like this in our courses). If you don't have a printer, we suggest opening the diagram on a second monitor or otherwise keeping it handy.
 
-![Huzzah32 pin diagram](assets/images/AdafruitHuzzah32PinDiagram.png)
+![Huzzah32 pin diagram[]({{ "/assets/images/AdafruitHuzzah32PinDiagram.png" | relative_url }})
 See the Adafruit Huzzah32 [docs](https://learn.adafruit.com/adafruit-huzzah32-esp32-feather/pinouts) for details. Right-click and open image in a new tab to zoom in and print.
 {: .fs-1 } 
 
@@ -43,7 +43,7 @@ See the Adafruit Huzzah32 [docs](https://learn.adafruit.com/adafruit-huzzah32-es
 
 Our circuit is about as simple as they come. 
 
-![Circuit showing LED connected to GPIO #21 via a current limiting resistor](assets/images/Huzzah32_Blink_CircuitDiagramAndSchematic_Fritzing.png)
+![Circuit showing LED connected to GPIO #21 via a current limiting resistor[]({{ "/assets/images/Huzzah32_Blink_CircuitDiagramAndSchematic_Fritzing.png" | relative_url }})
 
 Seating the Huzzah32 into the breadboard might take some effort. Please take care not to bend pins when placing and removing the board. Given that the Huzzah32 takes up so much room, you might consider using the full-sized breadboard rather than the half-sized.
 
@@ -72,7 +72,7 @@ This [source code](https://github.com/makeabilitylab/arduino/blob/master/ESP32/B
 
 ## Video
 
-![Animation of Blink on the ESP32](assets/movies/Huzzah32_Blink-optimized.gif)
+![Animation of Blink on the ESP32[]({{ "/assets/movies/Huzzah32_Blink-optimized.gif" | relative_url }})
 
 <!-- TODO: insert workbench video -->
 

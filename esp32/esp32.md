@@ -28,7 +28,7 @@ nav_order: 1
 
 <!-- See also https://randomnerdtutorials.com/esp32-adc-analog-read-arduino-ide/ -->
 
-![Image of a variety of ESP32 boards](assets/images/ESP32Boards_MakerAdvisor.png)
+![Image of a variety of ESP32 boards[]({{ "/assets/images/ESP32Boards_MakerAdvisor.png" | relative_url }})
 Image from [makeradvisor.com](https://makeradvisor.com/esp32-development-boards-review-comparison/). There are literally dozens of ESP32 boards. Search online for comparisons (*e.g.,* [link](https://makeradvisor.com/esp32-development-boards-review-comparison/)).
 {: .fs-1 } 
 
@@ -139,7 +139,7 @@ Regardless of which ESP32 board you use, our tutorial series should help. Note, 
 
 | Name | Arduino Uno | Adafruit ESP32 | Adafruit ESP32-S3 |
 | ---- | ----------- | -------- | ----------------- |
-| Image | ![Arduino Uno]({{ site.baseurl }}/assets/images/ArduinoUno_ArduinoCC_w200.png) | ![ESP32 Huzzah32]({{ site.baseurl }}/assets/images/ESP32Huzzah32_Adafruit_w200.png) | ![ESP32-S3](assets/images/AdafruitESP32-S3_w200.png) |
+| Image | ![Arduino Uno]({{ site.baseurl }}/assets/images/ArduinoUno_ArduinoCC_w200.png) | ![ESP32 Huzzah32]({{ site.baseurl }}/assets/images/ESP32Huzzah32_Adafruit_w200.png) | ![ESP32-S3[]({{ "/assets/images/AdafruitESP32-S3_w200.png" | relative_url }}) |
 | Store | [Arduino](https://store.arduino.cc/arduino-uno-rev3) | [Adafruit](https://www.adafruit.com/product/3405) | [Adafruit](https://www.adafruit.com/product/5477) |
 | Microcontroller | 8-bit, 16 MHz [ATmega328P](https://www.microchip.com/wwwproducts/en/ATmega328) | 32-bit, 240 MHz dual core Tensilica LX6 | 32-bit, 240 MHz dual core Tensilica LX7 |
 | Input voltage (limit) | 6-20V | Use either USB (5V) or 3.7V LiPoly | 5V (via USB) or 3.7V (LiPoly) |
@@ -182,7 +182,7 @@ The Huzzah32 is **not** designed for external power supplies, so either use the 
 
 The official ESP32 pin list is [here](https://www.espressif.com/sites/default/files/1a-esp32_pin_list_en-v0.1.pdf):
 
-![Official ESP32 pin list](assets/images/ESP32PinList_Espressif.png)
+![Official ESP32 pin list[]({{ "/assets/images/ESP32PinList_Espressif.png" | relative_url }})
 Screenshot of the ESP32 pin list [PDF](https://www.espressif.com/sites/default/files/1a-esp32_pin_list_en-v0.1.pdf).
 {: .fs-1 }
 
@@ -194,7 +194,7 @@ So, what do all of these pins do? Oh, so many things!
 
 The pin diagram for the Huzzah32 in the official Adafruit [docs](https://learn.adafruit.com/adafruit-huzzah32-esp32-feather/pinouts) is pretty confusing. So, we created our own:
 
-![Huzzah32 pin diagram](assets/images/AdafruitHuzzah32PinDiagram.png)
+![Huzzah32 pin diagram[]({{ "/assets/images/AdafruitHuzzah32PinDiagram.png" | relative_url }})
 See the Adafruit Huzzah32 [docs](https://learn.adafruit.com/adafruit-huzzah32-esp32-feather/pinouts) for details. Right-click and open image in a new tab to zoom in.
 {: .fs-1 } 
 
@@ -209,7 +209,7 @@ See the Adafruit Huzzah32 [docs](https://learn.adafruit.com/adafruit-huzzah32-es
 - The charging circuit light will flash quickly when there is no LiPoly battery plugged in. It's harmless and doesn't mean anything. This LED will also flash (more slowly) when the battery is plugged in and charging. The battery charges automatically when plugged in and the Huzzah32 is externally powered.
 - Only power your Huzzah32 either using the USB plug (max 5V, 1A) or a LiPoly battery (3.7/4.2V)
 
-![Animation of all 18 GPIO output pins fading in and out](assets/movies/Huzzah32_GPIOFadeTestAllPinsSimultaneously-Optimized3.gif)
+![Animation of all 18 GPIO output pins fading in and out[]({{ "/assets/movies/Huzzah32_GPIOFadeTestAllPinsSimultaneously-Optimized3.gif" | relative_url }})
 
 The Huzzah32 has 21 GPIO pins; however pins 34 (A2), 39 (A3), 36 (A4) are not output-capable. In this animation, we are attempting to fade in/out all 21 GPIO pins and demonstrating that only 18 work for output.
 {: .fs-1 } 
@@ -243,19 +243,19 @@ You can follow the [official Adafruit Huzzah32 Arduino IDE installation instruct
 1. Open the Arduino IDE
 
 2. Go to Preferences
-![Screenshot of opening preferences](assets/images/ArduinoIDE_OpenPreferences.png)
+![Screenshot of opening preferences[]({{ "/assets/images/ArduinoIDE_OpenPreferences.png" | relative_url }})
 
 3. In preferences, find the `Additional Board Manager URLs:` field 
-![Screenshot of additional board manager url in preferences](assets/images/ArduinoIDE_EnterAdditionalBoardManagerJSON.png)
+![Screenshot of additional board manager url in preferences[]({{ "/assets/images/ArduinoIDE_EnterAdditionalBoardManagerJSON.png" | relative_url }})
 
 4. Add the ESP32 JSON url `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json`
-![Screenshot of entering in ESP32 JSON string](assets/images/ArduinoIDE_EnteringESP32JsonString.png)
+![Screenshot of entering in ESP32 JSON string[]({{ "/assets/images/ArduinoIDE_EnteringESP32JsonString.png" | relative_url }})
 
 5. Open the Arduino IDE Board Manager
-![Screenshot of the Arduino IDE opening the board manager](assets/images/ArduinoIDE_OpenBoardManager.png)
+![Screenshot of the Arduino IDE opening the board manager[]({{ "/assets/images/ArduinoIDE_OpenBoardManager.png" | relative_url }})
 
 6. Search for `ESP32` and click `Install`
-![Screenshot showing ESP32 added to board manager](assets/images/ArduinoIDE_ESP32AddedInBoardManager.png)
+![Screenshot showing ESP32 added to board manager[]({{ "/assets/images/ArduinoIDE_ESP32AddedInBoardManager.png" | relative_url }})
 
 #### Step 2: Install USB to UART Bridge Virtual COM Port Driver
 
@@ -265,13 +265,13 @@ As noted in the [official Adafruit Huzzah32 Arduino IDE installation instruction
 
 Once installed, select the `Adafruit ESP32 Feather` in the Board menu.
 
-![Screenshot showing how to select the Adafruit ESP32 in the Board Manager menu](assets/images/ArduinoIDE_SelectAdafruitESP32Board.png)
+![Screenshot showing how to select the Adafruit ESP32 in the Board Manager menu[]({{ "/assets/images/ArduinoIDE_SelectAdafruitESP32Board.png" | relative_url }})
 
 #### Step 4: Select the appropriate port
 
 Finally, select the appropriate port
 
-![Screenshot showing how to select correct ESP32 port](assets/images/ArduinoIDE_SelectESP32Port.png)
+![Screenshot showing how to select correct ESP32 port[]({{ "/assets/images/ArduinoIDE_SelectESP32Port.png" | relative_url }})
 
 ## Resources
 

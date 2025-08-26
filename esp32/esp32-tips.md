@@ -51,7 +51,7 @@ Follow the installation instructions in the [README.md](https://github.com/me-no
 
 Then, open the Arduino IDE. Under the `Tools` menu, there will be a new option called `ESP Exception Decoder`. See screenshot below.
 
-![](assets/images/ESP32_ESPExceptionDecoder_InToolsMenu.png)
+![[]({{ "/assets/images/ESP32_ESPExceptionDecoder_InToolsMenu.png" | relative_url }})
 {: .mx-auto .align-center }
 
 **Figure.** The [EspExceptionDecoder](https://github.com/me-no-dev/EspExceptionDecoder) option in the Arduino IDE Tools menu. 
@@ -61,7 +61,7 @@ Then, open the Arduino IDE. Under the `Tools` menu, there will be a new option c
 
 Clicking on this option will open a new window where you can copy/paste the error message:
 
-![](assets/images/ESP32_ESPExceptionDecoder_PasteStackTrace.png)
+![[]({{ "/assets/images/ESP32_ESPExceptionDecoder_PasteStackTrace.png" | relative_url }})
 {: .mx-auto .align-center }
 
 **Figure.** The [EspExceptionDecoder](https://github.com/me-no-dev/EspExceptionDecoder) window in the Arduino IDE.

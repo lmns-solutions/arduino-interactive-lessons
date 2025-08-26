@@ -20,7 +20,7 @@ usetocbot: true
 ---
 For our first learning activity, we are going to use Arduino to turn on an [LED]({{ site.baseurl }}/pages/electronics/leds.md). We're **not** going to write any code. Instead, our goal is to build some initial familiarity with Arduino hardware and connecting components to Arduino pins before we introduce programming, which we do in the [next lesson](led-blink.md).
 
-![Animation showing a USB cable plugging into an Arduino Uno to power an LED + resistor hooked up to 5V and GND](assets/movies/Arduino_LEDOn_5VFixed_USBPower.gif)
+![Animation showing a USB cable plugging into an Arduino Uno to power an LED + resistor hooked up to 5V and GND[]({{ "/assets/movies/Arduino_LEDOn_5VFixed_USBPower.gif" | relative_url }})
 **Figure** The movement of **current** in the circuit is illustrated by the animated yellow circles. This visualization is a coarse abstraction designed to emphasize the direction of current flow. A more accurate visualization would show that electrons are already distributed throughout a wire before a voltage is applied. See our [Introduction to Electronics](../electronics/index.md) series, specifically the lesson on [Voltage, Current, and Resistance](../electronics/electricity-basics.md).
 {: .fs-1 }
 
@@ -60,7 +60,7 @@ Insert the LED + resistor into the Arduino:
 
 Make sure to push the legs down so they are well seated inside the Arduino's female headers.
 
-![Animation of LED + resistor being connected to Arduino's GND and 5V ports](assets/movies/Arduino_LEDOn_5VFixed_InsertLED.gif)
+![Animation of LED + resistor being connected to Arduino's GND and 5V ports[]({{ "/assets/movies/Arduino_LEDOn_5VFixed_InsertLED.gif" | relative_url }})
 
 ### Step 3: Connect your Arduino to power
 
@@ -68,20 +68,20 @@ Now connect your Arduino to power and the LED should light up. You did it!
 
 Here's a photo of the version I made. I found it easier to stretch the wiring across the Arduino from the 5V port to the GND on the opposite side.
 
-![Workbench photo of the the LED wired to the 5V port](assets/images/Arduino_LEDOn_5VFixed_WorkbenchPhoto.png)
+![Workbench photo of the the LED wired to the 5V port[]({{ "/assets/images/Arduino_LEDOn_5VFixed_WorkbenchPhoto.png" | relative_url }})
 
 For power, you can use a USB cable (which supplies 5V) or a 9V battery (which supplies 9V). Either way, the Arduino **supplies 5V** through the 5V pin. How? Using a [voltage regulator](https://itp.nyu.edu/physcomp/labs/labs-electronics/components/). See "More Info" below.
 
 | USB Power        | 9V Power          |
 |:-------------|:------------------|
-| ![Animation showing a USB cable plugging into an Arduino Uno to power an LED + resistor hooked up to 5V and GND](assets/movies/Arduino_LEDOn_5VFixed_USBPower-Cropped.gif) | ![Animation showing a 9V battery plugging into an Arduino Uno to power an LED + resistor hooked up to 5V and GND](assets/movies/Arduino_LEDOn_5VFixed_9VBattery-Cropped.gif) |
+| ![Animation showing a USB cable plugging into an Arduino Uno to power an LED + resistor hooked up to 5V and GND[]({{ "/assets/movies/Arduino_LEDOn_5VFixed_USBPower-Cropped.gif" | relative_url }}) | ![Animation showing a 9V battery plugging into an Arduino Uno to power an LED + resistor hooked up to 5V and GND[]({{ "/assets/movies/Arduino_LEDOn_5VFixed_9VBattery-Cropped.gif" | relative_url }}) |
 | With USB power, the 5V pin supplies 5V | Using the Arduino's barrel jack, we can connect an external power supply like a 7-12V wall adapter or a 9V battery. The Arduino's internal voltage regulator reduces these higher voltages to output a clean 5V |
 
 ### Let's analyze our circuit
 
 Just as we did in our [LED lesson](../electronics/leds.md), let's analyze how much current is flowing through this simple LED-based circuit. To do this, we first need to determine the voltage drop across the resistor $$V_R$$ and then use Ohm's Law to figure out the current ($$I = \frac{V_R}{R}$$).
 
-![](assets/images/LEDOn5V_HowMuchCurrentThroughCircuit_Step0.png)
+![[]({{ "/assets/images/LEDOn5V_HowMuchCurrentThroughCircuit_Step0.png" | relative_url }})
 
 {: .note }
 > While it's not totally necessary to understand **circuit basics** to work with Arduino—indeed, you can get pretty far just by following online tutorials—we think it's pretty important. As my colleague [Professor Andy Davidson](https://www.hcde.washington.edu/davidson) likes to say: there is a difference between a chef who understands how ingredients go together and creates their own dishes vs. a novice baker who simply follows recipes. We all start like the latter but we want to develop you more into the former! Let us all become chefs! 👩🏽‍🍳👨🏽‍🍳
@@ -100,7 +100,7 @@ When analyzing a circuit, we always start by **identifying nodes** and **what we
 
 From the above, we can set $$V_D=2V$$ and solve for $$V_R$$.
 
-![](assets/images/LEDOn5V_HowMuchCurrentThroughCircuit_Step1.png)
+![[]({{ "/assets/images/LEDOn5V_HowMuchCurrentThroughCircuit_Step1.png" | relative_url }})
 
 #### Step 2: Solve for voltage drop across the resistor
 
@@ -113,7 +113,7 @@ V_R = 5V - 2V = 3V$$
 
 Thus, the voltage drop across the resistor is $$V_R=3V$$. Let's take a look pictorially below:
 
-![](assets/images/LEDOn5V_HowMuchCurrentThroughCircuit_Step2.png)
+![[]({{ "/assets/images/LEDOn5V_HowMuchCurrentThroughCircuit_Step2.png" | relative_url }})
 
 #### Step 3: Solve for current
 
@@ -126,7 +126,7 @@ I = \frac{3V}{220Ω} = 0.014A = 13.6mA$$
 
 Let's again take a look at this pictorially:
 
-![](assets/images/LEDOn5V_HowMuchCurrentThroughCircuit_Step3.png)
+![[]({{ "/assets/images/LEDOn5V_HowMuchCurrentThroughCircuit_Step3.png" | relative_url }})
 
 So, with the 5V supply pin, our simple LED-based circuit is **drawing 13.6mA of current**. Is this a lot or a little? Short answer: it's not very much but let's put this in context below.
 
@@ -169,14 +169,14 @@ Well, for a **simple series** configuration, the total number of series LEDs is 
 
 Here's a picture of the test setup and circuits for the measurements above:
 
-![](assets/images/LEDSeries_5VSupply_TestPictures_ByJonFroehlich.png)
+![[]({{ "/assets/images/LEDSeries_5VSupply_TestPictures_ByJonFroehlich.png" | relative_url }})
 **Figure**. Measuring the individual LED voltage drop and current through the circuit using two multimeters: the yellow multimeter configured as a voltmeter to measure the voltage drop $$V_D$$ over the first LED in the circuit and the red multimeter configured as an ammeter to measure the current $$I$$ through the circuit.
 {: .fs-1 }
 
 Finally, we can also examine this circuit in a simulator, which mirrors our empirical measurements:
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/movies/LEDOn5V_Series_CircuitJS.mp4" type="video/mp4" />
+  <source src="{{ "/assets/movies/LEDOn5V_Series_CircuitJS.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** A [CircuitJS simulation](https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgpABZsKBTAWjDACgA3cQqhYlblTAZCUMTV5iqMBGwDugxTWKiwPcGwBOtFeBE7RKBKKpp5ivgOWjLGhdaW7hh8w6Oi3GASjYAPcEQg2BhCNEjB9DTcFABqbNhRAGZyACaaAPYADgA6AI4o0GBM9BDE0NgozKxQsDRWsNj8CTQ8LcpqUrCyala6mL2iFaYgyWlZeQVFJVI1kD49BkHYHrrYeFECoxk5+YXF4DMwc66raIvYyyA+CmpC6rd6JieD64sSpmwLDu9vNHhXI1S2wme2m0lm80IA1ohCiDgQYG8gLGO0m+wg4KO11+-2+sKuzwoiMWtmxFVofyCAlJnyhVNocHpNEpmyB412UwOmNgZIEayi5J+2OKkCiDxFYv0kHM5KG9IuLgWssusterJRIM5GM6xyV3i88rO6uBHPRhx5fhAxTWQRCVuwYGItsi0QQcQU5Pc9P6BI9Age5Ocvvtooo-HptnY2kD+k9xjEaGlCglikD904IaithTQfBEmo3NkAHNM2GBCmeP9pGwSw9I+pK1JLUwiOREVEW0hEeQxf8ACoAC00DAY2QAzgBlBiaACWDDH44AMgBRAAiC7HAAoYtOAJ7j1czgC2AEpLUQhIFmf6UE7eyAAGLpACumnHU9n86Xa43m4A8okiRnv4TCEBgXZGFaCDBAEuLgP2cjpO+05zhuK7rjWVoiP82bYSAjbVlwTB4bhhD-Lm4iSIW5jEWRihMHQ-rptoDExqIrHePGphwDRJHhhxZZ2FajH0SJQbCiJXoCT6PggXgcy2lQxF4PQES0K6cQLNJBoCXKxrsmiYI6pC5YiQqwmqhsyImoZXLGTRZlnLplzCnh4puVKDmWRZ1LhsKeCrJcTABTYfk0YiaZKRF-qecmIVUkp8XmSZVrxT6wWnMMWwGaCdnSBaIGIoQgx2iwKA0OQalijY7qpX08YZYYBr+U46iNY8wZleS2bxZGWh1ao+jtV63FJla0X0fFDzsERE3ZhNFFUPmSDUSWXW+eWE0EVAzasIy3bjXMqi4OpYD-H+AB2o5juhbBAA) of various LED series configurations with a 5V voltage supply.
 {: .fs-1 }
@@ -187,19 +187,19 @@ For the **parallel configuration**, the limiting factor is the total amount of c
 
 Well, in a parallel configuration, each resistor+LED branch is getting ~$$I=\frac{V_R}{R}=\frac{3V}{200}=15mA$$. Thus, the maximum number of LEDs in parallel is $$\frac{500mA}{15mA}=33.3$$ rounded to 34.
 
-![](assets/images/LEDParallelCircuit_5VSupply_34LEDs_CircuitJS.png)
+![[]({{ "/assets/images/LEDParallelCircuit_5VSupply_34LEDs_CircuitJS.png" | relative_url }})
 **Figure.** 34 LEDs in parallel draws 514.1mA of current, which exceeds the maximum amount of the 5V output pin on the Arduino (when powered by USB). Here's the [CircuitJS link](https://tinyurl.com/yhyl2zpo).
 {: .fs-1 }
 
 <!-- <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/movies/LEDOn5V_Parallel_CircuitJS.mp4" type="video/mp4" />
+  <source src="{{ "/assets/movies/LEDOn5V_Parallel_CircuitJS.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** A [CircuitJS simulation](https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgpABZsKBTAWjDACgB3EFlbFcGjW5he-MBkJQ22IQDMOAEwBOAewAOAHQCOKaGCb0IxaH2asosGvxqxsxXoMKQahGsTCSqMSAjYf+LGDOICgIkoHBuEL88srq2rr6hlAp3ihsAB7CREgomNkuIbi04JIIAGqcwkHRNFQR0WEhVQ0CQq0eVOlcPHwgfPWskWjgbErVwZ0TtV4hcC0ifWCC022jAG7ZfQNbYhKptFRIszC+PUNCUas73cJweP3BLPf9I7cdK8-4a+zjXw9Tf4hOopNCQBY1V6DF47djnF7LdpBb5Td7Ih4oEFA0KSdL+O7fHEEh5XGKKVSaHR6AzgA5pPyEALufhEpjMx7RECxCkJanJE6wd7szH1YVNIUiNZsyWohYwkbS-iwsbcdmA4UgrrzeEoz5qlZw1WSq6KqHNHp4Dwc7iWyQ3Fr69q2n4qpjOwHOkWg7VGpUK53Ki1WxE24NOc2h3FYz3ihkBGPhAPBMlxSmJGkQAWQPGM7gYN5NJj5qikrnk+JUpK0rPvYvA+p1om1kYhost8PvAMKuvKv51wGNzVzcFBySt-sGlo9p49t4tRmXJ4Ls3Nqit5ch37cDfhpjLr1akd5kY7PeYs2Gs9Cdfn2U9fdY-ex-FXkKF5el7kV9P81KCuPcAgKAYoWQEksmZapryVaZn+2YtGB9aAcBb64ghKGtohd7buep6Ib2yEAruiEHsO863p8WGTj0+FPPhc49HQSpPExK7oQCnysZurpcburGkWC7FmkwrGBtwXGcUsHYtPxWL8c+uYiX0rKiRBX5pny1ZwTmATYNguKFnpdpqeWGkwXS-49EZSEGPpqERrZY6fNZ2FKX69TWQRjmlB5dkCT6blSi51HcJ5TyeQx3Beia0WRd5rZetxfyJbuXr+Ue3mnrFa4tIlnwpV0uUgl6TBpQpARleE0UmVBlYZhZ8H4pVSGfqZ0H1TWVRpcVxWxlweUzD5EYhjcIIEQVSHpVUm4rANoz9WNyZjZFI2TCs9pcDQHHXgak7jJu4YhlNm0ki260ttNu07de0lcEdIJHeVaxEqtnLqe1v5eP++JbfZv2tbVP5aV98EnUhv1NlUv0htDt3iadVD-Rd4yw4jGJDoJjHbbQ2OGv9wRI4VWPWiJCMOTN7TQ3t8NDaTSGHgs531IT80062qMORDckgWhL4Q4W+NvW1dWfRYjWKY94SvSEkE8iLwNi2is1YpL5NXcIBpw6Vy2DEzox-AduuDQzPRzSw6uXtL5uXHOQA) of a parallel  with a 5V voltage supply.
 {: .fs-1 } -->
 
 I attempted to "stress" test the maximum values a bit using the USB port on an old MacBook Pro (do not do this!). Even though I exceeded both the 500mA limit with the 5V output pin (563mA) and the 150mA limit with the 3.3V pin (314mA), I did not trigger the fuse. However, I only kept the board plugged in for a short time.
 
-![](assets/images/LedParallel_TestPictures_ByJonFroehlich.png)
+![[]({{ "/assets/images/LedParallel_TestPictures_ByJonFroehlich.png" | relative_url }})
 **Figure.** I "stress tested" the 5V output pin using the USB for power. Do not attempt! Despite exceeding the rated maximums, I failed to trigger the Arduino's internal fuse on the 5V or 3.3V supplies. Note, the I/O pins do not have such protect so you could damage your board if you overdraw current.
 {: .fs-1 }
 
@@ -221,17 +221,17 @@ In future tutorials, we'll show how you can **control voltage output programmati
 
 The Arduino Uno provides both a 5V power supply (which we just used) and a 3.3V power supply. 
 
-![Close-up picture of the 5V and 3.3V power ports on the Arduino Uno](assets/images/Arduino_CloseUp_PowerPins.png)
+![Close-up picture of the 5V and 3.3V power ports on the Arduino Uno[]({{ "/assets/images/Arduino_CloseUp_PowerPins.png" | relative_url }})
 
 Let's move the LED anode (long leg) from the 5V pin to the 3.3V pin but keep the 220Ω resistor. What do you observe? The LED should be less bright! This is because there is less current flowing through the 3.3V circuit.
 
 Recall from above that with 5V, we have $$I=\frac{V_R}{R}=\frac{3V}{220Ω}=13.6mA$$. With the 3.3V output pin, this drops to $$I=\frac{V_R}{R}=\frac{1V}{220Ω}=4.5mA$$
 
-![](assets/images/ArduinoLEDOn_5.5Vs3.3V.png)
+![[]({{ "/assets/images/ArduinoLEDOn_5.5Vs3.3V.png" | relative_url }})
 
 Here's a workbench photo of the LED wired to the 3.3V port. The LED is noticeably less bright:
 
-![Workbench photo of the the LED wired to the 3.3V port](assets/images/Arduino_LEDOn_3.3Fixed_WorkbenchPhoto.png)
+![Workbench photo of the the LED wired to the 3.3V port[]({{ "/assets/images/Arduino_LEDOn_3.3Fixed_WorkbenchPhoto.png" | relative_url }})
 
 ### Full video walkthrough
 
@@ -261,7 +261,7 @@ V_R = 3.3V - 2V\to1.3V$$
 
 With ($$V_R=1.3V$$), we can now use Ohm's Law to calculate $$I$$: $$I = \frac{V}{R}\to\frac{1.3V}{220}\to5.9mA$$
 
-![Animation showing a USB cable plugging into an Arduino Uno to power an LED + resistor hooked up to 3.3V and GND](assets/movies/Arduino_LEDOn_3.3VFixed_USBPower.gif) -->
+![Animation showing a USB cable plugging into an Arduino Uno to power an LED + resistor hooked up to 3.3V and GND[]({{ "/assets/movies/Arduino_LEDOn_3.3VFixed_USBPower.gif" | relative_url }}) -->
 
 <!-- TODO: in future Fix Ohm's Law animations to use Vr, Vf nomenclature -->
 

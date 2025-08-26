@@ -22,7 +22,7 @@ We've only started to scratch the surface of what's possible in combining Arduin
 
 ## Processing and p5.js
 
-![](assets/images/ProcessingSketches_CollatzVariations.png)
+![[]({{ "/assets/images/ProcessingSketches_CollatzVariations.png" | relative_url }})
 **Figure.** Variations on the Collatz Conjecture by user [/u/ideology_boi](https://www.reddit.com/r/processing/comments/dy5z5h/collatz_variations/) on Reddit. Coded in ~200 lines in Processing ([code link](https://dailygenerative.art.blog/2019/11/17/reflections/)). Inspired by the Coding Train walkthrough video ["Collatz Conjecture"](https://www.youtube.com/watch?v=EYLWxwo1Ed8).
 {: .fs-1 }
 
@@ -35,14 +35,14 @@ Processing includes both an IDE and a Java-based library to allow designers, art
 
 Processing simplifies the graphical programming experiences and abstracts away complexity. In fact, when you write code in Processing, you don't even need to know that you're using Java! This design decision may feel familiar! Indeed, the Arduino framework similarly abstracts away complexity and often beginners don't even know they are writing `C/C++`. This is not by accident: the Arduino IDE and programming paradigm is based on Processing!
 
-![](assets/images/ProcessingVsArduino.png)
+![[]({{ "/assets/images/ProcessingVsArduino.png" | relative_url }})
 **Figure.** The Arduino IDE is based on Processing ([source](https://www.arduino.cc/en/guide/introduction)). Right-click on image and select "Open Image in New Tab" to zoom in. 
 {: .fs-1 }
 
 Creating interactive graphics and visualizations in Processing requires only a few lines of code. For example, here we've created a small painting program in ~10 lines.
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/ProcessingSimpleDrawingDemo-Optimized.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/ProcessingSimpleDrawingDemo-Optimized.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** A ten-line drawing program written in [Processing](https://processing.org/).
 {: .fs-1 }
@@ -71,19 +71,19 @@ In 2013, Lauren McCarthy (media artist + professor at UCLA) created [p5.js](http
 
 Even though p5.js is in JavaScript rather than Java—two languages that are similarly named but have absolutely [no relation](https://en.wikipedia.org/wiki/JavaScript#Java))—the p5.js implementation has almost a nearly identical API. So, it's very easy to translate pre-existing Processing code to p5.js (and to learn p5.js in general, if you know Processing). Similar to Processing, p5.js abstracts away much of the complexity of writing in JavaScript and allows you to focus purely on interactive graphics and visualizations. Here's a simple p5.js program—notice the similarities?
 
-![](assets/images/p5jsOnlineEditor.png)
+![[]({{ "/assets/images/p5jsOnlineEditor.png" | relative_url }})
 
 And here's the same black-and-white drawing program we wrote in Processing above but now written in p5.js:
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/p5jsSimpleDrawingDemo-Optimized.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/p5jsSimpleDrawingDemo-Optimized.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** A ten-line drawing program written in [p5.js](https://editor.p5js.org/jonfroehlich/sketches/fja8NHOKO). View, edit, and play with the code via the [online editor](https://editor.p5js.org/jonfroehlich/sketches/fja8NHOKO).
 {: .fs-1 }
 
 p5.js also has a convenient and incredibly cool [online editor](https://editor.p5js.org/), which makes it easy to not just rapidly write, test, and iterate on code but to share it with others as well. In the editor, simply go to `File -> Share` and select one of the options.
 
-![](assets/images/p5jsSharingSketch.png)
+![[]({{ "/assets/images/p5jsSharingSketch.png" | relative_url }})
 **Figure.** Sharing options in the p5.js [online editor](https://editor.p5js.org/).
 {: .fs-1 }
 
@@ -147,7 +147,7 @@ The easiest way to setup VSCode for p5.js is to install an extension like [p5.vc
 If you're a VSCode or web dev novice, we recommend this solution!
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/VSCodeAutocompleteForP5JS-TrimmedAndOptimized.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/VSCodeAutocompleteForP5JS-TrimmedAndOptimized.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** Spending time getting VSCode setup for p5.js is worth the investment. As the video shows, you get auto-complete, inline documentation, *etc.* You can either do this with the [p5.vcode](https://marketplace.visualstudio.com/items?itemName=samplavigne.p5-vscode) extension or via a manual setup, described next.
 {: .fs-1 }
@@ -182,7 +182,7 @@ You need to make sure that the baud rate in your JavaScript program and in your 
 OK, let's build a simple `Arduino → Computer` p5.js web app that reads in a single floating point number between [0, 1] (as text-encoded data) and draws an appropriately sized circle. For this demonstration, we will be using the Arduino program AnalogOut.ino and the web app called CircleSizeIn (live page, code). The full app experience will look like this:
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/AnalogInputOut.ino-CircleSizeIn-POT-TrimmedAndOptimized.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/AnalogInputOut.ino-CircleSizeIn-POT-TrimmedAndOptimized.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** A demonstration of the p5.js app CircleSizeIn ([live page](http://makeabilitylab.github.io/p5js/WebSerial/p5js/CircleSizeInDemo), [code](https://github.com/makeabilitylab/p5js/tree/master/WebSerial/p5js/CircleSizeInDemo)), which receives serial input from the attached Arduino running [AnalogOut.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/AnalogOut/AnalogOut.ino). We use a potentiometer on Pin A0 as analog input. Note: in this video, we use a slightly different Arduino sketch called [AnalogOutOLED.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/AnalogOutOLED/AnalogOutOLED.ino) to demonstrate both Arduino output and p5.js interactivity.
 {: .fs-1 }
@@ -293,7 +293,7 @@ function draw() {
 
 Now, save and load the page with Live Server. It should look like this:
 
-![](assets/images/CircleSizeDemoBlankCanvas.png)
+![[]({{ "/assets/images/CircleSizeDemoBlankCanvas.png" | relative_url }})
 **Figure.** An initial template for web dev development with p5.js and web serial.
 {: .fs-1 }
 
@@ -324,7 +324,7 @@ function draw() {
 
 It should look like this:
 
-![](assets/images/CircleSizeDemo-StaticCircleInTheMiddle.png)
+![[]({{ "/assets/images/CircleSizeDemo-StaticCircleInTheMiddle.png" | relative_url }})
 
 Or here's [a live demo](https://editor.p5js.org/jonfroehlich/sketches/aPoybLEdC) from the p5.js online editor.
 
@@ -356,7 +356,7 @@ function draw() {
 It should look something like this:
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/CircleSizeIn-MouseX.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/CircleSizeIn-MouseX.mp4" | relative_url }}" type="video/mp4" />
 </video>
 
 Or here's [a live demo](https://editor.p5js.org/jonfroehlich/sketches/HqhM0dc1B) from the p5.js online editor.
@@ -432,7 +432,7 @@ function mouseClicked() {
 
 Now save and run. The page should look largely the same except for the addition of the new `<p>` element at the bottom that says "Click anywhere on this page to open the serial connection dialog".
 
-![](assets/images/CircleSizeDemo-JustHookedUpSerialButDidNotParseContentYet.png)
+![[]({{ "/assets/images/CircleSizeDemo-JustHookedUpSerialButDidNotParseContentYet.png" | relative_url }})
 
 ##### Parse incoming web serial data
 
@@ -478,7 +478,7 @@ And that's it! We did it! You can view, edit, and run CircleSizeIn in p5.js's on
 Here's a video demonstration:
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/AnalogInputOut.ino-CircleSizeIn-POT-TrimmedAndOptimized.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/AnalogInputOut.ino-CircleSizeIn-POT-TrimmedAndOptimized.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** A demonstration of the p5.js app CircleSizeIn ([live page](http://makeabilitylab.github.io/p5js/WebSerial/p5js/CircleSizeInDemo), [code](https://github.com/makeabilitylab/p5js/tree/master/WebSerial/p5js/CircleSizeInDemo)), which receives serial input from the attached Arduino running [AnalogOut.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/AnalogOut/AnalogOut.ino). We use a potentiometer on Pin A0 as analog input. Note: in this video, we use a slightly different Arduino sketch called [AnalogOutOLED.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/AnalogOutOLED/AnalogOutOLED.ino) to demonstrate both Arduino output and p5.js interactivity.
 {: .fs-1 }
@@ -493,7 +493,7 @@ And, of course, we can hook up whatever sensor we want as input. Below, we're sh
 A demonstration of CircleSizeIn ([live page](http://makeabilitylab.github.io/p5js/WebSerial/p5js/CircleSizeInDemo), [code](https://github.com/makeabilitylab/p5js/tree/master/WebSerial/p5js/CircleSizeInDemo)) with a [force-sensitive resistor](../arduino/force-sensitive-resistors.md). The Arduino is still running [AnalogOut.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/AnalogOut/AnalogOut.ino).
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/AnalogOut-CircleSizeIn-FSR-Trimmed2-Optimized.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/AnalogOut-CircleSizeIn-FSR-Trimmed2-Optimized.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** A demonstration of the p5.js app CircleSizeIn ([live page](http://makeabilitylab.github.io/p5js/WebSerial/p5js/CircleSizeInDemo), [code](https://github.com/makeabilitylab/p5js/tree/master/WebSerial/p5js/CircleSizeInDemo)), with a [force-sensitive resistor (FSR)](../arduino/potentiometers.md) on Pin A0 and Arduino running [AnalogOut.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/AnalogOut/AnalogOut.ino). We use a FSR on Pin A0 as analog input. Note: in this video, we use a slightly different Arduino sketch called [AnalogOutOLED.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/AnalogOutOLED/AnalogOutOLED.ino) to demonstrate both Arduino output and p5.js interactivity.
 {: .fs-1 }
@@ -503,7 +503,7 @@ A demonstration of CircleSizeIn ([live page](http://makeabilitylab.github.io/p5j
 And here's a a demonstration of CircleSizeIn ([live page](http://makeabilitylab.github.io/p5js/WebSerial/p5js/CircleSizeInDemo), [code](https://github.com/makeabilitylab/p5js/tree/master/WebSerial/p5js/CircleSizeInDemo)) with the [Sharp GP2Y0A21YK](https://www.sparkfun.com/products/242) infrared distance sensor, which has analog output that varies from 3.1V at 10cm to 0.4V at 80cm. Because the IR sensor is noisy, we did not use [AnalogOut.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/AnalogOut/AnalogOut.ino). Instead, we wrote a custom program called [SharpIRDistanceOut.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SharpIRDistanceOut/SharpIRDistanceOut.ino) that uses a [moving average filter](../advancedio/smoothing-input.md) to smooth the input (at a cost of small input lag). 
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/SharpIRDistance-CircleSizeIn-Trimmed-Optimized.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/SharpIRDistance-CircleSizeIn-Trimmed-Optimized.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** A demonstration of CircleSizeIn ([live page](http://makeabilitylab.github.io/p5js/WebSerial/p5js/CircleSizeInDemo), [code](https://github.com/makeabilitylab/p5js/tree/master/WebSerial/p5js/CircleSizeInDemo)) with the [Sharp GP2Y0A21YK](https://www.sparkfun.com/products/242) infrared distance sensor, which has analog output that varies from 3.1V at 10cm to 0.4V at 80cm. For the video, we used a slightly modified version of [SharpIRDistanceOut.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SharpIRDistanceOut/SharpIRDistanceOut.ino) that also outputs information to a connected OLED called [SharpIRDistanceOutOLED.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SharpIRDistanceOutOLED/SharpIRDistanceOutOLED.ino)
 {: .fs-1 }
@@ -594,7 +594,7 @@ That's it! Pretty amazing, huh?! You can view our implementation as a [live page
 Here are two video demonstrations: one with a potentiometer and the other with the Sharp IR distance sensor.
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/AnalogOut.ino-GraphIn-POT-Trimmed-Optimized.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/AnalogOut.ino-GraphIn-POT-Trimmed-Optimized.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** A demonstration of GraphIn ([live page](https://makeabilitylab.github.io/p5js/WebSerial/p5js/GraphIn/), [code](https://github.com/makeabilitylab/p5js/tree/master/WebSerial/p5js/GraphIn)) with a potentiometer hooked up to Pin A0. The Arduino is running [AnalogOutOLED.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/AnalogOutOLED/AnalogOutOLED.ino) but something even simpler like [AnalogOut.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/AnalogOut/AnalogOut.ino) would work too!
 {: .fs-1 }
@@ -602,7 +602,7 @@ Here are two video demonstrations: one with a potentiometer and the other with t
 And here's a demonstration with the Sharp IR distance sensor.
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/SharpIRDistanceOutOLED-GraphIn-Trimmed-Optimized.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/SharpIRDistanceOutOLED-GraphIn-Trimmed-Optimized.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** A demonstration of GraphIn ([live page](https://makeabilitylab.github.io/p5js/WebSerial/p5js/GraphIn/), [code](https://github.com/makeabilitylab/p5js/tree/master/WebSerial/p5js/GraphIn)) with the [Sharp GP2Y0A21YK](https://www.sparkfun.com/products/242) infrared distance sensor. As before, we used a slightly modified version of [SharpIRDistanceOut.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SharpIRDistanceOut/SharpIRDistanceOut.ino) that also outputs information to a connected OLED called [SharpIRDistanceOutOLED.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SharpIRDistanceOutOLED/SharpIRDistanceOutOLED.ino)
 {: .fs-1 }

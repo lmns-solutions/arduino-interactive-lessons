@@ -27,11 +27,11 @@ You can view the Notebook in [html here](StepTracker/index.html) but we also **s
 
 To upload data to Colab, click on the folder icon on the left sidebar, then make a new folder called `Logs`, and then right-click on that folder and select `Upload`. Finally, select the file that you want to upload:
 
-![Screenshot of uploading data to Google Colab](assets/images/GoogleColab_UploadingData_Screenshot.png)
+![Screenshot of uploading data to Google Colab[]({{ "/assets/images/GoogleColab_UploadingData_Screenshot.png" | relative_url }})
 
 Once you've done this, you can save the project to your Google Drive and then invite your breakout group to collaborate and code together in the Colab notebook.
 
-![Screenshot of sharing and collaborating in Google Colab](assets/images/GoogleColab_ShareAndCollaborate_Screenshot.png)
+![Screenshot of sharing and collaborating in Google Colab[]({{ "/assets/images/GoogleColab_ShareAndCollaborate_Screenshot.png" | relative_url }})
 
 ## Next Lesson
 

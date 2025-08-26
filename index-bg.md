@@ -16,7 +16,7 @@ lang: bg
 {: .fs-2 .mt-1 .text-right}
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/HenryTapeManWelcome_HandWaverDemo-Optimized.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/HenryTapeManWelcome_HandWaverDemo-Optimized.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Видео.** Добре дошли в нашето виртуално учебно пространство по Физически изчисления! Много се радваме, че сте тук. Чувствайте се свободни да изследвате, играете, създавате, повтаряте и учите. В това видео демонстрираме използването на компютърно зрение в реално време за проследяване на ръката на потребителя, което след това се предава на Arduino, за да управлява изработен от картон човек със серво мотор. Можете да научите как да направите това в нашия урок [Серия HandPose](communication/handpose-serial.md). Сцената с картонен човек и планински фон е създадена в партньорство с двама от любимите ми създатели: дете от детска градина и дете в предучилищна възраст!
 {: .fs-1 }

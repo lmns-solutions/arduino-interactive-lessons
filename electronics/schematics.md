@@ -20,7 +20,7 @@ usetocbot: true
 
 Before going any further, it's useful to introduce [**circuit schematics**](https://en.wikipedia.org/wiki/Circuit_diagram), which are diagrammatic abstractions of circuits—this will allow us to "speak" about and describe circuits **visually**. 
 
-Unlike the more realistic pictorials that we have used thus far (*e.g.,* like [this](assets/videos/ElectronFlowVsConventionalCurrent_PhetSimulation_ByJonFroehlich.mp4) or [this](assets/videos/WaterCircuitAnalogy_Trimmed_ByJonFroehlich.mp4)), circuit schematics are the [*lingua franca*](https://learning.oreilly.com/library/view/practical-electronics-components/9781449373221/app02.html) of electronics—they are a compact, standardized, and visual representations of circuits. You'll find them in electronic datasheets, CAD layout software, and circuit analysis.
+Unlike the more realistic pictorials that we have used thus far (*e.g.,* like [this[]({{ "/assets/videos/ElectronFlowVsConventionalCurrent_PhetSimulation_ByJonFroehlich.mp4" | relative_url }}) or [this[]({{ "/assets/videos/WaterCircuitAnalogy_Trimmed_ByJonFroehlich.mp4" | relative_url }})), circuit schematics are the [*lingua franca*](https://learning.oreilly.com/library/view/practical-electronics-components/9781449373221/app02.html) of electronics—they are a compact, standardized, and visual representations of circuits. You'll find them in electronic datasheets, CAD layout software, and circuit analysis.
 
 But, like any "language", schematics take time and experience to learn and understand. For the most part, we will try to offer both pictorial representations and schematic representations in our tutorials but schematics are preferred for circuit analysis and you'll need to build up understanding in order to parse component datasheets—an important skill!
 
@@ -34,7 +34,7 @@ For more examples, see [Wikipedia's entry](https://en.wikipedia.org/wiki/Electro
 
 <!-- TODO: consider adding ground to this diagram below? -->
 
-![An image showing the electronic symbol for voltage source, current source, battery, resistive light (lamp), resistor, switch, diode, and LED](assets/images/BasicElectronicSymbols_ByJonFroehlich.png)
+![An image showing the electronic symbol for voltage source, current source, battery, resistive light (lamp), resistor, switch, diode, and LED[]({{ "/assets/images/BasicElectronicSymbols_ByJonFroehlich.png" | relative_url }})
 
 **Figure.** Common electronic symbols. For the battery, the long line is used to indicate the positive terminal and the short line is the negative terminal (which is typically used as ground). Image made in PowerPoint.
 {: .fs-1 }
@@ -45,14 +45,14 @@ To demonstrate the difference and utility of pictorial *vs.* circuit schematics,
 
 In the first example, we have a 1.5V battery with a 100Ω resistor. Unlike pictorial diagrams (on the left), circuit diagrams can be more visually compact as well as legible in black-and-white.
 
-![Image shows a pictorial representation of a basic circuit with a 1.5V battery, a switch, a resistor, and an LED along with a circuit schematic reprentation](assets/images/PictorialDiagramVsCircuitSchematic_ByJonFroehlich.png)
+![Image shows a pictorial representation of a basic circuit with a 1.5V battery, a switch, a resistor, and an LED along with a circuit schematic reprentation[]({{ "/assets/images/PictorialDiagramVsCircuitSchematic_ByJonFroehlich.png" | relative_url }})
 
 **Figure.** An example pictorial diagram and circuit schematic of a basic switching circuit with a 1.5V battery, a switch, a resistor, and an LED. Note: in a circuit schematic, the long line on the battery is used to indicate the positive terminal. Image made in [Fritzing](https://fritzing.org/) and PowerPoint.
 {: .fs-1 }
 
 Below, we have two additional examples. On the left, a 9V circuit with three components: a switch, a 470Ω, and an LED. On the right, we have two 1.5V batteries in series (stacked together, which creates a 3V voltage source) and a resistive light bulb (lamp). Do the schematic representations make sense? Do they seem to match their pictorial counterparts? Why or why not?
 
-![Two additional pictorial diagrams. vs. circuit schematics](assets/images/AdditionalPictorialDiagramVsCircuitSchematics_ByJonFroehlich.png)
+![Two additional pictorial diagrams. vs. circuit schematics[]({{ "/assets/images/AdditionalPictorialDiagramVsCircuitSchematics_ByJonFroehlich.png" | relative_url }})
 
 **Figure.** Additional examples of pictorial diagrams vs. circuit schematics for two more circuits. Right-click on the image and open it in a "new tab" to zoom. Image made in [Fritzing](https://fritzing.org/) and PowerPoint.
 {: .fs-1 }
@@ -63,7 +63,7 @@ While a circuit schematic captures the relative ordering of and connections betw
 
 For example, the following five schematics of a basic LED circuit are all functionally equivalent! Take your time reading them—do you agree that they are all equivalent? What stands out to you?
 
-![This image shows five different equivalent examples of a basic LED circuit with a 9V source, a resistor, and an LED](assets/images/BasicLEDCircuitMultipleExamples_CircuitSchematic_ByJonFroehlich.png)
+![This image shows five different equivalent examples of a basic LED circuit with a 9V source, a resistor, and an LED[]({{ "/assets/images/BasicLEDCircuitMultipleExamples_CircuitSchematic_ByJonFroehlich.png" | relative_url }})
 
 **Figure.** Though they *look* different, all five of these basic LED circuits are functionally equivalent. Each of them have the positive terminal of the battery connected to a resistor, then an LED, and the cathode of the LED is connected to the negative terminal of the battery. Image made in PowerPoint.
 {: .fs-1 }
@@ -74,14 +74,14 @@ When reading a circuit schematic, it can be difficult to properly interpret cros
 
 A wire is shown as a solid line. When two or more wires **connect**, the junction is *typically* depicted by a black dot—we call this junction a **node**. For **crossing** (unconnected) wires, there is *no* black dot. As [Hughes notes](https://learning.oreilly.com/library/view/practical-electronics-components/9781449373221/app02.html), schematics created before ~1980 used a *hump* or *arc* to indicate that one wire cross another without connecting (far right in image below). While valuable, this practice is far less common today perhaps because of the greater complexity of modern circuits, which have more crossing wires (thus, those humps could be visually distracting).
 
-![Examples of how to differentiate between connected and unconnected wires in a circuit schematic](assets/images/ConnectedVsUnconnectedWires_CircuitSchematics_ByJonFroehlich.png)
+![Examples of how to differentiate between connected and unconnected wires in a circuit schematic[]({{ "/assets/images/ConnectedVsUnconnectedWires_CircuitSchematics_ByJonFroehlich.png" | relative_url }})
 
 **Figure.** When reading a circuit schematic, it's important to properly assess and understand which wires are connected and how—but determining whether a crossing wire is unconnected (*e.g.,* jumping over a wire) or connected (*i.e.,* forming a node) can be confusing. Above, we show various examples of how to interpret whether wires are connected in a circuit diagram. Image made in PowerPoint.
 {: .fs-1 }
 
 But this can quickly get confusing. For example, are the two circuits below equivalent or not? In fact, they are! When in doubt, redraw the circuit yourself on a piece of paper!
 
-![An image of four block elements connected together in a certain arrangement and two equivalent circuit diagrams](assets/images/ExampleOfConfusingButEquivalentCircuit_CircuitSchematics_StanfordEngr40.png)
+![An image of four block elements connected together in a certain arrangement and two equivalent circuit diagrams[]({{ "/assets/images/ExampleOfConfusingButEquivalentCircuit_CircuitSchematics_StanfordEngr40.png" | relative_url }})
 
 An example of how even simple circuits can start to get confusing. What's connected to what? Are these two circuits the same? In fact, yes! When in doubt, redraw the circuit on paper. Image from [Stanford's ENGR 40M course](https://web.stanford.edu/class/archive/engr/engr40m.1178/slides/lecture01.pdf).
 {: .fs-1 }
@@ -93,13 +93,13 @@ An example of how even simple circuits can start to get confusing. What's connec
 
 On many circuit diagrams, you'll see special symbols used to denote the voltage source and ground nodes. Positive voltage source nodes are usually indicated by an arrow pointing up while ground nodes are typically pointed down (with a flat line, downward pointing triangle, or three lines).
 
-![Shows examples of positive voltage sources (upward arrows) and ground nodes (downward pointed triangles)](assets/images/VoltageSourceAndGroundNodes_ByJonFroehlich.png)
+![Shows examples of positive voltage sources (upward arrows) and ground nodes (downward pointed triangles)[]({{ "/assets/images/VoltageSourceAndGroundNodes_ByJonFroehlich.png" | relative_url }})
 
 Using these symbols has the advantage of more clearly marking what the reference or ground node of a circuit is but, more importantly, also allows the circuit designer to render more clean diagrams (by removing needless wires). 
 
 For example, all four versions of this simple LED-based circuit are functionally equivalent but the one on the right is far simpler.
 
-![Shows four equivalent circuits but the two on the right use the special voltage and/or ground node symbols](assets/images/RedrawingLEDCircuitWithVoltageSourceAndGroundNodes_ByJonFroehlich.png)
+![Shows four equivalent circuits but the two on the right use the special voltage and/or ground node symbols[]({{ "/assets/images/RedrawingLEDCircuitWithVoltageSourceAndGroundNodes_ByJonFroehlich.png" | relative_url }})
 
 Four examples of the *same* circuit drawn differently. The circuit visuals become increasingly minimalist from left-to-right. Image made in PowerPoint (inspired by [Section 5.6](https://learning.oreilly.com/library/view/electronics-for-beginners/9781484259795/html/488495_1_En_5_Chapter.xhtml) of Electronics for Beginners)
 {: .fs-1 }
@@ -108,7 +108,7 @@ Four examples of the *same* circuit drawn differently. The circuit visuals becom
 
 In the schematic below, you can see how the circuit designer made use of the voltage source and ground node symbols. This declutters the diagram by reducing the need to have many lines (wires) drawn to a shared $$GND$$ node.
 
-![A circuit diagram of the 5V regulator on the RedBoard](assets/images/CircuitSchematic_RedBoard5VRegulator_FromSparkfun.png)
+![A circuit diagram of the 5V regulator on the RedBoard[]({{ "/assets/images/CircuitSchematic_RedBoard5VRegulator_FromSparkfun.png" | relative_url }})
 
 This circuit schematic is of the 5V voltage regulator on the [Sparkfun RedBoard](https://www.sparkfun.com/products/13975), Sparkfun's open hardware version of the [Arduino Uno R3](https://store.arduino.cc/usa/arduino-uno-rev3) board. Notice how the schematic uses the voltage source and ground node symbols? A [voltage regulator](https://en.wikipedia.org/wiki/Voltage_regulator) is a system designed to maintain a constant voltage and is used here to stepdown 7-15V source inputs to a constant 5V. The full schematic is [here](http://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/RedBoard-v06.pdf).
 {: .fs-1 }
@@ -123,7 +123,7 @@ For your learning activity, we would like you to build both a *pictorial* repres
 
 The latest development version of Fritzing is CD-548. Visit the GitHub Fritzing [releases page](https://github.com/fritzing/fritzing-app/releases) and scroll down to CD-548, then click on the 'Assets' link, which will expand a download menu for compiled versions of Fritzing for various OSes. See image below.
 
-![Screenshot of the GitHub releases page for Fritzing](assets/images/DownloadingFritizingFromGitHub_ScreenshotByJonFroehlich.png)
+![Screenshot of the GitHub releases page for Fritzing[]({{ "/assets/images/DownloadingFritizingFromGitHub_ScreenshotByJonFroehlich.png" | relative_url }})
 
 **Figure** Go to the GitHub Fritzing [releases page](https://github.com/fritzing/fritzing-app/releases), scroll down to CD-548, then click on the 'Assets' link to download a free development version of Fritzing.
 {: .fs-1 }
@@ -133,7 +133,7 @@ Adafruit maintains an [open-source repository on GitHub](https://github.com/adaf
 
 ### Using Fritzing
 
-Once you've downloaded and unzipped the Fritzing release, open it and follow this tutorial video. Together, we will make a simple LED-based circuit with a 9V battery, a switch, a resistor, and an LED. To complement the video, we also have this [simple Fritzing PDF guide](assets/pdfs/RapidIntroduction_HowToUseFritizing_ByJonFroehlich.pdf).
+Once you've downloaded and unzipped the Fritzing release, open it and follow this tutorial video. Together, we will make a simple LED-based circuit with a 9V battery, a switch, a resistor, and an LED. To complement the video, we also have this [simple Fritzing PDF guide[]({{ "/assets/pdfs/RapidIntroduction_HowToUseFritizing_ByJonFroehlich.pdf" | relative_url }}).
 
 <iframe width="736" height="414"  src="https://www.youtube.com/embed/x1aN9LwhIAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

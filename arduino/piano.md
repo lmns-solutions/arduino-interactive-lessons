@@ -103,7 +103,7 @@ We'll start by constructing a simple piezo buzzer siren before making our piano.
 
 The circuit is quite simple: simply connect one leg of the piezo buzzer to Pin 9 and the other leg to GND. The piezo buzzer will work in either direction (try it if you don't believe us!).
 
-![A Tinkercad diagram of the siren circuit showing one leg of the piezo buzzer hooked to Pin 9 and the other leg to ground](assets/images/ArduinoUno_SirenCircuit_TinkercadDiagram.png)
+![A Tinkercad diagram of the siren circuit showing one leg of the piezo buzzer hooked to Pin 9 and the other leg to ground[]({{ "/assets/images/ArduinoUno_SirenCircuit_TinkercadDiagram.png" | relative_url }})
 You can play with the Tinkercad simulation [here](https://www.tinkercad.com/things/iYOIfJAsLVl-simple-siren).
 {: .fs-1 }
 
@@ -196,7 +196,7 @@ This is the first time we've breadboarded so many components, so try to keep you
 
 Note that we do **not** need to wire anything directly to Vcc here (and you can tell this at a glance with my wiring because no red wires!).
 
-![Tinkercad wiring diagram showing how to hook up the buttons and piezo speaker](assets/images/ArduinoUno_SimplePiano_TinkercadWiringDiagram.png)
+![Tinkercad wiring diagram showing how to hook up the buttons and piezo speaker[]({{ "/assets/images/ArduinoUno_SimplePiano_TinkercadWiringDiagram.png" | relative_url }})
 You can play with this circuit and the underlying Arduino program on [Tinkercad](https://www.tinkercad.com/things/dunwYl8U0Uq-simple-piano)
 {: .fs-1 }
 
@@ -204,7 +204,7 @@ Here are two images of our physical wiring. Click and open the images in a new t
 
 | Simple Piano Wiring View 1 | Simple Piano Wiring View 2 |
 | -------------------------- | -------------------------- |
-| ![Workbench photo of the simple piano wiring](assets/images/ArduinoUno_SimplePiano_WorkbenchPhoto1.png) | ![Workbench photo of the simple piano wiring](assets/images/ArduinoUno_SimplePiano_WorkbenchPhoto2.png) |
+| ![Workbench photo of the simple piano wiring[]({{ "/assets/images/ArduinoUno_SimplePiano_WorkbenchPhoto1.png" | relative_url }}) | ![Workbench photo of the simple piano wiring[]({{ "/assets/images/ArduinoUno_SimplePiano_WorkbenchPhoto2.png" | relative_url }}) |
 
 ### Writing the piano code
 

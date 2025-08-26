@@ -17,7 +17,7 @@ usetocbot: true
 {:toc}
 ---
 
-![Hand holding a Circuit Express Playground board](assets/images/CircuitExpressPlaygroundHandModelShot_Adafruit_Edited.png)
+![Hand holding a Circuit Express Playground board[]({{ "/assets/images/CircuitExpressPlaygroundHandModelShot_Adafruit_Edited.png" | relative_url }})
 **Figure.** The Circuit Express Playground. Image from [Adafruit](https://www.adafruit.com/product/3333). 
 {: .fs-1 } 
 
@@ -38,13 +38,13 @@ To contextualize CPX's potential even further, we can use the three evaluation c
 We believe the CPX meets each of these criteria—making it a powerful prototyping and educational platform. As an example, at the University of Washington, the CPX has been used in our [MHCI+D program](https://mhcid.washington.edu/) as well as some introductory electrical engineering courses—quite the range of contexts!
 
 ## Hardware
-<!-- ![Annotated version of the Circuit Playground Express showing the location of all components](assets/images/CircuitExpressHardwareOverview_AnnotationsByJonFroehlich.png)
+<!-- ![Annotated version of the Circuit Playground Express showing the location of all components[]({{ "/assets/images/CircuitExpressHardwareOverview_AnnotationsByJonFroehlich.png" | relative_url }})
 **Figure.** An overview of the Circuit Express Playground (CPX) hardware including built-in input and output. See below for larger versions.
 {: .fs-1 }  -->
 
-<!-- ![](assets/images/BuiltInCPXInput_AnnotationsByJonFroehlich.png.png)
+<!-- ![[]({{ "/assets/images/BuiltInCPXInput_AnnotationsByJonFroehlich.png.png" | relative_url }})
 
-![Annotated version of the Circuit Playground Express showing the location of all components](assets/images/CircuitPlaygroundExpress_AnnotatedImage_Adafruit.png)
+![Annotated version of the Circuit Playground Express showing the location of all components[]({{ "/assets/images/CircuitPlaygroundExpress_AnnotatedImage_Adafruit.png" | relative_url }})
 *Figure.* An annotated version of the CPX showing the location of all main components. Image from [Adafruit](https://learn.adafruit.com/adafruit-circuit-playground-express/guided-tour).  -->
 
 One key benefit of the CPX hardware—compared with vanilla Arduino boards like the Uno—is that it's  full of amazing input/output (IO) components. Adafruit provides a detailed ["guided tour"](https://learn.adafruit.com/adafruit-circuit-playground-express/guided-tour) but, in short, the board includes five types of input include motion, temperature, light, sound, and buttons as well as two types of output (LEDs, sound).
@@ -55,7 +55,7 @@ It's OK if you don't understand all of the terminology used below. In fact, if t
 ### Built-in Input
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/CPX_PaintingWithCPXAccelerometerAsAMouse.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/CPX_PaintingWithCPXAccelerometerAsAMouse.mp4" | relative_url }}" type="video/mp4" />
 </video>
 
 **Video.** The CPX has lots of really fun and interesting on-board sensors, including an accelerometer, temperature, light, sound, and more. In the video above, I'm showing how to use the on-board accelerometer (motion sensor) to create a "motion mouse" with the CPX. See [L7.2: Accelerometer Mouse](cpx-mouse.md#lesson-72-accelerometer-mouse) for more! 
@@ -70,7 +70,7 @@ Specifically, the CPX includes the following built-in input/sensors:
 - 2 x Push buttons, labeled A and B
 - 1 x Slide switch
 
-![An annotated diagram showing the location of the built-in motion, temperature, light, sound sensors along with the push buttons and slide switch](assets/images/BuiltInCPXInput_AnnotationsByJonFroehlich.png)
+![An annotated diagram showing the location of the built-in motion, temperature, light, sound sensors along with the push buttons and slide switch[]({{ "/assets/images/BuiltInCPXInput_AnnotationsByJonFroehlich.png" | relative_url }})
 
 **Figure.** An annotated image of the CPX's built-in sensors/input.
 {: .fs-1 .align-center}
@@ -84,7 +84,7 @@ In addition to the built-in input, the CPX also has built-in LEDs and speaker fo
 - Green "ON" LED so you know its powered
 - Red "#13" LED for basic blinking
 
-![An annotated diagram showing the location of the built-in neopixels and speaker](assets/images/BuiltInCPXOutput_AnnotationsByJonFroehlich.png)
+![An annotated diagram showing the location of the built-in neopixels and speaker[]({{ "/assets/images/BuiltInCPXOutput_AnnotationsByJonFroehlich.png" | relative_url }})
 
 **Figure.** An annotated image of the CPX's built-in output.
 {: .fs-1 .align-center}
@@ -103,9 +103,9 @@ In addition to the built-in components, the CPX has 14 connection pads to suppor
 
 <!-- TODO: insert picture or animated movie of CPX with alligator clips -->
 
-<!-- ![A pinout diagram of the CPX highlighting the 14 alligator pads](assets/images/CPX_14AlligatorClips_ByJonFroehlich.png) -->
+<!-- ![A pinout diagram of the CPX highlighting the 14 alligator pads[]({{ "/assets/images/CPX_14AlligatorClips_ByJonFroehlich.png" | relative_url }}) -->
 
-![A pinout diagram of the CPX highlighting the 14 alligator pads](assets/images/CPX_14AlligatorClipsAnnotated_ByJonFroehlich.png)
+![A pinout diagram of the CPX highlighting the 14 alligator pads[]({{ "/assets/images/CPX_14AlligatorClipsAnnotated_ByJonFroehlich.png" | relative_url }})
 
 **Figure.** An annotated image of the CPX's 14 alligator pads for power and GPIO.
 {: .fs-1 .align-center}
@@ -117,7 +117,7 @@ The CPX has eight general purpose I/O pins (GPIO) for interfacing with external 
 {: .warning }
 Each pad can provide up to ~20mA of current so **do not connect a motor** or other high-power component directly. If you don't know what this means, that's OK! You can always ask the instruction team whether a component is safe to use!
 
-![A pinout diagram of the CPX highlighting the CPX GPIO pads](assets/images/CPX_GPIOPadsAnnotated_ByJonFroehlich.png)
+![A pinout diagram of the CPX highlighting the CPX GPIO pads[]({{ "/assets/images/CPX_GPIOPadsAnnotated_ByJonFroehlich.png" | relative_url }})
 
 <!-- TODO: consider adding brief .mp4 showing pressure sensor + CPX lights and a second .mp4 showing NeoPixel hookup. -->
 
@@ -125,7 +125,7 @@ For more information, see [Adafruit's CPX Pinouts Guide](https://learn.adafruit.
 
 ### Analog Input
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/CPX_AnalogInput_PotentiometerOverview_Optimized.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/CPX_AnalogInput_PotentiometerOverview_Optimized.mp4" | relative_url }}" type="video/mp4" />
 </video>
 
 **Video.** Pins A1-A7 on the CPX can be used for analog input to read voltages between 0-3.3V, which the CPX converts to a number between 0-1023. Here, I'm using a [potentiometer](../electronics/variable-resistors.md#potentiometers), which dynamically changes its resistance (and splits the voltage levels) based on knob position. Learn more about analog input in [L8: Analog Input](analog-input.md)!
@@ -135,21 +135,21 @@ The CPX has six pins that can read analog input (A1-A7). Analog input pins read 
 
 Below is the pinout diagram for the CPX highlighting the analog input pins (A1-A7):
 
-![A pinout diagram of the CPX highlighting the analog input pins](assets/images/CPX_AnalogInputPads_ByJonFroehlich.png)
+![A pinout diagram of the CPX highlighting the analog input pins[]({{ "/assets/images/CPX_AnalogInputPads_ByJonFroehlich.png" | relative_url }})
 
 You'll learn more about analog input in [L8: Analog Input](analog-input.md)!
 
 ### Capacitive Touch Sensor Pads
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/CPX_CapacitiveSensing_SodaCanProximityDetector_MakeCode_Optimized.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/CPX_CapacitiveSensing_SodaCanProximityDetector_MakeCode_Optimized.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** Pins A1-A7 on the CPX can be used for capacitive touch sensing. Here, I'm showing how we can use a soda can to build a simple hand proximity detector. [Learn more here!](capacitive-touch.md)
 {: .fs-1 }
 
 Of the eight GPIO pins, **seven** can be used for capacitive touch sensing (Pins A1-A7). You'll learn more about capacitive sensing in [Lesson 5](capacitive-touch.md)!
 
-![A pinout diagram of the CPX highlighting the capacitive touch pads](assets/images/CPX_CapacitiveTouchPadsAnnotated_ByJonFroehlich.png)
+![A pinout diagram of the CPX highlighting the capacitive touch pads[]({{ "/assets/images/CPX_CapacitiveTouchPadsAnnotated_ByJonFroehlich.png" | relative_url }})
 
 ### Power Pads
 
@@ -159,7 +159,7 @@ As the [Adafruit CPX guide describes](https://learn.adafruit.com/adafruit-circui
 - 2 x **3.3V out** pads
 - 1 x **USB/battery Vout** pad, which is a special power pad. This pin will supply either USB power (5V) or LiPoly power (3.7V). If both are connected, the CPX supplies the higher voltage. This output is not connected to the onboard regulator, so can supply up to 500mA continuous and 1A peak before tripping the internal fuse (if the fuse trips, just wait a minute and it will automatically reset)
 
-![A pinout diagram of the CPX highlighting the alligator power pads](assets/images/CPX_PowerPadsAnnotated_ByJonFroehlich.png)
+![A pinout diagram of the CPX highlighting the alligator power pads[]({{ "/assets/images/CPX_PowerPadsAnnotated_ByJonFroehlich.png" | relative_url }})
 
 **Figure.** An annotated image of the CPX's GND and Vout power pads.
 {: .fs-1 .align-center}
@@ -171,7 +171,7 @@ The CPX also has a powerful embedded microcontroller—the ATSAMD21 ARM Cortex M
 ## Using the CPX as Computer Input
 
 <video playsinline style="margin:0px" controls>
-  <source src="assets/videos/CPX_BananaPiano_OptimizedTrimmed.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/CPX_BananaPiano_OptimizedTrimmed.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** The CPX can be used as an input controller to your computer. You can make your own keyboard, mouse, joystick, and more! This example is from [Lesson 5.3: Making a Capacitive Keyboard](capacitive-touch.md#lesson-53-making-a-capacitive-touch-keyboard).
 {: .fs-1 }
@@ -206,14 +206,14 @@ This is the old Adafruit video we used to have here
 </video> -->
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/Making_Blinky_MakeCode_Annotated.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/Making_Blinky_MakeCode_Annotated.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** Rapidly creating a full program with MakeCode called "Blinky." We will turn on all the NeoPixels (by setting them red) then pause then turn them off (by setting them black) and repeat "forever." [Code link](https://makecode.com/_JdPfj8VrmWV3).
 {: .fs-1 }
 
 ## Learning Resources
 
-<!-- ![A screenshot of the MakeCode website where you can find links to projects](assets/images/MakeCode_Screenshot_Tutorials.png)
+<!-- ![A screenshot of the MakeCode website where you can find links to projects[]({{ "/assets/images/MakeCode_Screenshot_Tutorials.png" | relative_url }})
 **Figure** A screenshot of the [Adafruit MakeCode website](https://makecode.adafruit.com/) that has links to tutorials and example projects.
 {: .fs-1 } -->
 

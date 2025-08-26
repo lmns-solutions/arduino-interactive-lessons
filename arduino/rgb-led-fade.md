@@ -42,7 +42,7 @@ The circuit is the same as the previous [RGB LED lesson](rgb-led.md). Make sure 
 
 | RGB Common Cathode Wiring | RGB Common Anode Wiring |
 |:-----:|:-----:|
-| ![Breadboard circuit wiring for an RGB LED Common Cathode design where the cathode is hooked to GND](assets/images/ArduinoUno_RgbLEDCommonCathode_WiringDiagramWithBreadboard.png) | ![Breadboard circuit wiring for an RGB LED Common Anode design where the anode is hooked to 5V](assets/images/ArduinoUno_RgbLEDCommonAnode_WiringDiagramWithBreadboard.png) |
+| ![Breadboard circuit wiring for an RGB LED Common Cathode design where the cathode is hooked to GND[]({{ "/assets/images/ArduinoUno_RgbLEDCommonCathode_WiringDiagramWithBreadboard.png" | relative_url }}) | ![Breadboard circuit wiring for an RGB LED Common Anode design where the anode is hooked to 5V[]({{ "/assets/images/ArduinoUno_RgbLEDCommonAnode_WiringDiagramWithBreadboard.png" | relative_url }}) |
 
 ## Writing the code
 
@@ -155,7 +155,7 @@ Second, a workbench video of the code running on an Arduino Uno:
 
 The second method for crossfading the RGB LED takes advantage of the [Hue, Saturation, Lightness (HSL)](https://en.wikipedia.org/wiki/HSL_and_HSV) color space. To change the "color" of the RGB LED, we are really talking about changing its **hue**. It's much easier to do this using HSL and then converting to RGB to set our RGB LED color. 
 
-![RGB vs. HSL color spaces](assets/images/RGBVsHSLColorSpace_Wikipedia.png)
+![RGB vs. HSL color spaces[]({{ "/assets/images/RGBVsHSLColorSpace_Wikipedia.png" | relative_url }})
 RGB and HSL color space visualizations from [Wikipedia](https://en.wikipedia.org/wiki/HSL_and_HSV).
 {: .fs-1 }
 

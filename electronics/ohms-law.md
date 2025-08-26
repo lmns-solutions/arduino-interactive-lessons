@@ -49,7 +49,7 @@ Drawing again on our hydraulic-electric analogies (which we used amply in [previ
 
 Does this equation sound familiar? It should. It is exactly Ohm's Law! Current flow in a circuit is directly proportional to the voltage drop in a circuit divided by its resistance. See image below.
 
-![An image showing that for laminar (smooth) flow of water in pipes, the equation for determining the water flow rate (called Poiseuille's Law) is an equivalent to determining the current flow in a circuit using Ohm's Law.](assets/images/PoseuillesLawAndOhmsLaw_FigureByJonFroehlich.png)
+![An image showing that for laminar (smooth) flow of water in pipes, the equation for determining the water flow rate (called Poiseuille's Law) is an equivalent to determining the current flow in a circuit using Ohm's Law.[]({{ "/assets/images/PoseuillesLawAndOhmsLaw_FigureByJonFroehlich.png" | relative_url }})
 
 **Figure.** [Poiseuille's Law](http://hyperphysics.phy-astr.gsu.edu/hbase/ppois.html#poi) for the smooth flow of fluids and [Ohm's Law](http://hyperphysics.phy-astr.gsu.edu/hbase/electric/ohmlaw.html#c1) for electric current are similar. Image based on [HyperPhysics at Georgia State ](http://hyperphysics.phy-astr.gsu.edu/hbase/electric/watcir2.html) and created in PowerPoint. Images of Poiseuille and Ohm are from Wikipedia.
 {: .fs-1 }
@@ -116,7 +116,7 @@ Before we begin, let's watch this video of me building a simple resistive circui
 
 Imagine a battery-powered circuit with a single resistor (basic, yes but pedagogically powerful!). If we are given the voltage $$9V$$ and the resistance ($$100Ω$$), can we solve for the current $$I$$?
 
-![A circuit diagram showing a 9V battery-powered circuit with a single resistor and the question: solve for current I.](assets/images/OhmsLawBasic_SolveForCurrentI_Step0_ByJonFroehlich.png)
+![A circuit diagram showing a 9V battery-powered circuit with a single resistor and the question: solve for current I.[]({{ "/assets/images/OhmsLawBasic_SolveForCurrentI_Step0_ByJonFroehlich.png" | relative_url }})
 
 **Figure.** A simple 9V-powered circuit with a single resistor of $$100Ω$$. Using Ohm's Law, can you solve for current $$I$$? Images made in [Fritzing](https://fritzing.org/) and PowerPoint.
 {: .fs-1 }
@@ -129,7 +129,7 @@ Observe that all wires touching the *positive* battery terminal have the same el
 
 And because we are solving for current, we we need to use the Ohm's Law formulation: $$I = \frac{V}{R}$$. More specifically, as voltage is always relative—an electric potential *difference*—we use $$I = \frac{V_1 - V_2}{R}$$
 
-![A diagram showing that all wires touching the battery's positive terminal have the same voltage (9V). Similarly, all wires touching the battery's negative terminal have the same voltage (0V)](assets/images/OhmsLawBasic_SolveForCurrentI_Step1_ByJonFroehlich.png)
+![A diagram showing that all wires touching the battery's positive terminal have the same voltage (9V). Similarly, all wires touching the battery's negative terminal have the same voltage (0V)[]({{ "/assets/images/OhmsLawBasic_SolveForCurrentI_Step1_ByJonFroehlich.png" | relative_url }})
 
 **Figure.** All wires touching the battery's positive terminal have the same voltage (9V). Similarly, all wires touching the battery's negative terminal have the same voltage (0V). Images made in [Fritzing](https://fritzing.org/) and PowerPoint.
 {: .fs-1 }
@@ -140,7 +140,7 @@ Having established that all of the wires on the top of the circuit (those direct
 
 Now, we can substitute $$9V$$ for $$V_1$$ and $$0V$$ for $$V_2$$. And we also know that $$R=100Ω$$, giving us the complete equation: $$I = \frac{9V - 0V}{100Ω}$$
 
-![The same circuit diagram as before with annotations calling all wires touching the battery's positive terminal node V1 and all wires touching the negative terminal node V2](assets/images/OhmsLawBasic_SolveForCurrentI_Step2_ByJonFroehlich.png)
+![The same circuit diagram as before with annotations calling all wires touching the battery's positive terminal node V1 and all wires touching the negative terminal node V2[]({{ "/assets/images/OhmsLawBasic_SolveForCurrentI_Step2_ByJonFroehlich.png" | relative_url }})
 
 **Figure.** We can call all wires touching the battery's positive terminal node $$V_1$$ and all wires touching the negative terminal node $$V_2$$. Using this information, we can substitute $$9V$$ for $$V_1$$ and $$0V$$ for $$V_2$$. Images made in [Fritzing](https://fritzing.org/) and PowerPoint.
 {: .fs-1 }
@@ -149,7 +149,7 @@ Now, we can substitute $$9V$$ for $$V_1$$ and $$0V$$ for $$V_2$$. And we also kn
 
 Finally, we are ready to solve for current $$I = \frac{9V - 0V}{100Ω} \Rightarrow 0.09A \Rightarrow 90mA$$
 
-![The final solution with I = 90mA](assets/images/OhmsLawBasic_SolveForCurrentI_Step3_ByJonFroehlich.png)
+![The final solution with I = 90mA[]({{ "/assets/images/OhmsLawBasic_SolveForCurrentI_Step3_ByJonFroehlich.png" | relative_url }})
 
 We did it. We successfully applied Ohm's Law to solve for current!
 
@@ -163,7 +163,7 @@ Current decreases, right? And does so proportionally.
 
 Indeed, the current goes from $$90mA$$ with $$100Ω$$ to $$I = \frac{9V}{4700Ω} \Rightarrow 0.0019𝐴 \Rightarrow 1.9𝑚𝐴$$, which is not very much!
 
-![Same circuit as before but with an increased resistance from 100Ω to 4700Ω](assets/images/OhmsLawBasic_SolveForCurrent2_ByJonFroehlich.png)
+![Same circuit as before but with an increased resistance from 100Ω to 4700Ω[]({{ "/assets/images/OhmsLawBasic_SolveForCurrent2_ByJonFroehlich.png" | relative_url }})
 
 **Figure.** As expected, the current $$I$$ goes down as resistance $$R$$ goes up.
 {: .fs-1 }
@@ -178,7 +178,7 @@ Because we are solving for voltage, we should use the $$V=I*R$$ formulation. The
 
 Now, we can easily solve for $$V = 0.05A * 100Ω = 5V$$. The battery is a $$5V$$ voltage source.
 
-![Diagram shows a similar circuit as before but with an unknown voltage source V and a known current (I=50mA) and a known resistance (R=100Ω). Given this information, we can use V = I * R to solve for V. So, V = 50mA * 100Ω => 5V](assets/images/OhmsLawBasic_SolveForVoltage_ByJonFroehlich.png)
+![Diagram shows a similar circuit as before but with an unknown voltage source V and a known current (I=50mA) and a known resistance (R=100Ω). Given this information, we can use V = I * R to solve for V. So, V = 50mA * 100Ω => 5V[]({{ "/assets/images/OhmsLawBasic_SolveForVoltage_ByJonFroehlich.png" | relative_url }})
 
 **Figure.** Using the $$V=I*R$$ formulation of Ohm's Law, we can solve for voltage given a known current $$I$$ and a known resistance $$R$$. Images made in [Fritzing](https://fritzing.org/) and PowerPoint.
 {: .fs-1 }
@@ -193,7 +193,7 @@ Again, the first thing to do is convert all units to base units. So, $$1.32mA \R
 
 Now, we can solve for $$R = \frac{9V}{0.00132A} \Rightarrow 6818.2Ω \Rightarrow 6.8kΩ$$
 
-![Diagram shows a similar circuit as before but with an unknown resistance R and a known voltage (V=9V) and a known current (I=50mA) . Given this information, we can use R = V / I to solve for R. So, R = 9V/50mA => 6.82kΩ](assets/images/OhmsLAwBasic_SolveForResistance_ByJonFroehlich.png)
+![Diagram shows a similar circuit as before but with an unknown resistance R and a known voltage (V=9V) and a known current (I=50mA) . Given this information, we can use R = V / I to solve for R. So, R = 9V/50mA => 6.82kΩ[]({{ "/assets/images/OhmsLAwBasic_SolveForResistance_ByJonFroehlich.png" | relative_url }})
 
 **Figure.** Using the $$R=\frac{V}{I}$$ formulation of Ohm's Law, we can solve for the resistance $$R$$ given a known voltage $$V$$ and a known current $$I$$. Images made in [Fritzing](https://fritzing.org/) and PowerPoint.
 {: .fs-1 }

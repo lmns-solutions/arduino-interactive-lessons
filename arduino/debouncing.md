@@ -24,12 +24,12 @@ search_exclude: false
 In this lesson, we're going to learn about [contact bouncing ](https://en.wikipedia.org/wiki/Switch#Contact_bounce) (or chatter), a common problem with mechanical switches, buttons, and [relays](https://en.wikipedia.org/wiki/Relay), and how to address it. As electromechanical devices, switch contact points are subject to momentum and elasticity, which act together to create rapid contact oscillations ("bounces") when a switch is "opened" or "closed". As an exaggerated but helpful analog, think of a hammer striking a surface: the hammer will "bounce" with dampened oscillations before entering a steady resting state with a surface.
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/movies/DebouncingHammer_CurrentSource_720p-Optimized.mp4" type="video/mp4" />
+  <source src="{{ "/assets/movies/DebouncingHammer_CurrentSource_720p-Optimized.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video**. A slow-motion video of a hammer bouncing off a table to help illustrate how switch contacts bounce before entering a steady state. Video from Episode 37 ["Contact and Bounce"](https://youtu.be/jI-rC2FCKo4) of [The Current Source](https://www.youtube.com/channel/UCw0U6DtO0PHb3l37eKEAdSg) YouTube channel.
 {: .fs-1 }
 
-<!-- ![Animated gif from the YouTube channel "The Current Source" episode 37 called 'Contact and Bounce' which shows a slow motion video of two contact points oscillating back-and-forth](assets/movies/ContactBounce_TheCurrentSource-Optimized.gif) -->
+<!-- ![Animated gif from the YouTube channel "The Current Source" episode 37 called 'Contact and Bounce' which shows a slow motion video of two contact points oscillating back-and-forth[]({{ "/assets/movies/ContactBounce_TheCurrentSource-Optimized.gif" | relative_url }}) -->
 
 So, what can you do? The solution is to "debounce" your switches, which can be done via software or [pure hardware solutions](#pure-hardware-solutions), which we'll address below. But first, let's learn a bit more about the problem before discussing solutions. We're going to use the term 'switch' to refer to any class of electromechanical device that has electrical contact points that can mechanically move to open or close an electrical circuit.
 
@@ -38,7 +38,7 @@ So, what can you do? The solution is to "debounce" your switches, which can be d
 [The Current Source](https://www.youtube.com/channel/UCw0U6DtO0PHb3l37eKEAdSg) recorded slow motion videos of switches bouncing during activations and deactivations. Just like the hammer, this electrical contact visibly bounces when first activated, creating a noisy contact signal.
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/movies/DebouncingButton_CurrentSource_720p-Optimized-WithLabels.mp4" type="video/mp4" />
+  <source src="{{ "/assets/movies/DebouncingButton_CurrentSource_720p-Optimized-WithLabels.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video**. A slow-motion video of a switch mechanically bouncing off its contacts. Buttons are mechanical devices. When a button is pressed or a contact switch moved, it creates a rapid oscillation of open- and closed-circuits before settling to its final state. In comparison to computation, mechanical motion is slow. Microcontrollers—even old, slow ones like the ATmega328—work so fast that they will read these rapid oscillations as `HIGH` and `LOW` input state changes. Video from Episode 37 ["Contact and Bounce"](https://youtu.be/jI-rC2FCKo4) of [The Current Source](https://www.youtube.com/channel/UCw0U6DtO0PHb3l37eKEAdSg) YouTube channel.
 {: .fs-1 }
@@ -49,7 +49,7 @@ When you press a button or slide a switch, you are interacting with an electro-m
 
 Indeed, if you look at a switch signal with an oscilloscope, you can see the "bouncing" action—the voltage rapidly fluctuates between `LOW` (0V) and `HIGH` (5V) before finally settling into its steady state of `HIGH`. If you counted each of these fluctuations as a button press, you would have very erroneous input!
 
-![Bouncing action of a tactile button on an oscilloscope](assets/images/SwitchBounce_Oscilliscope_Ladyada.jpg)
+![Bouncing action of a tactile button on an oscilloscope[]({{ "/assets/images/SwitchBounce_Oscilliscope_Ladyada.jpg" | relative_url }})
 {: .mx-auto .align-center }
 **Figure.** Image from [ladyada.net](https://www.ladyada.net/learn/arduino/lesson5.html)
 {: .fs-1 }
@@ -58,7 +58,7 @@ Indeed, if you look at a switch signal with an oscilloscope, you can see the "bo
 
 Yes! Take a look at the bouncing graphs below from an oscilloscope reading of both a switch activation (open to close) and deactivation (close to open). Depending on the switch type, the bouncing action may be more extreme for either action.
 
-![](assets/images/ContactBounce_ActivationAndDeactivation_FromCurrentSource.png)
+![[]({{ "/assets/images/ContactBounce_ActivationAndDeactivation_FromCurrentSource.png" | relative_url }})
 **Figure.** Switches can bounce during both closing and opening operations. Image derived from [The Current Source](https://youtu.be/jI-rC2FCKo4).
 {: .fs-1 }
 
@@ -68,7 +68,7 @@ So, how long do buttons bounce for? The answer: it varies depending on the switc
 
 Thankfully, we have [Jack Ganssle](http://www.ganssle.com/), an expert in embedded systems, to help answer this question. He painstakingly tested nearly twenty different switches ranging from cheap joystick and old mouse buttons to toggle and slide switches (see figure below). For each switch, he hooked up their contact signals to an oscilloscope, individually pressed them 300 times, and logged the min and max amount of bouncing for both *closing* and *opening* activations. The results of his research are documented [here](https://my.eng.utah.edu/~cs5780/debouncing.pdf).
 
-![](assets/images/Ganssle_SwitchesTested.png)
+![[]({{ "/assets/images/Ganssle_SwitchesTested.png" | relative_url }})
 **Figure.** Switches tested by Jack Ganssle in his "switch bouncing" experiences ([source](https://my.eng.utah.edu/~cs5780/debouncing.pdf)).
 {: .fs-1 }
 
@@ -76,7 +76,7 @@ In sum, most switches exhibited an average of 1.5 milliseconds (ms) of bouncing;
 
 ### What happens if we don't debounce?
 
-I made a [small test program](https://github.com/makeabilitylab/arduino/blob/master/Basics/digitalRead/DebounceTest/DebounceTest.ino) to help illustrate how problematic contact bouncing can be. I have a simple button circuit (like [this one](assets/images/ArduinoButtonPlusLEDCircuit.png)), which turns on a red LED when pressed.
+I made a [small test program](https://github.com/makeabilitylab/arduino/blob/master/Basics/digitalRead/DebounceTest/DebounceTest.ino) to help illustrate how problematic contact bouncing can be. I have a simple button circuit (like [this one[]({{ "/assets/images/ArduinoButtonPlusLEDCircuit.png" | relative_url }})), which turns on a red LED when pressed.
 
 I am tracking both **non-debounced button presses** ("raw" button presses) and **debounced button presses**. In the video, you'll observe how errant the non-debounced button press count gets (shown with the blue line)!
 
@@ -101,7 +101,7 @@ Although in physical computing, we often emphasize software solutions, hardware 
 
 So, how do we solve debouncing in software? The key is to first detect a switch state change (let's call this `state1`), then wait for a set amount of time (a "debouncing window"), then check the switch state again (let's call this `state2`). If the initial state and the post-debouncing window state match (*i.e.,* `state1 == state2`), then we can confidently conclude that the switch has transitioned from one steady state to another. See graph below.
 
-![](assets/images/DebounceSwitchGraph_DebouncingWindow.png)
+![[]({{ "/assets/images/DebounceSwitchGraph_DebouncingWindow.png" | relative_url }})
 **Figure.** Both graphs are showing the same open-to-close switch state change but with different annotations. The graph on the left highlights the first steady state (`LOW`), the transition and bouncing contact state, and the second steady state (`HIGH`). The graph on the right shows a depiction of our "debouncing window", which is key to the software solution. Image made in PowerPoint.
 {: .fs-1 }
 
@@ -115,7 +115,7 @@ As a second consideration, what's a human perceptible amount of lag? Wikipedia s
 
 Let's build the following test circuit and then walk through some possible software solutions to debouncing.
 
-![](assets/images/ArduinoButtonPlusLEDCircuit.png)
+![[]({{ "/assets/images/ArduinoButtonPlusLEDCircuit.png" | relative_url }})
 **Figure.** The button-based circuit. Image made in Fritzing and PowerPoint.
 {: .fs-1 }
 
@@ -195,7 +195,7 @@ For the two debouncing solutions above, we observed an initial state change on o
 
 However, if we soften our requirement and assume that the `state1` change was correct and not some errant signal, then we can apply a few other solutions. In these cases, we do **not read** from the digital input pin **again** after the debouncing window but, instead, simply ignore input for that time period.
 
-![](assets/images/DebouncingStateChangeGraph_TwoSolutions.png)
+![[]({{ "/assets/images/DebouncingStateChangeGraph_TwoSolutions.png" | relative_url }})
 **Figure.** Two approaches to debouncing buttons.
 {: .fs-1 }
 

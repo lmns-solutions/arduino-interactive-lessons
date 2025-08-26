@@ -34,23 +34,23 @@ For our lesson, we'll be using [Adafruit.io](https://learn.adafruit.com/welcome-
 
 You must register for Adafruit IO on their website. Follow their step-by-step instructions [here](https://learn.adafruit.com/welcome-to-adafruit-io/overview). If you don't rate throttle your uploads to a maximum of 1 upload every 2 seconds (30 uploads/minute), you'll receive this warning and a temporary block from Adafruit IO
 
-![Screenshot of Adafruit IO warning about throttling uploads](assets/images/AdafruitIO_TemporaryBlockWarning.png)
+![Screenshot of Adafruit IO warning about throttling uploads[]({{ "/assets/images/AdafruitIO_TemporaryBlockWarning.png" | relative_url }})
 
 ### Install Adafruit IO in Arduino IDE
 
 To install the Adafruit IO library for Arduino, open the Arduino IDE and go to Tools -> Library -> Manage Libraries. When the Library Manager opens, search for "Adafruit IO Arduino" and scroll to find the match:
 
-![Screenshot of Library Manager showing Adafruit IO Arduino](assets/images/ArduinoIDE_InstallAdafruitIOLibrary.png)
+![Screenshot of Library Manager showing Adafruit IO Arduino[]({{ "/assets/images/ArduinoIDE_InstallAdafruitIOLibrary.png" | relative_url }})
 
 When asked to install dependencies, click on "Install All"
 
-![Screenshot showing "Install All" as option when asked to install dependencies](assets/images/ArduinoIDE_InstallAllAdafruitIODependencies.png)
+![Screenshot showing "Install All" as option when asked to install dependencies[]({{ "/assets/images/ArduinoIDE_InstallAllAdafruitIODependencies.png" | relative_url }})
 
 ### Using Adafruit IO
 
 Adafruit has published a 7-step guide that covers everything from uploading [sensor data](https://learn.adafruit.com/adafruit-io-basics-analog-input) and viewing it on a dashboard (took us ~5 minutes to setup) to sending data from Adafruit IO to control an [RGB LED](https://learn.adafruit.com/adafruit-io-basics-color) or [servo motor](https://learn.adafruit.com/adafruit-io-basics-servo). You can access these examples (and many more) within the Arduino IDE by going to File -> Examples -> Adafruit IO Arduino:
 
-![Screenshot of Arduino IDE showing where to find the Adafruit IO examples](assets/images/ArduinoIDE_ScreenshotOfAdafruitIOExamples.png)
+![Screenshot of Arduino IDE showing where to find the Adafruit IO examples[]({{ "/assets/images/ArduinoIDE_ScreenshotOfAdafruitIOExamples.png" | relative_url }})
 
 ## Let's make something!
 
@@ -62,7 +62,7 @@ Because the max upload rate is 30 data points/minute (1 data point every two sec
 
 We have a photoresistor in a voltage divider with a 10k resistor connected to `A7` (we can only use ADC1 pins because we're going to use WiFi). The analog input voltage will increase as the brightness level increases. We drive a PWM output on pin GPIO 21 whose duty cycle is inversely proportional to the light level thereby turning on an LED brighter as the light level decreases.
 
-![Circuit diagram and schematic for LED photoresistor circuit with Huzzah32](assets/images/Huzzah32_Photoresistor_CircuitDiagramAndSchematic_Fritzing.png)
+![Circuit diagram and schematic for LED photoresistor circuit with Huzzah32[]({{ "/assets/images/Huzzah32_Photoresistor_CircuitDiagramAndSchematic_Fritzing.png" | relative_url }})
 
 ### The code
 

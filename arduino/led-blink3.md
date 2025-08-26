@@ -22,7 +22,7 @@ In this lesson, we will learn how to blink multiple LEDs at different rates and 
 
 As with our previous lesson on [crossfading RGB LEDs](rgb-led-fade.md), this lesson involves **simple circuits** but comparatively **complex code**. Often, when using microcontrollers, our code is the magic sauce—the circuits are straightforward but the code can be complicated.
 
-![Animated gif of a workbench video recording showing BlinkMultiple.ino](assets/movies/ArduinoUno_BlinkMultiple_Workbench.gif)
+![Animated gif of a workbench video recording showing BlinkMultiple.ino[]({{ "/assets/movies/ArduinoUno_BlinkMultiple_Workbench.gif" | relative_url }})
 
 ## Background
 
@@ -63,11 +63,11 @@ The circuit is the same as our basic [LED blink lesson](led-blink.md) but we dup
 
 By now, this circuit and wiring should feel familiar. Indeed, you may not even need a wiring diagram like this to help!
 
-![Wiring diagram for three LEDs hooked up to Pins 2, 5, and 9 (with anodes facing pins and cathodes connected to GND with current limiting resistors)](assets/images/ArduinoUno_LEDBlink3_WiringDiagramWithSchematic.png)
+![Wiring diagram for three LEDs hooked up to Pins 2, 5, and 9 (with anodes facing pins and cathodes connected to GND with current limiting resistors)[]({{ "/assets/images/ArduinoUno_LEDBlink3_WiringDiagramWithSchematic.png" | relative_url }})
 
 Recall that each LED color has a unique forward voltage Vf. In this case, our red LED has a Vf between 2.0-2.4V, our blue LED between 3.0-3.4V, and our yellow LED between 2.0-2.4V. To simplify things, we'll use the same value resistor for each LED circuit (220Ω); however, you could use different resistors for each LED to try and balance brightness levels.
 
-![Image of the Sparkfun multi-color LED pack showing different Vfs for the different LED colors](assets/images/SparkfunMulticolorLEDPack.png)
+![Image of the Sparkfun multi-color LED pack showing different Vfs for the different LED colors[]({{ "/assets/images/SparkfunMulticolorLEDPack.png" | relative_url }})
 The [LED assorted pack ](https://www.sparkfun.com/products/12062) from Sparkfun.com, which shows the Vdrop (or Vf) for each LED.
 {: .fs-1 }
 

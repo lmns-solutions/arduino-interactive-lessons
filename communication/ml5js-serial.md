@@ -23,7 +23,7 @@ In this lesson, we will extend our learning on [web serial](web-serial.md) and [
 For example, with only a few lines of JavaScript code and some slight modifications to our [FlappyBird.ino](https://github.com/makeabilitylab/arduino/blob/master/OLED/FlappyBird/FlappyBird.ino) Arduino sketch (updated to [FlappyBirdSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/FlappyBirdSerialIn/FlappyBirdSerialIn.ino)), we can play FlappyBird with our nose using a real-time web camera stream and [ml5's PoseNet library](https://learn.ml5js.org/#/reference/posenet).
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/FlappyBirdNoseTracker_Short_1000w.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/FlappyBirdNoseTracker_Short_1000w.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** Playing Flappy Bird on the Arduino Leonardo by using my nose using p5.js, [ml5.js](https://ml5js.org/), and [web serial](web-serial.md). The p5.js app is called Nose Tracker ([p5.js online editor](https://editor.p5js.org/jonfroehlich/sketches/QgPPEU5o2), GitHub [live page](https://makeabilitylab.github.io/p5js/WebSerial/ml5js/NoseTracker), GitHub [code](https://github.com/makeabilitylab/p5js/tree/master/WebSerial/ml5js/NoseTracker)). The Arduino sketch is [FlappyBirdSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/FlappyBirdSerialIn/FlappyBirdSerialIn.ino).
 {: .fs-1 }
@@ -33,7 +33,7 @@ In this lesson, we'll show how to do this and more. But first, let's start with 
 ## Machine learning frameworks
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/RealTimeGestureRecognizer-EditedAndOptimized.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/RealTimeGestureRecognizer-EditedAndOptimized.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** In our MS course on *Ubiquitous Computing*, students build a real-time gesture recognizer from the "ground up" using an LIS3DH accelerometer, Arduino, and Python. We use the machine learning framework called [scikit-learn](https://scikit-learn.org/stable/). Full [YouTube video](https://youtu.be/nnTyqCwYVbA).
 {: .fs-1 }
@@ -55,7 +55,7 @@ And what if we don't need (or want) to train our own classifiers or deeply engag
 
 Since its inception, researchers have worked to make machine learning more accessible to creators such as musicians, artists, designers, and hobbyists. For example, in 2009, Fiebrink and colleagues created the *[Wekinator](https://ualresearchonline.arts.ac.uk/id/eprint/16687/1/FiebrinkTruemanCook_NIME2009.pdf)* to allow "*musicians, composers, and new instrument designers to interactively train and modify many standard machine learning algorithms in real-time.*" Six years prior, Jerry Fails and Dan Olsen Jr. introduced [*Crayons*](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.14.8362&rep=rep1&type=pdf), an interactive machine-learning model that enabled users to train, classify, and correct pixel-based classifications via sketching (see Figure below).
 
-![](assets/images/CrayonsScreenShot_ByJerrFailsAndDanOlsenJr.png)
+![[]({{ "/assets/images/CrayonsScreenShot_ByJerrFailsAndDanOlsenJr.png" | relative_url }})
 **Figure.** The Crayons' interactive machine learning process for auto-segmenting pixel "blobs" in images. Users rapidly sketch over pixels to include and exclude from classification—in this case, segmenting a human hand—immediately see the ML model's response (highlighted pixels) and then make corrections. See full [video demo here](https://youtu.be/GtW-7YsiQdI).
 {: .fs-1 }
 
@@ -70,14 +70,14 @@ Though this lesson will not dive deeply into ML, our hope is that it will serve 
 ### Friendly machine learning on the web: ml5.js
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/PoseNet_TensorFlow-Optimized.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/PoseNet_TensorFlow-Optimized.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** ml5.js's [PoseNet](https://learn.ml5js.org/#/reference/posenet) is a machine learning model for real-time pose estimation built on [TensorFlow](https://medium.com/tensorflow/real-time-human-pose-estimation-in-the-browser-with-tensorflow-js-7dd0bc881cd5).
 {: .fs-1 }
 
 In this lesson, we will be using [ml5.js](https://www.tensorflow.org/js/), which provides an easy-to-use wrapper library around Google's [TensorFlow.js](https://www.tensorflow.org/js/) and is designed to work well with [p5.js](https://p5js.org/) (hence, the '5' in the name!). 
 
-![](assets/images/ml5js_DiagramRelationToTensorFlow.png)
+![[]({{ "/assets/images/ml5js_DiagramRelationToTensorFlow.png" | relative_url }})
 {: .mx-auto .align-center }
 
 **Figure.** ml5.js is built on top of Google's [TensorFlow.js](https://www.tensorflow.org/js/). It uses TensorFlow models, layers, and data API but abstracts them into a novice-friendly programming interface. Diagram from Yining Shi's "Machine Learning for the Web" course at ITP, NYU ([link](https://docs.google.com/presentation/d/1s0iT382Pl1DMGKb5xhk7_V3DlW1QQHfHs4snNoS_sIU/edit#slide=id.g953c8caacd_0_2))
@@ -100,7 +100,7 @@ To get started with [ml5.js](https://ml5js.org/), we recommend reading the offic
 
 ### Why not embedded machine learning?
 
-![](assets/images/SoundWatch_FourArchitecturesDiagram.png)
+![[]({{ "/assets/images/SoundWatch_FourArchitecturesDiagram.png" | relative_url }})
 **Figure.** There are many possibilities for how to architect embedded/IoT ML systems depending on power, computation, and latency requirements. In our [ASSETS'20 paper](https://makeabilitylab.cs.washington.edu/media/publications/Jain_SoundwatchExploringSmartwatchBasedDeepLearningApproachesToSupportSoundAwarenessForDeafAndHardOfHearingUsers_ASSETS2020.pdf) for [SoundWatch](https://makeabilitylab.cs.washington.edu/project/soundwatch/), for example, we explore four different ML architectures: *watch-only*, *watch+phone*, *watch+phone+cloud*, and *watch+cloud*.
 {: .fs-1 }
 
@@ -146,7 +146,7 @@ PoseNet actually has two different trained models: a single-pose estimator for w
 https://storage.googleapis.com/tfjs-models/demos/posenet/camera.html -->
 
 #### The PoseNet data structure
-![](assets/images/PoseNet_PosesAndKeypoints_FromMediumArticle.png)
+![[]({{ "/assets/images/PoseNet_PosesAndKeypoints_FromMediumArticle.png" | relative_url }})
 **Figure.** Overview of PoseNet data. Images from "[Real-time Human Pose Estimation in the Browser with TensorFlow.js](https://medium.com/tensorflow/real-time-human-pose-estimation-in-the-browser-with-tensorflow-js-7dd0bc881cd5)".
 {: .fs-1 }
 
@@ -194,7 +194,7 @@ The array structure looks like this:
 
 To make this more clear, here's a screenshot of our [Skeleton](https://makeabilitylab.github.io/p5js/ml5js/PoseNet/Skeleton/) app with Chrome's dev tools showing a pose and skeleton object.
 
-![](assets/images/PoseNet_DataStructure_ChromeDevTools.png)
+![[]({{ "/assets/images/PoseNet_DataStructure_ChromeDevTools.png" | relative_url }})
 **Figure.** Examining the PoseNet data structure for a single recognized pose. Right-click and select "Open Image in New Tab" to enlarge. If you'd like to do the same, open our [Skeleton](https://makeabilitylab.github.io/p5js/ml5js/PoseNet/Skeleton/) app in your web browser (*e.g.,* Chrome or FireFox). Then open dev tools (ctrl-shift-i on Windows, cmd-option-i on Mac). Click on the `Sources` tab and then put in a breakpoint at the `drawPose()` function call within the `draw()` function. Finally, add the variable `currentPoses` to `Watch` in the debugger.
 {: .fs-1 }
 
@@ -208,7 +208,7 @@ To demonstrate the [ml5.js PoseNet API](https://learn.ml5js.org/#/reference/pose
 Here's a video demonstration:
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/PoseNet_SkeletonDemo_Optimized.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/PoseNet_SkeletonDemo_Optimized.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** This video demonstrates the ml5 PoseNet API via the [Skeleton](https://makeabilitylab.github.io/p5js/ml5js/PoseNet/Skeleton/) application. We are drawing each of the 17 recognized keypoints along with the x,y position and confidence scores. The code is available on GitHub [here](https://github.com/makeabilitylab/p5js/tree/master/ml5js/PoseNet/Skeleton).
 {: .fs-1 }
@@ -224,7 +224,7 @@ For our first exercise, we will build a simple but fun toy application: tracking
 Here's a quick sneak preview. Play close attention to the OLED display, which is displaying a face icon based on my nose's position in the web camera frame!
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/NoseTracker_TrimmedAndOptimized.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/NoseTracker_TrimmedAndOptimized.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** This brief demo shows our p5.js + Arduino application that uses ml5's PoseNet to track the user's nose and eyes in real time with a web camera stream. This data is used to draw a cartoonish overlay at the nose and eye positions, to transmit a normalized x,y position of the nose to Arduino via web serial, and to draw a emoji-like face at the x,y position on the OLED display. The p5.js application is loosely based on this Coding Train "[Hour of Code with p5.js and PoseNet](https://youtu.be/EA3-k9mnLHs)" video. The full code is available in the [p5.js online editor](https://editor.p5js.org/jonfroehlich/sketches/QgPPEU5o2) or on GitHub ([live page](https://makeabilitylab.github.io/p5js/WebSerial/ml5js/NoseTracker/), [code](https://github.com/makeabilitylab/p5js/tree/master/WebSerial/ml5js/NoseTracker)). The Arduino code is on GitHub as [NoseTrackerSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/NoseTrackerSerialIn/NoseTrackerSerialIn.ino).
 {: .fs-1 }
@@ -391,7 +391,7 @@ function draw() {
 Here's a video demo with links to the [example code](https://editor.p5js.org/jonfroehlich/sketches/khxRw8FI3) of where we are thus far:
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/NoseTracker2-Nose_2x_Optimized.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/NoseTracker2-Nose_2x_Optimized.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** Video demonstration of using ml5 to track and draw on top of body part keypoints. Based on this Coding Train "[Hour of Code with p5.js and PoseNet](https://youtu.be/EA3-k9mnLHs)" by Daniel Shiffman. You can run and edit this code directly in your browser using the p5.js online editor ([link](https://editor.p5js.org/jonfroehlich/sketches/khxRw8FI3)).
 {: .fs-1 }
@@ -436,7 +436,7 @@ function drawEye(x, y) {
 And another video demo to help show what we've created thus far! Notice how PoseNet will recognize *pictures* of humans as well as real, physical humans in the web cam stream (but not pictures of seals!).
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/NoseTracker3-EyesAndNoseWithBook-Optimized.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/NoseTracker3-EyesAndNoseWithBook-Optimized.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** Video demonstration of turning oneself into Elmo using ml5 PoseNet. To demonstrate the multi-pose recognizer, I used a book cover with a human face (there was no one around me at the time to help demonstrate!). The video also shows how the book cover of a seal is not recognized. You can run and edit this code directly in your browser using the p5.js online editor ([link](https://editor.p5js.org/jonfroehlich/sketches/ZsvOFxZ0d)).
 {: .fs-1 }
@@ -510,7 +510,7 @@ The circuit is similar to many we've built for our [web serial lessons](p5js-ser
 
 | Arduino Leonardo Wiring | Huzzah32 (ESP32) Wiring |
 |-------------------------|-------------------------|
-| ![](assets/images/ArduinoLeonardo_OLEDDisplayWiring.png) | ![](../advancedio/assets/images/Huzzah32_OLEDWiring_FritzingSchematics.png) |
+| ![[]({{ "/assets/images/ArduinoLeonardo_OLEDDisplayWiring.png" | relative_url }}) | ![](../advancedio/assets/images/Huzzah32_OLEDWiring_FritzingSchematics.png) |
 
 **Figure.** Two example wirings for the OLED display, which we describe in detail in the [OLED lesson](../advancedio/oled.md). You can right-click on the images and select "Open Images in a New Tab" to enlarge.
 {: .fs-1 }
@@ -529,7 +529,7 @@ For the face, rather than drawing one using shape primitives (*e.g.,* [`drawCirc
 _display.drawChar(x, y, (unsigned char)2, SSD1306_WHITE, SSD1306_BLACK, CHAR_SIZE);
 {% endhighlight C++ %}
 
-![](assets/images/FaceCharacter2_DefaultFontSet_OLED.png)
+![[]({{ "/assets/images/FaceCharacter2_DefaultFontSet_OLED.png" | relative_url }})
 **Figure.** A close-up image of the face icon we'll use from the default character set.
 {: .fs-1 }
 
@@ -601,7 +601,7 @@ And that's it, the full code is available on GitHub as [NoseTrackerSerialIn.ino]
 Here's a longer video demonstration of the full p5.js + Arduino NoseTracker app:
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/NoseTrackerFullDemo-Optimized.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/NoseTrackerFullDemo-Optimized.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** The full code is available in the [p5.js online editor](https://editor.p5js.org/jonfroehlich/sketches/QgPPEU5o2) or on GitHub ([live page](https://makeabilitylab.github.io/p5js/WebSerial/ml5js/NoseTracker/), [code](https://github.com/makeabilitylab/p5js/tree/master/WebSerial/ml5js/NoseTracker)). The Arduino code is on GitHub as [NoseTrackerSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/NoseTrackerSerialIn/NoseTrackerSerialIn.ino). You can ignore the two momentary buttons on the breadboard—we don't use them here.
 {: .fs-1 }

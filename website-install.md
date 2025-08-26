@@ -80,13 +80,13 @@ Specifically, I downloaded and installed the [Ruby+Devkit 2.7.X (x64) installer]
 
 When the Ruby Installer command prompt asks you which option to install (see screenshot below), just press 'Enter'.
 
-![Shows a prompt from the Ruby Installer. Just hit Enter](assets/images/RubyInstaller_JustHitEnter.png)
+![Shows a prompt from the Ruby Installer. Just hit Enter[]({{ "/assets/images/RubyInstaller_JustHitEnter.png" | relative_url }})
 **Figure.** When prompted, just hit enter to accept defaults.
 {: .fs-1 }
 
 You may be prompted a second time. Again, just press 'Enter'.
 
-![Shows a prompt from the Ruby Installer. Just hit Enter](assets/images/RubyInstaller_Question2_JustHitEnter.png)
+![Shows a prompt from the Ruby Installer. Just hit Enter[]({{ "/assets/images/RubyInstaller_Question2_JustHitEnter.png" | relative_url }})
 **Figure.** If prompted again, just hit enter to accept defaults.
 {: .fs-1 }
 
@@ -111,7 +111,7 @@ Done installing documentation for mercenary, jekyll after 16 seconds
 
 Here's a screenshot:
 
-![Screenshot of the gem install jekyll command](assets/images/GemInstallJekyllScreenshot.png)
+![Screenshot of the gem install jekyll command[]({{ "/assets/images/GemInstallJekyllScreenshot.png" | relative_url }})
 **Figure.** A screenshot of PowerShell running the `gem install jekyll` command.
 {: .fs-1 }
 
@@ -168,7 +168,7 @@ ERROR:  Error installing github-pages:
 So, then I just skipped to the final step and ran `bundle install` and things worked. Hope it does for you too!
 
 #### Run 'bundle install'
-![Screenshot of bundle install command](assets/images/BundleInstallScreenshot.png)
+![Screenshot of bundle install command[]({{ "/assets/images/BundleInstallScreenshot.png" | relative_url }})
 
 From the shell, change directories to `physcomp`. On my machine:
 
@@ -211,7 +211,7 @@ The website should then be available at [http://127.0.0.1:4000/physcomp/](http:/
 
 If you receive an error like the following, you may need to *restart* your computer (not just VSCode). 
 
-![](assets/images/BundleExecJekyllServeFailsInVSCodeScreenshot.png)
+![[]({{ "/assets/images/BundleExecJekyllServeFailsInVSCodeScreenshot.png" | relative_url }})
 
 ```
 Try the new cross-platform PowerShell https://aka.ms/pscore6

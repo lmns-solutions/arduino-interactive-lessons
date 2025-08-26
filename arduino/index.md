@@ -42,7 +42,7 @@ So, our lessons start and stick with **output** to solidify understanding of how
 
 For this introductory lesson series, we use two of the most popular 5V Arduino models: the [Arduino Uno Rev3](https://store.arduino.cc/products/arduino-uno-rev3) and the [Arduino Leonardo](https://store-usa.arduino.cc/products/arduino-leonardo-with-headers); however, the lessons themselves should translate to almost any Arduino board—which is the beauty of the Arduino hardware-software ecosystem!.
 
-![Image showing both the Arduino Uno and the Arduino Leonardo](assets/images/ArduinoUnoVsArduinoLeonardo.png)
+![Image showing both the Arduino Uno and the Arduino Leonardo[]({{ "/assets/images/ArduinoUnoVsArduinoLeonardo.png" | relative_url }})
 
 Both the [Uno](https://store.arduino.cc/products/arduino-uno-rev3) and [Leonardo](https://store-usa.arduino.cc/products/arduino-leonardo-with-headers) have similar form factors, memory, clock speeds (16MHz), and GPIO pins (20 digital I/O pins); however, there are some differences:
 

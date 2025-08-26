@@ -22,7 +22,7 @@ In our [first lesson](led-on.md), we directly hooked up an LED circuit to the Ar
 
 In this lesson, we are going to do something more exciting: use the Arduino to turn the LED on and off by *programmatically* controlling the output voltage on one of Arduino's GPIO pins. This begins our entrée into the two key aspects of working with microcontrollers: (1) building circuits and (2) writing code to interact with those circuits.
 
-![Animation showing an LED connected to Pin 3 on the Arduino blinking on and off](assets/movies/Arduino_LEDBlink_Pin3.gif)
+![Animation showing an LED connected to Pin 3 on the Arduino blinking on and off[]({{ "/assets/movies/Arduino_LEDBlink_Pin3.gif" | relative_url }})
 
 <!-- TODO: Add in a version that makes a tone for accessibility reasons? 
      See: https://itp.nyu.edu/physcomp/labs/labs-arduino-digital-and-analog/digital-input-and-output-with-an-arduino/ -->
@@ -40,7 +40,7 @@ You will use the same materials as [before](led-on.md), but you will also need t
 
 Using the same resistor-wrapped red LED from [before](led-on.md#step-1-wrap-resistor-around-led-leg), plug the anode + resistor side into Pin 3 and the cathode into GND. See the wiring diagram below:
 
-![Wiring diagram showing LED cathode wired to GND and LED anode wired to a 220 Ohm resistor and then to Pin 3](assets/images/Arduino_LEDBlink_Pin3Circuit.png)
+![Wiring diagram showing LED cathode wired to GND and LED anode wired to a 220 Ohm resistor and then to Pin 3[]({{ "/assets/images/Arduino_LEDBlink_Pin3Circuit.png" | relative_url }})
 
 {: .highlight }
 **TIP:**
@@ -50,7 +50,7 @@ While it's not necessary to use a breadboard for this simple circuit, here are t
 
 | Breadboard Option 1 | Breadboard Option 2 |
 |:----:|:-----:|
-|![Breadboard wiring diagram showing LED cathode wired to GND and LED anode wired to a 220 Ohm resistor and then to Pin 3](assets/images/Arduino_LEDBlink_Pin3Circuit_Breadboard1.png) | ![Second breadboard wiring diagram showing LED cathode wired to GND and LED anode wired to a 220 Ohm resistor and then to Pin 3](assets/images/Arduino_LEDBlink_Pin3Circuit_Breadboard2.png) |
+|![Breadboard wiring diagram showing LED cathode wired to GND and LED anode wired to a 220 Ohm resistor and then to Pin 3[]({{ "/assets/images/Arduino_LEDBlink_Pin3Circuit_Breadboard1.png" | relative_url }}) | ![Second breadboard wiring diagram showing LED cathode wired to GND and LED anode wired to a 220 Ohm resistor and then to Pin 3[]({{ "/assets/images/Arduino_LEDBlink_Pin3Circuit_Breadboard2.png" | relative_url }}) |
 
 You can always return to our [breadboard](../electronics/breadboards.md) lesson to refresh your memory!
 
@@ -71,9 +71,9 @@ The Arduino Uno has **20 general-purpose input/output** ([GPIO](https://en.wikip
 
 We could have selected *any* of these pins for this lesson but we chose Pin 3 (in part, because we want to use this same pin in [Lesson 4](led-fade.md) and using it now simplifies things!).
 
-<!-- ![Close-up image of the 14 digital I/O pins on the Arduino Uno](assets/images/ArduinoUno_CloseUp_DigitalIOPins.png) -->
+<!-- ![Close-up image of the 14 digital I/O pins on the Arduino Uno[]({{ "/assets/images/ArduinoUno_CloseUp_DigitalIOPins.png" | relative_url }}) -->
 
-![Close-up image of the 20 digital I/O pins on the Arduino Uno](assets/images/ArduinoUno_DigitalIOPins.png)
+![Close-up image of the 20 digital I/O pins on the Arduino Uno[]({{ "/assets/images/ArduinoUno_DigitalIOPins.png" | relative_url }})
 
 You can control any of these 20 digital I/O pins with three functions:
 
@@ -85,20 +85,20 @@ You can control any of these 20 digital I/O pins with three functions:
 
 While the white silkscreening on the Uno and Leonardo makes it seem like these boards only have **14 digital I/O pins** (the top part of the board), they in fact have **20**! Indeed, you can consult the official [Arduino Uno pinout diagram](https://docs.arduino.cc/resources/pinouts/A000066-full-pinout.pdf) for verification.
 
-![The official Arduino Uno pinout diagram](assets/images/ArduinoUno_OfficialPinOutDiagram.png)
+![The official Arduino Uno pinout diagram[]({{ "/assets/images/ArduinoUno_OfficialPinOutDiagram.png" | relative_url }})
 
 And here's a version with the digital I/O pins highlighted for emphasis:
 
-![The official Arduino Uno pinout diagram with the 20 digital I/O pins marked](assets/images/ArduinoUno_OfficialPinOutDiagram_DigitalIOPinsMarked.png)
+![The official Arduino Uno pinout diagram with the 20 digital I/O pins marked[]({{ "/assets/images/ArduinoUno_OfficialPinOutDiagram_DigitalIOPinsMarked.png" | relative_url }})
 
 It's the same with the Arduino Leonardo (see [official "printout diagram" here](https://content.arduino.cc/assets/Pinout-Leonardo_latest.pdf)):
 
-![The official Arduino Leonardo pinout diagram with the 20 digital I/O pins marked](assets/images/ArduinoLeonardo_OfficialPinOutDiagram_DigitalIOPinsMarked.png)
+![The official Arduino Leonardo pinout diagram with the 20 digital I/O pins marked[]({{ "/assets/images/ArduinoLeonardo_OfficialPinOutDiagram_DigitalIOPinsMarked.png" | relative_url }})
 
 Finally, here's a [Tinkercad Circuit simulation](https://www.tinkercad.com/things/djhZYuYyqOR-using-all-20-gpio-pins-as-digital-out) demonstrating the use of all 20 digital I/O pins as digital output.
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/movies/ArduinoUno_UsingAll20GPIOPinsAsDigitalOutput.mp4" type="video/mp4" />
+  <source src="{{ "/assets/movies/ArduinoUno_UsingAll20GPIOPinsAsDigitalOutput.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** A [Tinkercad Circuit simulation](https://www.tinkercad.com/things/djhZYuYyqOR-using-all-20-gpio-pins-as-digital-out) showing how to use all 20 GPIO pins as digital output on the Arduino Uno. You can try the simulation yourself [here](https://www.tinkercad.com/things/djhZYuYyqOR-using-all-20-gpio-pins-as-digital-out) and view the code on [GitHub here](https://github.com/makeabilitylab/arduino/blob/master/Basics/digitalWrite/BlinkAll20Pins/BlinkAll20Pins.ino).
 {: .fs-1 }
@@ -133,7 +133,7 @@ You may be thinking: "um, what?" That's OK. In our years of teaching, we have ha
 
 Though it's not necessary to understand the following in order to *use* an Arduino, you might be curious about how the Arduino controls the voltage output of a pin? Using transistors. As the (simplified) schematic below highlights, a digital output pin provides either $$V_{DD}$$ (5V on the Uno and Leonardo) or $$GND$$ (0V) by dynamically turning on/off transistors (an inverter ensures that only one transistor can be on at a time).
 
-![A simplified schematic by Chuan-Zheng Lee showing that an output pin provides VDD or 0 V by making a connection to VDD or ground via a transistor](assets/images/Arduino_DigitalOutputPin_Schematic.png)
+![A simplified schematic by Chuan-Zheng Lee showing that an output pin provides VDD or 0 V by making a connection to VDD or ground via a transistor[]({{ "/assets/images/Arduino_DigitalOutputPin_Schematic.png" | relative_url }})
 Schematic by Chuan-Zheng Lee for his ["Intro to Arduino"](https://web.stanford.edu/class/archive/engr/engr40m.1178/slides/arduino.pdf) course at Stanford.
 {: .fs-1 }
 
@@ -145,7 +145,7 @@ OK, so let's write an initial program to set Pin 3 to `HIGH` (5V). We're not bli
 
 Start a new sketch in the Arduino IDE:
 
-![Screenshot of the Arduino IDE showing a new empty sketch](assets/images/ArduinoIDE_FreshSketch.png)
+![Screenshot of the Arduino IDE showing a new empty sketch[]({{ "/assets/images/ArduinoIDE_FreshSketch.png" | relative_url }})
 
 ### Step 2: Set the pinMode for Pin 3
 
@@ -176,25 +176,25 @@ We did it! Now it's time to compile and upload the code to Arduino.
 
 Compile the code by clicking on the "verify" checkmark button in the upper-left corner of the Arduino IDE. If you haven't already, the Arduino IDE will also ask you to save your sketch. If there are any syntax or other identifiable errors in the code, the Arduino IDE will print them out in the console window at the bottom.
 
-![Animation showing how to compile and save a sketch in the Arduino IDE](assets/movies/ArduinoIDE_Compile.gif)
+![Animation showing how to compile and save a sketch in the Arduino IDE[]({{ "/assets/movies/ArduinoIDE_Compile.gif" | relative_url }})
 
 ### Step 5: Upload the code to Arduino
 
 Finally, upload the code to the Arduino by clicking on the "right arrow" button (next to verify). Importantly, you must have already set your Arduino board and port in `Tools->Board` and `Tools->Port`, respectively.
 
-![Screenshot showing where the upload button is (to the right of the verify button)](assets/images/ArduinoIDE_UploadCodeButton.png)
+![Screenshot showing where the upload button is (to the right of the verify button)[]({{ "/assets/images/ArduinoIDE_UploadCodeButton.png" | relative_url }})
 
 Once uploading is complete, the code automatically runs on the Arduino and the LED should immediately turn on!
 
 <video controls="controls">
-  <source src="assets/movies/ArduinoUno_TurnOnLEDPin3_WorkbenchWithCode-Cropped.mov" type="video/mp4">
+  <source src="{{ "/assets/movies/ArduinoUno_TurnOnLEDPin3_WorkbenchWithCode-Cropped.mov" | relative_url }}" type="video/mp4">
 </video>
 **Note:** On my Windows machine, I use a [dark theme](https://create.arduino.cc/projecthub/konradhtc/one-dark-arduino-modern-dark-theme-for-arduino-ide-2fca81) for the Arduino IDE.
 {: .fs-1 }
 
 Here's an illustrative animation of what's happening in your circuit when the Arduino drives Pin 3 `HIGH`—hopefully, this matches your conceptual understanding as well:
 
-![Animation showing the LED on Pin 3 turning on)](assets/movies/Arduino_LEDTurnOn_Pin3ArduinoPluggedIn-Cropped.gif)
+![Animation showing the LED on Pin 3 turning on)[]({{ "/assets/movies/Arduino_LEDTurnOn_Pin3ArduinoPluggedIn-Cropped.gif" | relative_url }})
 
 ## Turn on and off the LED programmatically via Pin 3
 
@@ -238,7 +238,7 @@ void loop() {
 We're done! Now, compile and upload the code and see it run!
 
 <video controls="controls">
-  <source src="assets/movies/BlinkWithCodeAndWorkbenchCamera.mp4" type="video/mp4">
+  <source src="{{ "/assets/movies/BlinkWithCodeAndWorkbenchCamera.mp4" | relative_url }}" type="video/mp4">
 </video>
 
 ### Step 4: Replace constants
@@ -265,7 +265,7 @@ void loop() {
 How does this work? See the code walkthrough video below:
 
 <video controls="controls">
-  <source src="assets/movies/Arduino_BlinkWithCode_Pin3.mp4" type="video/mp4">
+  <source src="{{ "/assets/movies/Arduino_BlinkWithCode_Pin3.mp4" | relative_url }}" type="video/mp4">
 </video>
 
 ### Our Blink code is in GitHub
@@ -288,7 +288,7 @@ In your mind, imagine what the voltage out of Pin 3 looks like over time (the x-
 Using Tinkercad Circuits, we built the same LED-based circuit as above running the Blink program and hooked it up to an oscilliscope. Then, we recorded different `delay` values (400, 200, and 50) and created this movie. Is the graph what you expected? Why or why not. We suggest opening the video in its own tab or viewing it in fullscreen to see the details.
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/movies/LedBlinkOscilliscope_TinkercadCircuits_Trim.mp4" type="video/mp4" />
+  <source src="{{ "/assets/movies/LedBlinkOscilliscope_TinkercadCircuits_Trim.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** A video of this [Tinkercad project](https://www.tinkercad.com/things/17q2GFeYwP9) with three different `delay` values for both `HIGH` and `LOW`: 400, 200, and 50.
 {: .fs-1 }
@@ -308,7 +308,7 @@ We duplicated the above Tinkercad setup (circuit + oscilloscope) in our laborato
 
 You can play with the Tinkercad version of this experiment [here](https://www.tinkercad.com/things/42O2UlRJFrZ):
 
-![](assets/images/SettableBlinkLedOnAndOffWithOscilliscope_Tinkercad.png)
+![[]({{ "/assets/images/SettableBlinkLedOnAndOffWithOscilliscope_Tinkercad.png" | relative_url }})
 **Figure**. Tinkercad Circuits version of the settable delay circuit+code ([link](https://www.tinkercad.com/things/42O2UlRJFrZ)).
 {: .fs-1 }
 
@@ -317,7 +317,7 @@ You can play with the Tinkercad version of this experiment [here](https://www.ti
 As a quick mental model check, it's worth emphasizing that once you upload the code to your Arduino, you no longer need the USB cable. Why? Because a compiled version of the code is stored **locally** on your Arduino and stays there even when the Arduino loses power. Your Arduino *is* the computer! So, you could use some other power source like a 9V battery plugged in to the barrel jack port.
 
 <video controls="controls">
-  <source src="assets/movies/Arduino_LEDBlink_Pin3-9VPower.mp4" type="video/mp4">
+  <source src="{{ "/assets/movies/Arduino_LEDBlink_Pin3-9VPower.mp4" | relative_url }}" type="video/mp4">
 </video>
 
 ## Blink without using delays()
@@ -335,7 +335,7 @@ If you want to know how `delay()` actually works, read ["What does delay() actua
 
 Because `delay()` usage can be so troublesome, as part of their introductory tutorial series, Arduino publishes another Blink example with a tutorial called [BlinkWithoutDelay](https://www.arduino.cc/en/Tutorial/BlinkWithoutDelay). As with the regular [Blink](http://www.arduino.cc/en/Tutorial/Blink), this example can be accessed directly in the Arduino IDE:
 
-![Screenshot of accessing the official BlinkWithoutDelay example directly from the Arduino IDE](assets/images/ArduinoIDE_FileMenuToBlinkWithoutDelayExample.png)
+![Screenshot of accessing the official BlinkWithoutDelay example directly from the Arduino IDE[]({{ "/assets/images/ArduinoIDE_FileMenuToBlinkWithoutDelayExample.png" | relative_url }})
 
 To avoid `delay()` calls, the code tracks **time**, **LED state changes** (when the LED switches from `HIGH` to `LOW` or `LOW` to `HIGH`), and **when** these state changes occur. The [BlinkWithoutDelay](https://www.arduino.cc/en/Tutorial/BlinkWithoutDelay) main loop is below. Notice that there are no `delay()` calls!
 

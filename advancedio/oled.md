@@ -41,7 +41,7 @@ TODO: in future compare i2c and SPI. I believe SPI is faster
 - -->
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/OLED_Pong720p.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/OLED_Pong720p.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** Playing Pong on the Adafruit monochrome 1.3" 128x64 pixel [OLED display](https://www.adafruit.com/product/938) with the [Parallax 2-axis joystick](https://www.adafruit.com/product/245) and tactile buttons. The source code for Pong is [here](https://github.com/makeabilitylab/arduino/blob/master/OLED/Pong/Pong.ino). Parts of this video are sped up 4x.
 {: .fs-1 }
@@ -75,7 +75,7 @@ While the OLED display requires a 3.3V power supply and 3.3V logic levels for co
 
 The wiring diagram and circuit schematic are below. We used the [Qwiic](https://www.sparkfun.com/qwiic) color-coding system for our wires: blue for data (SDA), yellow for clock (SCL), black for ground (GND), and red for the voltage supply (5V). The I<sup>2</sup>C pins differ depending on your board. For example, on the Arduino Uno, they are A4 (SDA) and A5 (SCL) rather than digital pins 2 (SDA) and 3 (SCL) as they are on the Leonardo.
 
-![](assets/images/ArduinoLeonardo_OLEDWiring_FritzingSchematics.png)
+![[]({{ "/assets/images/ArduinoLeonardo_OLEDWiring_FritzingSchematics.png" | relative_url }})
 **Figure** Wiring the Adafruit OLED display requires only four wires (and nothing else). I used the standard STEMMA QT color coding for my wires: blue for data (SDA), yellow for clock (SCL), black for ground (GND), and red for the voltage supply (5V). Note that the I<sup>2</sup>C pins differ depending on your board. For example, on the Arduino Uno, they are A4 (SDA) and A5 (SCL) rather than digital pins 2 (SDA) and 3 (SCL) as they are for the Leonardo.
 {: .fs-1 }
 
@@ -83,7 +83,7 @@ The wiring diagram and circuit schematic are below. We used the [Qwiic](https://
 
 Here's a picture of actually wiring up the OLED using jumper cables.
 
-![](assets/images/ArduinoLeonardo_OLEDWiring_Breadboard.png)
+![[]({{ "/assets/images/ArduinoLeonardo_OLEDWiring_Breadboard.png" | relative_url }})
 **Figure** Physically wiring the OLED display with jumper cables. The Arduino is running this demo code ['BitmapBounce.ino'](https://github.com/makeabilitylab/arduino/blob/master/OLED/BitmapBounce/BitmapBounce.ino)
 {: .fs-1 }
 
@@ -91,7 +91,7 @@ Here's a picture of actually wiring up the OLED using jumper cables.
 
 Some students have asked for the ESP32 wiring, so here it is. The ESP32 board runs at 3.3V *vs.* the 5V supplied by the Arduino Leonardo and Uno; however, the OLED itself only needs 3V for operation. You can learn more about the [ESP32 here](../esp32/index.md).
 
-![](assets/images/Huzzah32_OLEDWiring_FritzingSchematics.png)
+![[]({{ "/assets/images/Huzzah32_OLEDWiring_FritzingSchematics.png" | relative_url }})
 **Figure.** Wiring diagram for the [Adafruit Huzzah32](../esp32/index.md) ESP32 board with OLED.
 {: .fs-1 }
 
@@ -103,12 +103,12 @@ Both [Sparkfun](https://www.sparkfun.com/categories/tags/qwiic-cables) and Adafr
 
 | STEMMA QT / Qwiic Female-to-Female Cable | STEMMA QT / Qwiic Female-to-Male Jumper Cable |
 |:------------------------------------:|:--------------------------------:|
-| ![](assets/images/Adafruit_STEMMA-QT_FemaleToFemale.png) | ![](assets/images/Adafruit_STEMMA-QT_FemaleToMale_Cable.png) |
+| ![[]({{ "/assets/images/Adafruit_STEMMA-QT_FemaleToFemale.png" | relative_url }}) | ![[]({{ "/assets/images/Adafruit_STEMMA-QT_FemaleToMale_Cable.png" | relative_url }}) |
 
 The video below shows the OLED display hooked up to a STEMMA QT [female-to-male jumper cable](https://www.adafruit.com/product/4209):
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/AdafruitSTEMMAQT_IMG_6163-TrimmedAndCropped720p.mov" type="video/mp4" />
+  <source src="{{ "/assets/videos/AdafruitSTEMMAQT_IMG_6163-TrimmedAndCropped720p.mov" | relative_url }}" type="video/mp4" />
 </video>
 **Video** Running the demo [`ssd1306_128x64_i2c`](https://github.com/adafruit/Adafruit_SSD1306/blob/master/examples/ssd1306_128x64_i2c/ssd1306_128x64_i2c.ino) with a STEMMA QT cable.
 {: .fs-1 }
@@ -125,20 +125,20 @@ To open and run the example, follow these steps.
 
 In the Arduino IDE, go to `File -> Examples -> Adafruit SSD1306` and select `ssd1306_128x64_i2c`. You might have to scroll down in the `Examples` file menu to see it.
 
-![](assets/images/ArduinoIDE_SelectingSSD1306ExampleFromFileMenu.png)
+![[]({{ "/assets/images/ArduinoIDE_SelectingSSD1306ExampleFromFileMenu.png" | relative_url }})
 
 #### Step 2: Compile and upload the example
 
 Now, compile and upload the example.
 
-![](assets/images/ArduinoIDE_CompileAndUploadSSD1306Example.png)
+![[]({{ "/assets/images/ArduinoIDE_CompileAndUploadSSD1306Example.png" | relative_url }})
 
 #### Step 3: Watch the demo
 
 Once the code has compiled and uploaded, it should look something like this:
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/AdafruitOLEDOfficialDemo0x3D-IMG_6160-Rotated-TrimmedAndSpedUp720p-Optimized.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/AdafruitOLEDOfficialDemo0x3D-IMG_6160-Rotated-TrimmedAndSpedUp720p-Optimized.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video** Running the demo [`ssd1306_128x64_i2c`](https://github.com/adafruit/Adafruit_SSD1306/blob/master/examples/ssd1306_128x64_i2c/ssd1306_128x64_i2c.ino). Parts of this video are sped up 4x.
 {: .fs-1 }
@@ -160,7 +160,7 @@ If you're familiar with graphics APIs in other programming frameworks—like C#'
 
 The black-and-white OLED consists of a matrix of OLEDS, called pixels, which can be individually addressed to turn on/off (or, in the case of colored displays, to control individual RGB OLEDs to create colors). As with all other drawing libraries, the coordinate system for these pixels places the origin `(0,0)` at the top-left corner with the `x-axis` increasing to the right and the `y-axis` increasing down.
 
-![](assets/images/AdafruitOLEDDisplay_CoordinateSystemAndPixels_ByJonFroehlich.png)
+![[]({{ "/assets/images/AdafruitOLEDDisplay_CoordinateSystemAndPixels_ByJonFroehlich.png" | relative_url }})
 **Figure** An overview of the 128x64 matrix of LEDs—we call each LED a "pixel". We've found that students sometimes flip the y-axis in their minds. So, make sure to note how the origin starts at `(0,0)` and the `x-axis` increases to the right and the `y-axis` increases down. Image created in PowerPoint and uses images from Fritzing and the [Adafruit GFX](https://learn.adafruit.com/adafruit-gfx-graphics-library/coordinate-system-and-units) tutorial.
 {: .fs-1 }
 
@@ -170,7 +170,7 @@ Thus, to turn "on" the LED at pixel `(18, 6)` using [Adafruit GFX](https://learn
 
 Below, we describe how to draw shapes, text, and bitmaps. Importantly, when you call any of the drawing routines—from `drawLine` to `drawTriangle`—you are **not** drawing directly to the OLED display. Instead, you are drawing to an offscreen buffer handled by the SSD1306 driver. So, after you call your drawing routines, you must then call the `void Adafruit_SSD1306::display()` function to push the data from RAM to the display. We'll show how to do this step-by-step in our examples below.
 
-![](assets/images/OLEDDisplay_DrawingCircleAt5020With10Radius.png)
+![[]({{ "/assets/images/OLEDDisplay_DrawingCircleAt5020With10Radius.png" | relative_url }})
 **Figure.** Let's begin by drawing a simple circle at `x,y` location of `50,20` with a radius of `10`. This code is also in GitHub as [DrawCircle.ino](https://github.com/makeabilitylab/arduino/blob/master/OLED/DrawCircle/DrawCircle.ino)); however, that code is slightly different in that it centers the circle in the middle of the screen. 
 {: .fs-1 }
 
@@ -382,7 +382,7 @@ We can also invert the text simply by switching the colors in `setTextColor(uint
 
 | setTextColor(WHITE, BLACK) | setTextColor(BLACK, WHITE) |
 |----------------------------|----------------------------|
-| ![](assets/images/OLED_setTextColor_WhiteBlack.png) | ![](assets/images/OLED_setTextColor_BlackWhite.png) |
+| ![[]({{ "/assets/images/OLED_setTextColor_WhiteBlack.png" | relative_url }}) | ![[]({{ "/assets/images/OLED_setTextColor_BlackWhite.png" | relative_url }}) |
 
 #### Drawing the embedded font graphics
 
@@ -390,7 +390,7 @@ You can draw the embedded font graphics either using `drawChar` or, similar to [
 
 While you can also use either `drawChar` or `write`, the latter uses the currently set `setText` parameters like `setTextSize` and `setTextColor`—which is helpful. Below, I'm printing out all of the glyphs embedded in the default font, which includes embedded graphics like smiley faces, hearts, spades, etc.
 
-![](assets/images/OLED_UsingWriteToDisplayGraphicalCharacters.png)
+![[]({{ "/assets/images/OLED_UsingWriteToDisplayGraphicalCharacters.png" | relative_url }})
 **Figure.** Drawing the embedded glyphs in the default font using `_display.write()`. This code is called [DrawAllChars.ino](https://github.com/makeabilitylab/arduino/blob/master/OLED/DrawAllChars/DrawAllChars.ino) in our GitHub.
 {: .fs-1 }
 
@@ -429,7 +429,7 @@ _display.write(charIndex);
 Here's an [example](https://github.com/makeabilitylab/arduino/blob/master/OLED/DrawChar/DrawChar.ino) iterating through all of the glyphs individually, which demonstrates the code above. Again, you can use either `drawChar` or `write` and I demonstrate both in [DrawChar.ino](https://github.com/makeabilitylab/arduino/blob/master/OLED/DrawChar/DrawChar.ino)
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/OLED_DrawChar-IMG_6308-Optimized.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/OLED_DrawChar-IMG_6308-Optimized.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video** A demonstration of [DrawChar.ino](https://github.com/makeabilitylab/arduino/blob/master/OLED/DrawChar/DrawChar.ino) showing how to draw the embedded graphics from the default font.
 {: .fs-1 }
@@ -481,7 +481,7 @@ _display.display();
 I made a version, called [SimpleDrawingDemo.ino](https://github.com/makeabilitylab/arduino/blob/master/OLED/SimpleDrawingDemo/SimpleDrawingDemo.ino) that draws shapes of random sizes and locations on **each frame** but you could do something even simpler (or more complex)!
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/OLEDSimpleDrawingDemo-IMG_6188-TrimmedAndOptimized720p.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/OLEDSimpleDrawingDemo-IMG_6188-TrimmedAndOptimized720p.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video** A demonstration of [SimpleDrawingDemo.ino](https://github.com/makeabilitylab/arduino/blob/master/OLED/SimpleDrawingDemo/SimpleDrawingDemo.ino).
 {: .fs-1 }
@@ -517,7 +517,7 @@ Perhaps best article I've seen:
 Here's a [demo of a bouncing ball](https://makeabilitylab.github.io/p5js/Animation/BallBounce2D/) we made in [p5js](https://p5js.org/). Sometimes, it's useful to prototype a visualization or game idea in a rapid programming environment like [p5js](https://p5js.org/) or [Processing](https://processing.org/) before coding it up in C++ for Arduino (and it's easier to debug in those environments as well). You can edit and play with this demo in your browser [here](https://editor.p5js.org/jonfroehlich/sketches/KpUirYrAk) using the p5js online editor.
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/BallBouncing_p5js.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/BallBouncing_p5js.mp4" | relative_url }}" type="video/mp4" />
 </video>
 {: .mx-auto .align-center }
 
@@ -586,7 +586,7 @@ You can view the full code on GitHub as [BallBounce.ino](https://github.com/make
 We also have a similar "bounce" demo, called [BitmapBounce.ino](https://github.com/makeabilitylab/arduino/blob/master/OLED/BitmapBounce/BitmapBounce.ino), that uses a bitmap rather than a graphic primitive. To create the the bitmap byte dump, we used this [image2cpp](http://javl.github.io/image2cpp/) tool on this [Makeability Lab logo](https://github.com/makeabilitylab/arduino/blob/master/OLED/BitmapBounce/logo_bw_no_text_600w.png).
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/OLEDBouncingBitmap-IMG_6180-Optimized.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/OLEDBouncingBitmap-IMG_6180-Optimized.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** A video of [BitmapBounce.ino](https://github.com/makeabilitylab/arduino/blob/master/OLED/BitmapBounce/BitmapBounce.ino).
 {: .fs-1 }
@@ -607,7 +607,7 @@ We'll start with changing a shape's size based on sensor input. While you can us
 
 Here's the circuit. Same as before but we've added a 10K potentiometer.
 
-![](assets/images/OLED_ArduinoLeonardo_POT_CircuitDiagram.png)
+![[]({{ "/assets/images/OLED_ArduinoLeonardo_POT_CircuitDiagram.png" | relative_url }})
 **Figure** A basic OLED circuit with [potentiometer](../arduino/potentiometers.md) input on `A0`.
 {: .fs-1 }
 
@@ -647,7 +647,7 @@ void loop() {
 You can view the full code on GitHub as [AnalogBallSize.ino](https://github.com/makeabilitylab/arduino/blob/master/OLED/AnalogBallSize/AnalogBallSize.ino).
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/OLEDAnalogBallSize-IMG_6189-TrimmedAndOptimized.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/OLEDAnalogBallSize-IMG_6189-TrimmedAndOptimized.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** A video of [AnalogBallSize.ino](https://github.com/makeabilitylab/arduino/blob/master/OLED/AnalogBallSize/AnalogBallSize.ino).
 {: .fs-1 }
@@ -656,7 +656,7 @@ You can view the full code on GitHub as [AnalogBallSize.ino](https://github.com/
 
 Now let's hook up **two** analog inputs to control the x,y location of the circle rather than the size. In this case, we'll use two potentiometers. The wiring diagram is below.
 
-![](assets/images/OLED_ArduinoLeonardo_2Pots_CircuitDiagram.png)
+![[]({{ "/assets/images/OLED_ArduinoLeonardo_2Pots_CircuitDiagram.png" | relative_url }})
 **Figure** The wiring and circuit diagram for two potentiometers and the OLED display.
 {: .fs-1 }
 
@@ -690,7 +690,7 @@ void loop() {
 You can view the full code on GitHub as [AnalogBallLocation.ino](https://github.com/makeabilitylab/arduino/blob/master/OLED/AnalogBallLocation/AnalogBallLocation.ino).
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/OLEDMoveBallTwoPots-IMG_6190-TrimmedAndOptimized720p.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/OLEDMoveBallTwoPots-IMG_6190-TrimmedAndOptimized720p.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video** A demonstration of [AnalogBallLocation.ino](https://github.com/makeabilitylab/arduino/blob/master/OLED/AnalogBallLocation/AnalogBallLocation.ino) using potentiometers on `A0` and `A1`.
 {: .fs-1 }
@@ -734,7 +734,7 @@ void loop() {
 The full source code is available in our [OLED GitHub](https://github.com/makeabilitylab/arduino/tree/master/OLED) as [AnalogGraph.ino](https://github.com/makeabilitylab/arduino/blob/master/OLED/AnalogGraph/AnalogGraph.ino). Here's a video demo:
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/OLEDAnalogGraph_TrimmedAndOptimized720p.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/OLEDAnalogGraph_TrimmedAndOptimized720p.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video** A demonstration of [AnalogGraph.ino](https://github.com/makeabilitylab/arduino/blob/master/OLED/AnalogGraph/AnalogGraph.ino) using a potentiometer for analog input on `A0`. We also show the currently sensed `A0` value in the upper-left corner and our frame rate (fps) in the upper-right corner.
 {: .fs-1 }
@@ -788,7 +788,7 @@ void loop() {
 The full source code is available in our [OLED GitHub](https://github.com/makeabilitylab/arduino/tree/master/OLED) as [AnalogGraphScrolling.ino](https://github.com/makeabilitylab/arduino/blob/master/OLED/AnalogGraphScrolling/AnalogGraphScrolling.ino). Here's a video demo. 
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/OLED_ScrollingGraphDemo-IMG_6192-TrimmedAndOptimized720p.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/OLED_ScrollingGraphDemo-IMG_6192-TrimmedAndOptimized720p.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video** A demonstration of [AnalogGraphScrolling.ino](https://github.com/makeabilitylab/arduino/blob/master/OLED/AnalogGraphScrolling/AnalogGraphScrolling.ino) using a potentiometer for analog input on `A0`. We also show the currently sensed `A0` value in the upper-left corner and our frame rate (fps) in the upper-right corner.
 {: .fs-1 }

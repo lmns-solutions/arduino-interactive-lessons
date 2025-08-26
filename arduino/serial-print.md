@@ -20,7 +20,7 @@ usetocbot: true
 ---
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/movies/BlinkWithSerialPrint-IMG_5777_Trim_720p.mp4" type="video/mp4" />
+  <source src="{{ "/assets/movies/BlinkWithSerialPrint-IMG_5777_Trim_720p.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** A video showing how to use Serial.println() to debug code. For this, we modified the simple blink program to add  serial prints ([source code](https://github.com/makeabilitylab/arduino/blob/master/Basics/digitalWrite/BlinkWithSerialPrint/BlinkWithSerialPrint.ino)).
 {: .fs-1 }
@@ -42,7 +42,7 @@ Using "print out" statements to "console" is perhaps the oldest (and possibly mo
 
 Unlike JavaScript, Java, C# or other code that runs in your web browser or natively on your desktops/laptops, your Arduino code is running on the Arduino's microcontroller (*e.g.,* the Uno uses the [ATmega328P](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf); the Leonardo uses the [ATmega32u4](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7766-8-bit-AVR-ATmega16U4-32U4_Datasheet.pdf)). Thus, when we "print to console", we actually need to get the data from the Arduino's microcontroller on to your development computer. For this, Arduino uses the [serial](https://www.arduino.cc/reference/en/language/functions/communication/serial/) protocol. More specifically, the function [`Serial.print()`](https://www.arduino.cc/reference/en/language/functions/communication/serial/print/) and [`Serial.println()`](https://www.arduino.cc/reference/en/language/functions/communication/serial/println/).
 
-![An abstract diagram showing how Serial.println works](assets/images/ArduinoSerialPrintlnDiagram_ByJonEFroehlich.png)
+![An abstract diagram showing how Serial.println works[]({{ "/assets/images/ArduinoSerialPrintlnDiagram_ByJonEFroehlich.png" | relative_url }})
 
 These two functions print data to the serial port as human-readable ASCII text (the `println` version simply inserts a carriage return `\r` followed by a newline character `\n`). To send data without converting it to ASCII text, you need to use [`Serial.write()`](https://www.arduino.cc/reference/en/language/functions/communication/serial/write).
 
@@ -90,11 +90,11 @@ void loop() {
 
 Finally, to view the incoming serial data, open up the Serial Monitor in the Arduino IDE. 
 
-![](assets/images/BlinkWithSerialPrint_OpenSerialMonitor.png)
+![[]({{ "/assets/images/BlinkWithSerialPrint_OpenSerialMonitor.png" | relative_url }})
 
 And you should see something like this:
 
-![](assets/images/SerialPrintHelloWorld_SerialMonitor.png)
+![[]({{ "/assets/images/SerialPrintHelloWorld_SerialMonitor.png" | relative_url }})
 
 The full code is on GitHub [here](https://github.com/makeabilitylab/arduino/blob/master/Basics/serial/SerialPrintHelloWorld/SerialPrintHelloWorld.ino).
 
@@ -122,7 +122,7 @@ void loop() {
 }
 {% endhighlight C %}
 
-![](assets/images/SerialPrintTimeStamp_ArduinoSerialMonitorScreenshot.png)
+![[]({{ "/assets/images/SerialPrintTimeStamp_ArduinoSerialMonitorScreenshot.png" | relative_url }})
 
 This code is also on GitHub [here](https://github.com/makeabilitylab/arduino/blob/master/Basics/serial/SerialPrintTimestamp/SerialPrintTimestamp.ino)
 
@@ -133,7 +133,7 @@ This code is also on GitHub [here](https://github.com/makeabilitylab/arduino/blo
 Now, let's return to our blink code and modify it to use `Serial.print` to print out when the LED is on and off. Here's my example.
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/movies/BlinkWithSerialPrint-IMG_5777_Trim_720p.mp4" type="video/mp4" />
+  <source src="{{ "/assets/movies/BlinkWithSerialPrint-IMG_5777_Trim_720p.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** A video of the blink program with serial prints ([source code](https://github.com/makeabilitylab/arduino/blob/master/Basics/digitalWrite/BlinkWithSerialPrint/BlinkWithSerialPrint.ino)).
 {: .fs-1 }
@@ -144,7 +144,7 @@ Now, let's return to our blink code and modify it to use `Serial.print` to print
 
 In addition to `Serial.print`, we can also use the Arduino's built-in LED for some quick debugging (*e.g.,* turn on the built-in LED to indicate some program state without hooking up an external LED circuit). On the Arduino Uno and Leonardo, the built-in LED is on Pin 13. So, if you write `digitalWrite(13, HIGH);` in your code, the built-in LED will turn on. Because not all Arduino boards have the built-in LED at Pin 13, you should use the constant `LED_BUILTIN` rather than a literal pin number.
 
-![Image showing the location of the built-in controllable LED on the Arduino Uno](assets/images/ArduinoUno_BuiltInLEDLocation.png)
+![Image showing the location of the built-in controllable LED on the Arduino Uno[]({{ "/assets/images/ArduinoUno_BuiltInLEDLocation.png" | relative_url }})
 
 In fact, the official [Arduino Blink example](http://www.arduino.cc/en/Tutorial/Blink) uses the built-in LED and the constant `LED_BUILTIN` to demonstrate blinking. This is also the program that ships with your Arduino and runs when you first power it up.
 
@@ -166,7 +166,7 @@ void loop() {
 
 You can access this example directly in the Arduino IDE:
 
-![Screenshot of accessing the official Blink example directly from the Arduino IDE](assets/images/ArduinoIDE_FileMenuToBlinkExample.png)
+![Screenshot of accessing the official Blink example directly from the Arduino IDE[]({{ "/assets/images/ArduinoIDE_FileMenuToBlinkExample.png" | relative_url }})
 
 ## Next Lesson
 

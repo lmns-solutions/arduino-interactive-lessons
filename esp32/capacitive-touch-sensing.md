@@ -35,7 +35,7 @@ The ESP32's touch sensor circuit measures the total capacitance on a touch chann
 
 The ESP32 has 10 capacitive touch pins; however, only **eight** are exposed on the Huzzah32:
 
-![Huzzah32 pin diagram](assets/images/AdafruitHuzzah32PinDiagram.png)
+![Huzzah32 pin diagram[]({{ "/assets/images/AdafruitHuzzah32PinDiagram.png" | relative_url }})
 See the Adafruit Huzzah32 [docs](https://learn.adafruit.com/adafruit-huzzah32-esp32-feather/pinouts) for details. Right-click and open image in a new tab to zoom in. For more details on the capacitive touch pins, see the Espressif [docs](https://github.com/espressif/esp-iot-solution/blob/master/documents/touch_pad_solution/touch_sensor_design_en.md).
 {: .fs-1 } 
 
@@ -98,7 +98,7 @@ Let's make a simple, touch-sensitive LED light. We will poll `touchRead` and det
 
 We use TOUCH6 (`T6`), which is GPIO Pin 14.
 
-![Circuit diagram with a wire hooked to T6](assets/images/Huzzah32_CapacitiveTouchSensing_CircuitDiagram_Fritzing.png)
+![Circuit diagram with a wire hooked to T6[]({{ "/assets/images/Huzzah32_CapacitiveTouchSensing_CircuitDiagram_Fritzing.png" | relative_url }})
 
 ### The code
 

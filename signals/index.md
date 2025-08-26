@@ -18,7 +18,7 @@ nav_exclude: false
 
 <!-- TODO: write an intro for signal processing and move this to jupyter.md -->
 
-![Screenshot of Jupyter Notebook](assets/images/JupyterNotebook_Screenshot.png)
+![Screenshot of Jupyter Notebook[]({{ "/assets/images/JupyterNotebook_Screenshot.png" | relative_url }})
 
 Jupyter Notebook screenshot showing an analysis and visualization of a 3-axis accelerometer to infer step counts.
 {: .fs-1 }
@@ -106,7 +106,7 @@ Let's build a feature-based (or model-based) gesture recognizer using supervised
 
 In this Notebook, you'll learn about automatic feature selection and hyperparameter tuning.
 
-<!-- ![](assets/images/JupyterNotebook_StepTrackerVisualization_Screenshot.png) -->
+<!-- ![[]({{ "/assets/images/JupyterNotebook_StepTrackerVisualization_Screenshot.png" | relative_url }}) -->
 
 <!-- ## Sampling
 

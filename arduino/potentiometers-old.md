@@ -42,7 +42,7 @@ Animation shows how the wiper can be used to vary resistance. The figure on the 
 
 Potentiometers are truly ubiquitous electronic components found in everything from volume controls to analog joysticks. In our UW courses, we often provide 10kΩ potentiometers in our kits (like [this one](https://www.adafruit.com/product/356) from Adafruit).
 
-![Image of two physical potentiometers along with a diagram and schematic symbol](assets/images/Potentiometer_DiagramWithSchematicSymbol.png)
+![Image of two physical potentiometers along with a diagram and schematic symbol[]({{ "/assets/images/Potentiometer_DiagramWithSchematicSymbol.png" | relative_url }})
 
 <!-- TODO: talk about different taper types? -->
 <!-- TODO: talk about potentiometer drawbacks--like maintainance, corrosion. See https://ultimateelectronicsbook.com/potentiometers/ -->
@@ -51,7 +51,7 @@ Potentiometers are truly ubiquitous electronic components found in everything fr
 
 Potentiometers can be thought of as conveniently packaged voltage dividers: $$R_{1}$$ and $$R_{2}$$ divide the voltage as the potentiometer wiper moves.
 
-![Image showing how you potentiometers can be thought of as voltage dividers](assets/images/PotentiometersAsVoltageDividers.png)
+![Image showing how you potentiometers can be thought of as voltage dividers[]({{ "/assets/images/PotentiometersAsVoltageDividers.png" | relative_url }})
 A 10kΩ potentiometer split into two constituent resistors ($$R_{1}$$) and ($$R_{2}$$). In this case, the wiper is in the middle, so $$V_{A0}$$ equals 2.5V.
 {: .fs-1 }
 
@@ -63,7 +63,7 @@ As you move the wiper, the resistance across Legs 1 and 2 ($$R_{1}$$) and Legs 2
 
 The voltage divider equation, which derives from Ohm's Law, states that $$V_{out} = V_{in} \cdot \frac{R_2}{R_1 + R_2}$$. So, the voltage at leg 2 (the wiper) of the potentiometer is equal to $$V_{in} \cdot \frac{R_2}{R_1 + R_2}$$  
 
-![The voltage divider equation](assets/images/VoltageDividerEquation.png)
+![The voltage divider equation[]({{ "/assets/images/VoltageDividerEquation.png" | relative_url }})
 
 For example, if we set Leg 1 to $$5V$$ and Leg 3 to $$GND$$, then as we change the potentiometer dial, the voltage at Leg 2 ($$V_{out}$$) will dynamically shift according to the voltage divider equation.
 
@@ -93,7 +93,7 @@ When only two terminals (or legs) of the potentiometer are used—an outer leg a
 
 That said, many common **sensors** are actually variable resistors—they dynamically change their resistance in response to some human or environmental input. For example, thermistors change their resistance based on temperature, photocells based on light, force-sensitive resistors (FSRs) based on force. In fact, you have both photocells and FSRs in your hardware kits!
 
-![Grid of images showing different types of variable resistors, including: potentiometers, touch membranes, photocells, thermistors, force-sensitive resistors, and flex sensors](assets/images/VariableResistors_ExampleGallery.png)
+![Grid of images showing different types of variable resistors, including: potentiometers, touch membranes, photocells, thermistors, force-sensitive resistors, and flex sensors[]({{ "/assets/images/VariableResistors_ExampleGallery.png" | relative_url }})
 Prices and pictures are from Sparkfun.com; parts can often be cheaper in bulk from suppliers like [Digi-Key](https://www.digikey.com/) or [Mouser Electronics](https://www.mouser.com/).
 {: .fs-1 }
 
@@ -120,7 +120,7 @@ Let's build a prototype in [Tinkercad Circuits](https://www.tinkercad.com/) befo
 
 In Tinkercad, you could make your dimmer with or without a breadboard (both are shown in the figure below). Let's prototype something we would actually make in real life, so go with the breadboarded version:
 
-![Wiring diagram of an LED-based circuit with a potentiometer for fading. 9V battery used for power](assets/images/Potentiometer_LEDCircuits_9VBatteryPowerSource_Tinkercad.png)
+![Wiring diagram of an LED-based circuit with a potentiometer for fading. 9V battery used for power[]({{ "/assets/images/Potentiometer_LEDCircuits_9VBatteryPowerSource_Tinkercad.png" | relative_url }})
 You can access these Tinkercad circuits [here](https://www.tinkercad.com/things/f4mL9xm0C7z) (no breadboard) and [here](https://www.tinkercad.com/things/2CTd0LQTHRk) (with breadboard).
 {: .fs-1 }
 
@@ -128,17 +128,17 @@ You can access these Tinkercad circuits [here](https://www.tinkercad.com/things/
 
 Visit [tinkercad.com](https://www.tinkercad.com/) and login (if you already have an Autodesk account) or register if not. We are not using any of the "In School" features, so create a personal account:
 
-![Screenshot of Tinkercad's registration page](assets/images/Tinkercad_RegistrationPage.png)
+![Screenshot of Tinkercad's registration page[]({{ "/assets/images/Tinkercad_RegistrationPage.png" | relative_url }})
 
 #### Step 2: Create a new circuit
 
 In your dashboard, click on "Circuits":
 
-![Screenshot of Tinkercad's dashboard](assets/images/Tinkercad_ClickOnCircuits.png)
+![Screenshot of Tinkercad's dashboard[]({{ "/assets/images/Tinkercad_ClickOnCircuits.png" | relative_url }})
 
 Then click on "Create new Circuit":
 
-![Screenshot of Tinkercad's dashboard with "create new circuit button"](assets/images/Tinkercad_CreateNewCircuit.png)
+![Screenshot of Tinkercad's dashboard with "create new circuit button"[]({{ "/assets/images/Tinkercad_CreateNewCircuit.png" | relative_url }})
 
 #### Step 3: Aquaint yourself with Tinkercad
 
@@ -146,7 +146,7 @@ Tinkercad works by dragging and dropping components from the right sidebar menu 
 
 If you've dragged over an Arduino, you can also click on the "Code" button and write code either in `C/C++` or in a visual, block-based language. The simulator even has a "Serial Monitor", "Serial Plotter", and, wait for it, a simplistic debugger with breakpoint support!
 
-![Screenshot of Tinkercad's primary UI](assets/images/Tinkercad_MainInterface.png)
+![Screenshot of Tinkercad's primary UI[]({{ "/assets/images/Tinkercad_MainInterface.png" | relative_url }})
 An example of the [multi-rate blinking lesson](led-blink3.md) created in Tinkercad. [Try it out](https://www.tinkercad.com/things/kAq7G2p4QQ6)!
 
 #### Step 4: Build the potentiomer-based LED dimmer
@@ -159,17 +159,17 @@ Now, let's build the potentiometer-based LED dimmer.
 
 Here's one possible wiring for a potentiometer-based LED fading circuit:
 
-![Wiring diagram of an LED-based circuit with a potentiometer for fading. 9V battery used for power](assets/images/Potentiometer_LEDCircuitWithBreadboard_9VPower_Tinkercad.png)
+![Wiring diagram of an LED-based circuit with a potentiometer for fading. 9V battery used for power[]({{ "/assets/images/Potentiometer_LEDCircuitWithBreadboard_9VPower_Tinkercad.png" | relative_url }})
 
 #### Step 5: Now simulate your circuit
 
 Once you're done, try simulating your circuit. Click the "Start Simulation" button (see animation below):
 
-![Animation of the LED-based circuit with potentiometer working in the Tinkercad simulator](assets/movies/Potentiometer_LEDCircuitWithBackupResistor_Tinkercad2-Optimized.gif)
+![Animation of the LED-based circuit with potentiometer working in the Tinkercad simulator[]({{ "/assets/movies/Potentiometer_LEDCircuitWithBackupResistor_Tinkercad2-Optimized.gif" | relative_url }})
 
 In the circuit above, we hooked up legs 2 and 3 of the potentiometer. What happens if you, instead, hook up legs 1 and 3 or 1 and 2? Try it!
 
-![Different wirings with the potentiometer in Tinkercad](assets/images/Potentiometer_LEDCircuitWithBackupResistor_MultipleWirings_Tinkercad.png)
+![Different wirings with the potentiometer in Tinkercad[]({{ "/assets/images/Potentiometer_LEDCircuitWithBackupResistor_MultipleWirings_Tinkercad.png" | relative_url }})
 
 ### Add ammeter to Tinkercad prototype
 
@@ -179,13 +179,13 @@ To help us observe the effect of the potentiometer's wiper position on the total
 
 Voltmeter's **measure voltage** in **parallel**. Ammeter's **measure current** in **series** (ammeter comes from Amperage meter). See the wiring diagram below. 
 
-![Shows two pictures: image on left shows how to measure voltage in parallel using a multimeter and figure on right shows how to measure current in series using a multimeter](assets/images/Multimeter_HowToMeasureVoltageAndCurrent.png)
+![Shows two pictures: image on left shows how to measure voltage in parallel using a multimeter and figure on right shows how to measure current in series using a multimeter[]({{ "/assets/images/Multimeter_HowToMeasureVoltageAndCurrent.png" | relative_url }})
 Image from this great ["Science Buddies" tutorial](https://www.sciencebuddies.org/science-fair-projects/references/how-to-use-a-multimeter#usingamultimeter) on using multimeters.
 {: .fs-1 } 
 
 To help us think about and remember how to measure current, I like to return to our water analogies from lecture: think of the ammeter as if it's a mechanical water flow meter (aka a turbine) that must be in-line within a pipe to measure water flow. An ammeter must be "in line" to measure current—you must rewire your circuit such that current is forced through your ammeter (just like water flowing through a turbine in a pipe).
 
-![Image shows a water flow meter that uses a turbine in series with a pipe to measure water flow and makes analogy to measure current in line with an ammeter](assets/images/Multimeter_MeasuringCurrentInSeriesLikeWaterFlowTurbine.png)
+![Image shows a water flow meter that uses a turbine in series with a pipe to measure water flow and makes analogy to measure current in line with an ammeter[]({{ "/assets/images/Multimeter_MeasuringCurrentInSeriesLikeWaterFlowTurbine.png" | relative_url }})
 Image adapted from ["Science Buddies"](https://www.sciencebuddies.org/science-fair-projects/references/how-to-use-a-multimeter#usingamultimeter).
 {: .fs-1 }
 
@@ -193,17 +193,17 @@ Image adapted from ["Science Buddies"](https://www.sciencebuddies.org/science-fa
 
 Because there is only one path for the current to flow in this circuit (no branches), we could hook up the ammeter at any in-series location—for example, in between the potentiometer and LED or the resistor and potentiometer. I just selected a position that I found convenient.
 
-![Tinkercad potentiometer circuit with ammeter in series](assets/images/Potentiometer_LEDCircuitWithBackupResistorAndAmmeter_Tinkercad.png)
+![Tinkercad potentiometer circuit with ammeter in series[]({{ "/assets/images/Potentiometer_LEDCircuitWithBackupResistorAndAmmeter_Tinkercad.png" | relative_url }})
 
 Note: when you drag over a multimeter, make sure you click on it and change the mode to ammeter to measure current (select Amperage).
 
-![Updated Tinkercad wiring diagram with ammeter](assets/images/Tinkercad_Multimeter_SwitchToAmmeter.png)
+![Updated Tinkercad wiring diagram with ammeter[]({{ "/assets/images/Tinkercad_Multimeter_SwitchToAmmeter.png" | relative_url }})
 
 #### Tinkercad simulation with ammeter
 
 Here's our circuit with the ammeter running in the simulator. Does the simulation match your expectations? 
 
-![Animation of the LED-based circuit with potentiometer and ammeter working in the Tinkercad simulator](assets/movies/Potentiometer_LEDCircuitWithBackupResistor_WithMultimeter_Tinkercad.gif)
+![Animation of the LED-based circuit with potentiometer and ammeter working in the Tinkercad simulator[]({{ "/assets/movies/Potentiometer_LEDCircuitWithBackupResistor_WithMultimeter_Tinkercad.gif" | relative_url }})
 
 Because we have Leg 2 hooked to the positive voltage source and Leg 3 as our "output", as we move the wiper from left-to-right, there is a smaller amount of resistance and an increase in current. You'll notice a jump in current when the $$V_f$$ condition of the LED is met (recall the [LED IV curves](http://lednique.com/current-voltage-relationships/iv-curves/) from lecture).
 
@@ -227,7 +227,7 @@ Because not all of us have access to a 9V battery + snap connector to easily int
 
 Given that the Arduino supplies 5V rather than 9V, we can replace our 470Ω resistor with a smaller resistor like a 220Ω (but you can certainly use a 470Ω or 680Ω if you'd like—remember, this is a backup resistor for when the potentiometer's wiper resistance goes to 0Ω).
 
-![Wiring diagram of an LED-based circuit with a potentiometer for fading. Arduino used for power](assets/images/Potentiometer_LEDCircuit_ArduinoUnoPowerSource_Tinkercad.png)
+![Wiring diagram of an LED-based circuit with a potentiometer for fading. Arduino used for power[]({{ "/assets/images/Potentiometer_LEDCircuit_ArduinoUnoPowerSource_Tinkercad.png" | relative_url }})
 You can play with this Tinkercad circuit [here](https://www.tinkercad.com/things/cDMY5BmSacm).
 {: .fs-1 }
 
@@ -235,7 +235,7 @@ You can play with this Tinkercad circuit [here](https://www.tinkercad.com/things
 
 Here's a workbench video of my trimpot circuit:
 
-<!-- ![Animation my potentiometer-based LED fade circuit hooked up to the Arduino for power](assets/movies/Potentiometer_LEDCircuit_ArduinoForPower_Workbench3_SpedUp1.5x.gif) -->
+<!-- ![Animation my potentiometer-based LED fade circuit hooked up to the Arduino for power[]({{ "/assets/movies/Potentiometer_LEDCircuit_ArduinoForPower_Workbench3_SpedUp1.5x.gif" | relative_url }}) -->
 
 <iframe width="736" height="414" src="https://www.youtube.com/embed/3LoxVFlc4r4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -304,11 +304,11 @@ But wait, you might wonder, how does the actual conversion from analog-to-digita
 
 The Arduino Uno and Leonardo have six analog inputs, which can be read using `analogRead(int pin)`:
 
-![Close-up image of the six analog input pins on the Arduino Uno](assets/images/ArduinoUno_CloseUp_AnalogInputPins.png)
+![Close-up image of the six analog input pins on the Arduino Uno[]({{ "/assets/images/ArduinoUno_CloseUp_AnalogInputPins.png" | relative_url }})
 
 While the digital I/O pins on the Arduino microcontroller are shared. The **analog input** pins are different from the **analog output** pins.
 
-![Close-up image of the Arduino Uno emphasizing that the Arduino analog input pins are different from the analog output pins](assets/images/ArduinoUno_CloseUp_WarningAnalogInputAndOutputPinsAreDifferent.png)
+![Close-up image of the Arduino Uno emphasizing that the Arduino analog input pins are different from the analog output pins[]({{ "/assets/images/ArduinoUno_CloseUp_WarningAnalogInputAndOutputPinsAreDifferent.png" | relative_url }})
 
 ### How does the Arduino read analog input?
 
@@ -348,7 +348,7 @@ Let's build an initial circuit in Tinkercad—first, the wrong way. And then we'
 
 To begin, you might treat the potentiometer similar to how we did with our LED circuits above—as a rheostat where we only use two legs (an outer leg and Leg 2). However, this won't work. Build and try these configurations yourself. Make sure to add the above code to the "Code" window in Tinkercad and then hit the "Simulation" button.
 
-![Incorrect ways to hook up potentiometers with microcontrollers](assets/images/ArduinoUno_Potentiometer_IncorrectCircuits_Tinkercad.png)
+![Incorrect ways to hook up potentiometers with microcontrollers[]({{ "/assets/images/ArduinoUno_Potentiometer_IncorrectCircuits_Tinkercad.png" | relative_url }})
 To try these incorrect circuits on Tinkercad, go [here](https://www.tinkercad.com/things/cvIBIowVyxG) and [here](https://www.tinkercad.com/things/fQOFEwZKUg6).
 {: .fs-1 }
 
@@ -366,7 +366,7 @@ Notice how the analog input voltage $$V_{A0}$$ to the microcontroller is always 
 
 So, what do we do? We hook up all three potentiometer legs to form a voltage divider: Leg 1 to $$V_{CC}$$ and Leg 2 to $$A0$$ but we'll also wire Leg 3 to $$GND$$. This will create a voltage difference across the potentiometer and cause current to flow from $$V_{CC}$$ to $$GND$$ (and a voltage divider network to emerge):
 
-![Correct ways of wiring a potentiometer to an Arduino's analog input A0.](assets/images/ArduinoUno_PotentiometerSimple_Tinkercad.png)
+![Correct ways of wiring a potentiometer to an Arduino's analog input A0.[]({{ "/assets/images/ArduinoUno_PotentiometerSimple_Tinkercad.png" | relative_url }})
 Try this circuit+code out on [Tinkercad](https://www.tinkercad.com/things/7K7OLIUWCdj).
 {: .fs-1 }
 

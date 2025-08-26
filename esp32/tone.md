@@ -32,7 +32,7 @@ Just as `analogWrite` is not supported on [arduino-esp32](https://github.com/esp
 
 However, if you attempt to compile code with `tone()` using the ESP32, you will receive a compiler error like this: `'tone' was not declared in this scope`. Thus, even basic tone examples built into the Arduino IDE like `Examples -> Digital -> toneMelody` fail, as shown below.
 
-![](assets/images/ESP32_CompilerError_ToneNotDeclaredInThisScope.png)
+![[]({{ "/assets/images/ESP32_CompilerError_ToneNotDeclaredInThisScope.png" | relative_url }})
 **Figure.** Example of how even basic tone examples, like [toneMelody.ino](https://github.com/arduino/arduino-examples/blob/main/examples/02.Digital/toneMelody/toneMelody.ino), which ships as a built-in example with the Arduino IDE, fails with a ESP32 board selected.
 {: .fs-1 }
 
@@ -121,7 +121,7 @@ To use either `ledcWriteTone` and `ledcWriteNote`, we can follow a similar appro
 
 Our circuit is as simple as they come. Simply attach your piezo buzzer to a GPIO pin. In this case, we're using GPIO Pin 26. In our courses, we often use the [TDK PS1240 ](https://product.tdk.com/system/files/dam/doc/product/sw_piezo/sw_piezo/piezo-buzzer/catalog/piezoelectronic_buzzer_ps_en.pdf) piezo buzzers (about $0.46 [Mouser](https://www.mouser.com/ProductDetail/810-PS1240P02BT) or $1.35 at [Adafruit](https://www.adafruit.com/product/160)). These buzzers work with both 3V and 5V square waves. Their resonant frequency (loudest tone) is 4kHz but you can drive them with a far larger range (we've tested from 32Hz up to 10Khz, at which point the sound is ear piercing). As non-polarized devices, they can be connected in either orientation (like resistors).
 
-![](assets/images/ESP32_Tone_PiezoBuzzerCircuit.png)
+![[]({{ "/assets/images/ESP32_Tone_PiezoBuzzerCircuit.png" | relative_url }})
 **Figure.** Circuit diagram to hook up [PS1240](https://www.adafruit.com/product/160) piezo buzzer with the ESP32. We've wired the buzzer to GPIO Pin 26. Image made in Fritzing and PowerPoint.
 {: .fs-1 }
 
@@ -253,7 +253,7 @@ OK, now let's make a slightly more complicated version that reads in an analog i
 
 We need to slightly modify our circuit by adding a potentiometer—in this case, a 10K potentiometer.
 
-![](assets/images/ESP32_Tone_PiezoBuzzerWithPotentiometerCircuit.png)
+![[]({{ "/assets/images/ESP32_Tone_PiezoBuzzerWithPotentiometerCircuit.png" | relative_url }})
 **Figure.** Circuit diagram of Huzzah32 with piezo buzzer and potentiometer. Image made in Fritzing and PowerPoint.
 {: .fs-1 }
 

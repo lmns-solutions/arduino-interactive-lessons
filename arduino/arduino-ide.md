@@ -25,7 +25,7 @@ Please follow our step-by-step download and installation instructions for the [A
 
 Download and install the local Mac, Windows, or Linux version of the [Arduino IDE](https://www.arduino.cc/en/main/software). We will **not** be using the Cloud version (the "Arduino Web Editor"), so please download and install the version that runs locally on your machine.
 
-![Arduino IDE download screenshot](assets/images/ArduinoIDEDownloadScreenshot.png)
+![Arduino IDE download screenshot[]({{ "/assets/images/ArduinoIDEDownloadScreenshot.png" | relative_url }})
 
 ### Step 2: Open the IDE
 
@@ -34,30 +34,30 @@ After installation is complete, open the Arduino IDE. Notice that there are **tw
 1. The first block is `setup()`, which is called once and only once when the Arduino is turned on
 2. And the second block is `loop()`, which is called as soon as `setup()` completes. When `loop()` completes, it's automatically called again and again (until the Arduino is turned off). Want to learn more, read [Inside Arduino](inside-arduino.md#whats-calling-loop-and-how-fast).
 
-![Screenshot of the Arduino IDE](assets/images/ArduinoIDE_BlankAndAnnotated.png)
+![Screenshot of the Arduino IDE[]({{ "/assets/images/ArduinoIDE_BlankAndAnnotated.png" | relative_url }})
 
 For those who have used [Processing](https://processing.org/)—a programming environment for digital artists and creators (and a favorite of mine)—this code structure should seem familiar. Indeed, the Arduino IDE is written in Java and derives from Processing ([link](https://github.com/arduino/Arduino/tree/ee1967cd530ceb9a1d638875e385157e90d532e8/arduino-core/src/processing/app)).
 
 | Processing | p5js |
 |----|----|
-| ![Screenshot of the Processing IDE](assets/images/ProcessingIDE_Blank.png) | ![Screenshot of p5js IDE](assets/images/p5jsIDE_Blank.png) |
+| ![Screenshot of the Processing IDE[]({{ "/assets/images/ProcessingIDE_Blank.png" | relative_url }}) | ![Screenshot of p5js IDE[]({{ "/assets/images/p5jsIDE_Blank.png" | relative_url }}) |
 | A screenshot of the [Processing IDE](https://processing.org/) | A screenshot of the [p5.js IDE](https://editor.p5js.org/) |
 
 ### Step 3: Select your Arduino board
 
 Plug in your Arduino and select your Arduino board in the Tools menu:
 
-![Screenshot showing how to select your Arduino board in the Arduino IDE by going to the file menu and then Tools->Board](assets/images/ArduinoIDE_SelectYourArduinoBoard.png)
+![Screenshot showing how to select your Arduino board in the Arduino IDE by going to the file menu and then Tools->Board[]({{ "/assets/images/ArduinoIDE_SelectYourArduinoBoard.png" | relative_url }})
 
 In newer versions of the IDE (since [1.8.13](https://www.arduino.cc/en/Main/ReleaseNotes)), there is a cascading menu organized by platform type.
 
-![Screenshot showing how to select your Arduino board in the Arduino IDE by going to the file menu and then Tools->Arduino AVR Boards->Board](assets/images/ArduinoIDE_SelectYourArduinoBoard_GroupedByPlatform.png)
+![Screenshot showing how to select your Arduino board in the Arduino IDE by going to the file menu and then Tools->Arduino AVR Boards->Board[]({{ "/assets/images/ArduinoIDE_SelectYourArduinoBoard_GroupedByPlatform.png" | relative_url }})
 
 ### Step 4: Select your Arduino port
 
 Then select your Arduino port. **Important:** This port can change if, for example, you change which USB port you plug in your Arduino. Students have also reported this port changing on their computer after restarts, etc. You will not be able to download code to Arduino if the proper port is not selected.
 
-![Screenshot showing how to select your Arduino port in the Arduino IDE by going to the file menu and then Tools->Port](assets/images/ArduinoIDE_SelectYourArduinoPort.png)
+![Screenshot showing how to select your Arduino port in the Arduino IDE by going to the file menu and then Tools->Port[]({{ "/assets/images/ArduinoIDE_SelectYourArduinoPort.png" | relative_url }})
 
 ### Stop and double check the following
 
@@ -73,7 +73,7 @@ A significant number of frustrating hours are wasted because:
 
 To use a dark theme in the Arduino IDE, [follow these steps](https://create.arduino.cc/projecthub/konradhtc/one-dark-arduino-modern-dark-theme-for-arduino-ide-2fca81). Note: I started investigating this when I noticed that the default Arduino theme was difficult to read over Zoom.
 
-![Screenshot of dark theme](assets/images/ArduinoIDE_DarkTheme.png)
+![Screenshot of dark theme[]({{ "/assets/images/ArduinoIDE_DarkTheme.png" | relative_url }})
 
 ## Troubleshooting
 
@@ -81,7 +81,7 @@ To use a dark theme in the Arduino IDE, [follow these steps](https://create.ardu
 
 If you click the `upload` button but receive the following error, did you remember to set the correct Arduino board and port in `Tools->Board` and `Tools->Port`? See above.
 
-![](assets/images/ArduinoIDE_CouldntFindBoardOnSelectedPortpng.png)
+![[]({{ "/assets/images/ArduinoIDE_CouldntFindBoardOnSelectedPortpng.png" | relative_url }})
 
 ### Arduino Leonardo port doesn't show up in Tools->Port
 
@@ -106,4 +106,4 @@ Why does this happen? Read the official Arduino guide [here](https://www.arduino
 ## Arduino is open source
 Arduino is open source and hosted on [GitHub](https://github.com/arduino).
 
-![](assets/images/ArduinoOpenSourceGitHubScreenshot.png)
+![[]({{ "/assets/images/ArduinoOpenSourceGitHubScreenshot.png" | relative_url }})

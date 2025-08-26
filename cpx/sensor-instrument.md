@@ -80,13 +80,13 @@ The examples we include here are intentionally more complicated to help demonstr
 
 How might you use the other built-in sensors to create music? Try playing with [**acceleration** (motion)](https://makecode.adafruit.com/reference/input/acceleration), [**sound level**](https://makecode.adafruit.com/reference/input/sound-level), and [**temperature**](https://makecode.adafruit.com/reference/input/temperature). For example, we've created an [example accelerometer-based instrument](https://makecode.com/_fbsJcbKMgJxv) that changes the pitch and volume based on the y and x acceleration, respectively. You need not create something so complicated but do try to experiment with different sensors!
 
-![A screenshot of MakeCode showing the accelerometer instrument](assets/images/MakeCode_AccelerometerInstrument.png)
+![A screenshot of MakeCode showing the accelerometer instrument[]({{ "/assets/images/MakeCode_AccelerometerInstrument.png" | relative_url }})
 **Figure.** An accelerometer-based instrument that changes the pitch and volume based on the y and x acceleration, respectively. Here's [the full code](https://makecode.com/_fbsJcbKMgJxv).
 {: .fs-1 }
 
 Relatedly, how might you improve *how* the music sounds? In the [example below](https://makecode.com/_49zec62PC6eJ), we map the light level to notes in the C scale using a predefined array of frequencies (each frequency maps to a musical note in the C scale, which is indexed based on the light level).
 
-![A screenshot of the MakeCode showing the light sensor instrument mapped to the C Scale](assets/images/MakeCode_LightSensorInstrumentCScale.png)
+![A screenshot of the MakeCode showing the light sensor instrument mapped to the C Scale[]({{ "/assets/images/MakeCode_LightSensorInstrumentCScale.png" | relative_url }})
 
 **Figure.** A more advanced light sensor instrument that translates the raw light levels to notes in the C scale. Here's [the full code](https://makecode.com/_49zec62PC6eJ).
 {: .fs-1 }

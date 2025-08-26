@@ -40,7 +40,7 @@ If you want to skip all the theory about why pull-down resistors and just "follo
 
 ### Circuit Diagrams
 
-![](assets/images/CPX_ExternalPullDownAndPullUpResistors.png)
+![[]({{ "/assets/images/CPX_ExternalPullDownAndPullUpResistors.png" | relative_url }})
 
 ### Code
 
@@ -58,9 +58,9 @@ In this video, we introduce external pull-up resistors and then using internal p
 
 ### Circuit Diagrams
 
-![](assets/images/CPX_InternalPullUpResistorConfiguration.png)
+![[]({{ "/assets/images/CPX_InternalPullUpResistorConfiguration.png" | relative_url }})
 
-![](assets/images/CPX_InternalPullDownResistorConfiguration.png)
+![[]({{ "/assets/images/CPX_InternalPullDownResistorConfiguration.png" | relative_url }})
 
 ## Lesson 8.4: Hooking up Arcade Buttons to the CPX
 
@@ -74,15 +74,15 @@ In this video, we show how to hook up arcade buttons to the CPX, which have cool
 
 Using an external pull-down resistor with the arcade button.
 
-![](assets/images/CPX_ArcadeButtonExternalPullDown.png)
+![[]({{ "/assets/images/CPX_ArcadeButtonExternalPullDown.png" | relative_url }})
 
 Using an internal pull-down resistor with the arcade button (but not hooking up the internal LED).
 
-![](assets/images/CPX_ArcadeButtonInternalPullDown.png)
+![[]({{ "/assets/images/CPX_ArcadeButtonInternalPullDown.png" | relative_url }})
 
 Hooking up internal LED. Here's [example code](https://makecode.com/_0oVYVmYK5gYt) that turns on the internal LED when the button is pressed.
 
-![](assets/images/CPX_ArcadeButtonInternalPullDown_WithInternalLED.png)
+![[]({{ "/assets/images/CPX_ArcadeButtonInternalPullDown_WithInternalLED.png" | relative_url }})
 
 <!-- TODO: add in circuit diagrams and code links 
 Post advance code for debouncing

@@ -20,7 +20,7 @@ nav_order: 4
 
 In this lesson, we'll learn how to use analog input on the ESP32 by building a potentiometer-based LED fader.
 
-![Animation of using a potentiometer to fade an LED on the ESP32](assets/movies/Huzzah32_PotFade-optimized.gif)
+![Animation of using a potentiometer to fade an LED on the ESP32[]({{ "/assets/movies/Huzzah32_PotFade-optimized.gif" | relative_url }})
 
 ## Materials
 
@@ -37,7 +37,7 @@ The ATmega chips used by the Arduino Uno ([ATmega328](http://ww1.microchip.com/d
 
 In constrast, the ESP32 integrates two **12-bit** ADCs (resolution: $$2^{12}=4096$$) supporting a total of 18 measurement channels (analog enabled pins). The official ESP32 docs are [here](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/adc.html).
 
-![Huzzah32 pin diagram](assets/images/AdafruitHuzzah32PinDiagram.png)
+![Huzzah32 pin diagram[]({{ "/assets/images/AdafruitHuzzah32PinDiagram.png" | relative_url }})
 The ADC pins are marked in teal. Right-click and open image in a new tab to zoom in.
 {: .fs-1 } 
 
@@ -68,7 +68,7 @@ The circuit is almost the same as the [previous lessons](led-fade.md); however, 
 1. The **input** circuit using the potentiometer, which we'll hook to `A6` (GPIO 14)
 2. The **output** circuit, which is the same as the [previous lessons](led-fade.md)
 
-![Circuit diagram and schematic for potentiometer-based fader](assets/images/Huzzah32_PotFade_CircuitDiagramAndSchematic_Fritzing.png)
+![Circuit diagram and schematic for potentiometer-based fader[]({{ "/assets/images/Huzzah32_PotFade_CircuitDiagramAndSchematic_Fritzing.png" | relative_url }})
 
 ### The code
 

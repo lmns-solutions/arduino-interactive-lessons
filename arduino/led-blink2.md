@@ -27,7 +27,7 @@ We are going to build two simple LED circuits:
 
 Yes, this can be a bit confusing at first ("*wait, the LED turns off when Pin 4 is `HIGH`?!?!*"). But you'll gain understanding by completing this lesson. In the animation below, pay attention to the current direction in each circuit. Notice how they're opposite!
 
-![Animation showing how driving Pin 3 and 4 HIGH will turn on LED Circuit 1 and off LED Circuit 2 and driving those pins LOW will turn off LED Circuit 1 and on LED Circuit 2](assets/movies/Arduino_Blink2Animation_Pins3And4-NoSchematic-Optimized.gif)
+![Animation showing how driving Pin 3 and 4 HIGH will turn on LED Circuit 1 and off LED Circuit 2 and driving those pins LOW will turn off LED Circuit 1 and on LED Circuit 2[]({{ "/assets/movies/Arduino_Blink2Animation_Pins3And4-NoSchematic-Optimized.gif" | relative_url }})
 
 ## Materials
 
@@ -48,19 +48,19 @@ We will increasingly be using our breadboards in these lessons so now is a good 
 
 ### Step 1: Wire up the power and GND rails
 
-![Diagram showing breadboard power and ground rails connected to the 5V and GND ports of the Arduino Uno](assets/images/ArduinoUno_LEDBlink2_Circuit_Step1.png)
+![Diagram showing breadboard power and ground rails connected to the 5V and GND ports of the Arduino Uno[]({{ "/assets/images/ArduinoUno_LEDBlink2_Circuit_Step1.png" | relative_url }})
 
 ### Step 2: Wire up the first LED circuit
 
 Now let's wire up the exact same circuit as before (*e.g.,* [LED Blink](led-blink.md) and [LED Fade](led-fade.md)) but this time we'll use a breadboard. Make sure the LED anode (the long leg) is facing Pin 3.
 
-![Diagram showing the LED circuit with with LED anode connected to Pin 3 and the resistor connected to the LED cathode and then to GND](assets/images/ArduinoUnoLEDBlink2_Circuit_Step2WithSchematic.png)
+![Diagram showing the LED circuit with with LED anode connected to Pin 3 and the resistor connected to the LED cathode and then to GND[]({{ "/assets/images/ArduinoUnoLEDBlink2_Circuit_Step2WithSchematic.png" | relative_url }})
 
 ### Step 3: Wire up the second LED circuit
 
 Now wire up the second LED circuit. This time, however, connect the LED cathode (short leg) to Pin 4 and the resistor to the 5V rail.
 
-![Diagram showing the LED circuit with with LED cathode connected to Pin 4 and the resistor connected to the LED anode and then to GND](assets/images/ArduinoUno_LEDBlink2_Circuit_Step3WithSchematic.png.png)
+![Diagram showing the LED circuit with with LED cathode connected to Pin 4 and the resistor connected to the LED anode and then to GND[]({{ "/assets/images/ArduinoUno_LEDBlink2_Circuit_Step3WithSchematic.png.png" | relative_url }})
 
 ## Writing the code: blinking Pins 3 and 4
 
@@ -71,7 +71,7 @@ Importantly, the Pin 3 circuit (**LED Circuit 1** i) will turn ***on*** with `di
 When Pin 3 is `HIGH` (5V), there is a voltage difference between Pin 3 and `GND` so current flows from Pin 3 to ground. When Pin 4 is `HIGH` (5V), however, there is no voltage difference across the circuit (from Pin 4 to 5V) and thus, no current. This behavior is illustrated in the animation below.
 
 <video controls="controls">
-  <source src="assets/movies/Arduino_Blink2Animation_Pins3And4.mp4" type="video/mp4">
+  <source src="{{ "/assets/movies/Arduino_Blink2Animation_Pins3And4.mp4" | relative_url }}" type="video/mp4">
 </video>
 
 Let's write the code!
@@ -112,13 +112,13 @@ void loop() {
 
 We did it! Now compile and upload the code.
 
-![Top-down workbench animated gif of the circuit working with Arduino](assets/movies/ArduinoUno_Blink2_Workbench.gif)
+![Top-down workbench animated gif of the circuit working with Arduino[]({{ "/assets/movies/ArduinoUno_Blink2_Workbench.gif" | relative_url }})
 
 And here's a top-down video with the code window:
 
 <iframe width="736" height="414" src="https://www.youtube.com/embed/q6KcPYfum7c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<!-- ![Animation showing LED Circuit 1 (hooked up to Pin 3) turning with HIGH output and LED Circuit 2 (hooked up to Pin 4) turning off and then the opposite when the pins are driven LOW (LED Circuit 1 turns off and LED Circuit 2 turns on)](assets/movies/Arduino_Blink2Animation_Pins3And4-Trimmed.gif) -->
+<!-- ![Animation showing LED Circuit 1 (hooked up to Pin 3) turning with HIGH output and LED Circuit 2 (hooked up to Pin 4) turning off and then the opposite when the pins are driven LOW (LED Circuit 1 turns off and LED Circuit 2 turns on)[]({{ "/assets/movies/Arduino_Blink2Animation_Pins3And4-Trimmed.gif" | relative_url }}) -->
 
 ## Our Blink2 code on GitHub
 

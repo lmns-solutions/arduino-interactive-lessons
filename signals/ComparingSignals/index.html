@@ -13847,7 +13847,7 @@ $( document ).ready(function(){
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Cross-correlation">Cross-correlation<a class="anchor-link" href="#Cross-correlation">&#182;</a></h1><p><a href="https://en.wikipedia.org/wiki/Cross-correlation">Cross-correlation</a> is a measure of similarity between two signals. It works by sliding one signal across another and finding the optimal match. This is also known as a sliding dot product or sliding inner-product and is closely related to <a href="https://en.wikipedia.org/wiki/Convolution">convolution</a>. As Wikipedia notes, cross-correlation is most often used to search a long signal for a potential shorter, known signal and is commonly used in pattern recognition, computer vision, and beyond.</p>
-<center><img src="assets/movies/CrossCorrelationAnimation_Robosub_EECS_WSU.gif" style="margin-bottom: 10px; margin-top:10px"/></center>
+<center><img src="{{ "/assets/movies/CrossCorrelationAnimation_Robosub_EECS_WSU.gif" | relative_url }}" style="margin-bottom: 10px; margin-top:10px"/></center>
 <center>A cross-correlation "slides" one signal along another to determine maximal overlap. Animated gif from <a href="http://robosub.eecs.wsu.edu/wiki/ee/hydrophones/start">WSU's RoboSub project</a>.</center>
 </div>
 </div>
@@ -14516,7 +14516,7 @@ best_correlation_index 175560 shift_amount_debug 32491 shift_amount 32491
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Dynamic-Time-Warping">Dynamic Time Warping<a class="anchor-link" href="#Dynamic-Time-Warping">&#182;</a></h1><p>Dynamic time warping (DTW) is a popular, alternative method for measuring similarity between two signals in the time domain. It works by "warping" the x-axis between two signals to find the closest y-value match. Please watch this <a href="https://youtu.be/_K1OsqCicBY">video</a> by Thales Körting for more details on the algorithm.</p>
-<p><img src="assets/images/Korting_HowDTWworks_YouTube.png" width="800" alt="Dynamic time warping video"/></p>
+<p><img src="{{ "/assets/images/Korting_HowDTWworks_YouTube.png" | relative_url }}" width="800" alt="Dynamic time warping video"/></p>
 <center>Watch <a href="https://youtu.be/_K1OsqCicBY">this video</a> by Thales Körting to learn more about DTW</center><p>The naive DTW algorithm is computationally expensive both in time and space—$O(N M)$ where $N$ and $M$ are the length of the two sequences—but provides an optimal match between two time-domain signals.</p>
 <p>There are a number of optimized DTW approaches, including <a href="https://github.com/rmaestre/FastDTW">FastDTW</a>, which provides optimal or near-optimal alignments with $O(N)$ time and memory based. The <a href="https://pypi.org/project/fastdtw/">fastdtw</a> Python package, which we use below, is based on Salvador and Chan's FastDTW paper from 2007.</p>
 <h2 id="References">References<a class="anchor-link" href="#References">&#182;</a></h2><ul>

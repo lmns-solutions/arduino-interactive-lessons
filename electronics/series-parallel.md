@@ -24,7 +24,7 @@ In this lesson, we we're going to extend Ohm's Law to more complicated circuits:
 * Resistors in series **divide voltage** and are one of the most common (and useful) circuit configurations when working with microcontrollers and resistive sensors like [potentiometers](../arduino/potentiometers.md), [force-sensitive resistors](../arduino/force-sensitive-resistors.md), and [photocells](../sensors/photoresistors.md).
 * Resistors in parallel **divide current** (and more current travels down paths with less resistance). Parallel circuits are useful, for example, in powering multiple LEDs.
 
-![Image shows two diagrams: on the left is a circuit with series resistors and on the right is a circuit with parallel resistors.](assets/images/OhmsLaw_IntroToSeriesVsParallelResistorCircuits_ByJonFroehlich.png)
+![Image shows two diagrams: on the left is a circuit with series resistors and on the right is a circuit with parallel resistors.[]({{ "/assets/images/OhmsLaw_IntroToSeriesVsParallelResistorCircuits_ByJonFroehlich.png" | relative_url }})
 **Figure.** An example of **series** resistors (left) and **parallel** resistors (right). Images made  PowerPoint.
 {: .fs-1 }
 
@@ -44,7 +44,7 @@ Yes, the parallel resistance equation is a bit enigmatic but you can derive it y
 
 For us, the most important and useful concept to understand is that **series resistors** divide voltage (we'll use this later in our microcontroller circuits) and that **parallel resistors** divide current (with *more* current flowing through branches with less resistance). The image below attempts to concisely explain this.
 
-![Image shows two diagrams: on the left is a circuit with series resistors and on the right is a circuit with parallel resistors](assets/images/OhmsLaw_IntroToSeriesVsParallelResistorCircuits_PictorialDiagram_ByJonFroehlich.png)
+![Image shows two diagrams: on the left is a circuit with series resistors and on the right is a circuit with parallel resistors[]({{ "/assets/images/OhmsLaw_IntroToSeriesVsParallelResistorCircuits_PictorialDiagram_ByJonFroehlich.png" | relative_url }})
 
 **Figure.** An overview of how **series resistors** work (current is the same across each resistor but *voltage is divided*) and how **parallel resistors** work (voltage is the same across each resistor but *current is divdided*). Take a moment to study and understand why this might be. Right-click on the image and select 'Open in new tab' to enlarge. Image made in PowerPoint.
 {: .fs-1 }
@@ -55,7 +55,7 @@ And, while the ability to manually understand and analyze a circuit is important
 
 [Resistors in series](https://www.khanacademy.org/science/electrical-engineering/ee-circuit-analysis-topic/ee-resistor-circuits/a/ee-series-resistors) are connected in sequence: head-to-tail. 
 
-![](assets/images/ComponentsInSeries_KhanAcademyAndJonFroehlich.png)
+![[]({{ "/assets/images/ComponentsInSeries_KhanAcademyAndJonFroehlich.png" | relative_url }})
 
 **Figure.** Components are in series if they are joined end-to-end (or head-to-tail) in sequence like the above. Image on left from [Khan Academy](https://www.khanacademy.org/science/electrical-engineering/ee-circuit-analysis-topic/ee-resistor-circuits/a/ee-series-resistors). Image made in PowerPoint. 
 {: .fs-1 }
@@ -70,7 +70,7 @@ So, let's try it!
 
 Let's begin with the simplest series resistor circuit: a 9V battery with 100Ω and 1kΩ resistors in series.
 
-![](assets/images/SeriesResistorCircuit_TwoResistorsOf100OhmAnd1kOhm_Step0.png)
+![[]({{ "/assets/images/SeriesResistorCircuit_TwoResistorsOf100OhmAnd1kOhm_Step0.png" | relative_url }})
 
 **Figure.** A simple circuit with two series resistors (100Ω and 1kΩ) and a 9V battery. How much current $$I$$ is flowing through this circuit?
 {: .fs-1 }
@@ -79,7 +79,7 @@ Let's begin with the simplest series resistor circuit: a 9V battery with 100Ω a
 
 The first step is to solve for the total resistance in our circuit. We know that we sum resistances in series, so: $$R_{Total} = R_{1} + R_{2} \Rightarrow  100Ω + 1000Ω \Rightarrow 1100Ω$$. The total resistance is $$1100Ω$$.
 
-![](assets/images/SeriesResistorCircuit_TwoResistorsOf100OhmAnd1kOhm_Step1.png)
+![[]({{ "/assets/images/SeriesResistorCircuit_TwoResistorsOf100OhmAnd1kOhm_Step1.png" | relative_url }})
 
 **Figure.** To find the equivalent resistance of this circuit (let's call this $$R_{Total}$$), we can combine series resistors by summing them. 
 
@@ -87,7 +87,7 @@ The first step is to solve for the total resistance in our circuit. We know that
 
 We can now use this equivalent resistance value $$R_{Total}$$ to solve for the current $$I$$ by using Ohm's Law: $$I=9V/1100Ω \Rightarrow 0.0082A \Rightarrow 8.2mA$$
 
-![](assets/images/SeriesResistorCircuit_TwoResistorsOf100OhmAnd1kOhm_Step2.png)
+![[]({{ "/assets/images/SeriesResistorCircuit_TwoResistorsOf100OhmAnd1kOhm_Step2.png" | relative_url }})
 
 **Figure.** We now solve by current $$I$$ simply by Ohm's Law: $$I=9V/1100Ω \Rightarrow 8.2mA$$
 {: .fs-1 }
@@ -106,7 +106,7 @@ R_{Total} = 3670Ω$$
 
 We can then use this equivalent resistance value to solve for current $$I$$, which is $$I=\frac{9V}{3670Ω} \Rightarrow 0.0025A \Rightarrow 2.5mA$$.
 
-![](assets/images/SeriesResistorCircuit_ThreeResistors_Solved.png)
+![[]({{ "/assets/images/SeriesResistorCircuit_ThreeResistors_Solved.png" | relative_url }})
 
 **Figure.** In the image above, we solve for current with three series resistors. First, sum the resistances (because they are in series) and then use this aggregate resistance ($$R_{Total}$$) to determine current with Ohm's Law: $$I=\frac{V}{R_{Total}} \Rightarrow \frac{9V}{3670Ω$} \Rightarrow 2.5mA$$
 {: .fs-1 }
@@ -122,7 +122,7 @@ We can click on the wires to magically show how much current is traveling throug
 Well, remember how we've been emphasizing that voltages are *split* or *divided* across resistors in series. You can clearly see this as well! The voltage is at $$9V$$ at the top node but drops by $$5.4V$$ over the $$2.2kΩ$$ resistor to $$3.6V$$, which then drops by $$2.4V$$ over the $$1kΩ$$ resistor leaving just $$1.2V$$ of electric potential before finally dropping down to $$0V$$ or $$GND$$ across the $$470Ω$$ resistor. We'll talk more about this next!
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/SeriesResistorThreeResistors9VBattery2.2k1k470_CircuitJSRecording.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/SeriesResistorThreeResistors9VBattery2.2k1k470_CircuitJSRecording.mp4" | relative_url }}" type="video/mp4" />
 </video>
 
 **Figure.** This video shows a [CircuitJS](https://www.falstad.com/circuit/circuitjs.html) simulation of a basic three resistor series circuit. You can play with the circuit [here](https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgpABZsKBTAWjDACgA3cYlWwm7rzCEqo2lWJQpMBGwDug8CIoo8SquwBOKtWAyEdIFAgNUUaSG20JVRjLxtrsNqWHhXD2Qmse0aaqhoMSwUwHj4BXxp+cHlDYSpfPQMUON9jA3T7IzTbZwc87xyFKP9DaIFUoA).
@@ -142,13 +142,13 @@ With this idea of voltages dropping across each resistor, let's look at how to c
 
 Before moving through our example, stop and ask yourself: how would you calculate the voltage at $$V_{B}$$?
 
-![](assets/images/VoltageDivider_100And150_ByJonFroehlich.png)
+![[]({{ "/assets/images/VoltageDivider_100And150_ByJonFroehlich.png" | relative_url }})
 
 #### Step 1: Solve for the current through the circuit
 
 As before, the first step is to solve for the current through the circuit. We do this, again, by finding the equivalent resistance $$R_{Total}$$ and using Ohm's Law. So, $$I=\frac{V}{R_{Total}} \Rightarrow \frac{9V}{250Ω} \Rightarrow 36mA$$.
 
-![](assets/images/VoltageDivider_100And150_Step1_ByJonFroehlich.png)
+![[]({{ "/assets/images/VoltageDivider_100And150_Step1_ByJonFroehlich.png" | relative_url }})
 
 #### Step 2: Calculate voltage drop across resistors
 
@@ -163,13 +163,13 @@ $$
 
 And, just as a quick check on our work (and without going into too much detail), we know from [Kirchoff's circuit laws](https://www.khanacademy.org/science/physics/circuits-topic/circuits-resistance/a/ee-kirchhoffs-laws), that $$V_{Total} = V_1 + V_2 \Rightarrow 9V = 3.6V + 5.4V \Rightarrow 9V = 9V$$. So, things are looking good so far!
 
-![](assets/images/VoltageDivider_100And150_Step2_ByJonFroehlich.png)
+![[]({{ "/assets/images/VoltageDivider_100And150_Step2_ByJonFroehlich.png" | relative_url }})
 
 #### Step 3: Now calculate VB
 
 Now it is trivial to calculate $$V_B$$. We know that $$V_A = 9V$$ and that $$R_1$$ causes a $$3.6V$$ voltage drop. So, $$V_B$$ must be equal to $$9V - 3.6V$$, which is 5.4V.
 
-![](assets/images/VoltageDivider_100And150_Step3_ByJonFroehlich.png)
+![[]({{ "/assets/images/VoltageDivider_100And150_Step3_ByJonFroehlich.png" | relative_url }})
 
 ### The voltage divider pattern
 
@@ -183,7 +183,7 @@ $$V_{B} = V_{A} * \frac{R_2}{R_1 + R_2}$$
 Or more commonly written as:
 $$V_{out} = V_{in} * \frac{R_2}{R_1 + R_2}$$
 
-![](assets/images/VoltageDividerBasic_ByJonFroehlich.png)
+![[]({{ "/assets/images/VoltageDividerBasic_ByJonFroehlich.png" | relative_url }})
 
 **Figure.** The voltage divider pattern and equation. Image made in PowerPoint. See [Khan Academy](https://www.khanacademy.org/science/electrical-engineering/ee-circuit-analysis-topic/ee-resistor-circuits/a/ee-voltage-divider) for more.
 {: .fs-1 }
@@ -198,7 +198,7 @@ Wouldn't it be cool to dynamically control one of those resistor values to outpu
 
 Given what you are learning about circuits, you now have the knowledge to derive the voltage divider equation or, at the very least, understand *how* it is derived. Let's take a look!
 
-![](assets/images/DerivingTheVoltageDividerEquation_ByJonFroehlich.png)
+![[]({{ "/assets/images/DerivingTheVoltageDividerEquation_ByJonFroehlich.png" | relative_url }})
 **Figure.** A derivation of the voltage divider equation. See [Khan Academy](https://www.khanacademy.org/science/electrical-engineering/ee-circuit-analysis-topic/ee-resistor-circuits/a/ee-voltage-divider) for more.
 {: .fs-1 }
 
@@ -228,7 +228,7 @@ $$V_{out} = V_{in} * \frac{R2}{(R1 + R2)}$$
 
 Note: for this voltage divider equation to hold true, the current $$I$$ flowing through $$R_1$$ must be (largely) equal to $$R_2$$. That is, if we hook up a branch to $$V_{out}$$, as we've done below, then this branch must have very high resistance so that very little current "leaks" out into that branch. That is, $$R_{Load}$$ must be magnitudes greater than $$R1 + R2$$. However, in the case of microcontroller inputs, this is *fortunately* the case, which we will return to later.
 
-![](assets/images/VoltageDividerWithHighResistanceLoad.png)
+![[]({{ "/assets/images/VoltageDividerWithHighResistanceLoad.png" | relative_url }})
 **Figure.** The voltage divider equation only holds when $$R_{Load}$$ is large, which it will be when we start using microcontrollers (which read changes in voltage levels and have "high input impedance")
 {: .fs-1 }
 
@@ -246,7 +246,7 @@ Note: for this voltage divider equation to hold true, the current $$I$$ flowing 
 
 Whereas **series resistors** have the same current but divide voltage, [**parallel resistors**](https://www.khanacademy.org/science/electrical-engineering/ee-circuit-analysis-topic/ee-resistor-circuits/a/ee-parallel-resistors) have the same voltage but divide current. Components in parallel look like this:
 
-![](assets/images/ComponentsInParallel_KhanAcademyAndJonFroehlich.png)
+![[]({{ "/assets/images/ComponentsInParallel_KhanAcademyAndJonFroehlich.png" | relative_url }})
 
 **Figure.** Components are in parallel if their head’s share a node and their tail’s share a node.
  Image on left from [Khan Academy](https://www.khanacademy.org/science/electrical-engineering/ee-circuit-analysis-topic/ee-resistor-circuits/a/ee-parallel-resistors). Image made in PowerPoint. 
@@ -256,31 +256,31 @@ Whereas **series resistors** have the same current but divide voltage, [**parall
 
 In the circuit below, we have two parallel resistors $$R_1=100Ω$$ and $$R_2=1kΩ$$. Let's solve for the total current $$I_{Total}$$ in the circuit.
 
-![](assets/images/ParallelResistorCircuit_TwoResistors_ByJonFroehlich.png)
+![[]({{ "/assets/images/ParallelResistorCircuit_TwoResistors_ByJonFroehlich.png" | relative_url }})
 
 #### Step 1: Observe that $$I_{Total}$$ splits into branches
 
 The first thing to recognize is that $$I_{Total}$$ splits into two branches. Let's call the current down those two branches $$I_1$$ and $$I_2$$. From Kirchoff's Laws, we know that $$I_{Total} = I_1 + I_2$$. This is due to the conservation of energy—no charges are lost in our circuit (they simply flow around and around).
 
-![](assets/images/ParallelResistorCircuit_TwoResistors_Step1_ByJonFroehlich.png)
+![[]({{ "/assets/images/ParallelResistorCircuit_TwoResistors_Step1_ByJonFroehlich.png" | relative_url }})
 
 #### Step 2: Identify and name nodes
 
 Also recognize that there are only two *nodes* in our circuit. We can label them $$Node A$$ and $$Node B$$. 
 
-![](assets/images/ParallelResistorCircuit_TwoResistors_Step2_ByJonFroehlich.png)
+![[]({{ "/assets/images/ParallelResistorCircuit_TwoResistors_Step2_ByJonFroehlich.png" | relative_url }})
 
 #### Step 3: Define $$V_A$$
 
 Because $$Node A$$ is directly connected to the positive terminal of the battery, it has an electric potential of 9V. Let's call this $$V_A = 9V$$. Similarly, $$Node B$$ is directly connected to the negative terminal of the battery, so let's refer to this as $$GND$$ or $$OV$$.
 
-![](assets/images/ParallelResistorCircuit_TwoResistors_Step3_ByJonFroehlich.png)
+![[]({{ "/assets/images/ParallelResistorCircuit_TwoResistors_Step3_ByJonFroehlich.png" | relative_url }})
 
 #### Step 4: Solve for $$I_1$$ and $$I_2$$
 
 Using Ohm's Law, we can now solve for $$I_1$$ and $$I_2$$ where: $$I_1 = \frac{V_A}{R_1}$$ and $$I_2 = \frac{V_A}{R_2}$$. Thus, $$I_1 = \frac{9V}{100Ω} \Rightarrow 90mA$$ and $$I_2 = \frac{9V}{1000Ω} \Rightarrow 9mA$$.
 
-![](assets/images/ParallelResistorCircuit_TwoResistors_Step4_ByJonFroehlich.png)
+![[]({{ "/assets/images/ParallelResistorCircuit_TwoResistors_Step4_ByJonFroehlich.png" | relative_url }})
 
 Stop for a moment. Think about these results. Do they *conceptually* make sense?
 
@@ -290,7 +290,7 @@ Using Ohm's Law, we found that **10 times** as much current flows through the $$
 
 Finally, we can use $$I_{Total} = I_1 + I_2$$ to solve for $$I_{Total}$$. In this case, $$I_{Total} = 90mA + 9mA \Rightarrow 99mA$$.
 
-![](assets/images/ParallelResistorCircuit_TwoResistors_Step5_ByJonFroehlich.png)
+![[]({{ "/assets/images/ParallelResistorCircuit_TwoResistors_Step5_ByJonFroehlich.png" | relative_url }})
 
 #### Step 6: Use equivalent resistance to check our work
 
@@ -313,7 +313,7 @@ We can also check our work in a circuit simulator. I built the same circuit in C
 Does the visualization match your expectation?
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/SimpleParallelResistorCircuit_9VBattery100And1kOhmResistors_CircuitJSRecording.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/SimpleParallelResistorCircuit_9VBattery100And1kOhmResistors_CircuitJSRecording.mp4" | relative_url }}" type="video/mp4" />
 </video>
 
 **Figure.** This video shows a [CircuitJS](https://www.falstad.com/circuit/circuitjs.html) simulation of a basic two resistor parallel circuit. You can play with the circuit [here](https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgpABZsKBTAWjDACgA3cYlWwm7rxR48UMTSrExVGAjYB3QSGGjsCISPBsATiDW9s2QnvW0wxqmDg7axY4eM07Zi8muL9yzU+MqoCpRp+E14ggXYPUzDbR2DIAM8-TwctRR8vUXSUiJCXXOj4tOcacxi+AXigA).

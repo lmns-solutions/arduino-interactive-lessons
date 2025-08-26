@@ -24,14 +24,14 @@ Resistors are one of the most common and important electrical components in digi
 
 In previous lessons, you learned about the [concept of resistance](electricity-basics.md#what-is-electrical-resistance), [Ohm's Law](ohms-law.md)—how voltage, current, and resistance relate together—as well as [series and parallel resistor configurations](series-parallel.md). In this lesson, we will expand on how resistors work, how they're characterized in terms of both resistance $$R$$ and power $$P$$, and how to "read" them.
 
-![An image of multiple resistors showing 1/4W resistors, 1/2W resistors, and 4W and 5W resistors. Typically, resistors with higher power capacity ratings are bigger](assets/images/OverviewOfResistorsPicture.png)
+![An image of multiple resistors showing 1/4W resistors, 1/2W resistors, and 4W and 5W resistors. Typically, resistors with higher power capacity ratings are bigger[]({{ "/assets/images/OverviewOfResistorsPicture.png" | relative_url }})
 
 **Figure.**  The above image shows a variety of resistor types from $$\frac{1}{4}W$$ to $$5W$$ resistors. I no longer have the source for the original image. Annotations made by Jon Froehlich in PowerPoint.
 {: .fs-1 }
 
 ## How do resistors work?
 
-![An animated gif showing how resistors can be placed in a circuit to resist current flow.](assets/gifs/ResistorCurrentFlow_EngineeringMindset-Optimized.gif)
+![An animated gif showing how resistors can be placed in a circuit to resist current flow.[]({{ "/assets/gifs/ResistorCurrentFlow_EngineeringMindset-Optimized.gif" | relative_url }})
 **Figure.** This animation shows how a resistor can be placed between two wires to reduce current flow. Notice how electrons flow freely through the copper wire. With the resistor, these electrons "collide" with other atoms and themselves, which transforms the electrical energy to thermal energy and induces a voltage drop. Animation from [The Engineering Mindset](https://youtu.be/kcL2_D33k3o?t=891).
 {: .fs-1 }
 
@@ -55,7 +55,7 @@ A common confusion is that resistors only reduce current at the resistors themse
 Resistors restrict the flow of electrons throughout a circuit path. Think of a small valve in a water pipe: this valve restricts the total water flow through the pipe—both before and after the valve. The animation below shows three simple circuits with different amounts of resistance: notice how the current flow is the same throughout each circuit, it is not faster or slower before or after a resistor.
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/ResistorsSlowCurrentEverywhereOnCircuitPath.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/ResistorsSlowCurrentEverywhereOnCircuitPath.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Video.** In the animation above, we are showing how current is the *same* for each individual circuit. It does not speed up before or after a resistor. Animations made in CircuitJS ([left](https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgpABZsKBTAWjDACgA3cYlWsQ7rxQIBVKjSrEo0mAjYB3QSGEDshPMpHg2AJxBqNuGvvX68xqpUgKlNfiY12B7RQc2rTR5TbfZzDvgEUNgAPcEJjbBR6MDx6KIFje2IANTYgA), [middle](https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgpABZsKBTAWjDACgA3cYlWsQ7rxQIBVKjSrEo0mAjYB3QSGECUKGspHg2AJxDZCefZA0Gj2PBqqVIC-Yc0CzxjSjvOLphzX7K2AD3BCUxR6MDx6bCJaIJBiADVdfQM+VXVU6Rs7MB4MtQ0fAXY9bBSVZXTy6zh3Mq1nKtqBQvsjFtsgA), [right](https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgpABZsKBTAWjDACgA3cYlWsQ7rxQIBVKjSrEo0mAjYB3QSGECUKGspHg2AJxDZCefZA0Gj2PBqph4C-Yc0CzxjSjvOLphzX7K2AD3BCUxR6MDx6bCJaIJBiADVdfQM+VXVU6Rs4OzAeDLUNHwF2PWwUlWV0iutbRTLVLWdq9xSi+yM2yDYgA))
 {: .fs-1 }
@@ -64,13 +64,13 @@ Resistors restrict the flow of electrons throughout a circuit path. Think of a s
 
 To make a resistor with a specific resistance $$R$$, component manufacturers carefully select the *type*, *amount*, and *shape* of a resistive material and embed it into insulated packaging. In the image below, for example, a resistive material (like carbon) is wrapped around an insulator and covered by a tan insulating material. The more wraps, the higher resistance. And this should intuitively make sense: increasing the number of wraps simply increases the *length* of the resistive material (or the amount of resistive material electrons have to navigate through).
 
-![](assets/images/InsideResistors_FromSparkfunWithSlightModificationsByJonFroehlich.png)
+![[]({{ "/assets/images/InsideResistors_FromSparkfunWithSlightModificationsByJonFroehlich.png" | relative_url }})
 **Figure.**  Image from [Sparkfun.com](https://learn.sparkfun.com/tutorials/resistors) with annotations by Jon Froehlich.
 {: .fs-1 }
 
 Other resistors look like this inside:
 
-![](assets/images/ResistorCrossSections_ByTubeTimeUS.png)
+![[]({{ "/assets/images/ResistorCrossSections_ByTubeTimeUS.png" | relative_url }})
 **Figure.** Two cross sections of non-wrapping resistors. Image from [TubeTimeUS](https://twitter.com/tubetimeus/status/1111785671650242560?s=11) on Twitter with adapted annotations by Jon Froehlich. Right-click and "Open image in new tab" to expand.
 {: .fs-1 }
 
@@ -80,7 +80,7 @@ Depending on their type and manufacturing, resistors have a certain "accuracy" t
 I'm not sure what to do with the video below. I think it's possibly conceptually helpful but also maybe not. Keeping commented out for now.
 
 <video autoplay loop muted playsinline style="margin:0px">
-  <source src="assets/videos/ResistorAndCurrentFlow_WaterHoseAnalogy_TrimmedAndCropped_EngineeringMindset.mp4" type="video/mp4" />
+  <source src="{{ "/assets/videos/ResistorAndCurrentFlow_WaterHoseAnalogy_TrimmedAndCropped_EngineeringMindset.mp4" | relative_url }}" type="video/mp4" />
 </video>
 **Figure.** Resistors are specially electronic components to reduce current flow. Just as a kink in a water hose will provide increased resistance and reduce water flow, so too will a resistor placed between two wires in a circuit. Animation from the [What is Current?](https://youtu.be/8Posj4WMo0o?t=521) video by The Engineering Mindset.
 {: .fs-1 }  -->
@@ -118,7 +118,7 @@ $$P = V*I = I^2 * R =\frac{V^2}{R}$$
 
 For example, consider a circuit with a 9V battery and a 100Ω resistor, how much power does the resistor absorb? $$P = \frac{V^2}{R} \Rightarrow \frac{9^2V}{100Ω} = 0.81W$$. In our prototyping kits, we typically supply $$\frac{1}{4}W$$ resistors, which are 3.2x **too small** to dissipate 0.81W of power.
 
-![A simple circuit with a 9V battery and a 100Ω resistor showing the equation for power P = IV](assets/images/Resistors_PowerDissipationEquationSimple_ByJonFroehlich.png)
+![A simple circuit with a 9V battery and a 100Ω resistor showing the equation for power P = IV[]({{ "/assets/images/Resistors_PowerDissipationEquationSimple_ByJonFroehlich.png" | relative_url }})
 
 **Figure.** Calculating the power dissipation of the resistor $$R_1=100Ω$$ in a circuit with a 9V battery. Using Ohm's Law to replace the $$I$$ with $$\frac{V}{R}$$ in $$P=I * V$$, we can solve for $$P$$ with $$\frac{V^2}{R} \Rightarrow \frac{9^2V}{100Ω} = 0.81W$$
 {: .fs-1 }
@@ -147,7 +147,7 @@ $$P = I^2 * R => \frac{V^2}{R}$$ -->
 
 If we exceed a resistor's power capacity, it will begin to heat up and eventually burn out. Once a resistor "burns out", it typically creates an "open circuit"—that is, current will no longer travel through that path (air is a good insulator).
 
-![An image of a resistor overheating a someone's finger having a slight burn (in the shape of a resistor) due to an overheated resistor](assets/images/OverheatedResistor_FromBeingEngineersAndReddit.png)
+![An image of a resistor overheating a someone's finger having a slight burn (in the shape of a resistor) due to an overheated resistor[]({{ "/assets/images/OverheatedResistor_FromBeingEngineersAndReddit.png" | relative_url }})
 **Figure.** Resistors are made of materials that cause electron collisions with atoms, generating heat. Resistors have "power ratings" that, when exceeded, can heat up too much and burn out (left image). If you overpower your resistor, it could burn you—be careful. On the right image, a Reddit user posted their resistor burn imprint on their finger. Image on left from this [Being Engineers video](https://youtu.be/HhUiWLlx1oA) and image on the right from the Electrical Engineering sub-reddit by user Xil0Sil0 ([link](https://www.reddit.com/r/ElectricalEngineering/comments/mh6jee/my_cute_little_resistor_burn/?utm_source=share&utm_medium=web2x&context=3))
 {: .fs-1 }
 
@@ -161,7 +161,7 @@ There are three ways to "read" resistors: (1) keep them arranged in pre-labeled 
 
 In our prototyping classes, we tend to purchase $$\frac{1}{4}W$$ resistor kits, which come with a set of resistors organized by resistance value and labeled (though you pay more per resistor for the convenience).
 
-![](assets/images/ResistorKits_Sparkfun_Plusivo.png)
+![[]({{ "/assets/images/ResistorKits_Sparkfun_Plusivo.png" | relative_url }})
 **Figure.** The Sparkfun resistor kit comes with 500 $$\frac{1}{4}W$$ resistors with ±5% tolerance (and costs ~$7.55 in bulk, which is $0.015/resistor) while the Plusivo resistor kit comes with 600 $$\frac{1}{4}W$$ resistors with ±1% tolerance (currently $8.99 on Amazon, which is $0.015/resistor).
 {: .fs-1 }
 
@@ -171,7 +171,7 @@ If you don't have your resistors pre-labeled in a pack, you'll need a method to 
 
 But knowing *how* to read these color bands is a nice skill for any prototyper, even if you do not memorize the color legend (I tend to look back at a reference, even now!).
 
-![](assets/images/ResistorColorBands.png)
+![[]({{ "/assets/images/ResistorColorBands.png" | relative_url }})
 **Figure** A legend for the color bands used on resistors and two examples: on the top, a tan ±5% tolerance resistor with green (5) and blue (6) digits and an orange multiplier (1000) color bands, which is $$56 * 1000 = 56kΩ$$. On the bottom, a blue ±1% tolerance resistor with yellow (4), purple (7), black (0) digits and a multipler of red (100), which is $$470 * 100 = 47kΩ$$. Image modified from [here](http://www.imajeenyus.com/electronics/20120315_resistor_colour_code/resistor-color-code2.jpg).
 {: .fs-1 }
 
@@ -191,7 +191,7 @@ In the video below, I slowly walk through how to decode the color bands on resis
 
 For your learning activity, pick out three different resistors from your kits. In your prototyping journals, for each selected resistor, take a picture, write down the color bands, and then manually calculate the resistance (showing your work). In the Plusivo kits, the resistors come in labeled strips, which you can use to check your work (ground truth!) or, if you have access to a multimeter, you could do that too. If you do use a multimeter, do you notice any differences between the color-coded value and the measured resistance in practice? Why do you think this might be?
 
-![](assets/images/PlusivoKitResistors.png)
+![[]({{ "/assets/images/PlusivoKitResistors.png" | relative_url }})
 
 <!-- ACTIVITY IDEA: have them make their own resistors with graphite pencils. I think this activity is better suited for the LEDs lesson... -->
 

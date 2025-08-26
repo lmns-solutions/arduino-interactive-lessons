@@ -17,7 +17,7 @@ usetocbot: true
 {:toc}
 ---
 
-![A collage of ESP32 boards](assets/images/ESP32Variants_FromS1-S3.png)
+![A collage of ESP32 boards[]({{ "/assets/images/ESP32Variants_FromS1-S3.png" | relative_url }})
 **Figure.** The [ESP32](https://www.espressif.com/en/products/socs/esp32) has quickly become **the** platform to learn and use for IoT projects. The ESP32s are fast, have WiFi and Bluetooth, and many are around $10 USD! And the best part is: you can program them with Arduino! So, all of your learning from [previous lessons](../arduino/index.md) can be applied here!
 {: .fs-1 }
 
