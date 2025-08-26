@@ -36,13 +36,13 @@ search_enabled: true
 # See: https://stackoverflow.com/a/19173888/388117
 baseurl: /physcomp
 
-url: "https://arduino-interactive-lessons.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://lmns-solutions.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # For copy button on code
 enable_copy_code_button: true
 
 # custom site variables
-arduino_github_baseurl: "https://arduino-interactive-lessons.github.io/physcomp/"
+arduino_github_baseurl: "https://lmns-solutions.github.io/physcomp/"
 comments: false
 
 # Set a path/url to a logo that will be displayed instead of the title
