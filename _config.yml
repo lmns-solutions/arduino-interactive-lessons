@@ -34,7 +34,8 @@ search_enabled: true
 # site.url: https://jonfroehlich.github.io/physcomp
 # Make absolute paths work with GitHub pages
 # See: https://stackoverflow.com/a/19173888/388117
-baseurl: /physcomp
+#baseurl: /physcomp
+baseurl: ""
 
 url: "https://lmns-solutions.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 

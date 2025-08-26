@@ -2,7 +2,7 @@ name: Deploy Jekyll site to Pages
 
 on:
   push:
-    branches: ["master"] # or "main" if that's your default
+    branches: ["master"] # change to "main" if needed
   workflow_dispatch:
 
 permissions:
@@ -27,8 +27,18 @@ jobs:
           ruby-version: "3.1"
           bundler-cache: true
 
+      # Set BASEURL to "" for org/user sites (repo ends with .github.io), otherwise "/<repo>"
+      - name: Compute baseurl
+        id: vars
+        run: |
+          if [[ "${{ github.event.repository.name }}" =~ \.github\.io$ ]]; then
+            echo "baseurl=" >> "$GITHUB_OUTPUT"
+          else
+            echo "baseurl=/${{ github.event.repository.name }}" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Build with Jekyll
-        run: bundle exec jekyll build --baseurl "${{ github.event.repository.name == github.event.repository.owner.login && '' || '/' + github.event.repository.name }}"
+        run: bundle exec jekyll build --baseurl "${{ steps.vars.outputs.baseurl }}"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
