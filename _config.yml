@@ -82,10 +82,11 @@ callouts:
     title: Warning
     color: red
 
-# Aux links for the upper right navigation
+# Simple top-right links (many themes, including Just the Docs, support aux links)
 aux_links:
-  "STEMCENTER":
-    - "//stemcenter.bg"
+  English: "/"
+  Български: "/bg/"
+aux_links_new_tab: false
 
 # Heading anchor links appear on hover over h1-h6 tags in page content
 # allowing users to deep link to a particular heading on a page.
