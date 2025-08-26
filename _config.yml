@@ -99,3 +99,14 @@ footer_content: 'All content is <a href="https://github.com/makeabilitylab/physc
 # Google Analytics Tracking (optional)
 # e.g, UA-1234567-89
 ga_tracking: G-2M632VWSRH
+
+# Translation settings
+plugins:
+  - jekyll-polyglot
+
+languages: ["en", "bg"]
+default_lang: "en"
+exclude_from_localization:
+  - assets
+  - favicon.ico
+  - node_modules
