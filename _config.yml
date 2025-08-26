@@ -48,9 +48,8 @@ search_enabled: true
 # Make absolute paths work with GitHub pages
 # See: https://stackoverflow.com/a/19173888/388117
 #baseurl: /physcomp
-baseurl: ""
-
 url: "https://lmns-solutions.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/arduino-interactive-lessions"
 
 # For copy button on code
 enable_copy_code_button: true
@@ -96,10 +95,10 @@ callouts:
     color: red
 
 # Simple top-right links (many themes, including Just the Docs, support aux links)
-aux_links:
-  English: "/"
-  Български: "/bg/"
-aux_links_new_tab: false
+# aux_links:
+#   English: "/"
+#   Български: "/bg/"
+# aux_links_new_tab: false
 
 # Heading anchor links appear on hover over h1-h6 tags in page content
 # allowing users to deep link to a particular heading on a page.
