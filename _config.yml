@@ -1,3 +1,8 @@
+# Translation settings
+plugins:
+  - jekyll-remote-theme
+  - jekyll-polyglot
+
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
@@ -10,6 +15,14 @@
 # remote_theme: pmarsceill/just-the-docs
 remote_theme: just-the-docs/just-the-docs@v0.8.1
 
+languages: ["en", "bg"]
+default_lang: "en"
+exclude_from_localization:
+  - assets
+  - favicon.ico
+  - node_modules
+#lang_from_path: true
+
 # Fixed at 0.2.8 because of: https://github.com/makeabilitylab/physcomp/issues/9
 # remote_theme: pmarsceill/just-the-docs@v0.2.8
 
@@ -21,11 +34,11 @@ description: A learning resource for prototyping interactive digital-physical sy
 
 # Turn on incremental building to reduce overall build time (still in beta)
 # See: https://jekyllrb.com/docs/configuration/incremental-regeneration/
-incremental: true
+incremental: false
 
 # Google Gemini suggested I try this to reduce build time, which is often 20 secs
 # or longer on my desktop (AMD Ryzen 7 3800X 8-Core Processor 3.90 GHz with 32 GB RAM)
-cache: true
+cache: false
 
 # Gemini also suggested I disable search for local builds
 # Note: Search is enabled by default (and this follows just-the-docs defaults)
@@ -100,14 +113,3 @@ footer_content: 'All content is <a href="https://github.com/makeabilitylab/physc
 # Google Analytics Tracking (optional)
 # e.g, UA-1234567-89
 ga_tracking: G-2M632VWSRH
-
-# Translation settings
-plugins:
-  - jekyll-polyglot
-
-languages: ["en", "bg"]
-default_lang: "en"
-exclude_from_localization:
-  - assets
-  - favicon.ico
-  - node_modules

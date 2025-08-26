@@ -1,9 +1,8 @@
 source "https://rubygems.org"
 
-# gem "jekyll"
-# gem 'kramdown-parser-gfm'
-gem "github-pages", group: :jekyll_plugins
-gem 'wdm', '>= 0.1.0' if Gem.win_platform?
-gem "webrick", "~> 1.7"
-gem "just-the-docs", "0.8.1"
+gem "jekyll", "~> 4.3"
+gem "webrick", "~> 1.8"       # for serve on Ruby 3
+gem "jekyll-remote-theme"     # because you use remote_theme
 gem "jekyll-polyglot"
+gem "jekyll-seo-tag"
+gem "jekyll-include-cache"
