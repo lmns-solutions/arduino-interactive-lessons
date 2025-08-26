@@ -18,7 +18,6 @@ remote_theme: just-the-docs/just-the-docs@v0.8.1
 languages: ["en", "bg"]
 default_lang: "en"
 exclude_from_localization:
-  - assets
   - favicon.ico
   - node_modules
 #lang_from_path: true
