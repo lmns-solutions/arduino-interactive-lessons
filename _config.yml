@@ -82,10 +82,11 @@ callouts:
     title: Warning
     color: red
 
-# Aux links for the upper right navigation
+# Simple top-right links (many themes, including Just the Docs, support aux links)
 aux_links:
-  "STEMCENTER":
-    - "//stemcenter.bg"
+  English: "/"
+  Български: "/bg/"
+aux_links_new_tab: false
 
 # Heading anchor links appear on hover over h1-h6 tags in page content
 # allowing users to deep link to a particular heading on a page.
@@ -99,3 +100,14 @@ footer_content: 'All content is <a href="https://github.com/makeabilitylab/physc
 # Google Analytics Tracking (optional)
 # e.g, UA-1234567-89
 ga_tracking: G-2M632VWSRH
+
+# Translation settings
+plugins:
+  - jekyll-polyglot
+
+languages: ["en", "bg"]
+default_lang: "en"
+exclude_from_localization:
+  - assets
+  - favicon.ico
+  - node_modules
