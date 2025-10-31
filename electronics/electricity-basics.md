@@ -1,4 +1,7 @@
 ---
+lang: en
+page_id: electricity-basics
+permalink: /electronics/electricity-basics/
 layout: default
 title: L1&#58; Voltage, Current, and Resistance
 nav_order: 1
