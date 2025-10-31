@@ -7,6 +7,7 @@ has_toc: false # включено по подразбиране
 usemathjax: true
 comments: true
 usetocbot: true
+lang: bg
 ---
 # {{ page.title | replace_first:„L“,'Урок '}}
 {: .no_toc }
