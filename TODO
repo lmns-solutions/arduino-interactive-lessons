@@ -1,0 +1,9 @@
+# TODO
+
+## Translation
+* Go through every EN page and add:
+  * page_id: <id>
+  * permalink: <permalink>
+  * for ref see (sensors/hall-effect.md)
+* The add each corresponding BG version of the pages next to the original ones and suffix them with -bg and then build
+  * Test on prod

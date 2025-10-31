@@ -1,4 +1,7 @@
 ---
+page_id: hall-effect
+permalink: /sensors/hall-effect/
+lang: en
 layout: default
 title: Hall Effect Sensors
 parent: Sensors
