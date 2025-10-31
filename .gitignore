@@ -29,3 +29,6 @@ assets/calculations/~$PullUpResistor.xlsx
 assets/calculations/~$PullUpResistor_v2.xlsx
 assets/calculations/~$NoisyDataFiltering.xlsx
 assets/calculations/~$TransistorVibromotorCalculations.xlsx
+
+# logs
+*.logs
