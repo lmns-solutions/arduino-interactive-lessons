@@ -1,4 +1,6 @@
 ---
+permalink: /esp32/esp32-tips/
+page_id: esp32-esp32-tips
 layout: default
 title: ESP32 Tips
 parent: ESP32

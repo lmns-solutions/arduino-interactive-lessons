@@ -1,4 +1,6 @@
 ---
+permalink: /esp32/pot-fade/
+page_id: esp32-pot-fade
 layout: default
 title: L4&#58; Analog input
 parent: ESP32
