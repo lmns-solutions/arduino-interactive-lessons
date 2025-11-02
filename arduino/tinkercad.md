@@ -1,4 +1,6 @@
 ---
+permalink: /arduino/tinkercad/
+page_id: arduino-tinkercad
 layout: default
 title: Tinkercad
 nav_order: 4

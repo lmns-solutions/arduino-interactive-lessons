@@ -1,4 +1,6 @@
 ---
+permalink: /arduino/potentiometers-old/
+page_id: arduino-potentiometers-old
 layout: default
 title: L4&#58; Potentiometers
 nav_order: 4

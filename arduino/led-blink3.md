@@ -1,4 +1,6 @@
 ---
+permalink: /arduino/led-blink3/
+page_id: arduino-led-blink3
 layout: default
 title: L8&#58; Rate Blinking LEDs
 parent: Output

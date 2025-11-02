@@ -1,4 +1,6 @@
 ---
+permalink: /arduino/fast-analog-read/
+page_id: arduino-fast-analog-read
 layout: default
 title: Fast Analog Read
 parent: Advanced Arduino

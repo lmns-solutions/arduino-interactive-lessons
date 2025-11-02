@@ -1,4 +1,6 @@
 ---
+permalink: /arduino/serial-print/
+page_id: arduino-serial-print
 layout: default
 title: L3&#58; Debugging with Serial
 nav_order: 3

@@ -1,5 +1,5 @@
 ---
-page_id: arduino_index
+page_id: arduino-index
 permalink: /arduino/
 layout: default
 title: Intro to Arduino

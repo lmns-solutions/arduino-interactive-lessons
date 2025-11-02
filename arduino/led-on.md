@@ -1,4 +1,6 @@
 ---
+permalink: /arduino/led-on/
+page_id: arduino-led-on
 layout: default
 title: L1&#58; Turning on an LED
 nav_order: 1
