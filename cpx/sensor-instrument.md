@@ -1,4 +1,6 @@
 ---
+permalink: /cpx/sensor-instrument/
+page_id: cpx-sensor-instrument
 layout: default
 title: L4&#58; Light-Level Instrument
 parent: Circuit Playground Express

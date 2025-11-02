@@ -1,4 +1,6 @@
 ---
+permalink: /cpx/neopixel/
+page_id: cpx-neopixel
 layout: default
 title: LX&#58; NeoPixels
 parent: Circuit Playground Express

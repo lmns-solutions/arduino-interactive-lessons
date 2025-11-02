@@ -1,4 +1,6 @@
 ---
+permalink: /cpx/cpx-mouse/
+page_id: cpx-cpx-mouse
 layout: default
 title: L7&#58; CPX as a Mouse
 parent: Circuit Playground Express

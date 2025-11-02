@@ -1,4 +1,6 @@
 ---
+permalink: /cpx/analog-input/
+page_id: cpx-analog-input
 layout: default
 title: L8&#58; Analog Input
 parent: Circuit Playground Express

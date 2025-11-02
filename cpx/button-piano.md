@@ -1,4 +1,6 @@
 ---
+permalink: /cpx/button-piano/
+page_id: cpx-button-piano
 layout: default
 title: L3&#58; Button Piano
 parent: Circuit Playground Express

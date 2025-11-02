@@ -1,4 +1,6 @@
 ---
+permalink: /cpx/makecode/
+page_id: cpx-makecode
 layout: default
 title: L2&#58; Making with MakeCode
 parent: Circuit Playground Express
