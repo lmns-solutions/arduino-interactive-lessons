@@ -1,4 +1,6 @@
 ---
+permalink: /communication/ml5js-serial/
+page_id: communication-ml5js-serial
 layout: default
 title: L6&#58; ml5.js Serial
 nav_order: 6
