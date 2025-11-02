@@ -1,5 +1,5 @@
 ---
-page_id: hall-effect
+page_id: sensors-hall-effect
 permalink: /sensors/hall-effect/
 lang: en
 layout: default
