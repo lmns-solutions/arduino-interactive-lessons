@@ -1,4 +1,6 @@
 ---
+permalink: /website-dev/
+page_id: website-dev
 layout: default
 title: Website Dev Notes
 has_toc: false # on by default
