@@ -1,4 +1,6 @@
 ---
+permalink: /advancedio/oled/
+page_id: advancedio-oled
 layout: default
 title: L1&#58; OLED Displays
 nav_order: 1

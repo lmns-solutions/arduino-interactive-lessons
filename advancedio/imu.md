@@ -1,4 +1,6 @@
 ---
+permalink: /advancedio/imu/
+page_id: advancedio-imu
 layout: default
 title: L1&#58; IMUs
 # nav_order: 1
