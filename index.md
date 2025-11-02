@@ -17,7 +17,7 @@ permalink: /
 <video autoplay loop muted playsinline style="margin:0px">
   <source src="assets/videos/HenryTapeManWelcome_HandWaverDemo-Optimized.mp4" type="video/mp4" />
 </video>
-**Video.** Welcome to our Physical Computing virtual learning space! We're so glad you are here. Please feel free to explore, play, make, iterate, and learn. In this video, we are demonstrating using real-time computer vision to track the user's hand, which is then transmitted to Arduino to control a cardboard-crafted person with a servo motor. You can learn how to make this in our [HandPose Serial](communication/handpose-serial.md) lesson. The cardboard person and mountain background scene was created in partnership with two of my favorite makers: a kindergartner and preschooler!
+**Video.** Welcome to our Physical Computing virtual learning space! We're so glad you are here. Please feel free to explore, play, make, iterate, and learn. In this video, we are demonstrating using real-time computer vision to track the user's hand, which is then transmitted to Arduino to control a cardboard-crafted person with a servo motor. You can learn how to make this in our [HandPose Serial]({% include tlink.html id="handpose-serial" text="HandPose Serial" %}) lesson. The cardboard person and mountain background scene was created in partnership with two of my favorite makers: a kindergartner and preschooler!
 {: .fs-1 }
 
 Welcome 👋!
