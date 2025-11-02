@@ -1,4 +1,6 @@
 ---
+permalink: /electronics/wires/
+page_id: electronics-wires
 layout: default
 title: Wires
 nav_order: 2

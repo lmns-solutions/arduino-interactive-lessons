@@ -1,4 +1,6 @@
 ---
+permalink: /electronics/schematics/
+page_id: electronics-schematics
 layout: default
 title: L2&#58; Circuit Schematics
 nav_order: 2

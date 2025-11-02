@@ -1,4 +1,6 @@
 ---
+permalink: /electronics/
+page_id: electronics-index
 layout: default
 title: Intro to Electronics
 nav_order: 1

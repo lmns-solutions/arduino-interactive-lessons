@@ -1,4 +1,6 @@
 ---
+permalink: /electronics/breadboards/
+page_id: electronics-breadboards
 layout: default
 title: L7&#58; Breadboards
 nav_order: 7
