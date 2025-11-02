@@ -22,6 +22,7 @@ import argparse
 import re
 from pathlib import Path
 from typing import Dict, List, Tuple
+import html
 
 # Google Cloud Translate v2
 try:
@@ -78,6 +79,12 @@ def _collect_tokens(text: str) -> Tuple[str, Dict[str, str]]:
     return text, token_map
 
 def _rebuild_links(masked: str, token_map: Dict[str, str], translator, target_lang: str) -> str:
+    """
+    - Rebuild link/image placeholders with translated visible text.
+    - Then restore *all* placeholders, even if the translator escaped them
+      (e.g. &lt;&lt;&lt;__TK0__&gt;&gt;&gt;) or inserted whitespace.
+    """
+    # 1) Translate link/alt texts and rebuild those placeholders
     new_map: Dict[str, str] = {}
     texts_to_translate: List[str] = []
     order: List[Tuple[str, str, str, str]] = []
@@ -110,11 +117,22 @@ def _rebuild_links(masked: str, token_map: Dict[str, str], translator, target_la
 
     token_map.update(new_map)
 
-    def put_back(m):
-        ph = m.group(0)
-        return token_map.get(ph, ph)
+    # 2) Allow for escaped / slightly mutated placeholders
+    #    - Accept either <<<...>>> or &lt;&lt;&lt;...&gt;&gt;&gt;
+    #    - Allow optional whitespace around tokens
+    PLACEHOLDER_ANY = re.compile(
+        r"(?:<<<|&lt;&lt;&lt;)\s*__TK\s*(\d+)\s*__\s*(?:>>>|&gt;&gt;&gt;)"
+    )
 
-    return re.sub(r"<<<__TK\d+__>>>", put_back, masked)
+    # If the translator escaped < and >, undo that first
+    masked = html.unescape(masked)
+
+    def restore(m: re.Match) -> str:
+        idx = m.group(1)
+        key = f"<<<__TK{idx}__>>>"
+        return token_map.get(key, key)
+
+    return PLACEHOLDER_ANY.sub(restore, masked)
 
 def _translate_text_preserving_prefixes(text: str, translator, target_lang: str) -> str:
     out_lines = []
@@ -138,6 +156,7 @@ def translate_markdown(md: str, target_lang: str = "bg") -> str:
     fm, body = split_front_matter(md)
     masked, token_map = _collect_tokens(body)
     translated_body = _translate_text_preserving_prefixes(masked, translator, target_lang)
+    translated_body = html.unescape(translated_body)
     translated = _rebuild_links(translated_body, token_map, translator, target_lang)
     if fm:
         if re.search(r"(?m)^lang\s*:", fm):
