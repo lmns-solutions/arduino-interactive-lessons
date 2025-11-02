@@ -1,4 +1,6 @@
 ---
+permalink: /signals/quantization-and-sampling/
+page_id: signals-quantization-and-sampling
 layout: default
 title: L1&#58; Quantization and Sampling
 parent: Signal Processing

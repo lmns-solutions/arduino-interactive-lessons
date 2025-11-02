@@ -1,4 +1,6 @@
 ---
+permalink: /signals/signal-processing/
+page_id: signals-signal-processing
 layout: default
 title: Signal Processing
 parent: Signals

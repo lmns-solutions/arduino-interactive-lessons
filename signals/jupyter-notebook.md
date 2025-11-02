@@ -1,4 +1,6 @@
 ---
+permalink: /signals/jupyter-notebook/
+page_id: signals-jupyter-notebook
 layout: default
 title: L1&#58; Jupyter Notebook
 parent: Tools
