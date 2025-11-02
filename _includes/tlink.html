@@ -1,0 +1,11 @@
+{% assign target = site.pages
+| where: "page_id", include.id
+| where: "lang", site.active_lang
+| first %}
+{% unless target %}
+{% comment %}fallback to any language if current not found{% endcomment %}
+{% assign target = site.pages | where: "page_id", include.id | first %}
+{% endunless %}
+<a href="{{ target.url | relative_url }}">
+    {{ include.text | default: target.title }}
+</a>
