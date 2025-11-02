@@ -30,13 +30,20 @@
 }
 
 /* custom css for the footer */
+/*
 .footer-logos {
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 15px;
     align-items: center;
     align-content: center;
     justify-items: center;
+}
+*/
+
+.footer-logos {
+    display: flex;
+    justify-content: center;
 }
 
 .footer-logos img {
