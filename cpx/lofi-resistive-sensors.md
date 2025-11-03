@@ -1,4 +1,5 @@
 ---
+permalink: /cpx/lofi-resistive-sensors.html
 page_id: cpx-lofi-resistive-sensors
 layout: default
 title: LX&#58; Lo-fi Resistive Sensors

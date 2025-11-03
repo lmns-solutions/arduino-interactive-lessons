@@ -1,4 +1,5 @@
 ---
+permalink: /cpx/cpx-keyboard.html
 page_id: cpx-cpx-keyboard
 layout: default
 title: L6&#58; CPX as a Keyboard
