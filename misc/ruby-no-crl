@@ -1,0 +1,22 @@
+require "openssl"
+module OpenSSL
+  module SSL
+    class SSLContext
+      alias __orig_initialize initialize
+      def initialize(*a)
+        __orig_initialize(*a)
+        # Turn OFF CRL flags if present
+        if respond_to?(:verify_flags) && respond_to?(:verify_flags=)
+          self.verify_flags = (verify_flags & ~OpenSSL::X509::V_FLAG_CRL_CHECK & ~OpenSSL::X509::V_FLAG_CRL_CHECK_ALL)
+        end
+        # Also ensure default cert paths are used
+        if respond_to?(:cert_store) && cert_store.nil?
+          store = OpenSSL::X509::Store.new
+          store.set_default_paths
+          self.cert_store = store
+        end
+      end
+    end
+  end
+end
+

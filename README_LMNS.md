@@ -8,6 +8,9 @@
 
 ## Local run
 
+* It is important due to Ruby SSL issue to set - export RUBYOPT="-r$HOME/.ruby-no-crl"
+* The content of the `.ruby-no-crl` file is in ./misc/ruby-no-crl
+
 * Makefile
   * make clean - cleans the build
   * make build - builds the website
