@@ -1,6 +1,6 @@
 ---
-lang: bg
 page_id: electronics-electricity-basics
+permalink: /electronics/electricity-basics.html
 layout: default
 title: L1&#58; Напрежение, ток и съпротивление
 nav_order: 1

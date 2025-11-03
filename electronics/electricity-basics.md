@@ -1,6 +1,6 @@
 ---
-lang: en
 page_id: electronics-electricity-basics
+permalink: /electronics/electricity-basics.html
 layout: default
 title: L1&#58; Voltage, Current, and Resistance
 nav_order: 1
@@ -9,6 +9,7 @@ has_toc: false # on by default
 usemathjax: true
 comments: true
 usetocbot: true
+lang: en
 ---
 # {{ page.title | replace_first:'L','Lesson '}}
 {: .no_toc }

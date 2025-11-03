@@ -29,7 +29,7 @@ exclude_from_localization:
   - favicon.ico
   - node_modules
 parallel_localization: false
-lang_from_path: true
+#lang_from_path: true # this should be enabled in case the translated versions are in separate directories (en/... bg/...)
 
 # Fixed at 0.2.8 because of: https://github.com/makeabilitylab/physcomp/issues/9
 # remote_theme: pmarsceill/just-the-docs@v0.2.8
