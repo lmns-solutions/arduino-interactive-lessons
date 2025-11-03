@@ -1,4 +1,5 @@
 ---
+permalink: /advancedio/oled-libraries.html
 page_id: advancedio-oled-libraries
 layout: default
 title: Installing Adafruit OLED libraries
