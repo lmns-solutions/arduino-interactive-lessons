@@ -1,4 +1,5 @@
 ---
+page_id: cpx-cpx
 layout: default
 title: L1&#58; Intro to the CPX
 parent: Circuit Playground Express
