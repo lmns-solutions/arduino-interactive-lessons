@@ -1,4 +1,5 @@
 ---
+permalink: /signals/quantization-and-sampling.html
 page_id: signals-quantization-and-sampling
 layout: default
 title: L1&#58; Quantization and Sampling
