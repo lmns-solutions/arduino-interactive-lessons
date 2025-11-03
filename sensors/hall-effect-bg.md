@@ -1,6 +1,6 @@
 ---
 lang: bg
-page_id: hall-effect
+page_id: sensors-hall-effect
 permalink: /sensors/hall-effect/
 layout: default
 title: Датчици с ефект на Хол

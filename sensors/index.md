@@ -1,4 +1,5 @@
 ---
+page_id: sensors-index
 layout: default
 title: Sensors
 nav_order: 7
