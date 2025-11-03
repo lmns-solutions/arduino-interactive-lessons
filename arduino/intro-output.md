@@ -1,4 +1,5 @@
 ---
+page_id: arduino-intro-output
 layout: default
 title: Output
 parent: Intro to Arduino

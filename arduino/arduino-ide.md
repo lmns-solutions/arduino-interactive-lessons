@@ -1,4 +1,5 @@
 ---
+page_id: arduino-arduino-ide
 layout: default
 title: Arduino IDE
 parent: Intro to Arduino

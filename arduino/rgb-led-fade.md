@@ -1,4 +1,5 @@
 ---
+page_id: arduino-rgb-led-fade
 layout: default
 title: L7&#58; Crossfading RGB LEDs
 parent: Output

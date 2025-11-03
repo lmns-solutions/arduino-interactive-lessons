@@ -1,4 +1,5 @@
 ---
+page_id: advancedio-accel
 layout: default
 title: L2&#58; Accelerometers
 nav_order: 2

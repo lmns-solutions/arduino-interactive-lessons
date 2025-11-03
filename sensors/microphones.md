@@ -1,4 +1,5 @@
 ---
+page_id: sensors-microphones
 layout: default
 title: Microphones
 parent: Sensors

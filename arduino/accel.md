@@ -1,4 +1,5 @@
 ---
+page_id: arduino-accel
 layout: default
 parent: Intro to Arduino
 title: 3-Axis Accelerometer

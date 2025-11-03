@@ -1,4 +1,5 @@
 ---
+page_id: cpx-digital-input
 layout: default
 title: L9&#58; Digital Input
 parent: Circuit Playground Express

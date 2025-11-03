@@ -1,4 +1,5 @@
 ---
+page_id: communication-serial-intro
 layout: default
 title: L1&#58; Intro to Serial
 nav_order: 1

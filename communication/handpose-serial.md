@@ -1,4 +1,5 @@
 ---
+page_id: communication-handpose-serial
 layout: default
 title: L7&#58; HandPose Serial
 nav_order: 7

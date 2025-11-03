@@ -1,4 +1,5 @@
 ---
+page_id: signals-matplotlib
 layout: default
 title: L4&#58; Matplotlib
 parent: Tools

@@ -1,4 +1,5 @@
 ---
+page_id: arduino-buttons
 layout: default
 title: L1&#58; Using buttons
 nav_order: 1
