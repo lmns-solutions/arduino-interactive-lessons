@@ -11,5 +11,6 @@ build:
 	@bundle exec jekyll build
 
 clean:
+	@bundle exec jekyll clean
 	@rm -rf _site
 	@rm -rf .jekyll-cache
