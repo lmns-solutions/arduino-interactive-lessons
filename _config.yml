@@ -54,7 +54,7 @@ search_enabled: true
 # See: https://stackoverflow.com/a/19173888/388117
 #baseurl: /physcomp
 url: "https://lmns-solutions.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "/arduino-interactive-lessions"
+baseurl: "/arduino-interactive-lessons"
 
 # For copy button on code
 enable_copy_code_button: true
