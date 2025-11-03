@@ -16,13 +16,13 @@ comments: false
 
 This [Notebook](ComparingSignals/index.html) introduces techniques to compare signals in the time domain, including Euclidean distance, cross-correlation, and Dynamic Time Warping (DTW).
 
-You can view the Notebook in [html here](ComparingSignals/index.html) but we also **strongly** recommend working with our Notebooks locally by performing a git clone on `https://github.com/makeabilitylab/signals.git` and running the [Jupyter Notebook](https://github.com/makeabilitylab/signals/blob/master/Tutorials/Signals%20-%20Comparing%20Signals.ipynb) on your system (see [installation notes](jupyter-notebook.md)).
+You can view the Notebook in [html here](ComparingSignals/index.html) but we also **strongly** recommend working with our Notebooks locally by performing a git clone on `https://github.com/makeabilitylab/signals.git` and running the [Jupyter Notebook](https://github.com/makeabilitylab/signals/blob/master/Tutorials/Signals%20-%20Comparing%20Signals.ipynb) on your system (see {% include tlink.html id='signals-jupyter-notebook' text='installation notes' %}).
 
 ## Next Lesson
 
-In the [next lesson](frequency-analysis.md), you'll learn about frequency analysis, including Discrete Fourier Transforms (DFTs) and the intuition for how they work, Fast Fourier Transforms and spectral frequency plots, and Short-time Fourier Transforms (STFTs) and spectrograms.
+In the {% include tlink.html id='signals-frequency-analysis' text='next lesson' %}, you'll learn about frequency analysis, including Discrete Fourier Transforms (DFTs) and the intuition for how they work, Fast Fourier Transforms and spectral frequency plots, and Short-time Fourier Transforms (STFTs) and spectrograms.
 
 <span class="fs-6">
-[Previous: Quantization and Sampling](quantization-and-sampling.md){: .btn .btn-outline }
-[Next: Frequency Analysis](frequency-analysis.md){: .btn .btn-outline }
+{% include tlink.html id='signals-quantization-and-sampling' text='Previous: Quantization and Sampling' %}{: .btn .btn-outline }
+{% include tlink.html id='signals-frequency-analysis' text='Next: Frequency Analysis' %}{: .btn .btn-outline }
 </span>

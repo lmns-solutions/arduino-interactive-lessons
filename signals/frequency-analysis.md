@@ -16,9 +16,9 @@ comments: false
 
 This [Notebook](FrequencyAnalysis/index.html) introduces frequency analysis, including Discrete Fourier Transforms (DFTs) and the intuition for how they work, Fast Fourier Transforms and spectral frequency plots, and Short-time Fourier Transforms (STFTs) and spectrograms.
 
-You can view the Notebook in [html here](FrequencyAnalysis/index.html) but we also **strongly** recommend working with our Notebooks locally by performing a git clone on `https://github.com/makeabilitylab/signals.git` and running the [Jupyter Notebook](https://github.com/makeabilitylab/signals/blob/master/Tutorials/Signals%20-%20Frequency%20Analysis.ipynb) on your system (see [installation notes](jupyter-notebook.md)).
+You can view the Notebook in [html here](FrequencyAnalysis/index.html) but we also **strongly** recommend working with our Notebooks locally by performing a git clone on `https://github.com/makeabilitylab/signals.git` and running the [Jupyter Notebook](https://github.com/makeabilitylab/signals/blob/master/Tutorials/Signals%20-%20Frequency%20Analysis.ipynb) on your system (see {% include tlink.html id='signals-jupyter-notebook' text='installation notes' %}).
 
 ## Previous Lesson
 <span class="fs-6">
-[Previous: Comparing Signals (Time Domain)](comparing-signals.md){: .btn .btn-outline }
+{% include tlink.html id='signals-comparing-signals' text='Previous: Comparing Signals (Time Domain)' %}{: .btn .btn-outline }
 </span>

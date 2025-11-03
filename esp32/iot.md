@@ -103,5 +103,5 @@ Here's a brief video demonstration showing a workbench recording paired with a s
 ## Previous lesson
 
 <span class="fs-6">
-[Previous: Capacitive Touch Sensing](capacitive-touch-sensing.md){: .btn .btn-outline }
+{% include tlink.html id='esp32-capacitive-touch-sensing' text='Previous: Capacitive Touch Sensing' %}{: .btn .btn-outline }
 </span>

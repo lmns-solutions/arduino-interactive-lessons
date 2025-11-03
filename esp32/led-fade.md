@@ -20,15 +20,15 @@ nav_order: 3
 {:toc}
 ---
 
-In this lesson, we'll show how to use [PWM](https://www.arduino.cc/en/Tutorial/PWM) output on the ESP32 to fade an LED on and off. This is where our lessons begin to differ from the [Intro to Output](../arduino/intro-output.md) series in the [Intro to Arduino section](../arduino/).
+In this lesson, we'll show how to use [PWM](https://www.arduino.cc/en/Tutorial/PWM) output on the ESP32 to fade an LED on and off. This is where our lessons begin to differ from the {% include tlink.html id='arduino-intro-output' text='Intro to Output' %} series in the [Intro to Arduino section](../arduino/).
 
-Importantly, the [`analogWrite`](https://www.arduino.cc/reference/en/language/functions/analog-io/analogwrite/) method—which was always a misnomer in the Arduino library because it output a pulse-width modulation (PWM) waveform rather than a true analog voltage—is not implemented in the ESP32 Arduino library. Instead, there is a set of PWM methods, which provide additional control but at a cost of complexity. So, it's good that, by now, you understand PWM. If you want a refresher, see our description and watch the videos [here](../arduino/led-fade.md#Pulse-width-modulation-PWM).
+Importantly, the [`analogWrite`](https://www.arduino.cc/reference/en/language/functions/analog-io/analogwrite/) method—which was always a misnomer in the Arduino library because it output a pulse-width modulation (PWM) waveform rather than a true analog voltage—is not implemented in the ESP32 Arduino library. Instead, there is a set of PWM methods, which provide additional control but at a cost of complexity. So, it's good that, by now, you understand PWM. If you want a refresher, see our description and watch the videos {% include tlink.html id='arduino-led-fade' text='here' %}#Pulse-width-modulation-PWM.
 
 ![Animation of Fade on the ESP32](assets/movies/Huzzah32_Fade-optimized.gif)
 
 ## Materials
 
-You'll need the same materials as the [last lesson](led-blink.md):
+You'll need the same materials as the {% include tlink.html id='esp32-led-blink' text='last lesson' %}:
 
 | Breadboard | ESP32 | LED | Resistor |
 | ---------- |:-----:|:-----:|:-----:|
@@ -43,7 +43,7 @@ On the ESP32, all 18 GPIO pins support PWM but the programming approach is diffe
 
 ### The LEDC PWM library
 
-The LEDC library was written primarily to control LEDs but can also be used for other purposes where PWM waveforms are useful like playing "music" to piezo speakers (just like we did with [`tone()`](https://www.arduino.cc/reference/en/language/functions/advanced-io/tone/) in our [simple piano](../arduino/piano.md) lesson) and driving motors. The Arduino version of this library is part of the core ESP32 Arduino library, so you don't need any `include` statements to use it.
+The LEDC library was written primarily to control LEDs but can also be used for other purposes where PWM waveforms are useful like playing "music" to piezo speakers (just like we did with [`tone()`](https://www.arduino.cc/reference/en/language/functions/advanced-io/tone/) in our {% include tlink.html id='arduino-piano' text='simple piano' %} lesson) and driving motors. The Arduino version of this library is part of the core ESP32 Arduino library, so you don't need any `include` statements to use it.
 
 Unlike all the other I/O we've done thus far with the Arduino, the LEDC library works on **channels** rather than individual **pins**. To apply a PWM wave to a pin, first setup a channel with a PWM waveform frequency and duty cycle and then subscribe or "attach" that pin to this channel. Multiple pins can attach to the same channel and will receive the same PWM waveform. The ESP32 has 16 channels in total, each which can generate an independent waveform. So, while all 18 GPIO pins support PWM, we can only drive 16 of them at once with **unique** waveforms. However, we can attach all 18 GPIO pins to a single channel (or divide them across channels). In the animation below, we've attached all 18 GPIO pins to channel 0.
 
@@ -165,7 +165,7 @@ We can use the same circuit as before:
 
 ### The Code
 
-We'll walk you through the code just as we did for some of the original Arduino [Intro to Output lessons](../arduino/intro-output.md). While our code is different, you may want to also access ESP32's official fade example in the Arduino IDE by clicking on File -> Examples -> ESP32 -> AnalogOut -> LEDCSoftwareFade. It's also open source and on [github](https://github.com/espressif/arduino-esp32/blob/master/libraries/ESP32/examples/AnalogOut/LEDCSoftwareFade/LEDCSoftwareFade.ino).
+We'll walk you through the code just as we did for some of the original Arduino {% include tlink.html id='arduino-intro-output' text='Intro to Output lessons' %}. While our code is different, you may want to also access ESP32's official fade example in the Arduino IDE by clicking on File -> Examples -> ESP32 -> AnalogOut -> LEDCSoftwareFade. It's also open source and on [github](https://github.com/espressif/arduino-esp32/blob/master/libraries/ESP32/examples/AnalogOut/LEDCSoftwareFade/LEDCSoftwareFade.ino).
 
 ![Screenshot of accessing ESP32's official fade example in the Arduino IDE by clicking on File -> Examples -> ESP32 -> AnalogOut -> LEDCSoftwareFade](assets/images/ArduinoIDE_ESP32Example_LEDCSoftwareFade_Screenshot.png)
 You can also access ESP32's official fade example in the Arduino IDE by clicking on File -> Examples -> ESP32 -> AnalogOut -> LEDCSoftwareFade.
@@ -216,7 +216,7 @@ void setup() {
 
 #### Step 4: Write the fade loop()
 
-And the fade `loop()` is almost the exact same as the original fade loop (from [here](../arduino/led-fade.md)); however, we are now using `ledcWrite` to change the duty cycle of a given channel rather than `analogWrite` to change the duty cycle on a given pin.
+And the fade `loop()` is almost the exact same as the original fade loop (from {% include tlink.html id='arduino-led-fade' text='here' %}); however, we are now using `ledcWrite` to change the duty cycle of a given channel rather than `analogWrite` to change the duty cycle on a given pin.
 
 {% highlight C %}
 void loop() {
@@ -259,9 +259,9 @@ This [source code](https://github.com/makeabilitylab/arduino/blob/master/ESP32/B
 
 ## Next Lesson
 
-In the [next lesson](pot-fade.md), we will use a potentiometer to control an LED's brightness and learn about the ESP32's analog input.
+In the {% include tlink.html id='esp32-pot-fade' text='next lesson' %}, we will use a potentiometer to control an LED's brightness and learn about the ESP32's analog input.
 
 <span class="fs-6">
-[Previous: Blinking an LED with ESP32](led-blink.md){: .btn .btn-outline }
-[Next: Analog input with the ESP32](pot-fade.md){: .btn .btn-outline }
+{% include tlink.html id='esp32-led-blink' text='Previous: Blinking an LED with ESP32' %}{: .btn .btn-outline }
+{% include tlink.html id='esp32-pot-fade' text='Next: Analog input with the ESP32' %}{: .btn .btn-outline }
 </span>

@@ -54,7 +54,7 @@ In this lesson, you will learn about organic light-emitting diode (OLED) display
 
 Organic light-emitting diode ([OLED](https://en.wikipedia.org/wiki/OLED)) displays are relatively new technology, increasingly used in TVs, computer monitors, smartphones, and handheld game consoles. Unlike LCDs, which require backlighting, each OLED pixel generates its own light providing superior contrast and color control.
 
-In this lesson, we will be using the [monochrome (black-and-white) OLED displays](https://learn.adafruit.com/monochrome-oled-breakouts) from Adafruit along with their display control and graphics libraries. To do so, we need to install some [ libraries](oled-libraries.md).
+In this lesson, we will be using the [monochrome (black-and-white) OLED displays](https://learn.adafruit.com/monochrome-oled-breakouts) from Adafruit along with their display control and graphics libraries. To do so, we need to install some {% include tlink.html id='advancedio-oled-libraries' text=' libraries' %}.
 
 <!-- TODO: add in examples of where OLEDs are used. Like the Fitbit Charge: https://www.microcontrollertips.com/inside-fitbit-charge/ -->
 
@@ -65,7 +65,7 @@ To use the Adafruit OLED display, we need two libraries:
 - The [Adafruit_SSD1306](https://github.com/adafruit/Adafruit_SSD1306) display driver library, which handles display communication, memory mapping, and low-level drawing routines
 - The [Adafruit_GFX](https://github.com/adafruit/Adafruit-GFX-Library) graphics library, which provides core graphics routines for all Adafruit displays like drawing points, lines, circles. 
 
-Fortunately, the Arduino IDE makes library installation easy. We can do it right from the IDE itself. Follow our step-by-step [installation guide here](oled-libraries.md).
+Fortunately, the Arduino IDE makes library installation easy. We can do it right from the IDE itself. Follow our step-by-step {% include tlink.html id='advancedio-oled-libraries' text='installation guide here' %}.
 
 ### Wiring the Adafruit OLED display
 
@@ -91,10 +91,10 @@ Here's a picture of actually wiring up the OLED using jumper cables.
 
 #### ESP32 wiring
 
-Some students have asked for the ESP32 wiring, so here it is. The ESP32 board runs at 3.3V *vs.* the 5V supplied by the Arduino Leonardo and Uno; however, the OLED itself only needs 3V for operation. You can learn more about the [ESP32 here](../esp32/index.md).
+Some students have asked for the ESP32 wiring, so here it is. The ESP32 board runs at 3.3V *vs.* the 5V supplied by the Arduino Leonardo and Uno; however, the OLED itself only needs 3V for operation. You can learn more about the {% include tlink.html id='esp32-index' text='ESP32 here' %}.
 
 ![](assets/images/Huzzah32_OLEDWiring_FritzingSchematics.png)
-**Figure.** Wiring diagram for the [Adafruit Huzzah32](../esp32/index.md) ESP32 board with OLED.
+**Figure.** Wiring diagram for the {% include tlink.html id='esp32-index' text='Adafruit Huzzah32' %} ESP32 board with OLED.
 {: .fs-1 }
 
 #### STEMMA QT wiring
@@ -288,7 +288,7 @@ For more information and examples, see the [Basic Drawing section](https://lastm
 
 ### Drawing text
 
-There are two methods to render text: drawing a single character with `drawChar` and using the `print` rendering subsystem, which mimics the familiar [`Serial.print()`](https://www.arduino.cc/reference/en/language/functions/communication/serial/print/) functionality covered in our Intro to Arduino series [here](../arduino/serial-print.md).
+There are two methods to render text: drawing a single character with `drawChar` and using the `print` rendering subsystem, which mimics the familiar [`Serial.print()`](https://www.arduino.cc/reference/en/language/functions/communication/serial/print/) functionality covered in our Intro to Arduino series {% include tlink.html id='arduino-serial-print' text='here' %}.
 
 #### Method 1: drawChar
 
@@ -603,14 +603,14 @@ Finally, for our last activity, let's make a few **interactive prototypes**—th
 
 #### Demo 1: Setting ball size based on analog input
 
-We'll start with changing a shape's size based on sensor input. While you can use whatever sensor you want, for this demonstration, we will use our ole trusty [potentiometer](../arduino/potentiometers.md) hooked up to `A0`.
+We'll start with changing a shape's size based on sensor input. While you can use whatever sensor you want, for this demonstration, we will use our ole trusty {% include tlink.html id='arduino-potentiometers' text='potentiometer' %} hooked up to `A0`.
 
 ##### The OLED + pot circuit
 
 Here's the circuit. Same as before but we've added a 10K potentiometer.
 
 ![](assets/images/OLED_ArduinoLeonardo_POT_CircuitDiagram.png)
-**Figure** A basic OLED circuit with [potentiometer](../arduino/potentiometers.md) input on `A0`.
+**Figure** A basic OLED circuit with {% include tlink.html id='arduino-potentiometers' text='potentiometer' %} input on `A0`.
 {: .fs-1 }
 
 ##### The OLED + pot code 
@@ -842,11 +842,11 @@ Activity outline:
 
 ## Next Lesson
 
-In the [next lesson](vibromotor.md), we will learn about vibration motors and how to use them with Arduino.
+In the {% include tlink.html id='advancedio-vibromotor' text='next lesson' %}, we will learn about vibration motors and how to use them with Arduino.
 
 <!-- In the [next lesson](resistors.md), we will expand what we know about [resistors](resistors.md)—specially designed electrical components that *resist* the flow of current—before showing how they are useful with [LEDs](leds.md).  -->
 
 <span class="fs-6">
-[Next: Vibration Motors](vibromotor.md){: .btn .btn-outline }
+{% include tlink.html id='advancedio-vibromotor' text='Next: Vibration Motors' %}{: .btn .btn-outline }
 <!-- [Next: Resistors](resistors.md){: .btn .btn-outline } -->
 </span>

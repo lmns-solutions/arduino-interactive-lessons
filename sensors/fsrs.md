@@ -9,7 +9,7 @@ comments: false
 usetocbot: true
 ---
 
-Please see our [Force-Sensitive Resistor lesson](../arduino/force-sensitive-resistors.md) as part of our [Intro to Input](../arduino/intro-input.md) series.
+Please see our {% include tlink.html id='arduino-force-sensitive-resistors' text='Force-Sensitive Resistor lesson' %} as part of our {% include tlink.html id='arduino-intro-input' text='Intro to Input' %} series.
 
 <!-- ugh, can't include '/arduino/force-sensitive-resistors.md' because it's in a diff directory and going up parent dirs not
      supported by Jekyll. From Jekyll docs: "Note that you cannot use the ../ syntax to specify an include location that refers to a higher-level directory." 

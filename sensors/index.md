@@ -125,7 +125,7 @@ There are a variety of important criteria when evaluating a sensor's capabilitie
 
 ## Signal acquisition pipeline
 
-Let's examine the entire signal acquisition pipeline from raw physical signal to the digitized representation. We'll learn more about signals and signal processing in the [Signals](../signals/index.md) lessons.
+Let's examine the entire signal acquisition pipeline from raw physical signal to the digitized representation. We'll learn more about signals and signal processing in the {% include tlink.html id='signals-index' text='Signals' %} lessons.
 
 1. First, there exists some physical phenomena that exists in the world (Stage 1). 
 2. We need to develop and/or utilize a method to sense that phenomena and output an electrical signal (which will be readable by a computer) (Stage 2). 
@@ -165,7 +165,7 @@ The ATmega328 ADC requires an input clock frequency between 50kHz and 200kHz (Se
 
 The ATmega328 CPU and ADC share the same clock; however, the microcontroller clock is too fast (16MHz) for the ADC, so you can control a "prescaler" to divide the CPU clock into an acceptable range (divisors are 2, 4, 8, 16, 32, 64, 128). By default, the Arduino library sets the prescaler to 128 (16MHz/128 = 125 KHz) in `wiring.c` (by setting a bit in a configuration register). Since a conversion takes 13 ADC clocks, the sample rate is about 125KHz/13 or **9600 Hz**. And this doesn't consider the overhead of the other code running on the microcontroller. 
 
-Is this fast enough? For a vast majority of human-oriented sensing, yes! For example, video games target 60 fps (60Hz) refresh rates and human reaction time is ~150-250 ms (~4 Hz). So, 9600Hz is blazingly fast in comparison! For sampling sound, however, 9600Hz is on the low end. Recall that most digital music files have a sampling rate of 44.1 kHz—4.6 times faster than the ATmega328's 9600Hz. At 9600Hz, the maximum recognizable frequency in the sound wave would be 4800Hz. We'll investigate this further in the [Signals](../signals/index.md) portion of the class.
+Is this fast enough? For a vast majority of human-oriented sensing, yes! For example, video games target 60 fps (60Hz) refresh rates and human reaction time is ~150-250 ms (~4 Hz). So, 9600Hz is blazingly fast in comparison! For sampling sound, however, 9600Hz is on the low end. Recall that most digital music files have a sampling rate of 44.1 kHz—4.6 times faster than the ATmega328's 9600Hz. At 9600Hz, the maximum recognizable frequency in the sound wave would be 4800Hz. We'll investigate this further in the {% include tlink.html id='signals-index' text='Signals' %} portion of the class.
 
 Note: It is possible to sample the ATmega328 at a faster rate but at a cost of accuracy. The ATmega328 datasheet warns that if the ADC input clock frequency exceeds 200kHz then not all 10 bits of conversion may be ready (perhaps just the first 8 bits or less). If you want to learn more about faster analog reads on the Arduino, Open Music Labs has explored the speed/quality tradeoffs of the ATmega328 ADC [here](http://www.openmusiclabs.com/learning/digital/atmega-adc/index.html) and [here](http://www.openmusiclabs.com/learning/digital/atmega-adc/in-depth/index.html). In addition, this [blog post ](http://yaab-arduino.blogspot.com/2015/02/fast-sampling-from-analog-input.html) talks about using the "ADC Free Running mode" with interrupts to get a 76.8 KHz sampling rate (and also links [here](https://sites.google.com/site/qeewiki/books/avr-guide/analog-input)).
 
@@ -183,19 +183,19 @@ Indeed, the Arduino library supports changing the ADC range from the default of 
 
 With that, let's make some stuff with sensors! 
 
-The lessons below assume that you've completed both our [Intro to Output](../arduino/intro-output.md) and [Intro to Input](../arduino/intro-input.md) series.
+The lessons below assume that you've completed both our {% include tlink.html id='arduino-intro-output' text='Intro to Output' %} and {% include tlink.html id='arduino-intro-input' text='Intro to Input' %} series.
 
 ### Force
 
-Learn how to sense force using a [force-sensitive resistor (FSR)](../arduino/force-sensitive-resistors.md). This is what you did in the [Intro to Input](../arduino/intro-input.md) series.
+Learn how to sense force using a {% include tlink.html id='arduino-force-sensitive-resistors' text='force-sensitive resistor (FSR)' %}. This is what you did in the {% include tlink.html id='arduino-intro-input' text='Intro to Input' %} series.
 
 ### Light
 
-Learn how to sense light using a [photoresistor (aka photocell)](photoresistors.md).
+Learn how to sense light using a {% include tlink.html id='sensors-photoresistors' text='photoresistor (aka photocell)' %}.
 
 ### Magnetic fields
 
-Learn how to sense magnetic fields using a [Hall effect sensor](hall-effect.md).
+Learn how to sense magnetic fields using a {% include tlink.html id='sensors-hall-effect' text='Hall effect sensor' %}.
 
 ### Distance
 

@@ -21,7 +21,7 @@ usetocbot: true
 {:toc}
 ---
 
-In this lesson, we'll refresh our memories about potentiometers, learn a bit about multimeters, and then introduce the concept of **analog input** and hook-up potentiometers as voltage dividers to Arduino! Similar to the [buttons lesson](buttons.md), we are going to use potentiometers on their own before learning how to use them with microcontrollers.
+In this lesson, we'll refresh our memories about potentiometers, learn a bit about multimeters, and then introduce the concept of **analog input** and hook-up potentiometers as voltage dividers to Arduino! Similar to the {% include tlink.html id='arduino-buttons' text='buttons lesson' %}, we are going to use potentiometers on their own before learning how to use them with microcontrollers.
 
 <iframe width="736" height="414" src="https://www.youtube.com/embed/MJt9kSNlsU4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -30,7 +30,7 @@ A [video](https://youtu.be/MJt9kSNlsU4) demonstration of a [trimpot](https://www
 
 ## Potentiometers: a refresher
 
-In our [Intro to Electronics](../electronics/index.md) lessons, we learned about [potentiometers](../electronics/variable-resistors.md). Recall that a potentiometer (or pot) is a three-terminal resistor with a sliding or rotating contact that can be used to dynamically vary resistance.
+In our {% include tlink.html id='electronics-index' text='Intro to Electronics' %} lessons, we learned about {% include tlink.html id='electronics-variable-resistors' text='potentiometers' %}. Recall that a potentiometer (or pot) is a three-terminal resistor with a sliding or rotating contact that can be used to dynamically vary resistance.
 
 <video autoplay loop muted playsinline style="margin:0px">
   <source src="../electronics/assets/videos/Potentiometer_Overview_ByJonFroehlich.mp4" type="video/mp4" />
@@ -71,9 +71,9 @@ Using two multimeters set to **measure resistances** across both Legs 1-2 and 2-
 There are two common ways to use a potentiometer:
 
 1. As a **variable resistor** or rheostat—where you only hook up two legs (the wiper leg and an outer leg)
-2. And as a [**voltage divider**](../electronics/series-parallel.md#voltage-dividers) where we hook up all three legs with the middle leg connected to the analog input of our microcontrollers.
+2. And as a {% include tlink.html id='electronics-series-parallel' text='**voltage divider**' %}#voltage-dividers where we hook up all three legs with the middle leg connected to the analog input of our microcontrollers.
 
-To use these two-leg variable resistors with a microcontroller, we will need to add an additional fixed resistor to create a voltage divider. We'll show you how to do that in our [next lesson](force-sensitive-resistors.md).
+To use these two-leg variable resistors with a microcontroller, we will need to add an additional fixed resistor to create a voltage divider. We'll show you how to do that in our {% include tlink.html id='arduino-force-sensitive-resistors' text='next lesson' %}.
 
 Below, we are going to focus on using a potentiometer first as a two-legged variable resistor and then as a voltage divider with our Arduino.
 
@@ -92,7 +92,7 @@ For our first making activity, we're going to create a potentiometer-based LED d
 
 ### A Tinkercad prototype
 
-Let's build a prototype in [Tinkercad Circuits](https://www.tinkercad.com/) before building a physical prototype. While similar to the activity in [Variable Resistors](../electronics/variable-resistors.md), we add in uses of Tinkercad's multimeter to check our circuits and also emphasize correct and incorrect hookups. Moreover, doing this activity before the Arduino-based one will help reinforce differences between using a potentiometer simply as a two-legged variable resistor and as a three-legged voltage divider. 
+Let's build a prototype in [Tinkercad Circuits](https://www.tinkercad.com/) before building a physical prototype. While similar to the activity in {% include tlink.html id='electronics-variable-resistors' text='Variable Resistors' %}, we add in uses of Tinkercad's multimeter to check our circuits and also emphasize correct and incorrect hookups. Moreover, doing this activity before the Arduino-based one will help reinforce differences between using a potentiometer simply as a two-legged variable resistor and as a three-legged voltage divider. 
 
 Still, if you feel confident in your understanding of potentiometers as two-leg variable resistors, then feel free to skip to the [Intro to Analog Input](#intro-to-analog-input) part of this lesson!
 
@@ -136,7 +136,7 @@ Voltmeter's **measure voltage** in **parallel**. Ammeter's **measure current** i
 Image from this great ["Science Buddies" tutorial](https://www.sciencebuddies.org/science-fair-projects/references/how-to-use-a-multimeter#usingamultimeter) on using multimeters.
 {: .fs-1 } 
 
-To help us think about and remember how to measure current, I like to return to [our water analogies](../electronics/electricity-basics.md) from our [Intro to Electronics](../electronics/index.md) lessons: think of the ammeter as if it's a mechanical water flow meter (aka a turbine) that must be in-line within a pipe to measure water flow. An ammeter must be "in line" to measure current—you must rewire your circuit such that current is forced through your ammeter (just like water flowing through a turbine in a pipe).
+To help us think about and remember how to measure current, I like to return to {% include tlink.html id='electronics-electricity-basics' text='our water analogies' %} from our {% include tlink.html id='electronics-index' text='Intro to Electronics' %} lessons: think of the ammeter as if it's a mechanical water flow meter (aka a turbine) that must be in-line within a pipe to measure water flow. An ammeter must be "in line" to measure current—you must rewire your circuit such that current is forced through your ammeter (just like water flowing through a turbine in a pipe).
 
 ![Image shows a water flow meter that uses a turbine in series with a pipe to measure water flow and makes analogy to measure current in line with an ammeter](assets/images/Multimeter_MeasuringCurrentInSeriesLikeWaterFlowTurbine.png)
 Image adapted from ["Science Buddies"](https://www.sciencebuddies.org/science-fair-projects/references/how-to-use-a-multimeter#usingamultimeter).
@@ -158,7 +158,7 @@ Here's our circuit with the ammeter running in the simulator. Does the simulatio
 
 ![Animation of the LED-based circuit with potentiometer and ammeter working in the Tinkercad simulator](assets/movies/Potentiometer_LEDCircuitWithBackupResistor_WithMultimeter_Tinkercad.gif)
 
-Because we have Leg 2 hooked to the positive voltage source and Leg 3 as our "output", as we move the wiper from left-to-right, there is a smaller amount of resistance and an increase in current. You'll notice a jump in current when the $$V_f$$ condition of the LED is met (recall the [LED IV curves](../electronics/leds.md#the-iv-graph-for-leds) from our [LED lesson](../electronics/leds.md).
+Because we have Leg 2 hooked to the positive voltage source and Leg 3 as our "output", as we move the wiper from left-to-right, there is a smaller amount of resistance and an increase in current. You'll notice a jump in current when the $$V_f$$ condition of the LED is met (recall the {% include tlink.html id='electronics-leds' text='LED IV curves' %}#the-iv-graph-for-leds from our {% include tlink.html id='electronics-leds' text='LED lesson' %}.
 
 <!-- TODO insert animation from Tinkercad with voltage drop across LED showing IV curve -->
 
@@ -176,7 +176,7 @@ There are two differences in this circuit compared to the Tinkercad one above. F
 
 OK, let's build this thing for real with our hardware parts.
 
-Because not all of us have access to a 9V battery + snap connector (or alligator clips) to easily interface with our breadboards, we can again use our Arduino for a power source (just like we did in our very first Arduino lesson: [LED On](led-on.md)).
+Because not all of us have access to a 9V battery + snap connector (or alligator clips) to easily interface with our breadboards, we can again use our Arduino for a power source (just like we did in our very first Arduino lesson: {% include tlink.html id='arduino-led-on' text='LED On' %}).
 
 Given that the Arduino supplies 5V rather than 9V, we can replace our 470Ω resistor with a smaller resistor like a 220Ω (but you can certainly use a 470Ω or 680Ω if you'd like—remember, this is a backup resistor for when the potentiometer's wiper resistance goes to 0Ω).
 
@@ -198,7 +198,7 @@ By now, you should feel pretty confident with using a potentiometer as a variabl
 
 ## Intro to analog input
 
-In our previous lessons, we learned about [**digital output**](led-blink.md), then [**analog output**](led-fade.md), and finally [**digital input**](buttons.md). Now, it's time for the last frontier: **analog input**!
+In our previous lessons, we learned about {% include tlink.html id='arduino-led-blink' text='**digital output**' %}, then {% include tlink.html id='arduino-led-fade' text='**analog output**' %}, and finally {% include tlink.html id='arduino-buttons' text='**digital input**' %}. Now, it's time for the last frontier: **analog input**!
 
 So, what's analog input?! The world—in all its beauty and complexity—is analog. It's not simply `HIGH` and `LOW` but everything in between. How can we sense and access that complexity?
 
@@ -220,7 +220,7 @@ The Arduino Uno has **six analog inputs** (), which can be read using [`analogRe
 
 ![Close-up image of the six analog input pins on the Arduino Uno](assets/images/ArduinoUno_CloseUp_AnalogInputPins.png)
 
-Often, students get confused between the analog **output** pins (which use PWM, see [Fading an LED](led-fade.md)) and the analog **input** pins. They are different.
+Often, students get confused between the analog **output** pins (which use PWM, see {% include tlink.html id='arduino-led-fade' text='Fading an LED' %}) and the analog **input** pins. They are different.
 
 ![Close-up image of the Arduino Uno emphasizing that the Arduino analog input pins are different from the analog output pins](assets/images/ArduinoUno_CloseUp_WarningAnalogInputAndOutputPinsAreDifferent.png)
 
@@ -314,7 +314,7 @@ Many newer Arduino boards use more modern 3.3V microcontrollers with higher-reso
 
 For many purposes, it probably doesn't. But the practical implication is that with a 5V board and a 10-bit ADC (like the Uno and Leonardo), we have a 0.0049V resolution. So, you won't be able to tell the difference between, for example, 2.0140V and 2.0152V (both which would convert to 411) or 4.9148V and 4.9190V (both which would be read as 1003). Does this matter? It depends on the context—for most things we do, it won't. 
 
-We discuss quantization in more depth in the [Sensors](../sensors/index.md) and [Signals](../signals/index.md) sections.
+We discuss quantization in more depth in the {% include tlink.html id='sensors-index' text='Sensors' %} and {% include tlink.html id='signals-index' text='Signals' %} sections.
 
 #### Changing the HIGH reference voltage
 
@@ -339,7 +339,7 @@ According to the ATmega328 datasheet, "*the successive approximation circuity re
 
 ## Hooking up variable resistors with microcontrollers
 
-Just like with our [button](buttons.md) lesson, let's walk through how one might try to hook up a potentiometer with a microcontroller. As before, we'll learn about what **not** to do and **why** as well as **what to do.**
+Just like with our {% include tlink.html id='arduino-buttons' text='button' %} lesson, let's walk through how one might try to hook up a potentiometer with a microcontroller. As before, we'll learn about what **not** to do and **why** as well as **what to do.**
 
 ### Simple program to read analog input
 
@@ -427,6 +427,6 @@ TODO: add more resources
 In the next lesson, we'll learn how to add a fixed resistor to a two-leg variable resistor like a force-sensitive resistor or photocell to create a voltage divider that can be read by a microcontroller.
 
 <span class="fs-6">
-[Previous: Make a simple piano](piano.md){: .btn .btn-outline }
-[Next: Using force-sensitive resistors](force-sensitive-resistors.md){: .btn .btn-outline }
+{% include tlink.html id='arduino-piano' text='Previous: Make a simple piano' %}{: .btn .btn-outline }
+{% include tlink.html id='arduino-force-sensitive-resistors' text='Next: Using force-sensitive resistors' %}{: .btn .btn-outline }
 </span>

@@ -135,4 +135,4 @@ Here are some example hardware kits (with source links) that we've used in our c
 
 ## Inspirations
 
-Searching for project ideas or some divine epiphany on what to work on next? Check out our [Inspirations](inspirations.md).
+Searching for project ideas or some divine epiphany on what to work on next? Check out our {% include tlink.html id='resources-inspirations' text='Inspirations' %}.

@@ -22,13 +22,13 @@ usetocbot: true
 
 In this lesson, we will learn how to blink multiple LEDs at different rates and build our first [C/C++ class](http://www.cplusplus.com/doc/tutorial/classes/), which will greatly simplify our code and, as an added bonus, reduce its size by eliminating code redundancy! 
 
-As with our previous lesson on [crossfading RGB LEDs](rgb-led-fade.md), this lesson involves **simple circuits** but comparatively **complex code**. Often, when using microcontrollers, our code is the magic sauce—the circuits are straightforward but the code can be complicated.
+As with our previous lesson on {% include tlink.html id='arduino-rgb-led-fade' text='crossfading RGB LEDs' %}, this lesson involves **simple circuits** but comparatively **complex code**. Often, when using microcontrollers, our code is the magic sauce—the circuits are straightforward but the code can be complicated.
 
 ![Animated gif of a workbench video recording showing BlinkMultiple.ino](assets/movies/ArduinoUno_BlinkMultiple_Workbench.gif)
 
 ## Background
 
-The canonical and beloved **first Arduino sketch**, [Blink](https://www.arduino.cc/en/tutorial/blink), enables beginners to quickly build and write code for a circuit. The code looks something like this, which we covered in our own [Blink lesson](led-blink.md):
+The canonical and beloved **first Arduino sketch**, [Blink](https://www.arduino.cc/en/tutorial/blink), enables beginners to quickly build and write code for a circuit. The code looks something like this, which we covered in our own {% include tlink.html id='arduino-led-blink' text='Blink lesson' %}:
 
 {% highlight C %}
 void setup() {
@@ -61,7 +61,7 @@ You'll need **three LEDs**—we'll use red, blue, and yellow but you can use wha
 
 ## Circuit
 
-The circuit is the same as our basic [LED blink lesson](led-blink.md) but we duplicate it three times—once for each LED. We could use any of the Arduino's GPIO pins, but we chose Pins 2, 5, and 9 simply to space out the circuit and make it easier to read.
+The circuit is the same as our basic {% include tlink.html id='arduino-led-blink' text='LED blink lesson' %} but we duplicate it three times—once for each LED. We could use any of the Arduino's GPIO pins, but we chose Pins 2, 5, and 9 simply to space out the circuit and make it easier to read.
 
 By now, this circuit and wiring should feel familiar. Indeed, you may not even need a wiring diagram like this to help!
 
@@ -343,11 +343,11 @@ Some additional references:
 
 ## Next Lesson
 
-We did it! This completes our [Intro to Output](intro-output.md) series. Let's now begin [Intro to Input](intro-output.md) to learn about buttons, sensors, voltage dividers, and more!
+We did it! This completes our {% include tlink.html id='arduino-intro-output' text='Intro to Output' %} series. Let's now begin {% include tlink.html id='arduino-intro-output' text='Intro to Input' %} to learn about buttons, sensors, voltage dividers, and more!
 
 <!-- In the next lesson, we'll learn about making sound with passive piezoelectric buzzers and the [`tone()`](https://www.arduino.cc/reference/en/language/functions/advanced-io/tone/).
 
 <span class="fs-6">
-[Previous: LED Blink 2](led-blink2.md){: .btn .btn-outline }
-[Next: Cross-fading RGB LEDs](rgb-led-fade.md){: .btn .btn-outline }
+{% include tlink.html id='arduino-led-blink2' text='Previous: LED Blink 2' %}{: .btn .btn-outline }
+{% include tlink.html id='arduino-rgb-led-fade' text='Next: Cross-fading RGB LEDs' %}{: .btn .btn-outline }
 </span> -->

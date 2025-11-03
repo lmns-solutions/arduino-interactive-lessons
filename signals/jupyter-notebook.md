@@ -114,8 +114,8 @@ For more tips, see this [dataquest](https://www.dataquest.io/blog/jupyter-notebo
 
 ## Next Lesson
 
-In the [next lesson](python.md), you will learn about the Python programming language and gain practical experience using Jupyter Notebook.
+In the {% include tlink.html id='signals-python' text='next lesson' %}, you will learn about the Python programming language and gain practical experience using Jupyter Notebook.
 
 <span class="fs-6">
-[Next: Introduction to Python](python.md){: .btn .btn-outline }
+{% include tlink.html id='signals-python' text='Next: Introduction to Python' %}{: .btn .btn-outline }
 </span>

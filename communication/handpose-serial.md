@@ -21,7 +21,7 @@ usetocbot: true
 {:toc}
 ---
 
-In our [previous lesson](ml5js-serial.md), we introduced combining Arduino with machine learning (ML) libraries like [ml5.js](https://ml5js.org/), a web-based ML library built on [Google TensorFlow](https://www.tensorflow.org/js). Specifically, we built a [p5.js app](https://makeabilitylab.github.io/p5js/WebSerial/ml5js/NoseTracker/) that fed a real-time web cam stream into [ml5's PoseNet](https://learn.ml5js.org/#/reference/posenet) to identify and classify human body parts (keypoints) and sent identified keypoints to our Arduino to create new interactive experiences.
+In our {% include tlink.html id='communication-ml5js-serial' text='previous lesson' %}, we introduced combining Arduino with machine learning (ML) libraries like [ml5.js](https://ml5js.org/), a web-based ML library built on [Google TensorFlow](https://www.tensorflow.org/js). Specifically, we built a [p5.js app](https://makeabilitylab.github.io/p5js/WebSerial/ml5js/NoseTracker/) that fed a real-time web cam stream into [ml5's PoseNet](https://learn.ml5js.org/#/reference/posenet) to identify and classify human body parts (keypoints) and sent identified keypoints to our Arduino to create new interactive experiences.
 
 In this lesson, we will introduce a new ml5 model, called [Handpose](https://learn.ml5js.org/#/reference/handpose),  which precisely tracks the hand and 20 finger keypoints in 3-dimensions, and use it to control a servo motor. This lesson should further advance your understanding of using [ml5](https://ml5js.org/), how to modularize and build an ml5+Arduino app step-by-step, and hopefully also inspire you to think about how we can combine real-time ML with Arduino.
 
@@ -103,7 +103,7 @@ In terms of limitations and ethical considerations, [the HandPose model card](ht
 
 Moreover, the model card makes clear that the HandPose model is not intended for life-critical decisions and that performance will vary across skin tones, gender, age, and environmental conditions (*e.g.,* low light).
 
-Importantly, just as [PoseNet](https://learn.ml5js.org/#/reference/posenet), which we used in the [previous lesson](ml5js-serial.md), **detects** body pose keypoints but does **not** attempt to **recognize** *who* is in an image, HandPose similarly performs detection but does not attempt recognition (that is, *who* owns the detected hand). In computer vision, there is an important difference between *detection* and *recognition*. All detections occur locally in the user's web browser (and not in the cloud).
+Importantly, just as [PoseNet](https://learn.ml5js.org/#/reference/posenet), which we used in the {% include tlink.html id='communication-ml5js-serial' text='previous lesson' %}, **detects** body pose keypoints but does **not** attempt to **recognize** *who* is in an image, HandPose similarly performs detection but does not attempt recognition (that is, *who* owns the detected hand). In computer vision, there is an important difference between *detection* and *recognition*. All detections occur locally in the user's web browser (and not in the cloud).
 
 <!-- The HandPose model detects hands in an input image or video stream and returns twenty-one 3-dimensional landmarks (keypoints) locating features within each hand. More specifically, the  -->
 
@@ -113,7 +113,7 @@ The ml5 HandPose model works similarly to the [TensorFlow.js](https://github.com
 
 ### The HandPose Data Structure
 
-Just like with [PoseNet](ml5js-serial.md#the-posenet-data-structure), the TensorFlow and ml5 HandPose APIs use the same data structure. The model returns an array of objects describing each detected hand (always one in ml5's case, currently). Each "hand" object includes four things:
+Just like with {% include tlink.html id='communication-ml5js-serial' text='PoseNet' %}#the-posenet-data-structure, the TensorFlow and ml5 HandPose APIs use the same data structure. The model returns an array of objects describing each detected hand (always one in ml5's case, currently). Each "hand" object includes four things:
 - a `handInViewConfidence`, which is the model's confidence that the hand actually exists
 - a `boundingBox`, which provides the `topLeft` x,y and `bottomRight` x,y positions of the detected hand
 - a `landmarks` array, which includes the 3D (x,y,z) coordinates of each hand landmark (keypoint)
@@ -160,7 +160,7 @@ To demonstrate the ml5.js HandPose API and how to step through the data structur
 - the `handInViewConfidence` score, which we draw above the "tight" bounding box
 - the 21 `landmarks` (keypoints) for the `thumb`, `indexFinger`, `middleFinger`, `ringFinger`,  `pinky`, and `palmBase` along with text labels
 
-This data structure is similar but not identical to [PoseNet](ml5js-serial.md#the-posenet-data-structure)—one key difference is that unlike PoseNet, the individual keypoints do not include specific confidence scores. Here's a quick video demo.
+This data structure is similar but not identical to {% include tlink.html id='communication-ml5js-serial' text='PoseNet' %}#the-posenet-data-structure—one key difference is that unlike PoseNet, the individual keypoints do not include specific confidence scores. Here's a quick video demo.
 
 <video autoplay loop muted playsinline style="margin:0px">
   <source src="assets/videos/HandPoseDemo-GrayBackdrop_TrimmedAndOptimized.mp4" type="video/mp4" />
@@ -189,7 +189,7 @@ We'll begin by building the web app in [p5.js](https://p5js.org/) and [ml5](http
 
 #### Add in and initialize ml5's HandPose
 
-The ml5 library generally aims to create consistency across their APIs. Thus, the ml5 HandPose API should feel familiar if you followed our previous [PoseNet lesson](ml5js-serial.md). Similar to [PoseNet](https://learn.ml5js.org/#/reference/posenet), the `ml5.handpose` constructor takes in three optional arguments `video`, `options`, and `callback` (indicated by the `?` prefix):
+The ml5 library generally aims to create consistency across their APIs. Thus, the ml5 HandPose API should feel familiar if you followed our previous {% include tlink.html id='communication-ml5js-serial' text='PoseNet lesson' %}. Similar to [PoseNet](https://learn.ml5js.org/#/reference/posenet), the `ml5.handpose` constructor takes in three optional arguments `video`, `options`, and `callback` (indicated by the `?` prefix):
 
 {% highlight JavaScript %}
 const handpose = ml5.handpose(?video, ?options, ?callback);
@@ -236,7 +236,7 @@ function onHandPoseModelReady() {
 }
 {% endhighlight JavaScript %}
 
-Again, this should feel familiar! It's quite similar to our [PoseNet lesson](ml5js-serial.md#initialize-ml5s-posenet) thus far.
+Again, this should feel familiar! It's quite similar to our {% include tlink.html id='communication-ml5js-serial' text='PoseNet lesson' %}#initialize-ml5s-posenet thus far.
 
 #### Subscribe to the new HandPose event
 

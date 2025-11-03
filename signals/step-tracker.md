@@ -21,7 +21,7 @@ comments: false
 
 This [Notebook](StepTracker/index.html) introduces a heuristic-based approach for inferring steps using an accelerometer. Notebook is perfectly suited for this task: it's easy to visualize data with [Matplotlib](https://matplotlib.org/) and [NumPy](https://numpy.org/) and [SciPy](https://www.scipy.org/scipylib/index.html) offer filtering, detrending, and other useful signal processing algorithms. You can try lots of ideas, see how well they work on some test data, and then implement your most promising idea on the ESP32.
 
-You can view the Notebook in [html here](StepTracker/index.html) but we also **strongly** recommend working with our Notebooks locally by performing a git clone on `https://github.com/makeabilitylab/signals.git` and running the [Jupyter Notebook](https://github.com/makeabilitylab/signals/blob/master/Projects/StepTracker/StepTracker-Exercises.ipynb) on your system (see [installation notes](jupyter-notebook.md)).
+You can view the Notebook in [html here](StepTracker/index.html) but we also **strongly** recommend working with our Notebooks locally by performing a git clone on `https://github.com/makeabilitylab/signals.git` and running the [Jupyter Notebook](https://github.com/makeabilitylab/signals/blob/master/Projects/StepTracker/StepTracker-Exercises.ipynb) on your system (see {% include tlink.html id='signals-jupyter-notebook' text='installation notes' %}).
 
 ## Using Google Colab
 
@@ -37,8 +37,8 @@ Once you've done this, you can save the project to your Google Drive and then in
 
 ## Next Lesson
 
-In the [next lesson](gesturerec-shape-based.md), you'll learn how to build a shape-based gesture recognizer for 3D accelerometer signals.
+In the {% include tlink.html id='signals-gesturerec-shape-based' text='next lesson' %}, you'll learn how to build a shape-based gesture recognizer for 3D accelerometer signals.
 
 <span class="fs-6">
-[Next: Shape-Based Gesture Recognition](gesturerec-shape-based.md){: .btn .btn-outline }
+{% include tlink.html id='signals-gesturerec-shape-based' text='Next: Shape-Based Gesture Recognition' %}{: .btn .btn-outline }
 </span>

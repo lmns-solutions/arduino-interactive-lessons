@@ -74,9 +74,9 @@ All project examples below provide tutorials with example MakeCode code.
 
 ## Next Lesson
 
-In the [next lesson](analog-input.md), we'll learn how to hook up external sensors like potentiometers using **analog input** on the CPX.
+In the {% include tlink.html id='cpx-analog-input' text='next lesson' %}, we'll learn how to hook up external sensors like potentiometers using **analog input** on the CPX.
 
 <span class="fs-6">
-[Previous: CPX as a Keyboard](cpx-keyboard.md){: .btn .btn-outline }
-[Next: Analog Input on the CPX](analog-input.md){: .btn .btn-outline }
+{% include tlink.html id='cpx-cpx-keyboard' text='Previous: CPX as a Keyboard' %}{: .btn .btn-outline }
+{% include tlink.html id='cpx-analog-input' text='Next: Analog Input on the CPX' %}{: .btn .btn-outline }
 </span>

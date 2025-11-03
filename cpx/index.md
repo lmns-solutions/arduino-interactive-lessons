@@ -23,7 +23,7 @@ nav_order: 5
 <video autoplay loop muted playsinline style="margin:0px">
   <source src="assets/videos/CPX_CapacitiveSensing_SodaCanProximityDetector_MakeCode_Optimized.mp4" type="video/mp4" />
 </video>
-**Video.** In the video above, we are using the CPX and capacitive sensing to measure the hand's distance from the soda can. See more in [Lesson 5: Capacitive Sensing](capacitive-touch.md). Join us in this tutorial series to learn about the amazing [Circuit Playground Express (CPX)](https://www.adafruit.com/product/3333) microcontroller platform and drag-and-drop visual programming called [MakeCode](https://www.microsoft.com/en-us/makecode).
+**Video.** In the video above, we are using the CPX and capacitive sensing to measure the hand's distance from the soda can. See more in {% include tlink.html id='cpx-capacitive-touch' text='Lesson 5: Capacitive Sensing' %}. Join us in this tutorial series to learn about the amazing [Circuit Playground Express (CPX)](https://www.adafruit.com/product/3333) microcontroller platform and drag-and-drop visual programming called [MakeCode](https://www.microsoft.com/en-us/makecode).
 {: .fs-1 }
 
 Welcome! 👋🏽
@@ -35,40 +35,40 @@ We've written these CPX tutorials assuming you have limited background in circui
 
 Many of the lessons have full video tutorials 📽. If you want to view them conveniently in one place, see the [YouTube playlist here](https://youtube.com/playlist?list=PLW7IRNr2aHZNWbCav5ez_dOus3o_qkHzv).
 
-## [Lesson 1: Introduction to the CPX and MakeCode](cpx.md)
+## {% include tlink.html id='cpx-cpx' text='Lesson 1: Introduction to the CPX and MakeCode' %}
 
-In [this lesson](cpx.md), you'll learn about the Circuit Playground Express (CPX), how it differs from and relates to the Arduino platform, and how to program the board.
+In {% include tlink.html id='cpx-cpx' text='this lesson' %}, you'll learn about the Circuit Playground Express (CPX), how it differs from and relates to the Arduino platform, and how to program the board.
 
-## [Lesson 2: Programming the CPX with MakeCode](makecode.md)
+## {% include tlink.html id='cpx-makecode' text='Lesson 2: Programming the CPX with MakeCode' %}
 
-In [this lesson](makecode.md), we will make our first MakeCode+CPX program—called Blinky. As we build, we will learn about the MakeCode programming environment, the simulator, and how to load our program on to the CPX.
+In {% include tlink.html id='cpx-makecode' text='this lesson' %}, we will make our first MakeCode+CPX program—called Blinky. As we build, we will learn about the MakeCode programming environment, the simulator, and how to load our program on to the CPX.
 
-## [Lesson 3: Making a Simple Button Piano](button-piano.md)
+## {% include tlink.html id='cpx-button-piano' text='Lesson 3: Making a Simple Button Piano' %}
 
-In [this lesson](button-piano.md), we will make our first interactive CPX program: a simple button piano, which uses the CPX's built-in buttons and the speaker to make sound.
+In {% include tlink.html id='cpx-button-piano' text='this lesson' %}, we will make our first interactive CPX program: a simple button piano, which uses the CPX's built-in buttons and the speaker to make sound.
 
-## [Lesson 4: Light-Level Instrument](sensor-instrument.md)
+## {% include tlink.html id='cpx-sensor-instrument' text='Lesson 4: Light-Level Instrument' %}
 
-In [this lesson](sensor-instrument.md), we will make our second interactive CPX program, which builds on our knowledge from the first: a light-responsive instrument.
+In {% include tlink.html id='cpx-sensor-instrument' text='this lesson' %}, we will make our second interactive CPX program, which builds on our knowledge from the first: a light-responsive instrument.
 
-## [Lesson 5: Capacitive Sensing](capacitive-touch.md)
+## {% include tlink.html id='cpx-capacitive-touch' text='Lesson 5: Capacitive Sensing' %}
 
-In [this multi-part lesson](capacitive-touch.md), we will use the CPX's capacitive touch features to create a proximity sensor, a banana piano, and a lo-fi input controller made out of cardboard, copper tape, and tin foil.
+In {% include tlink.html id='cpx-capacitive-touch' text='this multi-part lesson' %}, we will use the CPX's capacitive touch features to create a proximity sensor, a banana piano, and a lo-fi input controller made out of cardboard, copper tape, and tin foil.
 
-## [Lesson 6: CPX as a Keyboard](cpx-keyboard.md)
+## {% include tlink.html id='cpx-cpx-keyboard' text='Lesson 6: CPX as a Keyboard' %}
 
-In [this multi-part lesson](cpx-keyboard.md), we will revisit using the CPX as a keyboard and walk through creating a custom keyboard and an accelerometer-based keyboard.
+In {% include tlink.html id='cpx-cpx-keyboard' text='this multi-part lesson' %}, we will revisit using the CPX as a keyboard and walk through creating a custom keyboard and an accelerometer-based keyboard.
 
-## [Lesson 7: CPX as a Mouse](cpx-mouse.md)
+## {% include tlink.html id='cpx-cpx-mouse' text='Lesson 7: CPX as a Mouse' %}
 
-In [this multi-part lesson](cpx-mouse.md), we will build a custom mouse with the CPX and MakeCode. We'll start with a simple discrete mouse that moves the mouse cursor by a few pixels when you press the built-in CPX buttons before showing how to make an accelerometer-based mouse.
+In {% include tlink.html id='cpx-cpx-mouse' text='this multi-part lesson' %}, we will build a custom mouse with the CPX and MakeCode. We'll start with a simple discrete mouse that moves the mouse cursor by a few pixels when you press the built-in CPX buttons before showing how to make an accelerometer-based mouse.
 
-## [Lesson 8: Analog Input](analog-input.md)
+## {% include tlink.html id='cpx-analog-input' text='Lesson 8: Analog Input' %}
 
-In [this lesson](analog-input.md), we learn about how to use and hookup external sensors using **analog input** with the CPX and MakeCode.
+In {% include tlink.html id='cpx-analog-input' text='this lesson' %}, we learn about how to use and hookup external sensors using **analog input** with the CPX and MakeCode.
 
-## [Lesson 9: Digital Input](digital-input.md)
+## {% include tlink.html id='cpx-digital-input' text='Lesson 9: Digital Input' %}
 
-In [this lesson](digital-input.md), we learn about how to use and hookup external buttons using **digital input** with the CPX and MakeCode.
+In {% include tlink.html id='cpx-digital-input' text='this lesson' %}, we learn about how to use and hookup external buttons using **digital input** with the CPX and MakeCode.
 
 <!-- TODO: add in little teaser videos that load underneath each lesson -->

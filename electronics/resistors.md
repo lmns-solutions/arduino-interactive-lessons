@@ -24,7 +24,7 @@ search_exclude: false
 
 Resistors are one of the most common and important electrical components in digital circuits. A resistor is a specially formulated component that *resists* the flow of charge (current) in a circuit. Just as we can reduce the flow of water in a pipe by inserting a valve packed with sand, clay, hair (bleah), or other permeable blockages, so too can we reduce the flow of electrons by inserting a component that has less conductive material than a normal wire.
 
-In previous lessons, you learned about the [concept of resistance](electricity-basics.md#what-is-electrical-resistance), [Ohm's Law](ohms-law.md)—how voltage, current, and resistance relate together—as well as [series and parallel resistor configurations](series-parallel.md). In this lesson, we will expand on how resistors work, how they're characterized in terms of both resistance $$R$$ and power $$P$$, and how to "read" them.
+In previous lessons, you learned about the {% include tlink.html id='electronics-electricity-basics' text='concept of resistance' %}#what-is-electrical-resistance, {% include tlink.html id='electronics-ohms-law' text='Ohm&#39;s Law' %}—how voltage, current, and resistance relate together—as well as {% include tlink.html id='electronics-series-parallel' text='series and parallel resistor configurations' %}. In this lesson, we will expand on how resistors work, how they're characterized in terms of both resistance $$R$$ and power $$P$$, and how to "read" them.
 
 ![An image of multiple resistors showing 1/4W resistors, 1/2W resistors, and 4W and 5W resistors. Typically, resistors with higher power capacity ratings are bigger](assets/images/OverviewOfResistorsPicture.png)
 
@@ -41,7 +41,7 @@ In a resistor, flowing electrons collide with atoms making them vibrate, which c
 
 ### Factors determining resitivity
 
-As noted in [Lesson 1](electricity-basics.md), some materials like metals—silver, copper, and gold—have low resistances. Other materials such as glass, rubber, and air have high resistance and poor conductivity ("low electron mobility")—these materials are called *insulators*.
+As noted in {% include tlink.html id='electronics-electricity-basics' text='Lesson 1' %}, some materials like metals—silver, copper, and gold—have low resistances. Other materials such as glass, rubber, and air have high resistance and poor conductivity ("low electron mobility")—these materials are called *insulators*.
 
 But why?
 
@@ -213,9 +213,9 @@ For your learning activity, pick out three different resistors from your kits. I
 
 ## Next Lesson
 
-In the [next lesson](leds.md), we will learn about light-emitting diodes and how to use them.
+In the {% include tlink.html id='electronics-leds' text='next lesson' %}, we will learn about light-emitting diodes and how to use them.
 
 <span class="fs-6">
-[Previous: Series and Parallel Resistors](series-parallel.md){: .btn .btn-outline }
-[Next: LEDs](leds.md){: .btn .btn-outline }
+{% include tlink.html id='electronics-series-parallel' text='Previous: Series and Parallel Resistors' %}{: .btn .btn-outline }
+{% include tlink.html id='electronics-leds' text='Next: LEDs' %}{: .btn .btn-outline }
 </span>

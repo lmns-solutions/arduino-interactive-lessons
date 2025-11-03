@@ -23,7 +23,7 @@ In Lesson 5 in our CPX series, we will learn how to use capacitive touch sensing
 
 ## Lesson 5.1: Intro to Capacitive Touch on the CPX
 
-In this lesson, we will first introduce the concept of capacitive sensing before building a simple capacitive touch "piano." We will then show how to visualize the raw capacitance values and capacitance touch threshold values, which are used to trigger capacitance events. Third, we cover how to use both auto-calibration and manual calibration to change the capacitance touch threshold before building a capacitive-responsive instrument (similar to [Lesson 4: Light-Responsive Instrument](sensor-instrument.md)). 
+In this lesson, we will first introduce the concept of capacitive sensing before building a simple capacitive touch "piano." We will then show how to visualize the raw capacitance values and capacitance touch threshold values, which are used to trigger capacitance events. Third, we cover how to use both auto-calibration and manual calibration to change the capacitance touch threshold before building a capacitive-responsive instrument (similar to {% include tlink.html id='cpx-sensor-instrument' text='Lesson 4: Light-Responsive Instrument' %}). 
 
 <div class="iframe-container">
   <iframe width="100%" src="https://www.youtube.com/embed/HKwtXrTdocE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -133,14 +133,14 @@ If you want to learn more about how capacitive and resistive touchscreens work, 
 <!-- ## Previous Lesson
 
 <span class="fs-6">
-[Previous: Light-Responsive Instrument](sensor-instrument.md){: .btn .btn-outline }
+{% include tlink.html id='cpx-sensor-instrument' text='Previous: Light-Responsive Instrument' %}{: .btn .btn-outline }
 </span> -->
 
 ## Next Lesson
 
-In the [next lesson](cpx-keyboard.md), we'll revisit using the CPX as a programmable keyboard and deepen our understanding.
+In the {% include tlink.html id='cpx-cpx-keyboard' text='next lesson' %}, we'll revisit using the CPX as a programmable keyboard and deepen our understanding.
 
 <span class="fs-6">
-[Previous: Light-Responsive Instrument](sensor-instrument.md){: .btn .btn-outline }
-[Next: CPX as a Keyboard](cpx-keyboard.md){: .btn .btn-outline }
+{% include tlink.html id='cpx-sensor-instrument' text='Previous: Light-Responsive Instrument' %}{: .btn .btn-outline }
+{% include tlink.html id='cpx-cpx-keyboard' text='Next: CPX as a Keyboard' %}{: .btn .btn-outline }
 </span>

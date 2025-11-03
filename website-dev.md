@@ -20,7 +20,7 @@ usetocbot: true
 ---
 
 ## Running the website
-Assuming you have the prerequisite libraries and software infrastructure (e.g., Jekyll)—see our [website development setup guide here](website-install.md)—you can open terminal in VSCode and type:
+Assuming you have the prerequisite libraries and software infrastructure (e.g., Jekyll)—see our {% include tlink.html id='website-install' text='website development setup guide here' %}—you can open terminal in VSCode and type:
 
 ```
 > bundle exec jekyll serve 

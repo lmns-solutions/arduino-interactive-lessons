@@ -20,7 +20,7 @@ nav_order: 2
 {:toc}
 ---
 
-In this lesson, we'll rehash the ole [Blink lesson](../arduino/led-blink.md) from the [Intro to Output](../arduino/intro-output.md) series but with the **ESP32**.
+In this lesson, we'll rehash the ole {% include tlink.html id='arduino-led-blink' text='Blink lesson' %} from the {% include tlink.html id='arduino-intro-output' text='Intro to Output' %} series but with the **ESP32**.
 
 ![Animation of Blink on the ESP32](assets/movies/Huzzah32_Blink-optimized.gif)
 
@@ -49,7 +49,7 @@ Our circuit is about as simple as they come.
 
 Seating the Huzzah32 into the breadboard might take some effort. Please take care not to bend pins when placing and removing the board. Given that the Huzzah32 takes up so much room, you might consider using the full-sized breadboard rather than the half-sized.
 
-Note, we're still using a 220Ω resistor just like the original [Blink lesson](../arduino/led-blink.md). But now we're using a 3.3V board rather than 5V (like the Uno or Leonardo), so we'll be supplying less current with the same resistor value. To obtain the predicted current in our circuit, assume a ~2V forward voltage ($$V_f$$) for a red LED. Thus, 
+Note, we're still using a 220Ω resistor just like the original {% include tlink.html id='arduino-led-blink' text='Blink lesson' %}. But now we're using a 3.3V board rather than 5V (like the Uno or Leonardo), so we'll be supplying less current with the same resistor value. To obtain the predicted current in our circuit, assume a ~2V forward voltage ($$V_f$$) for a red LED. Thus, 
 
 $$I=V/R \\ 
 I = \frac{V_{cc} - V_f}{R} \\
@@ -58,7 +58,7 @@ I = 5.9mA$$
 
 ## Code
 
-The code is the exact same as the original Arduino [Blink lesson](../arduino/led-blink.md) (be forewarned: it won't be for the [fade](led-fade.md) lesson). The hard part here is just getting the wiring right and figuring out which pins correspond to what!
+The code is the exact same as the original Arduino {% include tlink.html id='arduino-led-blink' text='Blink lesson' %} (be forewarned: it won't be for the {% include tlink.html id='esp32-led-fade' text='fade' %} lesson). The hard part here is just getting the wiring right and figuring out which pins correspond to what!
 
 Given that this should be review, try writing a Blink implementation without consulting our solution below. You can do it!
 
@@ -80,9 +80,9 @@ This [source code](https://github.com/makeabilitylab/arduino/blob/master/ESP32/B
 
 ## Next Lesson
 
-In the [next lesson](led-fade.md), we'll learn about how to use "analog output" on the ESP32 to fade an LED's brightness up and down. This is similar to our original Arduino [LED fade](../arduino/led-fade.md) lesson but we won't be using `analogWrite`!
+In the {% include tlink.html id='esp32-led-fade' text='next lesson' %}, we'll learn about how to use "analog output" on the ESP32 to fade an LED's brightness up and down. This is similar to our original Arduino {% include tlink.html id='arduino-led-fade' text='LED fade' %} lesson but we won't be using `analogWrite`!
 
 <span class="fs-6">
-[Previous: Introduction to the ESP32](esp32.md){: .btn .btn-outline }
-[Next: Using PWM on the ESP32](led-fade.md){: .btn .btn-outline }
+{% include tlink.html id='esp32-esp32' text='Previous: Introduction to the ESP32' %}{: .btn .btn-outline }
+{% include tlink.html id='esp32-led-fade' text='Next: Using PWM on the ESP32' %}{: .btn .btn-outline }
 </span>

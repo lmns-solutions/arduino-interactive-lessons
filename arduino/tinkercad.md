@@ -49,4 +49,4 @@ Tinkercad works by dragging and dropping components from the right sidebar menu 
 If you've dragged over an Arduino, you can also click on the "Code" button and write code either in `C/C++` or in a visual, block-based language. The simulator even has a "Serial Monitor", "Serial Plotter", and, wait for it, a simplistic debugger with breakpoint support!
 
 ![Screenshot of Tinkercad's primary UI](assets/images/Tinkercad_MainInterface.png)
-An example of the [multi-rate blinking lesson](led-blink3.md) created in Tinkercad. [Try it out](https://www.tinkercad.com/things/kAq7G2p4QQ6)!
+An example of the {% include tlink.html id='arduino-led-blink3' text='multi-rate blinking lesson' %} created in Tinkercad. [Try it out](https://www.tinkercad.com/things/kAq7G2p4QQ6)!

@@ -48,12 +48,12 @@ Unlike JavaScript, Java, C# or other code that runs in your web browser or nativ
 
 These two functions print data to the serial port as human-readable ASCII text (the `println` version simply inserts a carriage return `\r` followed by a newline character `\n`). To send data without converting it to ASCII text, you need to use [`Serial.write()`](https://www.arduino.cc/reference/en/language/functions/communication/serial/write).
 
-In later lessons, we'll see how to use serial communication for more than just debugging purposes but to actually bidirectionally communicate with the computer (see [L1: Intro to Serial](../communication/serial-intro.md) and [these ITP examples](https://itp.nyu.edu/physcomp/labs/labs-serial-communication/)). For our introductory lessons, however, we'll just use it to print out information about how our program is performing.
+In later lessons, we'll see how to use serial communication for more than just debugging purposes but to actually bidirectionally communicate with the computer (see {% include tlink.html id='communication-serial-intro' text='L1: Intro to Serial' %} and [these ITP examples](https://itp.nyu.edu/physcomp/labs/labs-serial-communication/)). For our introductory lessons, however, we'll just use it to print out information about how our program is performing.
 
 {: .warning }
 > Once you turn on serial (via `Serial.begin()`), you can **no longer use** digital Pins 0 or 1 for I/O because these pins are used for serial communication (digital pin 0 is RX and pin 1 is TX). See [Arduino documentation](https://www.arduino.cc/en/reference/serial).
 >
-> This is why many of our "starter" examples use **Pin 3** rather than Pins 0 or 1 (Pin 3 also has the added benefit of being configurable for analog output, which we'll get to in the [next lesson](led-fade.md)).
+> This is why many of our "starter" examples use **Pin 3** rather than Pins 0 or 1 (Pin 3 also has the added benefit of being configurable for analog output, which we'll get to in the {% include tlink.html id='arduino-led-fade' text='next lesson' %}).
 
 ### Build a simple "Hello World!" Serial.print program
 
@@ -104,7 +104,7 @@ The full code is on GitHub [here](https://github.com/makeabilitylab/arduino/blob
 
 You will obviously want to print out more than just strings. So, how do you print out variables?
 
-The simple answer is to use multiple `Serial.print` and `Serial.println` statements. To print variables, put the variable as the sole parameter (see below). A more complicated answer is available in our [Inside Arduino](inside-arduino.md) guide. You can also see the example code on the [`Serial.print`](https://www.arduino.cc/reference/en/language/functions/communication/serial/print/) API page.
+The simple answer is to use multiple `Serial.print` and `Serial.println` statements. To print variables, put the variable as the sole parameter (see below). A more complicated answer is available in our {% include tlink.html id='arduino-inside-arduino' text='Inside Arduino' %} guide. You can also see the example code on the [`Serial.print`](https://www.arduino.cc/reference/en/language/functions/communication/serial/print/) API page.
 
 Below, we've written a simple program to print out the current time (in milliseconds) since the Arduino was turned on and our program began to run:
 
@@ -174,9 +174,9 @@ You can access this example directly in the Arduino IDE:
 
 Now that we know a bit about debugging and [`Serial.print()`](https://www.arduino.cc/reference/en/language/functions/communication/serial/print/), it's time to learn about ["analog output"]((led-fade.md)) on the Arduino. We'll be using `Serial.print()` throughout the rest of our tutorials.
 
-<!-- In the [next lesson](led-fade.md), we will learn how to control the output voltage not just at two levels, `LOW` (0V) or `HIGH` (5V), but at finer levels between 0 and 5V using [`analogWrite(int pin, int value)`](https://www.arduino.cc/reference/en/language/functions/analog-io/analogwrite/). -->
+<!-- In the {% include tlink.html id='arduino-led-fade' text='next lesson' %}, we will learn how to control the output voltage not just at two levels, `LOW` (0V) or `HIGH` (5V), but at finer levels between 0 and 5V using [`analogWrite(int pin, int value)`](https://www.arduino.cc/reference/en/language/functions/analog-io/analogwrite/). -->
 
 <span class="fs-6">
-[Previous: Turning on an LED with Arduino](led-on.md){: .btn .btn-outline }
-[Next: Fading an LED with Arduino](led-fade.md){: .btn .btn-outline }
+{% include tlink.html id='arduino-led-on' text='Previous: Turning on an LED with Arduino' %}{: .btn .btn-outline }
+{% include tlink.html id='arduino-led-fade' text='Next: Fading an LED with Arduino' %}{: .btn .btn-outline }
 </span>

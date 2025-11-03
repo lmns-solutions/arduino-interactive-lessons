@@ -68,9 +68,9 @@ To ensure that our volume is properly set, we initialize it to 255 (the highest 
 
 ## Next Lesson
 
-In the [next lesson](sensor-instrument.md), we'll create a light-responsive instrument!
+In the {% include tlink.html id='cpx-sensor-instrument' text='next lesson' %}, we'll create a light-responsive instrument!
 
 <span class="fs-6">
-[Previous: How to use MakeCode](makecode.md){: .btn .btn-outline }
-[Next: Light-Responsive Instrument](sensor-instrument.md){: .btn .btn-outline }
+{% include tlink.html id='cpx-makecode' text='Previous: How to use MakeCode' %}{: .btn .btn-outline }
+{% include tlink.html id='cpx-sensor-instrument' text='Next: Light-Responsive Instrument' %}{: .btn .btn-outline }
 </span>

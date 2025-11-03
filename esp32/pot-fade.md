@@ -26,7 +26,7 @@ In this lesson, we'll learn how to use analog input on the ESP32 by building a p
 
 ## Materials
 
-You'll need the same materials as the [last lesson](led-fade.md) but also a 10kΩ trim potentiometer.
+You'll need the same materials as the {% include tlink.html id='esp32-led-fade' text='last lesson' %} but also a 10kΩ trim potentiometer.
 
 | Breadboard | ESP32 | LED | Resistor | Trimpot | 
 | ---------- |:-----:|:-----:|:-----:|
@@ -66,9 +66,9 @@ Let's make a potentiometer-based LED fader.
 
 ### The circuit
 
-The circuit is almost the same as the [previous lessons](led-fade.md); however, we need to add and hook up a potentiometer. So, we'll build two simple circuits:
+The circuit is almost the same as the {% include tlink.html id='esp32-led-fade' text='previous lessons' %}; however, we need to add and hook up a potentiometer. So, we'll build two simple circuits:
 1. The **input** circuit using the potentiometer, which we'll hook to `A6` (GPIO 14)
-2. The **output** circuit, which is the same as the [previous lessons](led-fade.md)
+2. The **output** circuit, which is the same as the {% include tlink.html id='esp32-led-fade' text='previous lessons' %}
 
 ![Circuit diagram and schematic for potentiometer-based fader](assets/images/Huzzah32_PotFade_CircuitDiagramAndSchematic_Fritzing.png)
 
@@ -94,12 +94,12 @@ Here's a workbench video with serial plotter graphing the analog input value fro
 
 ## Next Lesson
 
-In the [next lesson](tone.md), we will learn how to play tones on the ESP32.
+In the {% include tlink.html id='esp32-tone' text='next lesson' %}, we will learn how to play tones on the ESP32.
 
-<!-- In the [next lesson](capacitive-touch-sensing.md), we will learn about and use the ESP32's built-in capacitive touch sensing module. -->
+<!-- In the {% include tlink.html id='esp32-capacitive-touch-sensing' text='next lesson' %}, we will learn about and use the ESP32's built-in capacitive touch sensing module. -->
 
 <span class="fs-6">
-[Previous: Fading an LED with ESP32](led-fade.md){: .btn .btn-outline }
-[Next: Playing tones](tone.md){: .btn .btn-outline }
-<!-- [Next: Capacitive touch sensing with the ESP32](capacitive-touch-sensing.md){: .btn .btn-outline } -->
+{% include tlink.html id='esp32-led-fade' text='Previous: Fading an LED with ESP32' %}{: .btn .btn-outline }
+{% include tlink.html id='esp32-tone' text='Next: Playing tones' %}{: .btn .btn-outline }
+<!-- {% include tlink.html id='esp32-capacitive-touch-sensing' text='Next: Capacitive touch sensing with the ESP32' %}{: .btn .btn-outline } -->
 </span>

@@ -19,7 +19,7 @@ usetocbot: true
 {:toc}
 ---
 
-In this lesson, we will build on our last lesson—the [Button Piano](button-piano.md)—to make an interactive instrument that translates light levels into sound and light. It won't sound great but it will sound fun!
+In this lesson, we will build on our last lesson—the {% include tlink.html id='cpx-button-piano' text='Button Piano' %}—to make an interactive instrument that translates light levels into sound and light. It won't sound great but it will sound fun!
 
 <!-- TODO consider adding in a lil video of a theremin? -->
 
@@ -102,6 +102,6 @@ Similarly, [here's a version](https://makecode.com/_RCK2f5KhHLby) that maps the 
 In the [next lesson](capacitive-touch), we'll introduce a multi-part series on using capacitive sensing to interact with everyday objects and more!
 
 <span class="fs-6">
-[Previous: Button Piano](button-piano.md){: .btn .btn-outline }
-[Next: Capacitive Sensing](capacitive-touch.md){: .btn .btn-outline }
+{% include tlink.html id='cpx-button-piano' text='Previous: Button Piano' %}{: .btn .btn-outline }
+{% include tlink.html id='cpx-capacitive-touch' text='Next: Capacitive Sensing' %}{: .btn .btn-outline }
 </span>

@@ -9,7 +9,7 @@ comments: false
 usetocbot: true
 ---
 
-Please see our [Potentiometers lesson](../arduino/potentiometers.md) as part of our [Intro to Input](../arduino/intro-input.md) series.
+Please see our {% include tlink.html id='arduino-potentiometers' text='Potentiometers lesson' %} as part of our {% include tlink.html id='arduino-intro-input' text='Intro to Input' %} series.
 
 Are Potentiometers even sensors? Well, they are a type of variable resistor and often used to sense human input, so I would say yes! :)
 

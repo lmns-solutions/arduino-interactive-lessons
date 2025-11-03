@@ -289,7 +289,7 @@ If you connect two batteries in series (*i.e.,* stack them), you increase their 
 
 **NOTE: BASE UNITS**
 
-As you learn and begin analyzing electrical circuits, it's important to pay attention to *units*. The base unit of voltage is volts (V), the base unit of current is amperes or amps (A), and the base unit of resistance is ohms (Ω). As noted, with digital circuits, we often work with voltages between 0-5V (and sometimes 9V or 12V) but amperages are often in the milliamp range—like 0.02A or 0.1A—and common resistances include 220Ω, 1,000Ω, 2,200Ω, and even 10,000Ω. Typically, however, you'll see these written as 20mA and 100mA and 1kΩ, 2.2kΩ, and 10kΩ respectively. Thus, it's important to carefully track units and convert values to base units for analysis. We'll talk more about this in the [Ohm's Law](ohms-law.md) lesson.
+As you learn and begin analyzing electrical circuits, it's important to pay attention to *units*. The base unit of voltage is volts (V), the base unit of current is amperes or amps (A), and the base unit of resistance is ohms (Ω). As noted, with digital circuits, we often work with voltages between 0-5V (and sometimes 9V or 12V) but amperages are often in the milliamp range—like 0.02A or 0.1A—and common resistances include 220Ω, 1,000Ω, 2,200Ω, and even 10,000Ω. Typically, however, you'll see these written as 20mA and 100mA and 1kΩ, 2.2kΩ, and 10kΩ respectively. Thus, it's important to carefully track units and convert values to base units for analysis. We'll talk more about this in the {% include tlink.html id='electronics-ohms-law' text='Ohm&#39;s Law' %} lesson.
 
 ---
 
@@ -515,8 +515,8 @@ MIT 8.02x lecture on electric charges, forces, and coulomb's law (polarization) 
 
 ## Next Lesson
 
-In the [next lesson](schematics.md), we will learn about visual representations of circuits—called [circuit schematics](schematics.md), which will prepare us for some basic circuit analysis and [Ohm's Law](ohms-law.md).
+In the {% include tlink.html id='electronics-schematics' text='next lesson' %}, we will learn about visual representations of circuits—called {% include tlink.html id='electronics-schematics' text='circuit schematics' %}, which will prepare us for some basic circuit analysis and {% include tlink.html id='electronics-ohms-law' text='Ohm&#39;s Law' %}.
 
 <span class="fs-6">
-[Next: Circuit Schematics](schematics.md){: .btn .btn-outline }
+{% include tlink.html id='electronics-schematics' text='Next: Circuit Schematics' %}{: .btn .btn-outline }
 </span>

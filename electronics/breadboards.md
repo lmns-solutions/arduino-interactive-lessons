@@ -216,6 +216,6 @@ Note that you'll need to use the alligator clips on the 9V battery to supply pow
 In the [next lesson](variable-resistors), we will learn more about **variable resistors** and how to use them.
 
 <span class="fs-6">
-[Previous: LEDs](leds.md){: .btn .btn-outline }
-[Next: Variable Resistors](variable-resistors.md){: .btn .btn-outline }
+{% include tlink.html id='electronics-leds' text='Previous: LEDs' %}{: .btn .btn-outline }
+{% include tlink.html id='electronics-variable-resistors' text='Next: Variable Resistors' %}{: .btn .btn-outline }
 </span>

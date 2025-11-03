@@ -20,7 +20,7 @@ usetocbot: true
 {:toc}
 ---
 
-OK, now we're really rolling! We learned about [serial communication](serial-intro.md), then how to use serial in our browsers ([web serial!](web-serial.md)), and then how to do this with [p5.js](p5js-serial.md). And we've already made some cool proof-of-concept demos.
+OK, now we're really rolling! We learned about {% include tlink.html id='communication-serial-intro' text='serial communication' %}, then how to use serial in our browsers ({% include tlink.html id='communication-web-serial' text='web serial!' %}), and then how to do this with {% include tlink.html id='communication-p5js-serial' text='p5.js' %}. And we've already made some cool proof-of-concept demos.
 
 Let's take this growing knowledge and momentum to create slightly more sophisticated programs. First, we'll cover the case of using p5.js to control something on our Arduino (`Computer → Arduino`) then we'll introduce bidirectional communication (`Computer ↔ Arduino`) where the computer + Arduino work together to create a holistic interactive experience.
 
@@ -38,7 +38,7 @@ Here's a small sneak preview of what the final interactive experience will look 
 
 ### Creating DisplayShapeOut in p5.js
 
-As with our [previous lesson](p5js-serial.md), we'll begin with our [`SerialTemplate`](https://github.com/makeabilitylab/p5js/tree/master/WebSerial/p5js/SerialTemplate). If you're using VSCode, copy [`SerialTemplate`](https://github.com/makeabilitylab/p5js/tree/master/WebSerial/p5js/SerialTemplate) and rename the folder to `DisplayShapeOut`. If you're using the p5.js online editor, simply open this project, [Serial Template](https://editor.p5js.org/jonfroehlich/sketches/vPfUvLze_C), and rename your project to `DisplayShapeOut`.
+As with our {% include tlink.html id='communication-p5js-serial' text='previous lesson' %}, we'll begin with our [`SerialTemplate`](https://github.com/makeabilitylab/p5js/tree/master/WebSerial/p5js/SerialTemplate). If you're using VSCode, copy [`SerialTemplate`](https://github.com/makeabilitylab/p5js/tree/master/WebSerial/p5js/SerialTemplate) and rename the folder to `DisplayShapeOut`. If you're using the p5.js online editor, simply open this project, [Serial Template](https://editor.p5js.org/jonfroehlich/sketches/vPfUvLze_C), and rename your project to `DisplayShapeOut`.
 
 #### Overview of DisplayShapeOut functionality
 
@@ -48,11 +48,11 @@ Let's go over some of DisplayShapeOut's primary functionality. We want the user 
 
 - **Change the size of the shape**. We'll do this by tracking the mouse's x position and mapping it to size
 
-- **Send shape data over serial.** Each time either the current shape or size changes, we need to send an update over serial. We'll do this using [our web serial class](web-serial.md#our-web-serial-class)
+- **Send shape data over serial.** Each time either the current shape or size changes, we need to send an update over serial. We'll do this using {% include tlink.html id='communication-web-serial' text='our web serial class' %}#our-web-serial-class
 
 #### Draw and dynamically resize shape
 
-We'll build this up piece-by-piece. First, we'll focus on the p5.js shape drawing code and then add in web serial. Let's start by supporting a single shape type and adding in the resizing via x mouse position (similar to [this part of our previous lesson](p5js-serial.md#make-circle-dynamically-sized)).
+We'll build this up piece-by-piece. First, we'll focus on the p5.js shape drawing code and then add in web serial. Let's start by supporting a single shape type and adding in the resizing via x mouse position (similar to {% include tlink.html id='communication-p5js-serial' text='this part of our previous lesson' %}#make-circle-dynamically-sized).
 
 Add in the following top-level variables:
 
@@ -286,7 +286,7 @@ And we're done with the p5.js app! You can view, edit, play with the code in the
 
 ### Creating DisplayShapeIn in Arduino
 
-We could design many different types of Arduino apps that read in `"shapeType, shapeSize"` off serial and do something interesting. For example, we could use this info to set the paddle size and ball type (circle, square, triangle) in an OLED-based [Breakout game](https://en.wikipedia.org/wiki/Breakout_(video_game)). For this Arduino app, however, let's simply replicate the p5.js app visual experience. This might sound hard but you're [OLED](../advancedio/oled.md) experts by now—you got this!
+We could design many different types of Arduino apps that read in `"shapeType, shapeSize"` off serial and do something interesting. For example, we could use this info to set the paddle size and ball type (circle, square, triangle) in an OLED-based [Breakout game](https://en.wikipedia.org/wiki/Breakout_(video_game)). For this Arduino app, however, let's simply replicate the p5.js app visual experience. This might sound hard but you're {% include tlink.html id='advancedio-oled' text='OLED' %} experts by now—you got this!
 
 But how should we begin?
 
@@ -296,7 +296,7 @@ The key is to start simply and build up your app step-by-step, testing increment
 
 #### A simple beginning and debugging strategies
 
-Let's begin our Arduino app simply by echo'ing the incoming data back on serial. Remember, you **cannot** use the Arduino IDE's [Serial Monitor](../arduino/serial-print.md) once your p5.js app connects with your Arduino over serial. See error message in the figure below.
+Let's begin our Arduino app simply by echo'ing the incoming data back on serial. Remember, you **cannot** use the Arduino IDE's {% include tlink.html id='arduino-serial-print' text='Serial Monitor' %} once your p5.js app connects with your Arduino over serial. See error message in the figure below.
 
 ![](assets/images/OnlyOneProgramCanReadFromASerialPortAtATime_CannotOpenArduinoIDESerialMonitor.png)
 **Figure.** This figures shows the p5.js app [DisplayShapeOut](https://makeabilitylab.github.io/p5js/WebSerial/p5js/DisplayShapeOut) running and connected to the Arduino via web serial. Consequently, we cannot open and use the Arduino IDE's Serial Monitor tool (`Tools -> Serial Monitor`) because only one program can connect to a serial port at a time. When we try, we get an error printed in the Arduino IDE console (right image) that says "Error opening serial port 'COM5'. (Port busy)"
@@ -341,13 +341,13 @@ TODO: need video -->
 
 This echo technique is a crucial debugging tool. So, make sure you understand it! We can also use the OLED display to show debugging output, which we need for this app anyway. So, let's do that next!
 
-<!-- Another useful debugging strategy is to use our [OLED](../advancedio/oled.md) displays for debugging output. We can change these debug printouts as our app progresses (and remove them, of course, once we're confident things are working the way we intend). -->
+<!-- Another useful debugging strategy is to use our {% include tlink.html id='advancedio-oled' text='OLED' %} displays for debugging output. We can change these debug printouts as our app progresses (and remove them, of course, once we're confident things are working the way we intend). -->
 
 <!-- So, let's add in our OLED—which we need for this app anyway. -->
 
-<!-- It's important that you understand this "echo" technique and the fact that you can no longer use Serial Monitor for debugging (at least not in the same way [as before](../arduino/serial-print.md)) because only one program can open and use a serial port at a time (which will be your p5.js app). -->
+<!-- It's important that you understand this "echo" technique and the fact that you can no longer use Serial Monitor for debugging (at least not in the same way {% include tlink.html id='arduino-serial-print' text='as before' %}) because only one program can open and use a serial port at a time (which will be your p5.js app). -->
 
-<!-- Another debugging strategy is to use your [OLED](../advancedio/oled.md) displays for debugging output. The OLEDs are actually hugely advantageous for displaying intermediate debugging information as you create and iterate. You can, of course, remove and change debugging printouts as your app progresses.
+<!-- Another debugging strategy is to use your {% include tlink.html id='advancedio-oled' text='OLED' %} displays for debugging output. The OLEDs are actually hugely advantageous for displaying intermediate debugging information as you create and iterate. You can, of course, remove and change debugging printouts as your app progresses.
 
 Additionally, it can be useful to simply turn on an LED to track some state. You can do this without hooking up an LED by using the built-in LED on your board (`LED_BUILTIN`). So, write `digitalWrite(LED_BUILTIN, HIGH)` when your program enters some state, for example.
 
@@ -357,7 +357,7 @@ With that, let's begin making on the Arduino side! -->
 
 #### A simple OLED circuit
 
-We'll wire up the OLED using I<sup>2</sup>C as we did in our [OLED](../advancedio/oled.md) lesson. For our lesson, we'll use the Arduino Leonardo but some of you may choose to use the Adafruit Huzzah32 (ESP32). We provide both I<sup>2</sup>C wirings below.
+We'll wire up the OLED using I<sup>2</sup>C as we did in our {% include tlink.html id='advancedio-oled' text='OLED' %} lesson. For our lesson, we'll use the Arduino Leonardo but some of you may choose to use the Adafruit Huzzah32 (ESP32). We provide both I<sup>2</sup>C wirings below.
 
 ##### The Arduino Leonardo Wiring
 
@@ -368,7 +368,7 @@ We'll wire up the OLED using I<sup>2</sup>C as we did in our [OLED](../advancedi
 ##### The ESP32 Wiring
 
 ![](../advancedio/assets/images/Huzzah32_OLEDWiring_FritzingSchematics.png)
-**Figure.** Wiring diagram for the [Adafruit Huzzah32](../esp32/index.md) ESP32 board with OLED. Note that the ESP32 has silk-printed SCL and SDA pins at the top-right corner.
+**Figure.** Wiring diagram for the {% include tlink.html id='esp32-index' text='Adafruit Huzzah32' %} ESP32 board with OLED. Note that the ESP32 has silk-printed SCL and SDA pins at the top-right corner.
 {: .fs-1 }
 
 #### Add in OLED and debug printlns
@@ -456,7 +456,7 @@ So far, so good!
 
 But now we actually need to **parse** the incoming serial text data into useful typed variables. Let's do that and update our OLED-based debug output. Again, it's useful to construct our program step-by-step testing along the way.
 
-Update the code inside of `if(Serial.available() > 0)` in `loop()` to include parsing. There are many possible parsing approaches; however, we are going to take advantage of Arduino's [String](https://www.arduino.cc/reference/en/language/variables/data-types/stringobject/) object and functions like [`indexOf()`](https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/indexof) and [`substring()`](https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/substring) to look for commas and parse out our data. We showed a similar technique in our [Intro to Serial](serial-intro.md#formatting-messages) lesson.
+Update the code inside of `if(Serial.available() > 0)` in `loop()` to include parsing. There are many possible parsing approaches; however, we are going to take advantage of Arduino's [String](https://www.arduino.cc/reference/en/language/variables/data-types/stringobject/) object and functions like [`indexOf()`](https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/indexof) and [`substring()`](https://www.arduino.cc/reference/en/language/variables/data-types/string/functions/substring) to look for commas and parse out our data. We showed a similar technique in our {% include tlink.html id='communication-serial-intro' text='Intro to Serial' %}#formatting-messages lesson.
 
 For now, we'll display both the raw data received over serial as well as the parsed data. Once we're confident we have this working, we'll remove this debug output.
 
@@ -507,7 +507,7 @@ Let's close our p5.js tab in our web browser to ensure it's disconnected from th
 <video autoplay loop muted playsinline style="margin:0px">
   <source src="assets/videos/DisplayShapeIn.ino-SerialMonitor-TrimmedOptimized1200w.mp4" type="video/mp4" />
 </video>
-**Video.** Using the Arduino IDE's [Serial Monitor](../arduino/serial-print.md) to test our parsing code. Using the Serial Monitor is an easy, convenient way to test your serial input and parsing code on the Arduino. 
+**Video.** Using the Arduino IDE's {% include tlink.html id='arduino-serial-print' text='Serial Monitor' %} to test our parsing code. Using the Serial Monitor is an easy, convenient way to test your serial input and parsing code on the Arduino. 
 {: .fs-1 }
 
 #### Write drawing code
@@ -995,16 +995,16 @@ For your prototyping journals, create a simple bidirectional app in p5.js and Ar
 
 ## Next Lesson
 
-In the [next lesson](p5js-paint-io.md), we'll bring everything together and build a fully functional paint application.
+In the {% include tlink.html id='communication-p5js-paint-io' text='next lesson' %}, we'll bring everything together and build a fully functional paint application.
 
 <span class="fs-6">
-[Previous: p5.js Serial In](p5js-serial.md){: .btn .btn-outline }
-[Next: Paint I/O Example](p5js-paint-io.md){: .btn .btn-outline }
+{% include tlink.html id='communication-p5js-serial' text='Previous: p5.js Serial In' %}{: .btn .btn-outline }
+{% include tlink.html id='communication-p5js-paint-io' text='Next: Paint I/O Example' %}{: .btn .btn-outline }
 </span>
 
 <!-- <span class="fs-6">
-[Previous: Intro to Web Serial](web-serial.md){: .btn .btn-outline }
-[Next: Serial I/O with p5.js](p5js-serial-io.md){: .btn .btn-outline }
+{% include tlink.html id='communication-web-serial' text='Previous: Intro to Web Serial' %}{: .btn .btn-outline }
+{% include tlink.html id='communication-p5js-serial-io' text='Next: Serial I/O with p5.js' %}{: .btn .btn-outline }
 </span> -->
 
 <!-- Other p5js app ideas:

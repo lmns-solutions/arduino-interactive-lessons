@@ -304,8 +304,8 @@ Finally, select the appropriate port
 
 ## Next Lesson
 
-In the [next lesson](led-blink.md), you will write your first ESP32 program using the ESP32 Arduino library.
+In the {% include tlink.html id='esp32-led-blink' text='next lesson' %}, you will write your first ESP32 program using the ESP32 Arduino library.
 
 <span class="fs-6">
-[Next: Blink an LED with ESP32](led-blink.md){: .btn .btn-outline }
+{% include tlink.html id='esp32-led-blink' text='Next: Blink an LED with ESP32' %}{: .btn .btn-outline }
 </span>

@@ -66,7 +66,7 @@ We're going to start with a Common Cathode circuit + code because it's more intu
 
 ### Making the circuit
 
-With a Common Cathode design, the 2nd leg needs to be hooked up to the `GND` pin and the 1st (red), 3rd (blue), and 4th (green) legs should connect to digital I/O pins (**don't forget** a current limiting resistor for each). We could have used any digital I/O pins; however, we chose Pins 6, 5, and 3 for red, blue, and green respectively (these pins support PWM and thus, we'll be able to use the same circuit for our next tutorial on [cross-fading colors with RGB LEDs](rgb-led-fade.md)).
+With a Common Cathode design, the 2nd leg needs to be hooked up to the `GND` pin and the 1st (red), 3rd (blue), and 4th (green) legs should connect to digital I/O pins (**don't forget** a current limiting resistor for each). We could have used any digital I/O pins; however, we chose Pins 6, 5, and 3 for red, blue, and green respectively (these pins support PWM and thus, we'll be able to use the same circuit for our next tutorial on {% include tlink.html id='arduino-rgb-led-fade' text='cross-fading colors with RGB LEDs' %}).
 
 Here's the wiring without a breadboard (not recommended but perhaps easier to see the circuit itself):
 
@@ -202,7 +202,7 @@ To drive current through our circuit and turn on an embedded LED—say the red L
 ---
 
 **Note:**
-Does this setup seem familiar? It should. With the Common Anode RGB LED, the digital I/O pins become *current sinks* just like LED Circuit 2 in the [LED Blink 2 tutorial](led-blink2.md).
+Does this setup seem familiar? It should. With the Common Anode RGB LED, the digital I/O pins become *current sinks* just like LED Circuit 2 in the {% include tlink.html id='arduino-led-blink2' text='LED Blink 2 tutorial' %}.
 
 ---
 
@@ -274,6 +274,6 @@ This [source code](https://github.com/makeabilitylab/arduino/blob/master/Basics/
 In the next lesson, we will learn how to fade between RGB colors and how to convert to the [HSL colorspace](https://en.wikipedia.org/wiki/HSL_and_HSV) to more easily (and independently) control hue and brightness.
 
 <span class="fs-6">
-[Previous: LED Blink 2](led-blink2.md){: .btn .btn-outline }
-[Next: Cross-fading RGB LEDs](rgb-led-fade.md){: .btn .btn-outline }
+{% include tlink.html id='arduino-led-blink2' text='Previous: LED Blink 2' %}{: .btn .btn-outline }
+{% include tlink.html id='arduino-rgb-led-fade' text='Next: Cross-fading RGB LEDs' %}{: .btn .btn-outline }
 </span>

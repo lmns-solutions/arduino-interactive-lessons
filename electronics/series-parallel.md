@@ -23,7 +23,7 @@ usetocbot: true
 In our Ohm's Law lesson we analyzed relatively straightforward circuits with a single resistor. These circuits helped us build a foundation for and a conceptual understanding of Ohm's Law and how to apply it; however, most circuits are not so simple.
 
 In this lesson, we we're going to extend Ohm's Law to more complicated circuits: resistors in **series** and resistors in **parallel**. In short: 
-* Resistors in series **divide voltage** and are one of the most common (and useful) circuit configurations when working with microcontrollers and resistive sensors like [potentiometers](../arduino/potentiometers.md), [force-sensitive resistors](../arduino/force-sensitive-resistors.md), and [photocells](../sensors/photoresistors.md).
+* Resistors in series **divide voltage** and are one of the most common (and useful) circuit configurations when working with microcontrollers and resistive sensors like {% include tlink.html id='arduino-potentiometers' text='potentiometers' %}, {% include tlink.html id='arduino-force-sensitive-resistors' text='force-sensitive resistors' %}, and {% include tlink.html id='sensors-photoresistors' text='photocells' %}.
 * Resistors in parallel **divide current** (and more current travels down paths with less resistance). Parallel circuits are useful, for example, in powering multiple LEDs.
 
 ![Image shows two diagrams: on the left is a circuit with series resistors and on the right is a circuit with parallel resistors.](assets/images/OhmsLaw_IntroToSeriesVsParallelResistorCircuits_ByJonFroehlich.png)
@@ -194,7 +194,7 @@ Importantly, as you can tell from the equation, it is *not* the absolute resista
 
 However, the amount of current between the two circuits would be significantly different with the former: $$I = \frac{9V}{200Ω} \Rightarrow 45mA$$ and the latter: $$I = \frac{9V}{4.4kΩ} \Rightarrow 2.0mA$$.
 
-Wouldn't it be cool to dynamically control one of those resistor values to output a variable voltage at $$V_{out}$$? Yes! And this is the basis of a [potentiometer](variable-resistors.md), which we will learn about in a later lesson.
+Wouldn't it be cool to dynamically control one of those resistor values to output a variable voltage at $$V_{out}$$? Yes! And this is the basis of a {% include tlink.html id='electronics-variable-resistors' text='potentiometer' %}, which we will learn about in a later lesson.
 
 #### Deriving the voltage divider equation
 
@@ -345,9 +345,9 @@ In your prototyping journals, include a sketch of the circuit (can be a smartpho
 
 ## Next Lesson
 
-In the [next lesson](resistors.md), we will learn more about resistors, how they're made, how to use them, how they're characterized, and how to calculate their power dissipation.
+In the {% include tlink.html id='electronics-resistors' text='next lesson' %}, we will learn more about resistors, how they're made, how to use them, how they're characterized, and how to calculate their power dissipation.
 
 <span class="fs-6">
-[Previous: Schematics](ohms-law.md){: .btn .btn-outline }
-[Next: Resistors](resistors.md){: .btn .btn-outline }
+{% include tlink.html id='electronics-ohms-law' text='Previous: Schematics' %}{: .btn .btn-outline }
+{% include tlink.html id='electronics-resistors' text='Next: Resistors' %}{: .btn .btn-outline }
 </span>

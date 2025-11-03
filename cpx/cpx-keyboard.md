@@ -22,7 +22,7 @@ usetocbot: true
 In Lesson 6 of our CPX series, we will learn how to use the CPX as a programmable keyboard. We'll begin by making the A and B buttons into keyboard presses and then create increasingly fun and interesting keyboards, including a media controller keyboard (Lesson 6.2) and an accelerometer-based keyboard (Lesson 6.3).
 
 {: .note }
-Note: there is some overlapping content with [Lesson 5.3: Making a Capacitive Keyboard](capacitive-touch.md#lesson-53-making-a-capacitive-touch-keyboard) but we wanted to start from the beginning here and grow outward! So, you should be able to complete these lessons even if you have not completed Lesson 5.3.
+Note: there is some overlapping content with {% include tlink.html id='cpx-capacitive-touch' text='Lesson 5.3: Making a Capacitive Keyboard' %}#lesson-53-making-a-capacitive-touch-keyboard but we wanted to start from the beginning here and grow outward! So, you should be able to complete these lessons even if you have not completed Lesson 5.3.
 
 ## Lesson 6.1: Making a Programmable Keyboard
 
@@ -113,9 +113,9 @@ All project examples below provide tutorials with example MakeCode code.
 
 ## Next Lesson
 
-In the [next lesson](cpx-mouse.md), we'll extend our work to build a custom interactive mouse.
+In the {% include tlink.html id='cpx-cpx-mouse' text='next lesson' %}, we'll extend our work to build a custom interactive mouse.
 
 <span class="fs-6">
-[Previous: Capacitive Sensing](capacitive-touch.md){: .btn .btn-outline }
-[Next: CPX as a Mouse](cpx-mouse.md){: .btn .btn-outline }
+{% include tlink.html id='cpx-capacitive-touch' text='Previous: Capacitive Sensing' %}{: .btn .btn-outline }
+{% include tlink.html id='cpx-cpx-mouse' text='Next: CPX as a Mouse' %}{: .btn .btn-outline }
 </span>

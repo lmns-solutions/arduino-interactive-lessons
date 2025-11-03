@@ -51,9 +51,9 @@ git clone https://github.com/makeabilitylab/signals.git
 <!-- TODO: add in an H3 that separates this stuff out a bit -->
 ### Introduction to Jupyter Notebook, Python, and SciPy
 
-#### [Lesson 0: Install Jupyter Notebook and Tips](jupyter-notebook.md)
+#### {% include tlink.html id='signals-jupyter-notebook' text='Lesson 0: Install Jupyter Notebook and Tips' %}
 
-In [our initial lesson](jupyter-notebook.md), we will learn how to install Jupyter Notebook, a helpful extension that auto-generates table of contents, and go over some tips.
+In {% include tlink.html id='signals-jupyter-notebook' text='our initial lesson' %}, we will learn how to install Jupyter Notebook, a helpful extension that auto-generates table of contents, and go over some tips.
 
 #### Lesson 1: Introduction to Jupyter Notebook
 
