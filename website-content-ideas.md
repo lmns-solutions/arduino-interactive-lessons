@@ -1,4 +1,5 @@
 ---
+permalink: /website-content-ideas.html
 page_id: website-content-ideas
 layout: default
 title: Website Content Ideas

@@ -6,7 +6,7 @@ nav_order: 0
 usemathjax: true
 description: "Website Overview"
 usetocbot: true
-permalink: /
+permalink: /index.html
 ---
 
 > Joy is a well-made object, equaled only to the joy of making it.

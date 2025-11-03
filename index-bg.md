@@ -6,7 +6,7 @@ nav_order: 0
 usemathjax: true
 description: "Website Overview"
 usetocbot: true
-permalink: /
+permalink: /index.html
 lang: bg
 ---
 
