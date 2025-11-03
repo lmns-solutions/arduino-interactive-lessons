@@ -1,4 +1,5 @@
 ---
+page_id: advancedio-vibromotor
 layout: default
 title: L2&#58; Vibromotors
 nav_order: 2

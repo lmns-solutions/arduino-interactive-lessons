@@ -1,4 +1,5 @@
 ---
+page_id: advancedio-input
 layout: default
 title: Input
 parent: Advanced I/O
