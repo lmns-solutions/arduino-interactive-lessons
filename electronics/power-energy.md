@@ -1,4 +1,5 @@
 ---
+page_id: electronics-power-energy
 layout: default
 title: Power and Energy
 nav_order: 2
