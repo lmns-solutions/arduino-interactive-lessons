@@ -1,4 +1,5 @@
 ---
+page_id: advancedio-output
 layout: default
 title: Output
 parent: Advanced I/O

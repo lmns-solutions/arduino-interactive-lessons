@@ -1,4 +1,5 @@
 ---
+page_id: advancedio-joystick
 layout: default
 title: LX&#58; Joystick
 nav_order: 1

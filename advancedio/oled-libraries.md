@@ -1,4 +1,5 @@
 ---
+page_id: advancedio-oled-libraries
 layout: default
 title: Installing Adafruit OLED libraries
 # nav_order: 1

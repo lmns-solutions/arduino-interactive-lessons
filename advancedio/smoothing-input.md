@@ -1,4 +1,5 @@
 ---
+page_id: advancedio-smoothing-input
 layout: default
 title: L1&#58; Smoothing Input
 nav_order: 1

@@ -1,4 +1,5 @@
 ---
+page_id: advancedio-haptic-notes
 layout: default
 title: Haptics
 # nav_order: 1
