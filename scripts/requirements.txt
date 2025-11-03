@@ -1,6 +1,7 @@
 cachetools==5.5.2
 certifi==2025.8.3
 charset-normalizer==3.4.3
+deepl==1.23.0
 google-api-core==2.25.1
 google-auth==2.40.3
 google-cloud-core==2.4.3
