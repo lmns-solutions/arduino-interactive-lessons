@@ -1,4 +1,5 @@
 ---
+page_id: resources-uw-courses
 layout: default
 title: UW Courses
 nav_order: 2

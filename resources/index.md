@@ -1,4 +1,5 @@
 ---
+page_id: resources-index
 layout: default
 title: Resources
 nav_order: 8
