@@ -36,22 +36,24 @@ def compute_page_id(relpath: pathlib.Path) -> str:
     return slugify(joined)
 
 def compute_permalink(relpath: pathlib.Path) -> str:
-    # Build POSIX-like URL parts
+    # Build POSIX-like URL parts ending with .html
     parts = list(relpath.parts)
     fname = parts[-1]
     stem = strip_lang_suffix(pathlib.Path(fname).stem)
     dir_parts = parts[:-1]
 
     if fname.lower() == "index.md":
-        # root index
+        # root index -> /index.html
+        # folder index -> /<folder>/index.html
         if not dir_parts:
-            return "/"
-        return "/" + "/".join(dir_parts) + "/"
+            return "/index.html"
+        return "/" + "/".join(dir_parts + ["index.html"])
     else:
+        # regular file -> /<dir>/<stem>.html  (or /<stem>.html at root)
         if dir_parts:
-            return "/" + "/".join(dir_parts + [stem]) + "/"
+            return "/" + "/".join(dir_parts + [f"{stem}.html"])
         else:
-            return f"/{stem}/"
+            return f"/{stem}.html"
 
 def split_front_matter(text: str):
     """
@@ -110,8 +112,8 @@ def ensure_kv_in_front_matter(fm_text: str, key: str, value: str) -> str:
     new_fm = header + "\n" + content.rstrip() + "\n" + lines[footer_idx].strip() + "\n"
     return new_fm
 
-def build_new_front_matter(page_id: str) -> str:
-    return f"---\npage_id: {page_id}\n---\n"
+def build_new_front_matter(page_id: str, permalink: str) -> str:
+    return f"---\npage_id: {page_id}\npermalink: {permalink}\n---\n"
 
 def process_file(md_path: pathlib.Path) -> bool:
     rel = md_path.resolve().relative_to(REPO)
@@ -121,16 +123,18 @@ def process_file(md_path: pathlib.Path) -> bool:
     content = md_path.read_text(encoding="utf-8")
 
     page_id = compute_page_id(rel)
+    permalink = compute_permalink(rel)
 
     fm_text, body, has_fm = split_front_matter(content)
 
     if has_fm and fm_text:
         # Update or insert both keys
         fm_text = ensure_kv_in_front_matter(fm_text, "page_id", page_id)
+        fm_text = ensure_kv_in_front_matter(fm_text, "permalink", permalink)
         new_text = fm_text + body
     else:
         # Create new front matter
-        fm_text = build_new_front_matter(page_id)
+        fm_text = build_new_front_matter(page_id, permalink)
         new_text = fm_text + content
 
     if new_text != content:
