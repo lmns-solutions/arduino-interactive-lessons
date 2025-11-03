@@ -1,4 +1,5 @@
 ---
+permalink: /resources/uw-courses.html
 page_id: resources-uw-courses
 layout: default
 title: UW Courses
