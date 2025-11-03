@@ -1,4 +1,5 @@
 ---
+page_id: electronics-electricity
 layout: default
 title: Electricity
 nav_order: 1
