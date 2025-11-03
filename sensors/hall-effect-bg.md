@@ -1,4 +1,5 @@
 ---
+permalink: /sensors/hall-effect.html
 lang: bg
 page_id: sensors-hall-effect
 layout: default
