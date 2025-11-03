@@ -1,4 +1,5 @@
 ---
+page_id: arduino-intro-input
 layout: default
 title: Input
 parent: Intro to Arduino

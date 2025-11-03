@@ -1,4 +1,5 @@
 ---
+page_id: arduino-debouncing
 layout: default
 title: L3&#58; Debouncing
 nav_order: 3

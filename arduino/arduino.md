@@ -1,4 +1,5 @@
 ---
+page_id: arduino-arduino
 layout: default
 title: LX&#58; Arduino
 nav_order: 1

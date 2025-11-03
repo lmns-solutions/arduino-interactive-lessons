@@ -1,4 +1,5 @@
 ---
+page_id: arduino-sound
 layout: default
 title: Sound
 parent: Intro to Arduino
