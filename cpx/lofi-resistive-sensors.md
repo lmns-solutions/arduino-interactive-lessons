@@ -1,4 +1,5 @@
 ---
+page_id: cpx-lofi-resistive-sensors
 layout: default
 title: LX&#58; Lo-fi Resistive Sensors
 parent: Circuit Playground Express

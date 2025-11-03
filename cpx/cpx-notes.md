@@ -1,4 +1,5 @@
 ---
+page_id: cpx-cpx-notes
 layout: default
 title: L2&#58; Programming the CPX with MakeCode
 parent: Circuit Express (CPX)

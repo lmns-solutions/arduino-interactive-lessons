@@ -1,4 +1,5 @@
 ---
+page_id: cpx-cpx-keyboard
 layout: default
 title: L6&#58; CPX as a Keyboard
 parent: Circuit Playground Express
