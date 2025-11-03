@@ -1,4 +1,5 @@
 ---
+permalink: /arduino/debouncing.html
 page_id: arduino-debouncing
 layout: default
 title: L3&#58; Debouncing

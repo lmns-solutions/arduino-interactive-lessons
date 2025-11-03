@@ -1,4 +1,5 @@
 ---
+permalink: /arduino/index.html
 page_id: arduino-index
 layout: default
 title: Intro to Arduino

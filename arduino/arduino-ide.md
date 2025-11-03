@@ -1,4 +1,5 @@
 ---
+permalink: /arduino/arduino-ide.html
 page_id: arduino-arduino-ide
 layout: default
 title: Arduino IDE

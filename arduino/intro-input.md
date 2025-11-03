@@ -1,4 +1,5 @@
 ---
+permalink: /arduino/intro-input.html
 page_id: arduino-intro-input
 layout: default
 title: Input

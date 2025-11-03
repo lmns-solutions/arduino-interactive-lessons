@@ -1,4 +1,5 @@
 ---
+permalink: /arduino/serial-print.html
 page_id: arduino-serial-print
 layout: default
 title: L3&#58; Debugging with Serial

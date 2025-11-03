@@ -1,4 +1,5 @@
 ---
+permalink: /arduino/led-fade.html
 page_id: arduino-led-fade
 layout: default
 title: L4&#58; Fading an LED
