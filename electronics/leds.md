@@ -1,4 +1,5 @@
 ---
+permalink: /electronics/leds.html
 page_id: electronics-leds
 layout: default
 title: L6&#58; LEDs

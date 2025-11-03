@@ -1,4 +1,5 @@
 ---
+permalink: /electronics/electricity.html
 page_id: electronics-electricity
 layout: default
 title: Electricity

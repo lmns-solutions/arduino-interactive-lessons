@@ -1,4 +1,5 @@
 ---
+permalink: /electronics/ics.html
 page_id: electronics-ics
 layout: default
 title: Integrated Circuits

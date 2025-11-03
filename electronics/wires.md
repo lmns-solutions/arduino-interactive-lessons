@@ -1,4 +1,5 @@
 ---
+permalink: /electronics/wires.html
 page_id: electronics-wires
 layout: default
 title: Wires
