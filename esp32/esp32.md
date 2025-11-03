@@ -1,4 +1,5 @@
 ---
+permalink: /esp32/esp32.html
 page_id: esp32-esp32
 layout: default
 title: L1&#58; Intro to the ESP32

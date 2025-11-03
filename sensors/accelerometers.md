@@ -1,4 +1,5 @@
 ---
+permalink: /sensors/accelerometers.html
 page_id: sensors-accelerometers
 layout: default
 title: Accelerometers

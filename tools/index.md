@@ -1,4 +1,5 @@
 ---
+permalink: /tools/index.html
 page_id: tools-index
 layout: default
 title: Tools

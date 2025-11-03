@@ -1,4 +1,5 @@
 ---
+permalink: /advancedio/input.html
 page_id: advancedio-input
 layout: default
 title: Input

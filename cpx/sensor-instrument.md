@@ -1,4 +1,5 @@
 ---
+permalink: /cpx/sensor-instrument.html
 page_id: cpx-sensor-instrument
 layout: default
 title: L4&#58; Light-Level Instrument

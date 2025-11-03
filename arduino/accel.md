@@ -1,4 +1,5 @@
 ---
+permalink: /arduino/accel.html
 page_id: arduino-accel
 layout: default
 parent: Intro to Arduino

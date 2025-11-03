@@ -1,4 +1,5 @@
 ---
+permalink: /esp32/tone.html
 page_id: esp32-tone
 layout: default
 title: L5&#58; Playing tones

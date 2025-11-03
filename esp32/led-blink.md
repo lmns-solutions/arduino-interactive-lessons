@@ -1,4 +1,5 @@
 ---
+permalink: /esp32/led-blink.html
 page_id: esp32-led-blink
 layout: default
 title: L2&#58; Blinking an LED

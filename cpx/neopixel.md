@@ -1,4 +1,5 @@
 ---
+permalink: /cpx/neopixel.html
 page_id: cpx-neopixel
 layout: default
 title: LX&#58; NeoPixels

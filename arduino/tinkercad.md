@@ -1,4 +1,5 @@
 ---
+permalink: /arduino/tinkercad.html
 page_id: arduino-tinkercad
 layout: default
 title: Tinkercad

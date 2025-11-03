@@ -1,4 +1,5 @@
 ---
+permalink: /signals/tools.html
 page_id: signals-tools
 layout: default
 title: Tools

@@ -1,4 +1,5 @@
 ---
+permalink: /electronics/series-parallel.html
 page_id: electronics-series-parallel
 layout: default
 title: L4&#58; Series and Parallel Resistors

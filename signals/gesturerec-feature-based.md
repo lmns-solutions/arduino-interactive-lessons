@@ -1,4 +1,5 @@
 ---
+permalink: /signals/gesturerec-feature-based.html
 page_id: signals-gesturerec-feature-based
 layout: default
 title: L3&#58; Feature-Based Classification

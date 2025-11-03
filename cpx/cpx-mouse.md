@@ -1,4 +1,5 @@
 ---
+permalink: /cpx/cpx-mouse.html
 page_id: cpx-cpx-mouse
 layout: default
 title: L7&#58; CPX as a Mouse

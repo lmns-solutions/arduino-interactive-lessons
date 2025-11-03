@@ -1,4 +1,5 @@
 ---
+permalink: /advancedio/vibromotor.html
 page_id: advancedio-vibromotor
 layout: default
 title: L2&#58; Vibromotors

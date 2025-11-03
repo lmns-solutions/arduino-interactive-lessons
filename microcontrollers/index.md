@@ -1,4 +1,5 @@
 ---
+permalink: /microcontrollers/index.html
 page_id: microcontrollers-index
 layout: default
 title: Microcontrollers

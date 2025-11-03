@@ -1,4 +1,5 @@
 ---
+permalink: /cpx/analog-input.html
 page_id: cpx-analog-input
 layout: default
 title: L8&#58; Analog Input

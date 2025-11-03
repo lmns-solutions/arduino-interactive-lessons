@@ -1,4 +1,5 @@
 ---
+permalink: /teaching-notes.html
 page_id: teaching-notes
 layout: default
 title: Website Dev Notes

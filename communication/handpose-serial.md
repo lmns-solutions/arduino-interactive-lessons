@@ -1,4 +1,5 @@
 ---
+permalink: /communication/handpose-serial.html
 page_id: communication-handpose-serial
 layout: default
 title: L7&#58; HandPose Serial

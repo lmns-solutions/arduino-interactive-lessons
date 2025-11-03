@@ -1,4 +1,5 @@
 ---
+permalink: /electronics/index.html
 page_id: electronics-index
 layout: default
 title: Intro to Electronics

@@ -1,4 +1,5 @@
 ---
+permalink: /sensors/photoresistors.html
 page_id: sensors-photoresistors
 layout: default
 title: Photoresistors

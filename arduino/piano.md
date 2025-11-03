@@ -1,4 +1,5 @@
 ---
+permalink: /arduino/piano.html
 page_id: arduino-piano
 layout: default
 title: L2&#58; A simple piano

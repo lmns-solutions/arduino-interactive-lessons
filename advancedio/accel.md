@@ -1,4 +1,5 @@
 ---
+permalink: /advancedio/accel.html
 page_id: advancedio-accel
 layout: default
 title: L2&#58; Accelerometers

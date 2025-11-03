@@ -1,4 +1,5 @@
 ---
+permalink: /signals/numpy.html
 page_id: signals-numpy
 layout: default
 title: L3&#58; Numpy
