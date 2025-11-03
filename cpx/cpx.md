@@ -1,4 +1,6 @@
 ---
+permalink: /cpx/cpx/
+page_id: cpx-cpx
 layout: default
 title: L1&#58; Intro to the CPX
 parent: Circuit Playground Express
@@ -23,11 +25,11 @@ usetocbot: true
 
 The Circuit Playground Express (CPX) is an introductory physical computing board created by [Adafruit](https://adafruit.com). It is a wonderful electronic prototyping platform board for learning *electronics* and *programming* and for creating imaginative physical computing projects (*e.g.,* [see samples here](https://learn.adafruit.com/category/circuit-playground)).
 
-Compared with [Arduino](../arduino/index.md), the CPX's advantages for novice makers are twofold:
+Compared with {% include tlink.html id='arduino-index' text='Arduino' %}, the CPX's advantages for novice makers are twofold:
 
 1. First, the CPX can be programmed with an **easy-to-use drag-and-drop visual programming language** called [MakeCode](https://makecode.adafruit.com/) developed by [Microsoft](https://www.microsoft.com/en-us/makecode), which is similar to [Scratch](https://scratch.mit.edu/). As students and makers gain experience and expertise, they can switch over to more advanced programming languages such as [CircuitPython](https://learn.adafruit.com/adafruit-circuit-playground-express/what-is-circuitpython) (Python), or [Arduino](https://learn.adafruit.com/adafruit-circuit-playground-express/arduino) (C/C++)
 
-2. Second, the CPX includes a variety of **built-in inputs and outputs**, so you do not need to purchase or wire-up external components (or even use a [breadboard](../electronics/breadboards.md)). On-board **inputs** include a [LIS3DH accelerometer](https://learn.adafruit.com/adafruit-lis3dh-triple-axis-accelerometer-breakout), a light-level sensor (a phototransistor), multiple push buttons, a microphone, and **outputs** include [neopixel LEDS](https://learn.adafruit.com/neopixels-with-makecode), a speaker, and infrared receivers/transmitters.
+2. Second, the CPX includes a variety of **built-in inputs and outputs**, so you do not need to purchase or wire-up external components (or even use a {% include tlink.html id='electronics-breadboards' text='breadboard' %}). On-board **inputs** include a [LIS3DH accelerometer](https://learn.adafruit.com/adafruit-lis3dh-triple-axis-accelerometer-breakout), a light-level sensor (a phototransistor), multiple push buttons, a microphone, and **outputs** include [neopixel LEDS](https://learn.adafruit.com/neopixels-with-makecode), a speaker, and infrared receivers/transmitters.
 
 To contextualize CPX's potential even further, we can use the three evaluation criteria for creative construction kits that Mitchell Resnick and Brian Silverman outline in their fantastic IDC'05 paper ["Some Reflections on Designing Construction Kits for Kids"](https://doi.org/10.1145/1109540.1109556). Creative constructions kits should have:
 
@@ -58,7 +60,7 @@ It's OK if you don't understand all of the terminology used below. In fact, if t
   <source src="assets/videos/CPX_PaintingWithCPXAccelerometerAsAMouse.mp4" type="video/mp4" />
 </video>
 
-**Video.** The CPX has lots of really fun and interesting on-board sensors, including an accelerometer, temperature, light, sound, and more. In the video above, I'm showing how to use the on-board accelerometer (motion sensor) to create a "motion mouse" with the CPX. See [L7.2: Accelerometer Mouse](cpx-mouse.md#lesson-72-accelerometer-mouse) for more! 
+**Video.** The CPX has lots of really fun and interesting on-board sensors, including an accelerometer, temperature, light, sound, and more. In the video above, I'm showing how to use the on-board accelerometer (motion sensor) to create a "motion mouse" with the CPX. See {% include tlink.html id='cpx-cpx-mouse' text='L7.2: Accelerometer Mouse' %}#lesson-72-accelerometer-mouse for more! 
 {: .fs-1 }
 
 Specifically, the CPX includes the following built-in input/sensors:
@@ -128,7 +130,7 @@ For more information, see [Adafruit's CPX Pinouts Guide](https://learn.adafruit.
   <source src="assets/videos/CPX_AnalogInput_PotentiometerOverview_Optimized.mp4" type="video/mp4" />
 </video>
 
-**Video.** Pins A1-A7 on the CPX can be used for analog input to read voltages between 0-3.3V, which the CPX converts to a number between 0-1023. Here, I'm using a [potentiometer](../electronics/variable-resistors.md#potentiometers), which dynamically changes its resistance (and splits the voltage levels) based on knob position. Learn more about analog input in [L8: Analog Input](analog-input.md)!
+**Video.** Pins A1-A7 on the CPX can be used for analog input to read voltages between 0-3.3V, which the CPX converts to a number between 0-1023. Here, I'm using a {% include tlink.html id='electronics-variable-resistors' text='potentiometer' %}#potentiometers, which dynamically changes its resistance (and splits the voltage levels) based on knob position. Learn more about analog input in {% include tlink.html id='cpx-analog-input' text='L8: Analog Input' %}!
 {: .fs-1 }
 
 The CPX has six pins that can read analog input (A1-A7). Analog input pins read voltage levels that range between 0V (GND) to 3.3V. The CPX converts these voltages to a number between 0-1023 using what's called an analog-to-digital (ADC). The official CPX docs list the ADC as 12 bits (0-4096) but we've found that, in practice, it defaults to 10-bits. So, an analog signal is converted from 0 - 1023.
@@ -137,17 +139,17 @@ Below is the pinout diagram for the CPX highlighting the analog input pins (A1-A
 
 ![A pinout diagram of the CPX highlighting the analog input pins](assets/images/CPX_AnalogInputPads_ByJonFroehlich.png)
 
-You'll learn more about analog input in [L8: Analog Input](analog-input.md)!
+You'll learn more about analog input in {% include tlink.html id='cpx-analog-input' text='L8: Analog Input' %}!
 
 ### Capacitive Touch Sensor Pads
 
 <video autoplay loop muted playsinline style="margin:0px">
   <source src="assets/videos/CPX_CapacitiveSensing_SodaCanProximityDetector_MakeCode_Optimized.mp4" type="video/mp4" />
 </video>
-**Video.** Pins A1-A7 on the CPX can be used for capacitive touch sensing. Here, I'm showing how we can use a soda can to build a simple hand proximity detector. [Learn more here!](capacitive-touch.md)
+**Video.** Pins A1-A7 on the CPX can be used for capacitive touch sensing. Here, I'm showing how we can use a soda can to build a simple hand proximity detector. {% include tlink.html id='cpx-capacitive-touch' text='Learn more here!' %}
 {: .fs-1 }
 
-Of the eight GPIO pins, **seven** can be used for capacitive touch sensing (Pins A1-A7). You'll learn more about capacitive sensing in [Lesson 5](capacitive-touch.md)!
+Of the eight GPIO pins, **seven** can be used for capacitive touch sensing (Pins A1-A7). You'll learn more about capacitive sensing in {% include tlink.html id='cpx-capacitive-touch' text='Lesson 5' %}!
 
 ![A pinout diagram of the CPX highlighting the capacitive touch pads](assets/images/CPX_CapacitiveTouchPadsAnnotated_ByJonFroehlich.png)
 
@@ -173,16 +175,16 @@ The CPX also has a powerful embedded microcontroller—the ATSAMD21 ARM Cortex M
 <video playsinline style="margin:0px" controls>
   <source src="assets/videos/CPX_BananaPiano_OptimizedTrimmed.mp4" type="video/mp4" />
 </video>
-**Video.** The CPX can be used as an input controller to your computer. You can make your own keyboard, mouse, joystick, and more! This example is from [Lesson 5.3: Making a Capacitive Keyboard](capacitive-touch.md#lesson-53-making-a-capacitive-touch-keyboard).
+**Video.** The CPX can be used as an input controller to your computer. You can make your own keyboard, mouse, joystick, and more! This example is from {% include tlink.html id='cpx-capacitive-touch' text='Lesson 5.3: Making a Capacitive Keyboard' %}#lesson-53-making-a-capacitive-touch-keyboard.
 {: .fs-1 }
 
 Like the Arduino Leonardo, the CPX can act like a keyboard, mouse, joystick, MIDI, or simply a serial port. So you can easily make custom input to your computer—neat!
 
 You can learn more about this in:
 
-- [Lesson 5.3: Making a Capacitive Keyboard](capacitive-touch.md#lesson-53-making-a-capacitive-touch-keyboard)
-- [Lesson 6: Using the CPX as a Keyboard](cpx-keyboard.md)
-- [Lesson 7: Using the CPX as a Mouse](cpx-mouse.md)
+- {% include tlink.html id='cpx-capacitive-touch' text='Lesson 5.3: Making a Capacitive Keyboard' %}#lesson-53-making-a-capacitive-touch-keyboard
+- {% include tlink.html id='cpx-cpx-keyboard' text='Lesson 6: Using the CPX as a Keyboard' %}
+- {% include tlink.html id='cpx-cpx-mouse' text='Lesson 7: Using the CPX as a Mouse' %}
 
 ## Programming
 
@@ -242,10 +244,10 @@ To learn more, Adafruit and MakeCode have published a series of thoughtful, easy
 
 ## Next Lesson
 
-In the [next lesson](makecode.md), we will make our first MakeCode+CPX program—called Blinky. As we build, we will learn about the MakeCode programming environment, the simulator, and how to load our program on to the CPX.
+In the {% include tlink.html id='cpx-makecode' text='next lesson' %}, we will make our first MakeCode+CPX program—called Blinky. As we build, we will learn about the MakeCode programming environment, the simulator, and how to load our program on to the CPX.
 
 <span class="fs-6">
-[Next: Programming the CPX with MakeCode](makecode.md){: .btn .btn-outline }
+{% include tlink.html id='cpx-makecode' text='Next: Programming the CPX with MakeCode' %}{: .btn .btn-outline }
 </span>
 
 ## Educational reflections

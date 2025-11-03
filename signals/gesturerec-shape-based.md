@@ -1,4 +1,6 @@
 ---
+permalink: /signals/gesturerec-shape-based/
+page_id: signals-gesturerec-shape-based
 layout: default
 title: L2&#58; Shape-Based Classification
 parent: Classification
@@ -14,13 +16,13 @@ comments: false
 
 This [Notebook](gesturerec/shapebased/index.html) introduces a shape-based (or template-based) approach to gesture recognition and provides the scaffolding for the A3 assignment.
 
-You can view the Notebook in [html here](gesturerec/shapebased/index.html) but we also **strongly** recommend working with our Notebooks locally by performing a git clone on `https://github.com/makeabilitylab/signals.git` and running the [Jupyter Notebook](https://github.com/makeabilitylab/signals/blob/master/Projects/GestureRecognizer/GestureRecognizer-ShapeBased.ipynb) on your system (see [installation notes](jupyter-notebook.md)).
+You can view the Notebook in [html here](gesturerec/shapebased/index.html) but we also **strongly** recommend working with our Notebooks locally by performing a git clone on `https://github.com/makeabilitylab/signals.git` and running the [Jupyter Notebook](https://github.com/makeabilitylab/signals/blob/master/Projects/GestureRecognizer/GestureRecognizer-ShapeBased.ipynb) on your system (see {% include tlink.html id='signals-jupyter-notebook' text='installation notes' %}).
 
 ## Next Lesson
 
-In the [next lesson](gesturerec-feature-based.md), you'll learn how to build a feature-based gesture recognizer for 3D accelerometer signals using a Support Vector Machine (SVM) and other classification models.
+In the {% include tlink.html id='signals-gesturerec-feature-based' text='next lesson' %}, you'll learn how to build a feature-based gesture recognizer for 3D accelerometer signals using a Support Vector Machine (SVM) and other classification models.
 
 <span class="fs-6">
-[Previous: Heuristic-Based Step Tracker](step-tracker.md){: .btn .btn-outline }
-[Next: Feature-Based Gesture Recognition](gesturerec-feature-based.md){: .btn .btn-outline }
+{% include tlink.html id='signals-step-tracker' text='Previous: Heuristic-Based Step Tracker' %}{: .btn .btn-outline }
+{% include tlink.html id='signals-gesturerec-feature-based' text='Next: Feature-Based Gesture Recognition' %}{: .btn .btn-outline }
 </span>

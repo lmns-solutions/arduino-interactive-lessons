@@ -1,4 +1,6 @@
 ---
+permalink: /sensors/accelerometers/
+page_id: sensors-accelerometers
 layout: default
 title: Accelerometers
 parent: Sensors

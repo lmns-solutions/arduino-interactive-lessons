@@ -1,4 +1,6 @@
 ---
+permalink: /esp32/capacitive-touch-sensing/
+page_id: esp32-capacitive-touch-sensing
 layout: default
 title: L6&#58; Capacitive touch sensing
 parent: ESP32
@@ -128,10 +130,10 @@ We also created two touch sensing examples using interrupts: [TouchInterrupt](ht
 
 ## Next Lesson
 
-In the [next lesson](iot.md), we will connect our ESP32 to the cloud over WiFi and use an IoT dashboard to view our data.
+In the {% include tlink.html id='esp32-iot' text='next lesson' %}, we will connect our ESP32 to the cloud over WiFi and use an IoT dashboard to view our data.
 
 <span class="fs-6">
-<!-- [Previous: Analog input using the ESP32](pot-fade.md){: .btn .btn-outline } -->
-[Previous: Playing tones](tone.md){: .btn .btn-outline }
-[Next: Making an IoT device](iot.md){: .btn .btn-outline }
+<!-- {% include tlink.html id='esp32-pot-fade' text='Previous: Analog input using the ESP32' %}{: .btn .btn-outline } -->
+{% include tlink.html id='esp32-tone' text='Previous: Playing tones' %}{: .btn .btn-outline }
+{% include tlink.html id='esp32-iot' text='Next: Making an IoT device' %}{: .btn .btn-outline }
 </span>

@@ -1,4 +1,6 @@
 ---
+permalink: /communication/ml5js-serial/
+page_id: communication-ml5js-serial
 layout: default
 title: L6&#58; ml5.js Serial
 nav_order: 6
@@ -18,14 +20,14 @@ usetocbot: true
 {:toc}
 ---
 
-In this lesson, we will extend our learning on [web serial](web-serial.md) and [p5.js](p5js-serial.md) to incorporate a machine learning (ML) framework called [ml5.js](https://ml5js.org/). While integrating machine learning into our designs may *seem* intimidating, just as p5.js makes it easier to play and experiment with interactive graphics in JavaScript so too does [ml5.js](https://ml5js.org/) make it easier to play and experiment with machine learning. It's really quite amazing!
+In this lesson, we will extend our learning on {% include tlink.html id='communication-web-serial' text='web serial' %} and {% include tlink.html id='communication-p5js-serial' text='p5.js' %} to incorporate a machine learning (ML) framework called [ml5.js](https://ml5js.org/). While integrating machine learning into our designs may *seem* intimidating, just as p5.js makes it easier to play and experiment with interactive graphics in JavaScript so too does [ml5.js](https://ml5js.org/) make it easier to play and experiment with machine learning. It's really quite amazing!
 
 For example, with only a few lines of JavaScript code and some slight modifications to our [FlappyBird.ino](https://github.com/makeabilitylab/arduino/blob/master/OLED/FlappyBird/FlappyBird.ino) Arduino sketch (updated to [FlappyBirdSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/FlappyBirdSerialIn/FlappyBirdSerialIn.ino)), we can play FlappyBird with our nose using a real-time web camera stream and [ml5's PoseNet library](https://learn.ml5js.org/#/reference/posenet).
 
 <video autoplay loop muted playsinline style="margin:0px">
   <source src="assets/videos/FlappyBirdNoseTracker_Short_1000w.mp4" type="video/mp4" />
 </video>
-**Video.** Playing Flappy Bird on the Arduino Leonardo by using my nose using p5.js, [ml5.js](https://ml5js.org/), and [web serial](web-serial.md). The p5.js app is called Nose Tracker ([p5.js online editor](https://editor.p5js.org/jonfroehlich/sketches/QgPPEU5o2), GitHub [live page](https://makeabilitylab.github.io/p5js/WebSerial/ml5js/NoseTracker), GitHub [code](https://github.com/makeabilitylab/p5js/tree/master/WebSerial/ml5js/NoseTracker)). The Arduino sketch is [FlappyBirdSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/FlappyBirdSerialIn/FlappyBirdSerialIn.ino).
+**Video.** Playing Flappy Bird on the Arduino Leonardo by using my nose using p5.js, [ml5.js](https://ml5js.org/), and {% include tlink.html id='communication-web-serial' text='web serial' %}. The p5.js app is called Nose Tracker ([p5.js online editor](https://editor.p5js.org/jonfroehlich/sketches/QgPPEU5o2), GitHub [live page](https://makeabilitylab.github.io/p5js/WebSerial/ml5js/NoseTracker), GitHub [code](https://github.com/makeabilitylab/p5js/tree/master/WebSerial/ml5js/NoseTracker)). The Arduino sketch is [FlappyBirdSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/FlappyBirdSerialIn/FlappyBirdSerialIn.ino).
 {: .fs-1 }
 
 In this lesson, we'll show how to do this and more. But first, let's start with some background on machine learning frameworks before diving into [ml5.js](https://ml5js.org/) and ml5+Arduino more specifically.
@@ -110,7 +112,7 @@ As this is a physical computing course, one may rightly ask: why not teach *embe
 - While new ML frameworks like [TensorFlow Lite](https://www.tensorflow.org/lite) are designed specifically for mobile and low-resource devices, the community is still small with commensurately few examples. And, again, running a model directly on Arduino increases training, testing, and iterating complexity. We should start simply and grow outward!
 - Finally, even "smart" IoT or wearable devices, which use machine learning often rely on cloud-based APIs for classification. The device itself might preprocess the data or extract features for the cloud but the full classifier runs off-device. For example, our [SoundWatch](https://makeabilitylab.cs.washington.edu/project/soundwatch/) system classifies and visualizes sounds in real-time on a smartwatch for people who are d/Deaf or hard of hearing. In our [ASSETS'20 paper](https://makeabilitylab.cs.washington.edu/media/publications/Jain_SoundwatchExploringSmartwatchBasedDeepLearningApproachesToSupportSoundAwarenessForDeafAndHardOfHearingUsers_ASSETS2020.pdf), we explore four different classification architectures: *watch-only*, *watch+phone*, *watch+phone+cloud*, and *watch+cloud*. There are many possibilities for how to architect embedded/IoT ML systems depending on power, computation, and latency requirements.
 
-In this lesson, we will **not** be classifying sensor streams off the Arduino but rather classifying web camera data with ml5.js and transmitting derived information to Arduino via [web serial](web-serial.md).
+In this lesson, we will **not** be classifying sensor streams off the Arduino but rather classifying web camera data with ml5.js and transmitting derived information to Arduino via {% include tlink.html id='communication-web-serial' text='web serial' %}.
 
 <!-- TODO: why not run classifiers on the microcontroller?
 See: https://experiments.withgoogle.com/tfmicrochallenge -->
@@ -219,7 +221,7 @@ OK, now we're ready to start building a ml5.js + Arduino application together!
 
 ## Building our first ml5.js + Arduino app: NoseTracker
 
-For our first exercise, we will build a simple but fun toy application: tracking a person's nose using [ml5.js' PoseNet](https://learn.ml5js.org/#/reference/posenet) to move around an object on the Arduino OLED display. As this is part of our [web serial](web-serial.md) series, we will transmit information from our JavaScript app to Arduino via serial communication.
+For our first exercise, we will build a simple but fun toy application: tracking a person's nose using [ml5.js' PoseNet](https://learn.ml5js.org/#/reference/posenet) to move around an object on the Arduino OLED display. As this is part of our {% include tlink.html id='communication-web-serial' text='web serial' %} series, we will transmit information from our JavaScript app to Arduino via serial communication.
 
 Here's a quick sneak preview. Play close attention to the OLED display, which is displaying a face icon based on my nose's position in the web camera frame!
 
@@ -307,7 +309,7 @@ function setup(){
 
 #### Subscribe to the new pose event
 
-Just as our [web serial](web-serial.md) library ([serial.js](https://github.com/makeabilitylab/p5js/blob/master/_libraries/serial.js)) uses an event-based architecture, so too does ml5.js. Recall that with serial.js, we can subscribe to four different events corresponding to connection opened, connection closed, data received, and error occurred. If you need a refresher, see [this section](web-serial.md#event-based-functions) of our [Web Serial lesson](web-serial.md).
+Just as our {% include tlink.html id='communication-web-serial' text='web serial' %} library ([serial.js](https://github.com/makeabilitylab/p5js/blob/master/_libraries/serial.js)) uses an event-based architecture, so too does ml5.js. Recall that with serial.js, we can subscribe to four different events corresponding to connection opened, connection closed, data received, and error occurred. If you need a refresher, see {% include tlink.html id='communication-web-serial' text='this section' %}#event-based-functions of our {% include tlink.html id='communication-web-serial' text='Web Serial lesson' %}.
 
 {% highlight JavaScript %}
 // Setup Web Serial using serial.js
@@ -506,18 +508,18 @@ There are lots of creative possibilities for how our Arduino might use PoseNet d
 
 #### The OLED circuit
 
-The circuit is similar to many we've built for our [web serial lessons](p5js-serial-io.md#a-simple-oled-circuit). Simply, wire up the OLED using I<sup>2</sup>C connections. 
+The circuit is similar to many we've built for our {% include tlink.html id='communication-p5js-serial-io' text='web serial lessons' %}#a-simple-oled-circuit. Simply, wire up the OLED using I<sup>2</sup>C connections. 
 
 | Arduino Leonardo Wiring | Huzzah32 (ESP32) Wiring |
 |-------------------------|-------------------------|
 | ![](assets/images/ArduinoLeonardo_OLEDDisplayWiring.png) | ![](../advancedio/assets/images/Huzzah32_OLEDWiring_FritzingSchematics.png) |
 
-**Figure.** Two example wirings for the OLED display, which we describe in detail in the [OLED lesson](../advancedio/oled.md). You can right-click on the images and select "Open Images in a New Tab" to enlarge.
+**Figure.** Two example wirings for the OLED display, which we describe in detail in the {% include tlink.html id='advancedio-oled' text='OLED lesson' %}. You can right-click on the images and select "Open Images in a New Tab" to enlarge.
 {: .fs-1 }
 
 #### The Arduino code
 
-The NoseTracker Arduino code is similar to [previous lessons](p5js-serial-io.md#parse-serial-data-and-update-oled-debug-output). We simply need to:
+The NoseTracker Arduino code is similar to {% include tlink.html id='communication-p5js-serial-io' text='previous lessons' %}#parse-serial-data-and-update-oled-debug-output. We simply need to:
 - **Parse incoming serial data** into x,y floats. 
 - **Convert the x,y normalized** positions into OLED pixel positions
 - **Draw a face** at the x,y pixel positions
@@ -608,7 +610,7 @@ Here's a longer video demonstration of the full p5.js + Arduino NoseTracker app:
 
 ## Introducing FlappyNose
 
-Using the same p5+ml5 code, NoseTracker ([live page](https://makeabilitylab.github.io/p5js/WebSerial/ml5js/NoseTracker/), [code](https://github.com/makeabilitylab/p5js/tree/master/WebSerial/ml5js/NoseTracker)), we can build lots of interesting physical computing experiences. As one example, we can modify the [FlappyBird.ino](https://github.com/makeabilitylab/arduino/blob/master/OLED/FlappyBird/FlappyBird.ino) code we introduced in our [OLED Lesson](../advancedio/oled.md) to use **serial input** rather than **digital input** (a button press) to control flapping. We'll call this new incarnation: FlappyNose! :)
+Using the same p5+ml5 code, NoseTracker ([live page](https://makeabilitylab.github.io/p5js/WebSerial/ml5js/NoseTracker/), [code](https://github.com/makeabilitylab/p5js/tree/master/WebSerial/ml5js/NoseTracker)), we can build lots of interesting physical computing experiences. As one example, we can modify the [FlappyBird.ino](https://github.com/makeabilitylab/arduino/blob/master/OLED/FlappyBird/FlappyBird.ino) code we introduced in our {% include tlink.html id='advancedio-oled' text='OLED Lesson' %} to use **serial input** rather than **digital input** (a button press) to control flapping. We'll call this new incarnation: FlappyNose! :)
 
 In this case, we'll draw a menu screen that asks the user to select the "flapping" control—either serial or button. If serial is selected, the Arduino sketch expects a text-encoded comma separated line of x,y positions—just like what the [NoseTracker](https://makeabilitylab.github.io/p5js/WebSerial/ml5js/NoseTracker/) page transmits—however, we only use the y position in the game to set the "bird" position. See the video below.
 

@@ -1,4 +1,6 @@
 ---
+permalink: /arduino/led-blink2/
+page_id: arduino-led-blink2
 layout: default
 title: L5&#58; Blinking Two LEDs
 parent: Output
@@ -18,7 +20,7 @@ usetocbot: true
 {:toc}
 ---
 
-In this tutorial, we will learn the difference between **current sourcing** and **current sinking** by revisiting our [LED Blink](led-blink.md) example. We will also incorporate the use of a [breadboard](../electronics/breadboards.md).
+In this tutorial, we will learn the difference between **current sourcing** and **current sinking** by revisiting our {% include tlink.html id='arduino-led-blink' text='LED Blink' %} example. We will also incorporate the use of a {% include tlink.html id='electronics-breadboards' text='breadboard' %}.
 
 We are going to build two simple LED circuits:
 
@@ -40,7 +42,7 @@ Our materials are *almost* the same as before but this time, we are going to mak
 
 ## Before you begin: breadboarding circuits
 
-We will increasingly be using our breadboards in these lessons so now is a good opportunity to revisit how to use them. If you're unfamiliar please read our [breadboarding guide](../electronics/breadboards.md) and watch the following [video](https://youtu.be/6WReFkfrUIk):
+We will increasingly be using our breadboards in these lessons so now is a good opportunity to revisit how to use them. If you're unfamiliar please read our {% include tlink.html id='electronics-breadboards' text='breadboarding guide' %} and watch the following [video](https://youtu.be/6WReFkfrUIk):
 
 <iframe width="736" height="414" src="https://www.youtube.com/embed/6WReFkfrUIk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -52,7 +54,7 @@ We will increasingly be using our breadboards in these lessons so now is a good 
 
 ### Step 2: Wire up the first LED circuit
 
-Now let's wire up the exact same circuit as before (*e.g.,* [LED Blink](led-blink.md) and [LED Fade](led-fade.md)) but this time we'll use a breadboard. Make sure the LED anode (the long leg) is facing Pin 3.
+Now let's wire up the exact same circuit as before (*e.g.,* {% include tlink.html id='arduino-led-blink' text='LED Blink' %} and {% include tlink.html id='arduino-led-fade' text='LED Fade' %}) but this time we'll use a breadboard. Make sure the LED anode (the long leg) is facing Pin 3.
 
 ![Diagram showing the LED circuit with with LED anode connected to Pin 3 and the resistor connected to the LED cathode and then to GND](assets/images/ArduinoUnoLEDBlink2_Circuit_Step2WithSchematic.png)
 
@@ -134,9 +136,9 @@ This [source code](https://github.com/makeabilitylab/arduino/blob/master/Basics/
 
 ## Next Lesson
 
-In the [next lesson](rgb-led.md), we will use a new component—an RGB LED—to output a variety of LED colors beyond just red and learn about the difference and how to use Common Anode *vs.* Common Cathode RGB LED designs.
+In the {% include tlink.html id='arduino-rgb-led' text='next lesson' %}, we will use a new component—an RGB LED—to output a variety of LED colors beyond just red and learn about the difference and how to use Common Anode *vs.* Common Cathode RGB LED designs.
 
 <span class="fs-6">
-[Previous: LED Fade](led-fade.md){: .btn .btn-outline }
-[Next: RGB LEDs](rgb-led.md){: .btn .btn-outline }
+{% include tlink.html id='arduino-led-fade' text='Previous: LED Fade' %}{: .btn .btn-outline }
+{% include tlink.html id='arduino-rgb-led' text='Next: RGB LEDs' %}{: .btn .btn-outline }
 </span>

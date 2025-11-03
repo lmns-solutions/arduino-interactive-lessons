@@ -1,4 +1,6 @@
 ---
+permalink: /cpx/makecode/
+page_id: cpx-makecode
 layout: default
 title: L2&#58; Making with MakeCode
 parent: Circuit Playground Express
@@ -273,11 +275,11 @@ For this lesson's design challenge, try seeing how many different ways you can b
 
 ## Next Lesson
 
-In the [next lesson](button-piano.md), we'll make our first interactive program: a button piano!
+In the {% include tlink.html id='cpx-button-piano' text='next lesson' %}, we'll make our first interactive program: a button piano!
 
 <span class="fs-6">
-[Previous: Intro the CPX](cpx.md){: .btn .btn-outline }
-[Next: Button Piano](button-piano.md){: .btn .btn-outline }
+{% include tlink.html id='cpx-cpx' text='Previous: Intro the CPX' %}{: .btn .btn-outline }
+{% include tlink.html id='cpx-button-piano' text='Next: Button Piano' %}{: .btn .btn-outline }
 </span>
 
 <!-- TODO:

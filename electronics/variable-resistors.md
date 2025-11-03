@@ -1,4 +1,6 @@
 ---
+permalink: /electronics/variable-resistors/
+page_id: electronics-variable-resistors
 layout: default
 title: L8&#58; Variable Resistors
 nav_order: 8
@@ -20,7 +22,7 @@ usetocbot: true
 {:toc}
 ---
 
-In previous lessons, we worked with [fixed-value resistors](resistors.md). In this lesson, we'll learn about **variable resistors**—resistors that *change* their resistance based in response to some physical input (like potentiometers) or environmental input like thermistors (temperature), force-sensitive resistors (force), or photo-sensitive resistors (light). We've listed some examples below.
+In previous lessons, we worked with {% include tlink.html id='electronics-resistors' text='fixed-value resistors' %}. In this lesson, we'll learn about **variable resistors**—resistors that *change* their resistance based in response to some physical input (like potentiometers) or environmental input like thermistors (temperature), force-sensitive resistors (force), or photo-sensitive resistors (light). We've listed some examples below.
 
 ![Grid of images showing different types of variable resistors, including: potentiometers, touch membranes, photocells, thermistors, force-sensitive resistors, and flex sensors](assets/images/VariableResistors_ExampleGallery.png)
 **Figure.** Many common **sensors** are actually variable resistors—they dynamically change their resistance in response to some human or environmental input. For example, thermistors change their resistance based on temperature, photocells based on light, force-sensitive resistors (FSRs) based on force. In fact, you have thermistors, photocells, and FSRs in your hardware kits! Prices and pictures are from Sparkfun.com; parts can often be cheaper in bulk from suppliers like [Digi-Key](https://www.digikey.com/) or [Mouser Electronics](https://www.mouser.com/).
@@ -158,7 +160,7 @@ By moving the analog joystick, you independently control the two potentiometers 
 
 ### Potentiometers as voltage dividers
 
-Potentiometers are actually conveniently packaged voltage dividers, which we first described in [Lesson 3](series-parallel.md): $$R_{1}$$ and $$R_{2}$$ divide the voltage as the potentiometer wiper moves.
+Potentiometers are actually conveniently packaged voltage dividers, which we first described in {% include tlink.html id='electronics-series-parallel' text='Lesson 3' %}: $$R_{1}$$ and $$R_{2}$$ divide the voltage as the potentiometer wiper moves.
 
 ![](assets/images/PotentiometersAsVoltageDividers2_ByJonFroehlich.png)
 **Figure.** A potentiometer is a compact voltage divider. Image made in PowerPoint.

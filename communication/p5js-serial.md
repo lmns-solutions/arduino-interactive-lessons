@@ -1,4 +1,6 @@
 ---
+permalink: /communication/p5js-serial/
+page_id: communication-p5js-serial
 layout: default
 title: L3&#58; p5.js Serial In
 nav_order: 3
@@ -112,7 +114,7 @@ Here are some examples that we've written directly in the p5.js editor. You can 
 
 ## Learning p5.js
 
-After conquering the [OLED display](../advancedio/oled.md) and graphics rendering, p5.js will feel both familiar and infinitely more expressive and accessible. [Processing](https://processing.org/) (for Java) and [p5.js](https://p5js.org/) (for JavaScript) are some of our favorite programming environments, and we can't wait to share p5.js with you!
+After conquering the {% include tlink.html id='advancedio-oled' text='OLED display' %} and graphics rendering, p5.js will feel both familiar and infinitely more expressive and accessible. [Processing](https://processing.org/) (for Java) and [p5.js](https://p5js.org/) (for JavaScript) are some of our favorite programming environments, and we can't wait to share p5.js with you!
 
 There are some **amazing** p5.js learning resources on the web. So, rather than replicate them, we'll simply share them with you!
 
@@ -134,7 +136,7 @@ You can develop p5.js projects either in the [online editor](https://editor.p5js
 
 #### Setting up p5.js in VSCode
 
-We used [Visual Studio Code (VS Code)](https://code.visualstudio.com/) in our [previous lesson](web-serial.md). So, by now hopefully you've downloaded [VSCode](https://code.visualstudio.com/) and installed the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension. If not, follow [these instructions](web-serial.md#web-dev-tools) and do so now!
+We used [Visual Studio Code (VS Code)](https://code.visualstudio.com/) in our {% include tlink.html id='communication-web-serial' text='previous lesson' %}. So, by now hopefully you've downloaded [VSCode](https://code.visualstudio.com/) and installed the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension. If not, follow {% include tlink.html id='communication-web-serial' text='these instructions' %}#web-dev-tools and do so now!
 
 ##### Using a p5.js VSCode extension
 
@@ -173,7 +175,7 @@ To make it easier to build p5.js web apps with web serial, we've created a basic
 ---
 **IMPORTANT:**
 
-You need to make sure that the baud rate in your JavaScript program and in your Arduino program match. For JavaScript, we can set this with the `let serialOptions = { baudRate: 115200  };` option. With Arduino, we do so with `Serial.begin(baudRate)` as described in our [Intro to Serial lesson](serial-intro.md).
+You need to make sure that the baud rate in your JavaScript program and in your Arduino program match. For JavaScript, we can set this with the `let serialOptions = { baudRate: 115200  };` option. With Arduino, we do so with `Serial.begin(baudRate)` as described in our {% include tlink.html id='communication-serial-intro' text='Intro to Serial lesson' %}.
 
 ---
 
@@ -228,7 +230,7 @@ void loop() {
 **Code.** The full code is [AnalogOut.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/AnalogOut/AnalogOut.ino) in our GitHub.
 {: .fs-1 }
 
-This should all make sense. There is nothing new here. We've been doing this since the very early [Intro to Arduino](../arduino/index.md) lessons.
+This should all make sense. There is nothing new here. We've been doing this since the very early {% include tlink.html id='arduino-index' text='Intro to Arduino' %} lessons.
 
 #### The p5.js code: CircleSizeIn
 
@@ -485,22 +487,22 @@ Here's a video demonstration:
 
 #### Other sensors as input
 
-And, of course, we can hook up whatever sensor we want as input. Below, we're showing demonstrations of a [force-sensitive resistor](../arduino/force-sensitive-resistors.md) and a infrared distance sensor.
+And, of course, we can hook up whatever sensor we want as input. Below, we're showing demonstrations of a {% include tlink.html id='arduino-force-sensitive-resistors' text='force-sensitive resistor' %} and a infrared distance sensor.
 
 <!-- TODO: make circuit diagrams of each -->
 ##### CircleSizeIn with FSR
 
-A demonstration of CircleSizeIn ([live page](http://makeabilitylab.github.io/p5js/WebSerial/p5js/CircleSizeInDemo), [code](https://github.com/makeabilitylab/p5js/tree/master/WebSerial/p5js/CircleSizeInDemo)) with a [force-sensitive resistor](../arduino/force-sensitive-resistors.md). The Arduino is still running [AnalogOut.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/AnalogOut/AnalogOut.ino).
+A demonstration of CircleSizeIn ([live page](http://makeabilitylab.github.io/p5js/WebSerial/p5js/CircleSizeInDemo), [code](https://github.com/makeabilitylab/p5js/tree/master/WebSerial/p5js/CircleSizeInDemo)) with a {% include tlink.html id='arduino-force-sensitive-resistors' text='force-sensitive resistor' %}. The Arduino is still running [AnalogOut.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/AnalogOut/AnalogOut.ino).
 
 <video autoplay loop muted playsinline style="margin:0px">
   <source src="assets/videos/AnalogOut-CircleSizeIn-FSR-Trimmed2-Optimized.mp4" type="video/mp4" />
 </video>
-**Video.** A demonstration of the p5.js app CircleSizeIn ([live page](http://makeabilitylab.github.io/p5js/WebSerial/p5js/CircleSizeInDemo), [code](https://github.com/makeabilitylab/p5js/tree/master/WebSerial/p5js/CircleSizeInDemo)), with a [force-sensitive resistor (FSR)](../arduino/potentiometers.md) on Pin A0 and Arduino running [AnalogOut.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/AnalogOut/AnalogOut.ino). We use a FSR on Pin A0 as analog input. Note: in this video, we use a slightly different Arduino sketch called [AnalogOutOLED.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/AnalogOutOLED/AnalogOutOLED.ino) to demonstrate both Arduino output and p5.js interactivity.
+**Video.** A demonstration of the p5.js app CircleSizeIn ([live page](http://makeabilitylab.github.io/p5js/WebSerial/p5js/CircleSizeInDemo), [code](https://github.com/makeabilitylab/p5js/tree/master/WebSerial/p5js/CircleSizeInDemo)), with a {% include tlink.html id='arduino-potentiometers' text='force-sensitive resistor (FSR)' %} on Pin A0 and Arduino running [AnalogOut.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/AnalogOut/AnalogOut.ino). We use a FSR on Pin A0 as analog input. Note: in this video, we use a slightly different Arduino sketch called [AnalogOutOLED.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/AnalogOutOLED/AnalogOutOLED.ino) to demonstrate both Arduino output and p5.js interactivity.
 {: .fs-1 }
 
 ##### CircleSizeIn with IR distance sensor
 
-And here's a a demonstration of CircleSizeIn ([live page](http://makeabilitylab.github.io/p5js/WebSerial/p5js/CircleSizeInDemo), [code](https://github.com/makeabilitylab/p5js/tree/master/WebSerial/p5js/CircleSizeInDemo)) with the [Sharp GP2Y0A21YK](https://www.sparkfun.com/products/242) infrared distance sensor, which has analog output that varies from 3.1V at 10cm to 0.4V at 80cm. Because the IR sensor is noisy, we did not use [AnalogOut.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/AnalogOut/AnalogOut.ino). Instead, we wrote a custom program called [SharpIRDistanceOut.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SharpIRDistanceOut/SharpIRDistanceOut.ino) that uses a [moving average filter](../advancedio/smoothing-input.md) to smooth the input (at a cost of small input lag). 
+And here's a a demonstration of CircleSizeIn ([live page](http://makeabilitylab.github.io/p5js/WebSerial/p5js/CircleSizeInDemo), [code](https://github.com/makeabilitylab/p5js/tree/master/WebSerial/p5js/CircleSizeInDemo)) with the [Sharp GP2Y0A21YK](https://www.sparkfun.com/products/242) infrared distance sensor, which has analog output that varies from 3.1V at 10cm to 0.4V at 80cm. Because the IR sensor is noisy, we did not use [AnalogOut.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/AnalogOut/AnalogOut.ino). Instead, we wrote a custom program called [SharpIRDistanceOut.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SharpIRDistanceOut/SharpIRDistanceOut.ino) that uses a {% include tlink.html id='advancedio-smoothing-input' text='moving average filter' %} to smooth the input (at a cost of small input lag). 
 
 <video autoplay loop muted playsinline style="margin:0px">
   <source src="assets/videos/SharpIRDistance-CircleSizeIn-Trimmed-Optimized.mp4" type="video/mp4" />
@@ -512,7 +514,7 @@ And here's a a demonstration of CircleSizeIn ([live page](http://makeabilitylab.
 
 Once we get the data into p5.js, we can really do *anything* we want: use the input to change colors, play a game, make a visualization, *etc.*
 
-Recall in our [OLED lesson](../advancedio/oled.md) that we built a [real-time analog graph](../advancedio/oled.md#demo-4-real-time-scrolling-analog-graph). During that lesson, I alluded to how this graph replicated a [famous Processing example ](https://www.arduino.cc/en/Tutorial/BuiltInExamples/Graph) but self-contained on the Arduino. Now we can build that Processing example in p5.js!
+Recall in our {% include tlink.html id='advancedio-oled' text='OLED lesson' %} that we built a {% include tlink.html id='advancedio-oled' text='real-time analog graph' %}#demo-4-real-time-scrolling-analog-graph. During that lesson, I alluded to how this graph replicated a [famous Processing example ](https://www.arduino.cc/en/Tutorial/BuiltInExamples/Graph) but self-contained on the Arduino. Now we can build that Processing example in p5.js!
 
 On the Arduino side, we can use the exact same Arduino code ([AnalogOut.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/AnalogOut/AnalogOut.ino)) as before—which should make sense, the Arduino program simply read analog data and transmitted it via serial; however, we obviously need to write a new p5.js app. Let's call it `GraphIn`.
 
@@ -613,11 +615,11 @@ For your prototyping journals, create a simple p5.js app that reads in one or mo
 
 ## Next Lesson
 
-In the [next lesson](p5js-serial-io.md), we'll show more complicated examples where Arduino and p5.js bidirectionally communicate (Computer ↔ Arduino). It should be fun!
+In the {% include tlink.html id='communication-p5js-serial-io' text='next lesson' %}, we'll show more complicated examples where Arduino and p5.js bidirectionally communicate (Computer ↔ Arduino). It should be fun!
 
 <span class="fs-6">
-[Previous: Intro to Web Serial](web-serial.md){: .btn .btn-outline }
-[Next: Serial I/O with p5.js](p5js-serial-io.md){: .btn .btn-outline }
+{% include tlink.html id='communication-web-serial' text='Previous: Intro to Web Serial' %}{: .btn .btn-outline }
+{% include tlink.html id='communication-p5js-serial-io' text='Next: Serial I/O with p5.js' %}{: .btn .btn-outline }
 </span>
 
 <!-- TODO: consider showing one of our earlier p5.js videos we made for HCID with a controller? -->

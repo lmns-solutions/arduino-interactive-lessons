@@ -1,4 +1,6 @@
 ---
+permalink: /arduino/led-blink/
+page_id: arduino-led-blink
 layout: default
 title: L2&#58; Blinking an LED
 nav_order: 2
@@ -18,7 +20,7 @@ usetocbot: true
 1. TOC
 {:toc}
 ---
-In our [first lesson](led-on.md), we directly hooked up an LED circuit to the Arduino's 5V and 3.3V pins. While this enabled us to learn about Arduino's supply voltage and GND pins and gave us practical experience wiring electrical components into the Arduino ports, it was admittedly, a toy exercise.
+In our {% include tlink.html id='arduino-led-on' text='first lesson' %}, we directly hooked up an LED circuit to the Arduino's 5V and 3.3V pins. While this enabled us to learn about Arduino's supply voltage and GND pins and gave us practical experience wiring electrical components into the Arduino ports, it was admittedly, a toy exercise.
 
 In this lesson, we are going to do something more exciting: use the Arduino to turn the LED on and off by *programmatically* controlling the output voltage on one of Arduino's GPIO pins. This begins our entrée into the two key aspects of working with microcontrollers: (1) building circuits and (2) writing code to interact with those circuits.
 
@@ -29,7 +31,7 @@ In this lesson, we are going to do something more exciting: use the Arduino to t
 
 ## Materials
 
-You will use the same materials as [before](led-on.md), but you will also need the [Arduino IDE](https://www.arduino.cc/en/main/software) and a USB cable to upload your program from your computer to your Arduino.
+You will use the same materials as {% include tlink.html id='arduino-led-on' text='before' %}, but you will also need the [Arduino IDE](https://www.arduino.cc/en/main/software) and a USB cable to upload your program from your computer to your Arduino.
 
 | Arduino | LED | Resistor |
 |:-----:|:-----:|:-----:|
@@ -38,7 +40,7 @@ You will use the same materials as [before](led-on.md), but you will also need t
 
 ## Making the circuit
 
-Using the same resistor-wrapped red LED from [before](led-on.md#step-1-wrap-resistor-around-led-leg), plug the anode + resistor side into Pin 3 and the cathode into GND. See the wiring diagram below:
+Using the same resistor-wrapped red LED from {% include tlink.html id='arduino-led-on' text='before' %}#step-1-wrap-resistor-around-led-leg, plug the anode + resistor side into Pin 3 and the cathode into GND. See the wiring diagram below:
 
 ![Wiring diagram showing LED cathode wired to GND and LED anode wired to a 220 Ohm resistor and then to Pin 3](assets/images/Arduino_LEDBlink_Pin3Circuit.png)
 
@@ -52,7 +54,7 @@ While it's not necessary to use a breadboard for this simple circuit, here are t
 |:----:|:-----:|
 |![Breadboard wiring diagram showing LED cathode wired to GND and LED anode wired to a 220 Ohm resistor and then to Pin 3](assets/images/Arduino_LEDBlink_Pin3Circuit_Breadboard1.png) | ![Second breadboard wiring diagram showing LED cathode wired to GND and LED anode wired to a 220 Ohm resistor and then to Pin 3](assets/images/Arduino_LEDBlink_Pin3Circuit_Breadboard2.png) |
 
-You can always return to our [breadboard](../electronics/breadboards.md) lesson to refresh your memory!
+You can always return to our {% include tlink.html id='electronics-breadboards' text='breadboard' %} lesson to refresh your memory!
 
 Next, we'll write `C/C++` code for the Arduino's microcontroller to turn on the LED from Pin 3, which will programmatically set Pin 3 to 5V.
 
@@ -61,7 +63,7 @@ The Arduino software is open source and consists of a development environment (c
 
 ## Get the Arduino IDE
 
-But first, we need to download and install the [Arduino IDE](https://www.arduino.cc/en/software/) (if you haven't already). Please follow our step-by-step installation and customization instructions [here](arduino-ide.md).
+But first, we need to download and install the [Arduino IDE](https://www.arduino.cc/en/software/) (if you haven't already). Please follow our step-by-step installation and customization instructions {% include tlink.html id='arduino-arduino-ide' text='here' %}.
 
 ## Introducing digital output
 
@@ -69,7 +71,7 @@ Now, we are going to write code to turn on our LED by setting Pin 3 to HIGH (or 
 
 The Arduino Uno has **20 general-purpose input/output** ([GPIO](https://en.wikipedia.org/wiki/General-purpose_input/output)) pins that can be used for digital input/output (I/O)—that is, to read or write digital information (`HIGH` or `LOW`) using [`digitalRead()`](https://www.arduino.cc/reference/en/language/functions/digital-io/digitalread/) and [`digitalWrite()`](https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/), respectively.
 
-We could have selected *any* of these pins for this lesson but we chose Pin 3 (in part, because we want to use this same pin in [Lesson 4](led-fade.md) and using it now simplifies things!).
+We could have selected *any* of these pins for this lesson but we chose Pin 3 (in part, because we want to use this same pin in {% include tlink.html id='arduino-led-fade' text='Lesson 4' %} and using it now simplifies things!).
 
 <!-- ![Close-up image of the 14 digital I/O pins on the Arduino Uno](assets/images/ArduinoUno_CloseUp_DigitalIOPins.png) -->
 
@@ -78,7 +80,7 @@ We could have selected *any* of these pins for this lesson but we chose Pin 3 (i
 You can control any of these 20 digital I/O pins with three functions:
 
 1. [`pinMode(int pin, int mode)`](https://www.arduino.cc/reference/en/language/functions/digital-io/pinmode/) configures a specified pin as either an `INPUT` or `OUTPUT`. In this case, we want to specify `OUTPUT` because we want to **output** a signal to turn on the LED.
-2. [`digitalRead(int pin)`](https://www.arduino.cc/reference/en/language/functions/digital-io/digitalread/) reads digital input from the specified pin, either `HIGH` or `LOW`. We will cover `digitalRead` in our [Intro to Input](intro-input.md) lesson series.
+2. [`digitalRead(int pin)`](https://www.arduino.cc/reference/en/language/functions/digital-io/digitalread/) reads digital input from the specified pin, either `HIGH` or `LOW`. We will cover `digitalRead` in our {% include tlink.html id='arduino-intro-input' text='Intro to Input' %} lesson series.
 3. [`digitalWrite(int pin, int value)`](https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/) writes digital output to the specified pin, either `HIGH` or `LOW`. We'll be using `digitalWrite` in this lesson.
 
 ### How did we count 20 digital I/O pins?
@@ -299,7 +301,7 @@ We encourage you to play with this [Tinkercad project ](https://www.tinkercad.co
 
 ### Setting and visualizing different blinking frequencies
 
-We duplicated the above Tinkercad setup (circuit + oscilloscope) in our laboratory and recorded a video. Notably, we used slightly different [code](https://github.com/makeabilitylab/arduino/blob/master/Basics/digitalWrite/SettableBlinkWithoutDelay/SettableBlinkWithoutDelay.ino) that allows us to set the blink frequency by rotating a [potentiometer](../electronics/variable-resistors.md).
+We duplicated the above Tinkercad setup (circuit + oscilloscope) in our laboratory and recorded a video. Notably, we used slightly different [code](https://github.com/makeabilitylab/arduino/blob/master/Basics/digitalWrite/SettableBlinkWithoutDelay/SettableBlinkWithoutDelay.ino) that allows us to set the blink frequency by rotating a {% include tlink.html id='electronics-variable-resistors' text='potentiometer' %}.
 
 <iframe width="736" height="414" src="https://www.youtube.com/embed/_ByA8Q-hL8I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -327,9 +329,9 @@ Before moving on, it's worth emphasizing that, in general, long `delay()` calls 
 ---
 **NOTE:**
 
-It's OK to stop here and move on to the [next lesson](serial-print.md). It's sufficient to be **aware** that long `delay()` calls can be dangerous and should probably be avoided. However, if you're curious, you can continue this sub-section to see a Blink example that works without delays. We will return to this concept for our final [Intro to Output](intro-output.md) lesson on [multi-rate blinking LEDs](led-blink3.md).
+It's OK to stop here and move on to the {% include tlink.html id='arduino-serial-print' text='next lesson' %}. It's sufficient to be **aware** that long `delay()` calls can be dangerous and should probably be avoided. However, if you're curious, you can continue this sub-section to see a Blink example that works without delays. We will return to this concept for our final {% include tlink.html id='arduino-intro-output' text='Intro to Output' %} lesson on {% include tlink.html id='arduino-led-blink3' text='multi-rate blinking LEDs' %}.
 
-If you want to know how `delay()` actually works, read ["What does delay() actually do"](inside-arduino.md#what-does-delay-actually-do) in our [Inside Arduino guide](#inside-arduino).
+If you want to know how `delay()` actually works, read {% include tlink.html id='arduino-inside-arduino' text='"What does delay() actually do"' %}#what-does-delay-actually-do in our [Inside Arduino guide](#inside-arduino).
 
 ---
 
@@ -375,12 +377,12 @@ This [source code](https://github.com/makeabilitylab/arduino/blob/master/Basics/
 
 ## Next Lesson
 
-In the [next lesson](serial-print.md), we are going to learn about a few basic debugging strategies before moving on to [analog output](led-fade.md), which lets us control the output voltage not just at two levels, `LOW` (0V) or `HIGH` (5V), but at finer levels between 0 and 5V using [`analogWrite(int pin, int value)`](https://www.arduino.cc/reference/en/language/functions/analog-io/analogwrite/). 
+In the {% include tlink.html id='arduino-serial-print' text='next lesson' %}, we are going to learn about a few basic debugging strategies before moving on to {% include tlink.html id='arduino-led-fade' text='analog output' %}, which lets us control the output voltage not just at two levels, `LOW` (0V) or `HIGH` (5V), but at finer levels between 0 and 5V using [`analogWrite(int pin, int value)`](https://www.arduino.cc/reference/en/language/functions/analog-io/analogwrite/). 
 
-<!-- In the [next lesson](led-fade.md), we will learn how to control the output voltage not just at two levels, `LOW` (0V) or `HIGH` (5V), but at finer levels between 0 and 5V using [`analogWrite(int pin, int value)`](https://www.arduino.cc/reference/en/language/functions/analog-io/analogwrite/). -->
+<!-- In the {% include tlink.html id='arduino-led-fade' text='next lesson' %}, we will learn how to control the output voltage not just at two levels, `LOW` (0V) or `HIGH` (5V), but at finer levels between 0 and 5V using [`analogWrite(int pin, int value)`](https://www.arduino.cc/reference/en/language/functions/analog-io/analogwrite/). -->
 
 <span class="fs-6">
-[Previous: Turning on an LED with Arduino](led-on.md){: .btn .btn-outline }
-[Next: Debugging Arduino code with Serial.print](serial-print.md){: .btn .btn-outline }
-<!-- [Next: Fading an LED with Arduino](led-fade.md){: .btn .btn-outline } -->
+{% include tlink.html id='arduino-led-on' text='Previous: Turning on an LED with Arduino' %}{: .btn .btn-outline }
+{% include tlink.html id='arduino-serial-print' text='Next: Debugging Arduino code with Serial.print' %}{: .btn .btn-outline }
+<!-- {% include tlink.html id='arduino-led-fade' text='Next: Fading an LED with Arduino' %}{: .btn .btn-outline } -->
 </span>

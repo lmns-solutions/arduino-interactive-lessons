@@ -1,4 +1,6 @@
 ---
+permalink: /resources/inspirations/
+page_id: resources-inspirations
 layout: default
 title: Inspirations
 nav_order: 1

@@ -1,4 +1,6 @@
 ---
+permalink: /esp32/tone/
+page_id: esp32-tone
 layout: default
 title: L5&#58; Playing tones
 parent: ESP32
@@ -22,13 +24,13 @@ nav_order: 5
 **Video.** A video demonstrating the [Tone32.hpp](https://github.com/makeabilitylab/arduino/blob/master/MakeabilityLab_Arduino_Library/src/Tone32.hpp) class, which supports play durations on the ESP32. The code running on the ESP32 is available [here](https://github.com/makeabilitylab/arduino/blob/master/ESP32/Tone/AnalogInputTone32WithOLED/AnalogInputTone32WithOLED.ino). Make sure your sound is on.
 {: .fs-1 }
 
-On Arduino, the [`tone()`](https://www.arduino.cc/reference/en/language/functions/advanced-io/tone/) function generates a square wave of a specified frequency on a pin and is used to "play" tones on piezo buzzers or speakers; however, it is [famously unsupported](https://www.thomascountz.com/2021/02/21/arduino-tone-for-esp32) on the ESP32. In this lesson, we will provide some context about this problem and then show you how to play tones on the ESP32 using the [LEDC PWM library](https://github.com/espressif/arduino-esp32/blob/master/cores/esp32/esp32-hal-ledc.c), which we also used in our [ESP32 LED Fade lesson](led-fade.md).
+On Arduino, the [`tone()`](https://www.arduino.cc/reference/en/language/functions/advanced-io/tone/) function generates a square wave of a specified frequency on a pin and is used to "play" tones on piezo buzzers or speakers; however, it is [famously unsupported](https://www.thomascountz.com/2021/02/21/arduino-tone-for-esp32) on the ESP32. In this lesson, we will provide some context about this problem and then show you how to play tones on the ESP32 using the [LEDC PWM library](https://github.com/espressif/arduino-esp32/blob/master/cores/esp32/esp32-hal-ledc.c), which we also used in our {% include tlink.html id='esp32-led-fade' text='ESP32 LED Fade lesson' %}.
 
 ## The ESP32 tone problem
 
-The ESP32's Arduino library called [arduino-esp32](https://github.com/espressif/arduino-esp32/) attempts to mimic and/or directly replicate the functionality from [core Arduino](https://github.com/arduino/ArduinoCore-avr); however, as we saw in our [ESP32's LED Fade lesson](../esp32/led-fade.md), this is not always possible and key functions, like `analogWrite`, are different.
+The ESP32's Arduino library called [arduino-esp32](https://github.com/espressif/arduino-esp32/) attempts to mimic and/or directly replicate the functionality from [core Arduino](https://github.com/arduino/ArduinoCore-avr); however, as we saw in our {% include tlink.html id='esp32-led-fade' text='ESP32&#39;s LED Fade lesson' %}, this is not always possible and key functions, like `analogWrite`, are different.
 
-Just as `analogWrite` is not supported on [arduino-esp32](https://github.com/espressif/arduino-esp32/) so too is [`tone()`](https://www.arduino.cc/reference/en/language/functions/advanced-io/tone/) unavailable. Recall that on Arduino, `tone()`generates a square wave of a specified frequency (with fixed 50% duty cycle) on a pin and is used to "play" tones on piezo buzzers or speakers. In our [Intro to Arduino](../arduino/index.md) series, for example, we used [`tone()`](https://www.arduino.cc/reference/en/language/functions/advanced-io/tone/) to create a [piano](../arduino/piano.md).
+Just as `analogWrite` is not supported on [arduino-esp32](https://github.com/espressif/arduino-esp32/) so too is [`tone()`](https://www.arduino.cc/reference/en/language/functions/advanced-io/tone/) unavailable. Recall that on Arduino, `tone()`generates a square wave of a specified frequency (with fixed 50% duty cycle) on a pin and is used to "play" tones on piezo buzzers or speakers. In our {% include tlink.html id='arduino-index' text='Intro to Arduino' %} series, for example, we used [`tone()`](https://www.arduino.cc/reference/en/language/functions/advanced-io/tone/) to create a {% include tlink.html id='arduino-piano' text='piano' %}.
 
 However, if you attempt to compile code with `tone()` using the ESP32, you will receive a compiler error like this: `'tone' was not declared in this scope`. Thus, even basic tone examples built into the Arduino IDE like `Examples -> Digital -> toneMelody` fail, as shown below.
 
@@ -96,7 +98,7 @@ Most relevantly for us, Expressif decided **not** to implement `tone()` into [ar
 
 ## Playing tones on ESP32
 
-Fear not, things are not as dire as they seem. As Thomas Countz points out on [GitHub Issue #1720](https://github.com/espressif/arduino-esp32/issues/1720#issuecomment-782876308), the [LEDC PWM library](https://github.com/espressif/arduino-esp32/blob/master/cores/esp32/esp32-hal-ledc.c)—which we used in our [ESP32 LED Fade lesson](led-fade.md)—actually has tone related methods, including:
+Fear not, things are not as dire as they seem. As Thomas Countz points out on [GitHub Issue #1720](https://github.com/espressif/arduino-esp32/issues/1720#issuecomment-782876308), the [LEDC PWM library](https://github.com/espressif/arduino-esp32/blob/master/cores/esp32/esp32-hal-ledc.c)—which we used in our {% include tlink.html id='esp32-led-fade' text='ESP32 LED Fade lesson' %}—actually has tone related methods, including:
 
 {% highlight C %}
 double ledcWriteTone(uint8_t chan, double freq)
@@ -494,9 +496,9 @@ Finally, we've included a bonus [simple ball bounce demo](https://github.com/mak
 
 ## Next Lesson
 
-In the [next lesson](capacitive-touch-sensing.md), we will learn about and use the ESP32's built-in capacitive touch sensing module.
+In the {% include tlink.html id='esp32-capacitive-touch-sensing' text='next lesson' %}, we will learn about and use the ESP32's built-in capacitive touch sensing module.
 
 <span class="fs-6">
-[Previous: Analog input using the ESP32](pot-fade.md){: .btn .btn-outline }
-[Next: Capacitive touch sensing with the ESP32](capacitive-touch-sensing.md){: .btn .btn-outline }
+{% include tlink.html id='esp32-pot-fade' text='Previous: Analog input using the ESP32' %}{: .btn .btn-outline }
+{% include tlink.html id='esp32-capacitive-touch-sensing' text='Next: Capacitive touch sensing with the ESP32' %}{: .btn .btn-outline }
 </span>

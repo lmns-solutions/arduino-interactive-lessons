@@ -1,4 +1,6 @@
 ---
+permalink: /arduino/buttons/
+page_id: arduino-buttons
 layout: default
 title: L1&#58; Using buttons
 nav_order: 1
@@ -19,7 +21,7 @@ usetocbot: true
 {:toc}
 ---
 
-This is the first lesson in the [**Intro to Arduino Input**](intro-input.md) lesson series. We assume you've already completed the [**Intro to Arduino Output**](intro-output.md) series. If not, please complete that first!
+This is the first lesson in the {% include tlink.html id='arduino-intro-input' text='**Intro to Arduino Input**' %} lesson series. We assume you've already completed the {% include tlink.html id='arduino-intro-output' text='**Intro to Arduino Output**' %} series. If not, please complete that first!
 
 In this lesson, we'll finally get to build something interactive: turning on an LED with a push button. We'll cover buttons (aka momentary switches), how to use digital input with the [`digitalRead`](https://www.arduino.cc/reference/en/language/functions/digital-io/digitalread/) function, and pull-up and pull-down resistors.
 
@@ -89,7 +91,7 @@ And, of course, the best way to learn it is to try it yourself (and hopefully th
 
 We'll make a simple button-based circuit that turns on an LED when the button is pressed. This will give you experience with how the button connections work before hooking it up to an Arduino.
 
-Below, we've included two wiring diagrams: one using an external power source like a 9V battery with a snap connector (you could use alligator clips!) and the other using Arduino's 5V pin for power, just like we did in the [LED on](led-on.md) lesson. We suggest the 9V battery approach just to avoid confusion—remember, this circuit is completely independent of Arduino!
+Below, we've included two wiring diagrams: one using an external power source like a 9V battery with a snap connector (you could use alligator clips!) and the other using Arduino's 5V pin for power, just like we did in the {% include tlink.html id='arduino-led-on' text='LED on' %} lesson. We suggest the 9V battery approach just to avoid confusion—remember, this circuit is completely independent of Arduino!
 
 | With 9V Battery | With Arduino 5V Pin |
 |:-------------:|:-----------:|
@@ -115,7 +117,7 @@ Now that we understand how this button works, let's move on to using switches/bu
 
 ## Intro to digital input
 
-In our [Blink](led-blink.md) lesson, we introduced [digital I/O](led-blink.md#introducing-digital-output) with a specific focus on **digital output**. Here, we are going to talk about **digital input**, which is a bit more complicated.
+In our {% include tlink.html id='arduino-led-blink' text='Blink' %} lesson, we introduced {% include tlink.html id='arduino-led-blink' text='digital I/O' %}#introducing-digital-output with a specific focus on **digital output**. Here, we are going to talk about **digital input**, which is a bit more complicated.
 
 ### Digital I/O refresher
 
@@ -123,7 +125,7 @@ Recall that the Arduino Uno and Leonardo have **20 general-purpose input/output*
 
 ![Close-up image of the 20 digital I/O pins on the Arduino Uno](assets/images/ArduinoUno_DigitalIOPins.png)
 
-As noted in our [Intro to Digital Output](led-blink.md) lesson, you can control any of these 20 digital I/O pins with three functions:
+As noted in our {% include tlink.html id='arduino-led-blink' text='Intro to Digital Output' %} lesson, you can control any of these 20 digital I/O pins with three functions:
 
 1. [`pinMode(int pin, int mode)`](https://www.arduino.cc/reference/en/language/functions/digital-io/pinmode/) configures a specified pin as either an `INPUT` or `OUTPUT`. For our buttons, we'll be using `INPUT`—because a button is an input and not an output—and a variant of `INPUT` called `INPUT_PULLUP`.
 2. [`digitalRead(int pin)`](https://www.arduino.cc/reference/en/language/functions/digital-io/digitalread/) reads digital input from the specified pin, either `HIGH` or `LOW`. This is what we need to read the button's state (either pressed or not pressed)
@@ -342,7 +344,7 @@ The above sub-sections were strongly informed by Section 12.6.9 entitled "Pullup
 
 Whew, OK. We've now explained how to use four-legged tactile buttons, how to use pull-down, pull-up, and internal pull-up resistors and their purpose, and provided a general overview of digital input.
 
-It's time to make stuff. We're going to start with a button in a pull-down configuration before making circuits with external pull-up and internal pull-up configurations. Then, in the [next lesson](piano.md), we'll make a simple "piano" synthesizer that puts our skills to the test!
+It's time to make stuff. We're going to start with a button in a pull-down configuration before making circuits with external pull-up and internal pull-up configurations. Then, in the {% include tlink.html id='arduino-piano' text='next lesson' %}, we'll make a simple "piano" synthesizer that puts our skills to the test!
 
 ![Screenshot of Tinkercad pull-down, pull-up, and internal pull-up circuits + code](assets/images/Tinkercad_ExternalPullDownAndUp_AndInternalPullUp_ByJonEFroehlich.png)
 **Figure:** In Tinkercad, we created interactive demos of [external pull-down resistors](https://www.tinkercad.com/things/hlkxqsvSz2E-button-with-pull-down-resistor-no-breadboard), [external pull-up resistors](https://www.tinkercad.com/things/15Jim4uneb7-button-with-pull-up-resistor-no-breadboard), and [internal pull-up resistors](https://www.tinkercad.com/things/5AADEXC7R1o-button-with-internal-pull-up-resistor-no-breadboard). For simplicity, we built these *without* breadboards to allow you to really focus on the circuit and wiring. Click on the links to try them yourself!
@@ -456,10 +458,10 @@ See also:
 
 ## Next Lesson
 
-In the [next lesson](piano.md), we'll get to apply our newfound digital input skills to build a simple interactive piano with tactile buttons and a piezo buzzer.
+In the {% include tlink.html id='arduino-piano' text='next lesson' %}, we'll get to apply our newfound digital input skills to build a simple interactive piano with tactile buttons and a piezo buzzer.
 
 <span class="fs-6">
-[Next: Make a simple piano](piano.md){: .btn .btn-outline }
+{% include tlink.html id='arduino-piano' text='Next: Make a simple piano' %}{: .btn .btn-outline }
 </span>
 
 <!-- ## TODO/Outline

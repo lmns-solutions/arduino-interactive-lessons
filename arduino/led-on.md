@@ -1,4 +1,6 @@
 ---
+permalink: /arduino/led-on/
+page_id: arduino-led-on
 layout: default
 title: L1&#58; Turning on an LED
 nav_order: 1
@@ -18,10 +20,10 @@ usetocbot: true
 1. TOC
 {:toc}
 ---
-For our first learning activity, we are going to use Arduino to turn on an [LED]({{ site.baseurl }}/pages/electronics/leds.md). We're **not** going to write any code. Instead, our goal is to build some initial familiarity with Arduino hardware and connecting components to Arduino pins before we introduce programming, which we do in the [next lesson](led-blink.md).
+For our first learning activity, we are going to use Arduino to turn on an [LED]({{ site.baseurl }}/pages/electronics/leds.md). We're **not** going to write any code. Instead, our goal is to build some initial familiarity with Arduino hardware and connecting components to Arduino pins before we introduce programming, which we do in the {% include tlink.html id='arduino-led-blink' text='next lesson' %}.
 
 ![Animation showing a USB cable plugging into an Arduino Uno to power an LED + resistor hooked up to 5V and GND](assets/movies/Arduino_LEDOn_5VFixed_USBPower.gif)
-**Figure** The movement of **current** in the circuit is illustrated by the animated yellow circles. This visualization is a coarse abstraction designed to emphasize the direction of current flow. A more accurate visualization would show that electrons are already distributed throughout a wire before a voltage is applied. See our [Introduction to Electronics](../electronics/index.md) series, specifically the lesson on [Voltage, Current, and Resistance](../electronics/electricity-basics.md).
+**Figure** The movement of **current** in the circuit is illustrated by the animated yellow circles. This visualization is a coarse abstraction designed to emphasize the direction of current flow. A more accurate visualization would show that electrons are already distributed throughout a wire before a voltage is applied. See our {% include tlink.html id='electronics-index' text='Introduction to Electronics' %} series, specifically the lesson on {% include tlink.html id='electronics-electricity-basics' text='Voltage, Current, and Resistance' %}.
 {: .fs-1 }
 
 ## Materials
@@ -41,7 +43,7 @@ Let's begin by hooking up an LED with a current limiting resistor to the Arduino
 
 ### Step 1: Wrap resistor around LED leg
 
-Grab a 220Ω resistor (or any resistor 220Ω or greater) and twist one leg around an LED leg. If you want to follow my example *exactly*, connect the resistor to the LED's anode (long leg) but either leg will work. (Remember, a current limiting resistor can go on either side of an LED, see our [LED lesson](../electronics/leds.md)).
+Grab a 220Ω resistor (or any resistor 220Ω or greater) and twist one leg around an LED leg. If you want to follow my example *exactly*, connect the resistor to the LED's anode (long leg) but either leg will work. (Remember, a current limiting resistor can go on either side of an LED, see our {% include tlink.html id='electronics-leds' text='LED lesson' %}).
 
 To wire wrap your components, simply twist the legs together like this:
 
@@ -79,14 +81,14 @@ For power, you can use a USB cable (which supplies 5V) or a 9V battery (which su
 
 ### Let's analyze our circuit
 
-Just as we did in our [LED lesson](../electronics/leds.md), let's analyze how much current is flowing through this simple LED-based circuit. To do this, we first need to determine the voltage drop across the resistor $$V_R$$ and then use Ohm's Law to figure out the current ($$I = \frac{V_R}{R}$$).
+Just as we did in our {% include tlink.html id='electronics-leds' text='LED lesson' %}, let's analyze how much current is flowing through this simple LED-based circuit. To do this, we first need to determine the voltage drop across the resistor $$V_R$$ and then use Ohm's Law to figure out the current ($$I = \frac{V_R}{R}$$).
 
 ![](assets/images/LEDOn5V_HowMuchCurrentThroughCircuit_Step0.png)
 
 {: .note }
 > While it's not totally necessary to understand **circuit basics** to work with Arduino—indeed, you can get pretty far just by following online tutorials—we think it's pretty important. As my colleague [Professor Andy Davidson](https://www.hcde.washington.edu/davidson) likes to say: there is a difference between a chef who understands how ingredients go together and creates their own dishes vs. a novice baker who simply follows recipes. We all start like the latter but we want to develop you more into the former! Let us all become chefs! 👩🏽‍🍳👨🏽‍🍳
 >
-> So, while you could skip this section and go on to [Maximum current draw](#maximum-current-draw) below, we recommend that you instead invest in this circuit analysis and do your best to understand it. If you're confused, try going through our [Intro to Electronics series](../electronics/), particularly [Ohm's Law](../electronics/ohms-law.md) and [LEDs](../electronics/leds.md). 
+> So, while you could skip this section and go on to [Maximum current draw](#maximum-current-draw) below, we recommend that you instead invest in this circuit analysis and do your best to understand it. If you're confused, try going through our [Intro to Electronics series](../electronics/), particularly {% include tlink.html id='electronics-ohms-law' text='Ohm&#39;s Law' %} and {% include tlink.html id='electronics-leds' text='LEDs' %}. 
 
 #### Step 1: Identify nodes and what we know
 
@@ -96,7 +98,7 @@ When analyzing a circuit, we always start by **identifying nodes** and **what we
 
 * Due to Kirchhoff's Circuit Laws, we know that the total voltage drop across both the resistor and LED ($$V_R + V_D$$) must equal our supply voltage $$V_S=5V$$. 
 
-* Finally, from our [LED lesson](../electronics/leds.md), we know that our circuit is off until the "on" or "forward" voltage of our LED is met, which for a red LED is ~2V. 
+* Finally, from our {% include tlink.html id='electronics-leds' text='LED lesson' %}, we know that our circuit is off until the "on" or "forward" voltage of our LED is met, which for a red LED is ~2V. 
 
 From the above, we can set $$V_D=2V$$ and solve for $$V_R$$.
 
@@ -134,7 +136,7 @@ So, with the 5V supply pin, our simple LED-based circuit is **drawing 13.6mA of 
 
 The Arduino has a variety of pin types, each with their own maximum current ratings. 
 
-* **I/O Pins**: The maximum current draw of any **single** I/O pin—which we haven't used yet but we will in the [next lesson](led-blink.md)—is **40 mA** (a safer, continuous range is ~20mA). The total current across all I/O pins together is **200mA**. If we exceed these values, we could damage our Arduino board or the underlying microcontroller (the ATmega328 for the Uno or the ATmega32u4 for the Leonardo)
+* **I/O Pins**: The maximum current draw of any **single** I/O pin—which we haven't used yet but we will in the {% include tlink.html id='arduino-led-blink' text='next lesson' %}—is **40 mA** (a safer, continuous range is ~20mA). The total current across all I/O pins together is **200mA**. If we exceed these values, we could damage our Arduino board or the underlying microcontroller (the ATmega328 for the Uno or the ATmega32u4 for the Leonardo)
 
 * **Power supply pins**: The **5V output pin** can supply ~400-500mA when powered by USB and ~900-1000mA when using an external power adapter. The **3.3V output pin** can supply ~150mA; however, if you have both 3.3V and 5V output pins connected, any current drawn from the 3.3V pin will be counted against 5V's total current. 
 
@@ -215,7 +217,7 @@ LED brightness is controlled by **current**. So, to dim an LED, we need to reduc
 1. Decreasing **voltage**
 2. Increasing **resistance**
 
-In future tutorials, we'll show how you can **control voltage output programmatically** by writing code for the Arduino microcontroller. But, for now, let's dim the LED by first decreasing voltage using the Arduino's 3.3V pin (rather than the 5V pin) and then by using higher value resistors. This is similar to the activities in our [LED lessons](../electronics/leds.md) but now we are using the Arduino's pins as a voltage source.
+In future tutorials, we'll show how you can **control voltage output programmatically** by writing code for the Arduino microcontroller. But, for now, let's dim the LED by first decreasing voltage using the Arduino's 3.3V pin (rather than the 5V pin) and then by using higher value resistors. This is similar to the activities in our {% include tlink.html id='electronics-leds' text='LED lessons' %} but now we are using the Arduino's pins as a voltage source.
 
 ### Hooking up the LED to the 3.3V supply pin
 
@@ -247,7 +249,7 @@ To determine the current through the circuit, we can use Ohm's Law ($$I = \frac{
 
 **NOTE:**
 
-As mentioned, If you want to make your LED dimmer (without writing microcontroller code), you can either (1) add more resistance or (2) reduce your supply voltage—both have the same effect: reducing current. This is sufficient conceptual knowledge to start building circuits. If you want to know more, read on! Otherwise, you can skip to the [next lesson](led-blink.md).
+As mentioned, If you want to make your LED dimmer (without writing microcontroller code), you can either (1) add more resistance or (2) reduce your supply voltage—both have the same effect: reducing current. This is sufficient conceptual knowledge to start building circuits. If you want to know more, read on! Otherwise, you can skip to the {% include tlink.html id='arduino-led-blink' text='next lesson' %}.
 {: .notice}
 
 ---
@@ -312,5 +314,5 @@ They have multimeters in [Tinkercad Circuits](https://www.tinkercad.com/things/d
 In the next lesson, we will learn how to programmatically control the output voltage of a digital I/O pin to switch between `LOW` (0V) or `HIGH` (5V) using [`digitalWrite(int pin, int value)`](https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/).
 
 <span class="fs-6">
-[Next: Blinking an LED with Arduino](led-blink.md){: .btn .btn-outline }
+{% include tlink.html id='arduino-led-blink' text='Next: Blinking an LED with Arduino' %}{: .btn .btn-outline }
 </span>

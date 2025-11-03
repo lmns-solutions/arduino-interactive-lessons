@@ -1,4 +1,6 @@
 ---
+permalink: /electronics/schematics/
+page_id: electronics-schematics
 layout: default
 title: L2&#58; Circuit Schematics
 nav_order: 2
@@ -172,9 +174,9 @@ There are a number of schematic building tools aimed at makers, each with their 
 
 ## Next Lesson
 
-In the [next lesson](ohms-law.md), we will learn about [Ohm's Law](ohms-law.md), one of the most important and fundamental empirical laws in electrical circuits that relates voltage, current, and resistance together in a rather simple equation: $$I = \frac{V}{R}$$.
+In the {% include tlink.html id='electronics-ohms-law' text='next lesson' %}, we will learn about {% include tlink.html id='electronics-ohms-law' text='Ohm&#39;s Law' %}, one of the most important and fundamental empirical laws in electrical circuits that relates voltage, current, and resistance together in a rather simple equation: $$I = \frac{V}{R}$$.
 
 <span class="fs-6">
-[Previous: Voltage, current, and resistance](electricity-basics.md){: .btn .btn-outline }
-[Next: Ohm's Law](ohms-law.md){: .btn .btn-outline }
+{% include tlink.html id='electronics-electricity-basics' text='Previous: Voltage, current, and resistance' %}{: .btn .btn-outline }
+{% include tlink.html id='electronics-ohms-law' text='Next: Ohm&#39;s Law' %}{: .btn .btn-outline }
 </span>

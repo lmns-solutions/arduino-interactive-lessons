@@ -1,4 +1,6 @@
 ---
+permalink: /arduino/arduino-ide/
+page_id: arduino-arduino-ide
 layout: default
 title: Arduino IDE
 parent: Intro to Arduino
@@ -32,7 +34,7 @@ Download and install the local Mac, Windows, or Linux version of the [Arduino ID
 After installation is complete, open the Arduino IDE. Notice that there are **two blocks** of code (called functions):
 
 1. The first block is `setup()`, which is called once and only once when the Arduino is turned on
-2. And the second block is `loop()`, which is called as soon as `setup()` completes. When `loop()` completes, it's automatically called again and again (until the Arduino is turned off). Want to learn more, read [Inside Arduino](inside-arduino.md#whats-calling-loop-and-how-fast).
+2. And the second block is `loop()`, which is called as soon as `setup()` completes. When `loop()` completes, it's automatically called again and again (until the Arduino is turned off). Want to learn more, read {% include tlink.html id='arduino-inside-arduino' text='Inside Arduino' %}#whats-calling-loop-and-how-fast.
 
 ![Screenshot of the Arduino IDE](assets/images/ArduinoIDE_BlankAndAnnotated.png)
 

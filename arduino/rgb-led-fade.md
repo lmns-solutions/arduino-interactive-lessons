@@ -1,4 +1,6 @@
 ---
+permalink: /arduino/rgb-led-fade/
+page_id: arduino-rgb-led-fade
 layout: default
 title: L7&#58; Crossfading RGB LEDs
 parent: Output
@@ -23,13 +25,13 @@ In this lesson, you will learn how to fade between RGB colors using [`analogWrit
 ---
 **NOTE:**
 
-This is our most complex lesson yet. From a circuit standpoint, things are easy—it's the same circuit as [before](rgb-led.md) (yay!). From a coding standpoint, things are more complicated. If you don't have a coding background, it's OK if the code doesn't (fully) make sense. Try to read it and understand it given your current abilities. Regardless of your comprehension level, try copying the code and playing with it on your own!
+This is our most complex lesson yet. From a circuit standpoint, things are easy—it's the same circuit as {% include tlink.html id='arduino-rgb-led' text='before' %} (yay!). From a coding standpoint, things are more complicated. If you don't have a coding background, it's OK if the code doesn't (fully) make sense. Try to read it and understand it given your current abilities. Regardless of your comprehension level, try copying the code and playing with it on your own!
 
 ---
 
 ## Materials
 
-You'll need the same materials as the previous [RGB LED lesson](rgb-led.md). Recall that there are **two types** of RGB LEDs: a **common cathode design** and a **common anode design**, so make sure you know which one you have as it will affect the circuit you make and the code you write.
+You'll need the same materials as the previous {% include tlink.html id='arduino-rgb-led' text='RGB LED lesson' %}. Recall that there are **two types** of RGB LEDs: a **common cathode design** and a **common anode design**, so make sure you know which one you have as it will affect the circuit you make and the code you write.
 
 | Breadboard | Arduino | RGB LED | Resistors |
 |:-----:|:-----:|:-----:|:-----:|
@@ -38,7 +40,7 @@ You'll need the same materials as the previous [RGB LED lesson](rgb-led.md). Rec
 
 ## Making the circuit
 
-The circuit is the same as the previous [RGB LED lesson](rgb-led.md). Make sure you follow the appropriate wiring based on whether you are using a **common cathode** or **common anode** RGB LED.
+The circuit is the same as the previous {% include tlink.html id='arduino-rgb-led' text='RGB LED lesson' %}. Make sure you follow the appropriate wiring based on whether you are using a **common cathode** or **common anode** RGB LED.
 
 | RGB Common Cathode Wiring | RGB Common Anode Wiring |
 |:-----:|:-----:|
@@ -261,13 +263,13 @@ CrossFadeHue
 ## Exercises
 
 - **New crossfade algorithms**. Develop your own crossfade algorithm to fade between colors. Play around with hue, saturation, and lightness. How do they seem to affect the RGB LED?
-- **Fade multiple RGB LEDs**. How could we modify our code to fade multiple RGB LEDs at different rates? **Hint:** We'll work on one potential solution in the [next lesson](led-blink3.md)
+- **Fade multiple RGB LEDs**. How could we modify our code to fade multiple RGB LEDs at different rates? **Hint:** We'll work on one potential solution in the {% include tlink.html id='arduino-led-blink3' text='next lesson' %}
 
 ## Next Lesson
 
-For our next and final [Intro to Output](intro-output.md) lesson, we are going to learn how to blink multiple LEDs at different frequencies, which is one of the most common questions on Arduino forums—perhaps because of the way the [official Arduino Blink tutorial](https://www.arduino.cc/en/tutorial/blink) uses `delay()` to control blinking rates (which is fine for one LED but doesn't scale). Before starting the lesson, it's worth thinking about how *you* would blink multiple frequencies at different rates. :)
+For our next and final {% include tlink.html id='arduino-intro-output' text='Intro to Output' %} lesson, we are going to learn how to blink multiple LEDs at different frequencies, which is one of the most common questions on Arduino forums—perhaps because of the way the [official Arduino Blink tutorial](https://www.arduino.cc/en/tutorial/blink) uses `delay()` to control blinking rates (which is fine for one LED but doesn't scale). Before starting the lesson, it's worth thinking about how *you* would blink multiple frequencies at different rates. :)
 
 <span class="fs-6">
-[Previous: RGB LEDs](rgb-led.md){: .btn .btn-outline }
-[Next: Blinking Multiple LEDs at Different Rates](led-blink3.md){: .btn .btn-outline }
+{% include tlink.html id='arduino-rgb-led' text='Previous: RGB LEDs' %}{: .btn .btn-outline }
+{% include tlink.html id='arduino-led-blink3' text='Next: Blinking Multiple LEDs at Different Rates' %}{: .btn .btn-outline }
 </span>

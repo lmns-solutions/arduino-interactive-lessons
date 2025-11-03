@@ -1,4 +1,6 @@
 ---
+permalink: /electronics/ohms-law/
+page_id: electronics-ohms-law
 layout: default
 title: L3&#58; Ohm's Law
 nav_order: 3
@@ -41,11 +43,11 @@ $$V = I * R$$
 To solve for **resistance**, use:
 $$R = \frac{V}{I}$$
 
-Notice how these equations map to the concepts we explained in our first lesson on [Voltage, Current, and Resistance](electricity-basics.md)—which you may want to return to. For example, $$I = \frac{V}{R}$$ clearly demonstrates that to **increase current**, we can either **increase voltage** or **decrease resistance**.
+Notice how these equations map to the concepts we explained in our first lesson on {% include tlink.html id='electronics-electricity-basics' text='Voltage, Current, and Resistance' %}—which you may want to return to. For example, $$I = \frac{V}{R}$$ clearly demonstrates that to **increase current**, we can either **increase voltage** or **decrease resistance**.
 
 ### Relating Ohm's Law to our water analogies
 
-Drawing again on our hydraulic-electric analogies (which we used amply in [previous lessons](electricity-basics.md)), we can highlight another similarity. In the 1840s, [Poiseuille](https://en.wikipedia.org/wiki/Hagen%E2%80%93Poiseuille_equation) empirically showed that the flow rate of water through a pipe is equal to the pressure drop across the pipe divided by the pipe's resistance—this is called **Poiseuille's Law**. And it conceptually makes sense: a higher pressure difference between two ends of a pipe creates more force and a lower resistance allows more water flow. 
+Drawing again on our hydraulic-electric analogies (which we used amply in {% include tlink.html id='electronics-electricity-basics' text='previous lessons' %}), we can highlight another similarity. In the 1840s, [Poiseuille](https://en.wikipedia.org/wiki/Hagen%E2%80%93Poiseuille_equation) empirically showed that the flow rate of water through a pipe is equal to the pressure drop across the pipe divided by the pipe's resistance—this is called **Poiseuille's Law**. And it conceptually makes sense: a higher pressure difference between two ends of a pipe creates more force and a lower resistance allows more water flow. 
 
 Does this equation sound familiar? It should. It is exactly Ohm's Law! Current flow in a circuit is directly proportional to the voltage drop in a circuit divided by its resistance. See image below.
 
@@ -218,7 +220,7 @@ In your prototyping journals, include a screenshot of each CircuitJS circuit alo
 
 In this lesson, we learned:
 - That there is an empirical law, called Ohm's Law, that describes the linear relationship between voltage, current, and resistance
-- Specifically, Ohm's Law states that the current in a circuit is the total voltage divided by the total resistance ($$I = \frac{V}{R}$$). This law builds on the concepts and intuitions we were developing in [the first lesson](electricity-basics.md) in this series
+- Specifically, Ohm's Law states that the current in a circuit is the total voltage divided by the total resistance ($$I = \frac{V}{R}$$). This law builds on the concepts and intuitions we were developing in {% include tlink.html id='electronics-electricity-basics' text='the first lesson' %} in this series
 - We also learned how to apply Ohm's Law to some simple circuits to solve for unknown currents, voltages, and resistances
 - That a common "gotcha" for beginners is forgetting to convert measurements to base units
 - We then played around with circuits in [CircuitJS](https://www.falstad.com/circuit/circuitjs.html) and made observations.
@@ -233,12 +235,12 @@ In this lesson, we learned:
 
 ## Next Lesson
 
-In the [next lesson](series-parallel.md), we will apply Ohm's Law to more complex circuits—specifically those that combine resistors in *series* and those that combine them in *parallel*.
+In the {% include tlink.html id='electronics-series-parallel' text='next lesson' %}, we will apply Ohm's Law to more complex circuits—specifically those that combine resistors in *series* and those that combine them in *parallel*.
 
-<!-- In the [next lesson](resistors.md), we will expand what we know about [resistors](resistors.md)—specially designed electrical components that *resist* the flow of current—before showing how they are useful with [LEDs](leds.md).  -->
+<!-- In the {% include tlink.html id='electronics-resistors' text='next lesson' %}, we will expand what we know about {% include tlink.html id='electronics-resistors' text='resistors' %}—specially designed electrical components that *resist* the flow of current—before showing how they are useful with {% include tlink.html id='electronics-leds' text='LEDs' %}.  -->
 
 <span class="fs-6">
-[Previous: Schematics](schematics.md){: .btn .btn-outline }
-[Next: Resistors in Series and Parallel](series-parallel.md){: .btn .btn-outline }
-<!-- [Next: Resistors](resistors.md){: .btn .btn-outline } -->
+{% include tlink.html id='electronics-schematics' text='Previous: Schematics' %}{: .btn .btn-outline }
+{% include tlink.html id='electronics-series-parallel' text='Next: Resistors in Series and Parallel' %}{: .btn .btn-outline }
+<!-- {% include tlink.html id='electronics-resistors' text='Next: Resistors' %}{: .btn .btn-outline } -->
 </span>

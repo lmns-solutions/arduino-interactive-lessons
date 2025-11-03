@@ -1,4 +1,6 @@
 ---
+permalink: /electronics/ics/
+page_id: electronics-ics
 layout: default
 title: Integrated Circuits
 nav_order: 2

@@ -1,4 +1,6 @@
 ---
+permalink: /cpx/analog-input/
+page_id: cpx-analog-input
 layout: default
 title: L8&#58; Analog Input
 parent: Circuit Playground Express
@@ -63,7 +65,7 @@ Now try touching the yellow wire to black. What happens? You should see the grap
 ### Optional Theory
 
 {: .note }
-It's OK if you don't understand exactly how voltage dividers work. The key is in developing a bit of intuition about how the CPX analog read function works and what physical phenomena it is reading on A1 (it's voltage!). Any sensor that can manipulate voltage can be used as input. If you want to learn more about potentiometers and voltage dividers, see our [Arduino L4: Potentiometer lesson](../arduino/potentiometers.md) and [Electronics L4: Voltage Dividers lesson](../electronics/series-parallel.md#voltage-dividers)
+It's OK if you don't understand exactly how voltage dividers work. The key is in developing a bit of intuition about how the CPX analog read function works and what physical phenomena it is reading on A1 (it's voltage!). Any sensor that can manipulate voltage can be used as input. If you want to learn more about potentiometers and voltage dividers, see our {% include tlink.html id='arduino-potentiometers' text='Arduino L4: Potentiometer lesson' %} and {% include tlink.html id='electronics-series-parallel' text='Electronics L4: Voltage Dividers lesson' %}#voltage-dividers
 
 In the above examples, we showed how to read 3.3V and GND (0V) with the CPX by touching the yellow wire to the red and black respectively and graphing the result. But analog input is far more interesting than just two numbers: 0 and 1023. How can we play with everything in between?
 
@@ -159,6 +161,6 @@ Series 10 could be getting sensor data into computer (the hacky way)
 In the next lesson, we'll learn how to use **digital input** like buttons!
 
 <span class="fs-6">
-[Previous: CPX as a Mouse](cpx-mouse.md){: .btn .btn-outline }
-[Next: Digital Input](digital-input.md){: .btn .btn-outline }
+{% include tlink.html id='cpx-cpx-mouse' text='Previous: CPX as a Mouse' %}{: .btn .btn-outline }
+{% include tlink.html id='cpx-digital-input' text='Next: Digital Input' %}{: .btn .btn-outline }
 </span>

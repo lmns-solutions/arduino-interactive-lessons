@@ -1,4 +1,6 @@
 ---
+permalink: /arduino/force-sensitive-resistors/
+page_id: arduino-force-sensitive-resistors
 layout: default
 title: L5&#58; Force-Sensitive Resistors
 nav_order: 5
@@ -21,7 +23,7 @@ usetocbot: true
 
 In this lesson, you'll learn about force-sensitive resistors (FSRs) and how to use FSRs and two-legged variable resistors more generally with microcontrollers. We'll conclude with building a "force-sensitive" musical instrument—very Jedi-like!
 
-This lesson directly builds on the prior one ([potentiometers](potentiometers.md)), so definitely complete that first.
+This lesson directly builds on the prior one ({% include tlink.html id='arduino-potentiometers' text='potentiometers' %}), so definitely complete that first.
 
 ![Animation showing an FSR](/assets/movies/FSR_LEDCircuit_ArduinoForPower_WorkbenchWithAmmeter.gif)
 
@@ -94,7 +96,7 @@ For more details, see the Interlink [FSR 402 datasheet]({{ site.baseurl }}/asset
 
 Let's make something!
 
-To begin, just like we did with the [buttons](buttons.md) and [potentiometers](potentiometers.md) lessons, we'll make a simple LED circuit without a microcontroller. In fact, this circuit will be the exact same as the "rheostat" potentiometer circuit [here](potentiometers.md#build-the-potentiomer-based-led-dimmer) (but we'll replace the rheostat with an FSR).
+To begin, just like we did with the {% include tlink.html id='arduino-buttons' text='buttons' %} and {% include tlink.html id='arduino-potentiometers' text='potentiometers' %} lessons, we'll make a simple LED circuit without a microcontroller. In fact, this circuit will be the exact same as the "rheostat" potentiometer circuit {% include tlink.html id='arduino-potentiometers' text='here' %}#build-the-potentiomer-based-led-dimmer (but we'll replace the rheostat with an FSR).
 
 Below, we show two possible wiring diagrams: the first (preferred) shows the FSR circuit powered by a 9V battery while the second shows power derived from the 5V and GND pins on the Arduino. (Again, we prefer the former just to further emphasize that at this point, we're not using microcontrollers!)
 
@@ -124,7 +126,7 @@ Image from [Sparkfun.com](https://learn.sparkfun.com/tutorials/force-sensitive-r
 
 Once you've made the circuit, have fun playing with the FSR. Get a sense of its responsiveness and how hard you have to press.
 
-Here's a workbench video of our completed circuit (this is the same video as the one in the [potentiometers](potentiometers.md) lesson, so there is a backup resistor):
+Here's a workbench video of our completed circuit (this is the same video as the one in the {% include tlink.html id='arduino-potentiometers' text='potentiometers' %} lesson, so there is a backup resistor):
 
 <iframe width="736" height="414" src="https://www.youtube.com/embed/YMCqDcnwMYo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 Workbench video of the FSR LED dimmer circuit
@@ -139,11 +141,11 @@ First, like usual, we'll show you the wrong way to hook up a component to a micr
 
 Why doesn't this work?
 
-Recall from our [potentiometers](potentiometers.md) lesson, microcontrollers read voltages, not current. We have to setup a circuit that enables our microcontroller to "see" changes in voltages. 
+Recall from our {% include tlink.html id='arduino-potentiometers' text='potentiometers' %} lesson, microcontrollers read voltages, not current. We have to setup a circuit that enables our microcontroller to "see" changes in voltages. 
 
 <!-- make and show an animation of the pot splitting into two resistors and how this is the same thing that we have to do for our FSR -->
 
-We had to do the same thing with the [potentiometer](potentiometers.md). The potentiometer would not work as analog input when only two legs were used. We had to connect all three potentiometer legs. 
+We had to do the same thing with the {% include tlink.html id='arduino-potentiometers' text='potentiometer' %}. The potentiometer would not work as analog input when only two legs were used. We had to connect all three potentiometer legs. 
 
 To use an FSR—or any variable resistor—with a microcontroller, you must add a fixed resistor to form a voltage divider like this:
 

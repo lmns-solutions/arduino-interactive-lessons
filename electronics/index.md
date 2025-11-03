@@ -1,4 +1,6 @@
 ---
+permalink: /electronics/
+page_id: electronics-index
 layout: default
 title: Intro to Electronics
 nav_order: 1
@@ -19,51 +21,51 @@ nav_exclude: false
 <video autoplay loop muted playsinline style="margin:0px">
   <source src="assets/videos/FSR-TopDown9VCircuit-IMG_5683_Trimmed-Optimized.mp4" type="video/mp4" />
 </video>
-**Video.** A video demonstration of a force-sensitive resistor (aka a "pressure sensor") that varies its resistance in proportion to an applied force. This is just one of the many things you will learn about and build in this "Intro to Electronics" tutorial series. See more in [L8: Variable Resistors](variable-resistors.md).
+**Video.** A video demonstration of a force-sensitive resistor (aka a "pressure sensor") that varies its resistance in proportion to an applied force. This is just one of the many things you will learn about and build in this "Intro to Electronics" tutorial series. See more in {% include tlink.html id='electronics-variable-resistors' text='L8: Variable Resistors' %}.
 {: .fs-1 }
 
 Welcome 👋 to the first "step" in your Physical Computing journey!
 
-In this tutorial series, you will learn about the fundamentals of electricity—[voltage, current, and resistance](electricity-basics.md)—and how these elements can be used to build circuits that turn on lights, spin motors, and do other "work." You'll also learn about an empirically derived relationship, called [Ohm's Law](ohms-law.md), that relates voltage, current, and resistance together and methods to analyze circuits using Ohm's Law. Finally, you'll learn about three common circuit elements (resistors,  LEDs, variable resistors), how they work, and how to use them in circuits.
+In this tutorial series, you will learn about the fundamentals of electricity—{% include tlink.html id='electronics-electricity-basics' text='voltage, current, and resistance' %}—and how these elements can be used to build circuits that turn on lights, spin motors, and do other "work." You'll also learn about an empirically derived relationship, called {% include tlink.html id='electronics-ohms-law' text='Ohm&#39;s Law' %}, that relates voltage, current, and resistance together and methods to analyze circuits using Ohm's Law. Finally, you'll learn about three common circuit elements (resistors,  LEDs, variable resistors), how they work, and how to use them in circuits.
 
 Throughout, you'll use simulation tools like [CircuitJS](https://www.falstad.com/circuit/circuitjs.html) and [Tinkercad Circuits](https://www.tinkercad.com/) to design and evaluate circuits and then actually build them using physical components.
 
-By the end of this module, you will be prepared to start [Module 2](../arduino/index.md)—our [Intro to Arduino series](../arduino/index.md)—where you will begin making with electronics, microcontrollers, and programming!
+By the end of this module, you will be prepared to start {% include tlink.html id='arduino-index' text='Module 2' %}—our {% include tlink.html id='arduino-index' text='Intro to Arduino series' %}—where you will begin making with electronics, microcontrollers, and programming!
 
 {: .note }
 If you have limited background in circuits and programming, you may also want to consider our series on [Making with the Circuit Playground Express (CPX)](../cpx/), which uses a wonderful prototyping platform called [CPX](https://www.adafruit.com/product/3333) along with a drag-and-drop visual programming language called [MakeCode](https://makecode.adafruit.com/) (that is similar to [Scratch](https://scratch.mit.edu/)).
 
-## [Lesson 1: Voltage, current, and resistance](electricity-basics.md)
+## {% include tlink.html id='electronics-electricity-basics' text='Lesson 1: Voltage, current, and resistance' %}
 
-Introduces three key electricity concepts, [current, voltage, and resistance](electricity-basics.md), which form the foundation of electronics and circuits.
+Introduces three key electricity concepts, {% include tlink.html id='electronics-electricity-basics' text='current, voltage, and resistance' %}, which form the foundation of electronics and circuits.
 
-## [Lesson 2: Circuit Schematics](schematics.md)
+## {% include tlink.html id='electronics-schematics' text='Lesson 2: Circuit Schematics' %}
 
-Introduces a visual language for describing circuits called [circuit schematics](schematics.md), which are used in component datasheets, CAD programs (*e.g.,* circuit simulators, PCB layout software), and circuit analyses. Also includes an activity using [Fritzing](https://fritzing.org/) to build your own schematics.
+Introduces a visual language for describing circuits called {% include tlink.html id='electronics-schematics' text='circuit schematics' %}, which are used in component datasheets, CAD programs (*e.g.,* circuit simulators, PCB layout software), and circuit analyses. Also includes an activity using [Fritzing](https://fritzing.org/) to build your own schematics.
 
-## [Lesson 3: Ohm's Law](ohms-law.md)
+## {% include tlink.html id='electronics-ohms-law' text='Lesson 3: Ohm&#39;s Law' %}
 
-Introduces [Ohm’s Law](ohms-law.md), one of the most important empirical laws in electrical circuits that describes how current, voltage, and resistance relate together. Also includes an activity to build and explore resistive circuits in [CircuitJS](https://www.falstad.com/circuit/circuitjs.html).
+Introduces {% include tlink.html id='electronics-ohms-law' text='Ohm’s Law' %}, one of the most important empirical laws in electrical circuits that describes how current, voltage, and resistance relate together. Also includes an activity to build and explore resistive circuits in [CircuitJS](https://www.falstad.com/circuit/circuitjs.html).
 
-## [Lesson 4: Series vs. Parallel Resistors](series-parallel.md)
+## {% include tlink.html id='electronics-series-parallel' text='Lesson 4: Series vs. Parallel Resistors' %}
 
-Introduces [series and parallel resistor circuits](series-parallel.md), how to analyze them, and why they're important. Also includes an activity to build and explore series and parallel resistor configurations in [CircuitJS](https://www.falstad.com/circuit/circuitjs.html).
+Introduces {% include tlink.html id='electronics-series-parallel' text='series and parallel resistor circuits' %}, how to analyze them, and why they're important. Also includes an activity to build and explore series and parallel resistor configurations in [CircuitJS](https://www.falstad.com/circuit/circuitjs.html).
 
-## [Lesson 5: Resistors](resistors.md)
+## {% include tlink.html id='electronics-resistors' text='Lesson 5: Resistors' %}
 
-Building on Lessons 1 - 4, let's dive more deeply into [resistors](resistors.md) and learn about how resistors work, how they're made, how they're characterized in terms of both resistance $$R$$ and power $$P$$, and how to "read" them.
+Building on Lessons 1 - 4, let's dive more deeply into {% include tlink.html id='electronics-resistors' text='resistors' %} and learn about how resistors work, how they're made, how they're characterized in terms of both resistance $$R$$ and power $$P$$, and how to "read" them.
 
-## [Lesson 6: LEDs](leds.md)
+## {% include tlink.html id='electronics-leds' text='Lesson 6: LEDs' %}
 
-In [this lesson](leds.md), we'll introduce one of the most common electrical components in the world: [light-emitting diodes](leds.md) or [LEDs](leds.md). You'll learn about your first semiconductor device, diodes, and how they're non-ohmic and only allow current to pass in one direction. Then, we'll introduce a special kind of diode, called an LED, and show how to use them, how to select an appropriate current-limiting resistor, and why resistors are necessary. You'll also get to physically build stuff, yay!
+In {% include tlink.html id='electronics-leds' text='this lesson' %}, we'll introduce one of the most common electrical components in the world: {% include tlink.html id='electronics-leds' text='light-emitting diodes' %} or {% include tlink.html id='electronics-leds' text='LEDs' %}. You'll learn about your first semiconductor device, diodes, and how they're non-ohmic and only allow current to pass in one direction. Then, we'll introduce a special kind of diode, called an LED, and show how to use them, how to select an appropriate current-limiting resistor, and why resistors are necessary. You'll also get to physically build stuff, yay!
 
-## [Lesson 7: Breadboards](breadboards.md)
+## {% include tlink.html id='electronics-breadboards' text='Lesson 7: Breadboards' %}
 
-In [this lesson](breadboards.md), we'll learn about a very useful circuit prototyping tool called breadboards, which makes it easy to rapidly build circuits (and plug/unplug components and wires).
+In {% include tlink.html id='electronics-breadboards' text='this lesson' %}, we'll learn about a very useful circuit prototyping tool called breadboards, which makes it easy to rapidly build circuits (and plug/unplug components and wires).
 
-## [Lesson 8: Variable resistors](variable-resistors.md)
+## {% include tlink.html id='electronics-variable-resistors' text='Lesson 8: Variable resistors' %}
 
-In [this lesson](variable-resistors.md), we'll learn about variable resistors, a certain kind of variable resistor called a potentiometer, and then we'll design, simulate, and build some LED circuits using variable resistors. At the end, you'll even make your own DIY variable resistor!
+In {% include tlink.html id='electronics-variable-resistors' text='this lesson' %}, we'll learn about variable resistors, a certain kind of variable resistor called a potentiometer, and then we'll design, simulate, and build some LED circuits using variable resistors. At the end, you'll even make your own DIY variable resistor!
 
 <!-- ## [Lesson 9: Using a multimeter](multimeter.md)
 

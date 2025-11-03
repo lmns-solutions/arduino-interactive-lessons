@@ -1,4 +1,6 @@
 ---
+permalink: /communication/serial-intro/
+page_id: communication-serial-intro
 layout: default
 title: L1&#58; Intro to Serial
 nav_order: 1
@@ -35,7 +37,7 @@ In this lesson, we'll dive into asynchronous serial communication and how we can
 
 <!-- Arduino uses a standard [asynchronous serial communication protocol](https://learn.sparkfun.com/tutorials/serial-communication/all) for serial communication.  -->
 
-We've been using [Arduino's serial](https://www.arduino.cc/reference/en/language/functions/communication/serial/) functionality since our very first set of lessons (*e.g.,* [L3: Serial Debugging](../arduino/serial-print.md)). However, we've glossed over the details and used serial primarily for debugging rather than `Computer ↔ Arduino` communication.
+We've been using [Arduino's serial](https://www.arduino.cc/reference/en/language/functions/communication/serial/) functionality since our very first set of lessons (*e.g.,* {% include tlink.html id='arduino-serial-print' text='L3: Serial Debugging' %}). However, we've glossed over the details and used serial primarily for debugging rather than `Computer ↔ Arduino` communication.
 
 On Arduino, we initialize the serial port using [`Serial.begin()`](https://www.arduino.cc/en/Serial.Begin). The [`Serial.begin()`](https://github.com/arduino/ArduinoCore-avr/blob/master/cores/arduino/HardwareSerial.cpp) function has two overloaded options:
 
@@ -57,7 +59,7 @@ Thus far, speed hasn't been a concern. We've typically used 9600 bps (or 9.6 kbp
 
 ![](assets/images/SerialMonitorShowingBaudRate.png)
 {: .mx-auto .align-center }
-**Figure.** The Arduino IDE's [Serial Monitor](../arduino/serial-print.md), which has a drop down for baud rate. The baud rate used in `Serial.begin(<baud>)` must match this drop down menu setting or Serial Monitor will not properly communicate with Arduino.
+**Figure.** The Arduino IDE's {% include tlink.html id='arduino-serial-print' text='Serial Monitor' %}, which has a drop down for baud rate. The baud rate used in `Serial.begin(<baud>)` must match this drop down menu setting or Serial Monitor will not properly communicate with Arduino.
 {: .fs-1 }
 
 #### What's the fastest serial baud rate?
@@ -138,7 +140,7 @@ All three [`Serial.write()`](https://www.arduino.cc/reference/en/language/functi
 
 #### Reading and writing ASCII-encoded data
 
-Reading and writing ASCII-encoded data should feel more familiar. Indeed, for our use-case of [serial-based debugging](../arduino/serial-print.md), we've been using [`Serial.print()`](https://www.arduino.cc/reference/en/language/functions/communication/serial/print/) and [`Serial.println()`](https://www.arduino.cc/reference/en/language/functions/communication/serial/println/), which transmits data as human-readable ASCII text. 
+Reading and writing ASCII-encoded data should feel more familiar. Indeed, for our use-case of {% include tlink.html id='arduino-serial-print' text='serial-based debugging' %}, we've been using [`Serial.print()`](https://www.arduino.cc/reference/en/language/functions/communication/serial/print/) and [`Serial.println()`](https://www.arduino.cc/reference/en/language/functions/communication/serial/println/), which transmits data as human-readable ASCII text. 
 
 To read ASCII data, we can use [`Serial.readString()`](https://www.arduino.cc/reference/en/language/functions/communication/serial/readstring/) and [`Serial.readStringUntil()`](https://www.arduino.cc/reference/en/language/functions/communication/serial/readstringuntil/):
 
@@ -339,20 +341,20 @@ And here's the corresponding circuit for the program above, which consists of a 
 
 ### Using Serial Monitor
 
-Let's begin by using our now familiar Arduino IDE [Serial Monitor](../arduino/serial-print.md) tool. With [SimpleSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SimpleSerialIn/SimpleSerialIn.ino) loaded on your Arduino and your Arduino connected to your computer, open the Serial Monitor and send data to our Arduino. Make sure you've selected the same baud rate used in `Serial.begin(<baud rate>)`.
+Let's begin by using our now familiar Arduino IDE {% include tlink.html id='arduino-serial-print' text='Serial Monitor' %} tool. With [SimpleSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SimpleSerialIn/SimpleSerialIn.ino) loaded on your Arduino and your Arduino connected to your computer, open the Serial Monitor and send data to our Arduino. Make sure you've selected the same baud rate used in `Serial.begin(<baud rate>)`.
 
 ![](assets/images/ArduinoIDESerialMonitor_AnnotatedScreenShot.png)
-**Figure** An annotated screenshot the Arduino IDE's [Serial Monitor](../arduino/serial-print.md) tool for sending and receiving serial data. The data "echoed" back to our Arduino is shown in the autoscrolling textfield (where it says "Arduino received...").
+**Figure** An annotated screenshot the Arduino IDE's {% include tlink.html id='arduino-serial-print' text='Serial Monitor' %} tool for sending and receiving serial data. The data "echoed" back to our Arduino is shown in the autoscrolling textfield (where it says "Arduino received...").
 {: .fs-1}
 
 #### Video demo using Serial Monitor
 
-Here's a video demonstration of sending ASCII-encoded text via [Serial Monitor](../arduino/serial-print.md) to the Arduino running [SimpleSerialInOLED.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SimpleSerialInOLED/SimpleSerialInOLED.ino). 
+Here's a video demonstration of sending ASCII-encoded text via {% include tlink.html id='arduino-serial-print' text='Serial Monitor' %} to the Arduino running [SimpleSerialInOLED.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SimpleSerialInOLED/SimpleSerialInOLED.ino). 
 
 <video autoplay loop muted playsinline style="margin:0px">
   <source src="assets/videos/SimpleSerialIn-NoTalking-TrimmedAndSpedUp720p.mp4" type="video/mp4" />
 </video>
-**Video.** A video demonstrating using the Arduino IDE [Serial Monitor](../arduino/serial-print.md) tool to communicate with the Arduino running [SimpleSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SimpleSerialIn/SimpleSerialIn.ino). For this video, we are using a slightly modified program called [SimpleSerialInOLED.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SimpleSerialInOLED/SimpleSerialInOLED.ino) along with an [OLED display](../advancedio/oled.md). This allows you to more easily see the received values.
+**Video.** A video demonstrating using the Arduino IDE {% include tlink.html id='arduino-serial-print' text='Serial Monitor' %} tool to communicate with the Arduino running [SimpleSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SimpleSerialIn/SimpleSerialIn.ino). For this video, we are using a slightly modified program called [SimpleSerialInOLED.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SimpleSerialInOLED/SimpleSerialInOLED.ino) along with an {% include tlink.html id='advancedio-oled' text='OLED display' %}. This allows you to more easily see the received values.
 {: .fs-1 }
 
 Notice how we are able to print out what the Arduino receives because the Arduino cpde echos the received data back over serial using `Serial.print`. This is optional but helpful!
@@ -366,7 +368,7 @@ Serial.println("'");
 
 ### Command lines tools
 
-While we've thus far emphasized the Arduino IDE's [Serial Monitor](../arduino/serial-print.md), there is nothing special or unique about that tool. We can use any application or programming language with serial support. Below, we'll show how to use command line tools for both Windows and Mac/Linux before showing an example with Python (but C#, Objective C, Java, *etc.* would work too!)
+While we've thus far emphasized the Arduino IDE's {% include tlink.html id='arduino-serial-print' text='Serial Monitor' %}, there is nothing special or unique about that tool. We can use any application or programming language with serial support. Below, we'll show how to use command line tools for both Windows and Mac/Linux before showing an example with Python (but C#, Objective C, Java, *etc.* would work too!)
 
 <!-- https://itp.nyu.edu/physcomp/lab-intro-to-serial-communications/#Connecting_via_the_Command_Line
 https://learn.sparkfun.com/tutorials/terminal-basics/command-line-windows-mac-linux -->
@@ -429,7 +431,7 @@ Here's a video demonstration:
 <video autoplay loop muted playsinline style="margin:0px">
   <source src="assets/videos/SimpleSerialIn-NoTalking-WindowsPowerShell-TrimmedAndSpedUp720p.mp4" type="video/mp4" />
 </video>
-**Video.** A video demonstrating using [Windows PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/overview) to communicate with the Arduino running [SimpleSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SimpleSerialIn/SimpleSerialIn.ino). For this video, we are using a slightly modified program called [SimpleSerialInOLED.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SimpleSerialInOLED/SimpleSerialInOLED.ino) along with an [OLED display](../advancedio/oled.md). This allows you to more easily see the received values.
+**Video.** A video demonstrating using [Windows PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/overview) to communicate with the Arduino running [SimpleSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SimpleSerialIn/SimpleSerialIn.ino). For this video, we are using a slightly modified program called [SimpleSerialInOLED.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SimpleSerialInOLED/SimpleSerialInOLED.ino) along with an {% include tlink.html id='advancedio-oled' text='OLED display' %}. This allows you to more easily see the received values.
 {: .fs-1 }
 
 #### Mac and Linux
@@ -520,7 +522,7 @@ And that's it! This code is available as [serial_demo.py](https://github.com/mak
 <video autoplay loop muted playsinline style="margin:0px">
   <source src="assets/videos/SimpleSerialIn-Python-NoTalking2-TrimmedAndSpedUp720p.mp4" type="video/mp4" />
 </video>
-**Video.** A video demonstrating using [Python3](https://www.python.org/downloads/) with [pySerial](https://pypi.org/project/pyserial/) to communicate with the Arduino running [SimpleSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SimpleSerialIn/SimpleSerialIn.ino). For this video, we are using a slightly modified program called [SimpleSerialInOLED.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SimpleSerialInOLED/SimpleSerialInOLED.ino) along with an [OLED display](../advancedio/oled.md). This allows you to more easily see the received values.
+**Video.** A video demonstrating using [Python3](https://www.python.org/downloads/) with [pySerial](https://pypi.org/project/pyserial/) to communicate with the Arduino running [SimpleSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SimpleSerialIn/SimpleSerialIn.ino). For this video, we are using a slightly modified program called [SimpleSerialInOLED.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SimpleSerialInOLED/SimpleSerialInOLED.ino) along with an {% include tlink.html id='advancedio-oled' text='OLED display' %}. This allows you to more easily see the received values.
 {: .fs-1 }
 
 #### Using Python for real-time gesture recognition
@@ -529,7 +531,7 @@ Of course, we can do significantly more interesting things using serial communic
 
 <iframe width="736" height="414" src="https://www.youtube.com/embed/nnTyqCwYVbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-**Video.** A video demonstrating real-time gesture recognition using 3-axis accelerometer data sent via the Arduino over serial. We wrote the gesture recognizer in Python; however, we are not linking to the code because we use it as an assignment in some of our courses. You can learn more in our [Signal Classification](../signals/classification.md) lesson series.
+**Video.** A video demonstrating real-time gesture recognition using 3-axis accelerometer data sent via the Arduino over serial. We wrote the gesture recognizer in Python; however, we are not linking to the code because we use it as an assignment in some of our courses. You can learn more in our {% include tlink.html id='signals-classification' text='Signal Classification' %} lesson series.
 {: .fs-1 }
 
 There is a world of possibilities here. And we'll begin to explore them in this lesson series!
@@ -557,12 +559,12 @@ For your prototyping journals, run [SimpleSerialIn.ino](https://github.com/makea
 In the [next lesson](web-serial), we'll apply our newfound serial knowledge to communicating with our Arduino via our web browsers using the [Web Serial API](https://web.dev/serial/).
 
 <span class="fs-6">
-[Next: Web Serial](web-serial.md){: .btn .btn-outline }
+{% include tlink.html id='communication-web-serial' text='Next: Web Serial' %}{: .btn .btn-outline }
 </span>
 
 <!-- #### DisplayTextSerialIn
 
-For each, we will be running [DisplayTextSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/DisplayTextSerialIn/DisplayTextSerialIn.ino) on the Arduino, which reads text data off the Serial port, displays it on a connected [OLED](../advancedio/oled.md), and echos the data back on the Serial port.
+For each, we will be running [DisplayTextSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/DisplayTextSerialIn/DisplayTextSerialIn.ino) on the Arduino, which reads text data off the Serial port, displays it on a connected {% include tlink.html id='advancedio-oled' text='OLED' %}, and echos the data back on the Serial port.
 
 Essentially, [DisplayTextSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/DisplayTextSerialIn/DisplayTextSerialIn.ino) does this:
 

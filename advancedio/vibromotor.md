@@ -1,4 +1,6 @@
 ---
+permalink: /advancedio/vibromotor/
+page_id: advancedio-vibromotor
 layout: default
 title: L2&#58; Vibromotors
 nav_order: 2
@@ -171,14 +173,14 @@ LRA Motors
 
 ## Wiring ERM motors with Arduino
 
-Although many online tutorials and YouTube videos show ERM motors directly hooked up to Arduino GPIO pins—using wirings similar to how we connect [LEDs](../arduino/led-blink.md)—this is incorrect and could damage your microcontroller. Why?
+Although many online tutorials and YouTube videos show ERM motors directly hooked up to Arduino GPIO pins—using wirings similar to how we connect {% include tlink.html id='arduino-led-blink' text='LEDs' %}—this is incorrect and could damage your microcontroller. Why?
 
 Recall that Arduino GPIO pins can supply a [maximum 40mA](https://www.arduino.cc/en/reference/board) per pin with a safe continuous current of 20mA. This is sufficient to turn on LEDs with current limiting resistors but not enough for higher-current loads. In the table [above](#example-erm-motors), most ERM motors have operating currents of 50mA or beyond. Moreover, as electromechanical devices, ERMs require a higher startup current to initiate motor movement from rest (due to inertia). The [coin ERM sold](https://www.adafruit.com/product/1201) by Adafruit has an operating current of 75mA and a startup current of up to 120mA.
 
 So, what do we do? We need to use a **transistor**.
 
 ![](assets/images/Arduino_ERMMotorWirings_ThreeOptions.png)
-**Figure.** Three example wirings for hooking up ERM motors to your Arduino. The incorrect wiring on the left directly connects the ERM to the GPIO Pin 3 (using a similar wiring as we did with [LEDs](../arduino/led-blink.md)). This is wrong and could damage your Arduino. GPIO pins can only supply up to 40mA of current but the ERM motor requires 75mA with a startup current of up to 120mA. The other two wirings use transistors as switches to connect the ERM motors to the 3.3V supply pins, which are capable of supplying 150mA. You can right-click on this image and select "Open Image in a New Tab" to enlarge. See also this "[How to Build a Vibration Motor Circuit](http://www.learningaboutelectronics.com/Articles/Vibration-motor-circuit.php)" by Learning about Electronics.
+**Figure.** Three example wirings for hooking up ERM motors to your Arduino. The incorrect wiring on the left directly connects the ERM to the GPIO Pin 3 (using a similar wiring as we did with {% include tlink.html id='arduino-led-blink' text='LEDs' %}). This is wrong and could damage your Arduino. GPIO pins can only supply up to 40mA of current but the ERM motor requires 75mA with a startup current of up to 120mA. The other two wirings use transistors as switches to connect the ERM motors to the 3.3V supply pins, which are capable of supplying 150mA. You can right-click on this image and select "Open Image in a New Tab" to enlarge. See also this "[How to Build a Vibration Motor Circuit](http://www.learningaboutelectronics.com/Articles/Vibration-motor-circuit.php)" by Learning about Electronics.
 {: .fs-1 }
 
 ---

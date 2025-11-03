@@ -1,4 +1,6 @@
 ---
+permalink: /electronics/leds/
+page_id: electronics-leds
 layout: default
 title: L6&#58; LEDs
 nav_order: 6
@@ -20,7 +22,7 @@ search_exclude: false
 {:toc}
 ---
 
-Second only to [resistors](resistors.md), light-emitting diodes (LEDs) are the most common electrical components used in physical computing. LEDs are power-efficient light sources *not* based on resistive properties and thus, are non-ohmic devices. They come in a variety of shapes and sizes (see image below). In this lesson, you will learn about diodes and how they work before diving into LEDS, the importance of current-limiting resistors, and how to use them.
+Second only to {% include tlink.html id='electronics-resistors' text='resistors' %}, light-emitting diodes (LEDs) are the most common electrical components used in physical computing. LEDs are power-efficient light sources *not* based on resistive properties and thus, are non-ohmic devices. They come in a variety of shapes and sizes (see image below). In this lesson, you will learn about diodes and how they work before diving into LEDS, the importance of current-limiting resistors, and how to use them.
 
 ![](assets/images/Verschiedene_LEDs_FromWikipedia.jpg)
 **Figure.**  LEDs range in color, size, and shape. Image from [Wikipedia](https://en.wikipedia.org/wiki/File:Verschiedene_LEDs.jpg).
@@ -82,7 +84,7 @@ Typically, once $$V_f$$ is reached, we assume that the voltage drop $$V_D$$ acro
 
 ### Diode power dissipation
 
-Just like resistors, which have [maximum power capacity ratings](resistors.md#calculating-the-power-dissipation-of-a-resistor), diodes do too! For a resistor $$R$$, we calculate power dissipation by the voltage drop across it $$V$$ multiplied by the current $$I$$ through it (so, $$P=V * I$$). It's the same thing for a diode!
+Just like resistors, which have {% include tlink.html id='electronics-resistors' text='maximum power capacity ratings' %}#calculating-the-power-dissipation-of-a-resistor, diodes do too! For a resistor $$R$$, we calculate power dissipation by the voltage drop across it $$V$$ multiplied by the current $$I$$ through it (so, $$P=V * I$$). It's the same thing for a diode!
 
 ### Breakdown voltage
 
@@ -186,7 +188,7 @@ Where $$I_S$$ is the saturation current, $$V_D$$ is the voltage across the diode
 
 ## Using LEDs
 
-Whew, we finally made it back to LEDs, which are amazingly flexible, fun, and elegant electronic components (see image below). LEDs are essential to physical computing and we rely on them in many of our [Intro to Arduino](../arduino/index.md) lessons. So, it's important that you understand how to use them. 
+Whew, we finally made it back to LEDs, which are amazingly flexible, fun, and elegant electronic components (see image below). LEDs are essential to physical computing and we rely on them in many of our {% include tlink.html id='arduino-index' text='Intro to Arduino' %} lessons. So, it's important that you understand how to use them. 
 
 ![](assets/images/LEDBasedProjects.png)
 **Figure.** A variety of relatively simple LED-based projects. The top row projects are built with just LEDs, resistors, and a battery. The bottom row are built with microcontrollers. From top-left: (a) Flower LED lamp built with plastic spoons by [Wemyour](https://www.youtube.com/watch?v=OsTKdKdMXKU); (b and c)  Paper-based nightlights and a starry water bottle built by [I Love Creativity](https://youtu.be/3frVM7J0nO8); (d) an 8x8x8 LED cube built with Arduino Uno by [Harry Le](https://youtu.be/T5Aq7cRc-mU); (e) hanging LED cloud by [Richard Clarkson](https://vimeo.com/111889143); (f) air quality balloons by Stacey Kuznetsov and colleagues ([UbiComp'11 paper](http://doi.acm.org/10.1145/2030112.2030145), [Instructables](https://www.instructables.com/Air-quality-balloons/))

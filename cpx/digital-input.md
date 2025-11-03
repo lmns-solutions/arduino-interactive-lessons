@@ -1,4 +1,6 @@
 ---
+permalink: /cpx/digital-input/
+page_id: cpx-digital-input
 layout: default
 title: L9&#58; Digital Input
 parent: Circuit Playground Express
@@ -21,7 +23,7 @@ In Lesson 9, we continue exploring how to hook up and use external electronics w
 
 ## Lesson 8.1: Overview of Digital Input
 
-In this lesson, we learn about _what_ is **digital input** and _how_ to use it on the Circuit Playground Express (CPX). We begin similarly to our [analog input lessons](analog-input.md): introducing the 3.3V, GND, and A1 CPX connection pads and showing how the **digital read** function responds to different input voltages (e.g., 3.3V, GND).
+In this lesson, we learn about _what_ is **digital input** and _how_ to use it on the Circuit Playground Express (CPX). We begin similarly to our {% include tlink.html id='cpx-analog-input' text='analog input lessons' %}: introducing the 3.3V, GND, and A1 CPX connection pads and showing how the **digital read** function responds to different input voltages (e.g., 3.3V, GND).
 
 <div class="iframe-container">
   <iframe width="100%" src="https://www.youtube.com/embed/raIc-EuHfmc?si=-KCgO3ypF9kPKBVd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -36,7 +38,7 @@ In this video, we introduce a solution to the "floating pin" problem using pull-
 </div>
 
 {: .note }
-If you want to skip all the theory about why pull-down resistors and just "follow the recipe" for hooking up a button, [skip to 13:54 in our video](https://youtu.be/mFXvAfsiRx0?si=jWkx5H2zZZ5vhSaB&t=834). You can learn more about the "floating pin problem" and more in [Arduino L1: Using Buttons](../arduino/buttons.md).
+If you want to skip all the theory about why pull-down resistors and just "follow the recipe" for hooking up a button, [skip to 13:54 in our video](https://youtu.be/mFXvAfsiRx0?si=jWkx5H2zZZ5vhSaB&t=834). You can learn more about the "floating pin problem" and more in {% include tlink.html id='arduino-buttons' text='Arduino L1: Using Buttons' %}.
 
 ### Circuit Diagrams
 
@@ -94,7 +96,7 @@ Post advance code for debouncing
 
 ## Advanced Code
 
-* [Debouncing Buttons in MakeCode](https://makecode.com/_ie5VHcgsXfEu). Note: I haven't really found the need to debounce buttons with MakeCode and CPX but if you're getting unexpected multiple button presses when using a button, try this out. For more on debouncing, see our [Debouncing Lesson](../arduino/debouncing.md).
+* [Debouncing Buttons in MakeCode](https://makecode.com/_ie5VHcgsXfEu). Note: I haven't really found the need to debounce buttons with MakeCode and CPX but if you're getting unexpected multiple button presses when using a button, try this out. For more on debouncing, see our {% include tlink.html id='arduino-debouncing' text='Debouncing Lesson' %}.
 
 ## Resources
 Here are some additional resources:
@@ -109,5 +111,5 @@ Here are some additional resources:
 ## Previous Lesson
 
 <span class="fs-6">
-[Previous: Analog Input](analog-input.md){: .btn .btn-outline }
+{% include tlink.html id='cpx-analog-input' text='Previous: Analog Input' %}{: .btn .btn-outline }
 </span>

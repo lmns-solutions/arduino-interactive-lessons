@@ -1,4 +1,6 @@
 ---
+permalink: /arduino/potentiometers-old/
+page_id: arduino-potentiometers-old
 layout: default
 title: L4&#58; Potentiometers
 nav_order: 4
@@ -25,7 +27,7 @@ TODO:
 - Make the potentiometer stuff about being a refresher
 - Directly compare the circuit hookup with using a potentiometer as a rheostat vs. as a potentiometer for our circuit
 
-In this lesson, we'll learn about potentiometers, analog input, voltage dividers, and, as a bonus, multimeters too! Similar to the [buttons lesson](buttons.md), we are going to use potentiometers on their own before learning how to use them with microcontrollers.
+In this lesson, we'll learn about potentiometers, analog input, voltage dividers, and, as a bonus, multimeters too! Similar to the {% include tlink.html id='arduino-buttons' text='buttons lesson' %}, we are going to use potentiometers on their own before learning how to use them with microcontrollers.
 
 <iframe width="736" height="414" src="https://www.youtube.com/embed/MJt9kSNlsU4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -97,7 +99,7 @@ That said, many common **sensors** are actually variable resistors—they dynami
 Prices and pictures are from Sparkfun.com; parts can often be cheaper in bulk from suppliers like [Digi-Key](https://www.digikey.com/) or [Mouser Electronics](https://www.mouser.com/).
 {: .fs-1 }
 
-To use these two-leg variable resistors with a microcontroller, we will need to add an additional fixed resistor to create a voltage divider. We'll show you how to do that in our [next lesson](force-sensitive-resistors.md).
+To use these two-leg variable resistors with a microcontroller, we will need to add an additional fixed resistor to create a voltage divider. We'll show you how to do that in our {% include tlink.html id='arduino-force-sensitive-resistors' text='next lesson' %}.
 
 Here, however, we are going to focus on using a potentiometer first as a rheostat and then as a voltage divider with our Arduino.
 
@@ -147,7 +149,7 @@ Tinkercad works by dragging and dropping components from the right sidebar menu 
 If you've dragged over an Arduino, you can also click on the "Code" button and write code either in `C/C++` or in a visual, block-based language. The simulator even has a "Serial Monitor", "Serial Plotter", and, wait for it, a simplistic debugger with breakpoint support!
 
 ![Screenshot of Tinkercad's primary UI](assets/images/Tinkercad_MainInterface.png)
-An example of the [multi-rate blinking lesson](led-blink3.md) created in Tinkercad. [Try it out](https://www.tinkercad.com/things/kAq7G2p4QQ6)!
+An example of the {% include tlink.html id='arduino-led-blink3' text='multi-rate blinking lesson' %} created in Tinkercad. [Try it out](https://www.tinkercad.com/things/kAq7G2p4QQ6)!
 
 #### Step 4: Build the potentiomer-based LED dimmer
 
@@ -223,7 +225,7 @@ There are two differences in this circuit compared to the Tinkercad one above. F
 
 OK, let's build this thing for real with our hardware parts.
 
-Because not all of us have access to a 9V battery + snap connector to easily interface with our breadboards, we can again use our Arduino for a power source (just like we did in our very first lesson: [LED On](led-on.md)).
+Because not all of us have access to a 9V battery + snap connector to easily interface with our breadboards, we can again use our Arduino for a power source (just like we did in our very first lesson: {% include tlink.html id='arduino-led-on' text='LED On' %}).
 
 Given that the Arduino supplies 5V rather than 9V, we can replace our 470Ω resistor with a smaller resistor like a 220Ω (but you can certainly use a 470Ω or 680Ω if you'd like—remember, this is a backup resistor for when the potentiometer's wiper resistance goes to 0Ω).
 
@@ -279,7 +281,7 @@ The Arduino's microcontroller contains an analog-to-digital converter (ADC), whi
 
 Why does this matter?
 
-For many purposes, it probably doesn't. But the practical implication is that with a 0.0049V resolution, you won't be able to tell the difference between, for example, 2.0140V and 2.0152V (both which would convert to 411) or 4.9148V and 4.9190V (both which would be read as 1003). Does this matter? It depends on the context—for most things we do, it won't. We'll return to this in more depth when we discuss sampling rates and quantization in the [Sensors](../sensors/index.md) and [Signals](../signals/index.md) sections.
+For many purposes, it probably doesn't. But the practical implication is that with a 0.0049V resolution, you won't be able to tell the difference between, for example, 2.0140V and 2.0152V (both which would convert to 411) or 4.9148V and 4.9190V (both which would be read as 1003). Does this matter? It depends on the context—for most things we do, it won't. We'll return to this in more depth when we discuss sampling rates and quantization in the {% include tlink.html id='sensors-index' text='Sensors' %} and {% include tlink.html id='signals-index' text='Signals' %} sections.
 
 #### Changing the HIGH reference voltage
 
@@ -320,7 +322,7 @@ This means that we have to configure our variable resistor sensors as **voltage 
 
 ## Hooking up variable resistors with microcontrollers
 
-Just like with our [button](buttons.md) lesson, let's walk through how one might try to hook up a potentiometer with a microcontroller. As before, we'll learn about what **not** to do and **why** as well as **what to do.**
+Just like with our {% include tlink.html id='arduino-buttons' text='button' %} lesson, let's walk through how one might try to hook up a potentiometer with a microcontroller. As before, we'll learn about what **not** to do and **why** as well as **what to do.**
 
 ### Simple program to read analog input
 
@@ -401,6 +403,6 @@ UIUC Analog Input: https://courses.engr.illinois.edu/ece110/sp2021/content/labs/
 In the next lesson, we'll learn how to add a fixed resistor to a two-leg variable resistor like a force-sensitive resistor or photocell to create a voltage divider that can be read by a microcontroller.
 
 <span class="fs-6">
-[Previous: Make a simple piano](piano.md){: .btn .btn-outline }
-[Next: Using force-sensitive resistors](force-sensitive-resistors.md){: .btn .btn-outline }
+{% include tlink.html id='arduino-piano' text='Previous: Make a simple piano' %}{: .btn .btn-outline }
+{% include tlink.html id='arduino-force-sensitive-resistors' text='Next: Using force-sensitive resistors' %}{: .btn .btn-outline }
 </span>

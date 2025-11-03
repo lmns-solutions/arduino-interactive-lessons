@@ -1,4 +1,6 @@
 ---
+permalink: /sensors/photoresistors/
+page_id: sensors-photoresistors
 layout: default
 title: Photoresistors
 parent: Sensors
@@ -129,9 +131,9 @@ As before, we're going to explore this sensor first **without** a microcontrolle
 
 ### Initial auto-on nightlight circuit
 
-Like the [FSR](../arduino/force-sensitive-resistors.md), the photoresistor is a two-legged resistive sensor and is non-polarized. So, you can connect them in "either direction" in your circuits. 
+Like the {% include tlink.html id='arduino-force-sensitive-resistors' text='FSR' %}, the photoresistor is a two-legged resistive sensor and is non-polarized. So, you can connect them in "either direction" in your circuits. 
 
-You might initially try to hook up the photoresistor in the same way as the [FSR](../arduino/force-sensitive-resistors.md): in-series with the LED. As we measured a minimum resistance of ~50-100Ω when an ultrabright LED flashlight was pointed directly at the photoresistor, in both wiring diagrams, we include a backup current limiting resistor.
+You might initially try to hook up the photoresistor in the same way as the {% include tlink.html id='arduino-force-sensitive-resistors' text='FSR' %}: in-series with the LED. As we measured a minimum resistance of ~50-100Ω when an ultrabright LED flashlight was pointed directly at the photoresistor, in both wiring diagrams, we include a backup current limiting resistor.
 
 ![Two wiring diagrams of a photocell connected to an LED: one with 9V battery; other powered by Arduino 5V pin](assets/images/Photoresistor_WiringDiagram_NoArduino_Fritzing.png)
 
@@ -188,7 +190,7 @@ Let's pursue the latter option!
 
 ## Using photoresistors with microcontrollers
 
-As a two-legged variable resistor, we can use the same voltage divider wiring as the [FSR](../arduino/force-sensitive-resistors.md). Recall the voltage divider equation introduced in the [potentiometers](../arduino/potentiometers.md) lesson: $$V_{out} = V_{in} \cdot \frac{R_2}{R_1 + R_2}$$. 
+As a two-legged variable resistor, we can use the same voltage divider wiring as the {% include tlink.html id='arduino-force-sensitive-resistors' text='FSR' %}. Recall the voltage divider equation introduced in the {% include tlink.html id='arduino-potentiometers' text='potentiometers' %} lesson: $$V_{out} = V_{in} \cdot \frac{R_2}{R_1 + R_2}$$. 
 
 Below, we show two wiring options. On the left, the photoresistor is $$R_1$$ in the voltage divider configuration so $$V_{out}$$ will increase as light levels increase. On the right, the photoresistor is $$R_2$$ so $$V_{out}$$ will increase as light levels decrease (a "darkness" sensor, if you will).
 
@@ -222,7 +224,7 @@ analogWrite(OUTPUT_LED_PIN, ledVal);
 
 ### What value should we make our fixed resistor?
 
-I think, by now, we understand how to hook up a two-leg resistive sensor to a microcontroller: using a voltage divider! We covered this both in our [potentiometers lesson](../arduino/potentiometers.md) and our [force-sensitive resistor lesson](../arduino/force-sensitive-resistors.md). 
+I think, by now, we understand how to hook up a two-leg resistive sensor to a microcontroller: using a voltage divider! We covered this both in our {% include tlink.html id='arduino-potentiometers' text='potentiometers lesson' %} and our {% include tlink.html id='arduino-force-sensitive-resistors' text='force-sensitive resistor lesson' %}. 
 
 However, one key question remains: how do we know what to use as the fixed resistor in the voltage divider?
 
@@ -299,7 +301,7 @@ This [source code](https://github.com/makeabilitylab/arduino/blob/master/Sensors
 
 ## Exercises
 - `map()` assumes a linear mapping between two value ranges. What if you wanted a logarithmic or exponential conversion? How would you implement this? How might this be useful for working with sensors?
-- Just like we did for the [FSR lesson](../arduino/force-sensitive-resistors.md), try hooking up a piezo buzzer (and be creative about how it makes "music").
+- Just like we did for the {% include tlink.html id='arduino-force-sensitive-resistors' text='FSR lesson' %}, try hooking up a piezo buzzer (and be creative about how it makes "music").
 - Make the night light brighter or multi-color (either with your RGB LEDs or individually colored LEDs)
 
 ## References

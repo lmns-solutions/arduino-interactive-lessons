@@ -1,4 +1,6 @@
 ---
+page_id: arduino-index
+permalink: /arduino/
 layout: default
 title: Intro to Arduino
 nav_order: 2
@@ -17,10 +19,10 @@ usetocbot: true
 {:toc}
 ---
 
-Welcome 👋 to the second module in your Physical Computing journey: **Introduction to Microcontrollers** (using Arduino). Here, you will learn about [digital output](./led-blink.md), [analog output](./led-fade.md), [digital input](./buttons.md), and [analog input](./potentiometers.md) and build interesting musical instruments along the way from a [button piano](./piano.md) to a [Jedi-force instrument](./force-sensitive-resistors.md#jedi-force-instrument)! Get started with our first lesson: [L1: Turning on an LED](./led-on.md) and start building! ⚒🛠
+Welcome 👋 to the second module in your Physical Computing journey: **Introduction to Microcontrollers** (using Arduino). Here, you will learn about {% include tlink.html id='arduino-led-blink' text='digital output' %}, {% include tlink.html id='arduino-led-fade' text='analog output' %}, {% include tlink.html id='arduino-buttons' text='digital input' %}, and {% include tlink.html id='arduino-potentiometers' text='analog input' %} and build interesting musical instruments along the way from a {% include tlink.html id='arduino-piano' text='button piano' %} to a {% include tlink.html id='arduino-force-sensitive-resistors' text='Jedi-force instrument' %}#jedi-force-instrument! Get started with our first lesson: {% include tlink.html id='arduino-led-on' text='L1: Turning on an LED' %} and start building! ⚒🛠
 
 {: .note }
-Although you can begin your learning journey here, we  recommend that you complete the first module on [Intro to Electronics](../electronics/index.md) first. This will allow you to have a more deep understanding of the content in this section, and we will occassionally refer back to [Intro to Electronics](../electronics/index.md).
+Although you can begin your learning journey here, we  recommend that you complete the first module on {% include tlink.html id='electronics-index' text='Intro to Electronics' %} first. This will allow you to have a more deep understanding of the content in this section, and we will occassionally refer back to {% include tlink.html id='electronics-index' text='Intro to Electronics' %}.
 
 <!-- Call this intro to Microcontrollers and then cast Arduino as an example? -->
 
@@ -28,7 +30,7 @@ Although you can begin your learning journey here, we  recommend that you comple
 
 ## Why this Tutorial Series?
 
-There are many Arduino resources online, many good, some bad. Our two favorites are, perhaps, [Adafruit’s 18-Step Guide](https://learn.adafruit.com/series/learn-arduino) and Jeremy Blum's [Exploring Arduino: Tools and Techniques for Engineering Wizardry](https://alliance-primo.hosted.exlibrisgroup.com/permalink/f/kjtuig/CP51311244450001451), 2nd Edition, Wiley, 2020. See our [Resources](../resources/index.md) page for more.
+There are many Arduino resources online, many good, some bad. Our two favorites are, perhaps, [Adafruit’s 18-Step Guide](https://learn.adafruit.com/series/learn-arduino) and Jeremy Blum's [Exploring Arduino: Tools and Techniques for Engineering Wizardry](https://alliance-primo.hosted.exlibrisgroup.com/permalink/f/kjtuig/CP51311244450001451), 2nd Edition, Wiley, 2020. See our {% include tlink.html id='resources-index' text='Resources' %} page for more.
 
 Our lessons are different both in approach and scope. They are based on years of experience in teaching physical computing—to design students, computer scientists, and engineers at the undergraduate and graduate level—and we attempt to address common confusions head-on.
 
@@ -72,59 +74,59 @@ The following tutorials are interactive and designed to be completed **in order*
     
     -->
 
-### [Lesson 1: Turning on an LED](led-on.md)
+### {% include tlink.html id='arduino-led-on' text='Lesson 1: Turning on an LED' %}
 
 Introduces the Arduino power and ground pins, powering an initial LED circuit with a current limiting resistor, and plugging components into the Arduino.
 
-### [Lesson 2: Blinking an LED](led-blink.md)
+### {% include tlink.html id='arduino-led-blink' text='Lesson 2: Blinking an LED' %}
 
 Introduces the Arduino IDE, digital output, and the ability to programmatically control Arduino GPIO pins to turn an LED on and off via [`digitalWrite`](https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/).
 
-### [Lesson 3: Serial debugging](serial-print.md)
+### {% include tlink.html id='arduino-serial-print' text='Lesson 3: Serial debugging' %}
 
 Introduces some basic debugging approaches for Arduino, with a specific focus on [`Serial.print`](https://www.arduino.cc/reference/en/language/functions/communication/serial/print/).
 
-### [Lesson 4: Fading an LED](led-fade.md)
+### {% include tlink.html id='arduino-led-fade' text='Lesson 4: Fading an LED' %}
 
 Introduces analog output, pulse-width modulation (PWM), and demonstrates how to gradually fade an LED on and off by using [`analogWrite`](https://www.arduino.cc/reference/en/language/functions/analog-io/analogwrite/)
 
-### [Lesson 5: Blinking an LED Part 2](led-blink2.md)
+### {% include tlink.html id='arduino-led-blink2' text='Lesson 5: Blinking an LED Part 2' %}
 
 Introduces the concept of using Arduino GPIO pins as either current **sources** or **sinks** by hooking up two LED circuit configurations: one circuit with the LED cathode towards GND and another with the LED anode towards GND.
 
-### [Lesson 6: RGB LEDs](rgb-led.md)
+### {% include tlink.html id='arduino-rgb-led' text='Lesson 6: RGB LEDs' %}
 
 Introduces RGB LEDs, using both common anode and cathode versions, and independently controlling brightness and hue.
 
-### [Lesson 7: Crossfading RGB LEDs](rgb-led-fade.md)
+### {% include tlink.html id='arduino-rgb-led-fade' text='Lesson 7: Crossfading RGB LEDs' %}
 
 Shows how to fade between RGB colors using [`analogWrite`](https://www.arduino.cc/reference/en/language/functions/analog-io/analogwrite/), to use the [HSL colorspace](https://en.wikipedia.org/wiki/HSL_and_HSV) to more easily (and independently) control hue and brightness, and to use and load local `C/C++` libraries
 
-### [Lesson 8: Rate Blinking Multiple LEDs](led-blink3.md)
+### {% include tlink.html id='arduino-led-blink3' text='Lesson 8: Rate Blinking Multiple LEDs' %}
 
 In this lesson, we will learn how to blink multiple LEDs at different rates and build our first [C/C++ class](http://www.cplusplus.com/doc/tutorial/classes/), which will greatly simplify our code and, as an added bonus, reduce its size by eliminating code redundancy.
 
 ## Intro to Input
 
-### [Lesson 1: Using buttons](buttons.md)
+### {% include tlink.html id='arduino-buttons' text='Lesson 1: Using buttons' %}
 
 Introduces buttons (aka momentary switches), digital input, using Arduino's [`digitalRead`](https://www.arduino.cc/reference/en/language/functions/digital-io/digitalread/) function, and pull-up and pull-down resistors.
 
-### [Lesson 2: Button piano](piano.md)
+### {% include tlink.html id='arduino-piano' text='Lesson 2: Button piano' %}
 
-In [this lesson](piano.md), we are going to make a simple five-key piano with tactile buttons wired with internal pull-up resistors and a [piezo buzzer](https://www.adafruit.com/product/160).
+In {% include tlink.html id='arduino-piano' text='this lesson' %}, we are going to make a simple five-key piano with tactile buttons wired with internal pull-up resistors and a [piezo buzzer](https://www.adafruit.com/product/160).
 
-### [Lesson 3: Debouncing switches](debouncing.md)
+### {% include tlink.html id='arduino-debouncing' text='Lesson 3: Debouncing switches' %}
 
-In [this lesson](debouncing.md), we'll learn about "contact bouncing" and how to "debounce" to make our digital input more reliable.
+In {% include tlink.html id='arduino-debouncing' text='this lesson' %}, we'll learn about "contact bouncing" and how to "debounce" to make our digital input more reliable.
 
-### [Lesson 4: Potentiometers](potentiometers.md)
+### {% include tlink.html id='arduino-potentiometers' text='Lesson 4: Potentiometers' %}
 
-[This lesson](potentiometers.md) introduces potentiometers and rheostats, analog input, and using Arduino's [`analogRead`](https://www.arduino.cc/reference/en/language/functions/analog-io/analogread/) function. Also shows how to use Tinkercad to prototype and test circuits in an online simulator and how to use a multimeter to measure current.
+{% include tlink.html id='arduino-potentiometers' text='This lesson' %} introduces potentiometers and rheostats, analog input, and using Arduino's [`analogRead`](https://www.arduino.cc/reference/en/language/functions/analog-io/analogread/) function. Also shows how to use Tinkercad to prototype and test circuits in an online simulator and how to use a multimeter to measure current.
 
-### [Lesson 5: Force-sensitive resistors](force-sensitive-resistors.md)
+### {% include tlink.html id='arduino-force-sensitive-resistors' text='Lesson 5: Force-sensitive resistors' %}
 
-Introduces [force-sensitive resistors (FSRs)](force-sensitive-resistors.md), how to use two-legged variable resistors with microcontrollers (including FSRs), and how to make a force-piano. Very Jedi-like!
+Introduces {% include tlink.html id='arduino-force-sensitive-resistors' text='force-sensitive resistors (FSRs)' %}, how to use two-legged variable resistors with microcontrollers (including FSRs), and how to make a force-piano. Very Jedi-like!
 
 <!--
 TODO: after Lesson 4, have them make their own lo-fi resistive sensor? and turn their arduino into a voltmeter?

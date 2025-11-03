@@ -1,4 +1,6 @@
 ---
+permalink: /communication/web-serial/
+page_id: communication-web-serial
 layout: default
 title: L2&#58; Web Serial
 nav_order: 2
@@ -18,7 +20,7 @@ usetocbot: true
 {:toc}
 ---
 
-In our [previous lesson](serial-intro.md) we dove deeper into asynchronous serial communication, Arduino's [Serial functionality](https://www.arduino.cc/reference/en/language/functions/communication/serial/), and how we can write computer programs, like [serial_demo.py](https://github.com/makeabilitylab/arduino/blob/master/Python/Serial/serial_demo.py), to bidirectionally communicate with Arduino.
+In our {% include tlink.html id='communication-serial-intro' text='previous lesson' %} we dove deeper into asynchronous serial communication, Arduino's [Serial functionality](https://www.arduino.cc/reference/en/language/functions/communication/serial/), and how we can write computer programs, like [serial_demo.py](https://github.com/makeabilitylab/arduino/blob/master/Python/Serial/serial_demo.py), to bidirectionally communicate with Arduino.
 
 In this lesson, we will apply our growing serial knowledge to a new context: the web! Now, it may seem a bit weird to use a web browser to communicate with a locally connected device. But, if you think about it, we actually do this all the time using video chat in our web browsers: the w3c [MediaDevices API](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) provides regulated access to media input devices like cameras and microphones.
 
@@ -30,7 +32,7 @@ However, WebUSB did not include support for USB-to-serial devices like Arduino. 
 
 While we've previously taught computer-Arduino serial communication using [Processing](https://processing.org/) and [Python](https://www.python.org/), using Web Serial let's us combine Arduino with a creative, fast-changing context: the Web. Web Serial also lets us utilize all of the wonderful web-based tools and APIs like [p5js](https://p5js.org/), [ml5js](https://ml5js.org/), [paper.js](http://paperjs.org/), [three.js](https://threejs.org/), [matter.js](https://brm.io/matter-js/), and more!
 
-Of course, if your Arduino board has built-in WiFi, you can communicate directly with web servers (as we explore a bit in the [ESP32 IoT lesson](../esp32/iot.md)); however, in this case, we assume either a tethered connection via serial over USB or a local wireless connection via serial over Bluetooth.
+Of course, if your Arduino board has built-in WiFi, you can communicate directly with web servers (as we explore a bit in the {% include tlink.html id='esp32-iot' text='ESP32 IoT lesson' %}); however, in this case, we assume either a tethered connection via serial over USB or a local wireless connection via serial over Bluetooth.
 
 Much of what we do with Web Serial could be translated to a WiFi context. 
 
@@ -264,7 +266,7 @@ The `connectAndOpen()` method simply combines the two `connect()` and `open()` f
 
 ## Let's make stuff
 
-We'll begin by running the same Arduino code ([SimpleSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SimpleSerialIn/SimpleSerialIn.ino)) with the same circuit as the [previous lesson](serial-intro.md). The circuit:
+We'll begin by running the same Arduino code ([SimpleSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SimpleSerialIn/SimpleSerialIn.ino)) with the same circuit as the {% include tlink.html id='communication-serial-intro' text='previous lesson' %}. The circuit:
 
 ![](assets/images/SimpleSerialIn_LEDCircuit.png)
 **Figure.** The corresponding circuit for [SimpleSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/SimpleSerialIn/SimpleSerialIn.ino). Made in Fritzing and PowerPoint.
@@ -555,7 +557,7 @@ For our second and final example, we will build a simple webpage that sends and 
 **Video.** Running the DisplayText demo ([live page](https://makeabilitylab.github.io/p5js/WebSerial/Basic/DisplayText/), [code](https://github.com/makeabilitylab/p5js/tree/master/WebSerial/Basic/DisplayText)) with [DisplayTextSerialIn.ino](https://github.com/makeabilitylab/arduino/blob/master/Serial/DisplayTextSerialIn/DisplayTextSerialIn.ino) on the Arduino Leonardo.
 {: .fs-1 }
 
-For our circuit and wiring, we simply need an Arduino and [OLED display](../advancedio/oled.md).
+For our circuit and wiring, we simply need an Arduino and {% include tlink.html id='advancedio-oled' text='OLED display' %}.
 ![](assets/images/ArduinoLeonardo_OLEDDisplayWiring.png)
 
 #### Create new folder and index.html page
@@ -763,10 +765,10 @@ For your prototyping journals, either modify or create your own lil web app to c
 
 ## Next Lesson
 
-In the [next lesson](p5js-serial.md), we'll show how to use [p5js](https://p5js.org/) with Web Serial. It's gonna be great fun!
+In the {% include tlink.html id='communication-p5js-serial' text='next lesson' %}, we'll show how to use [p5js](https://p5js.org/) with Web Serial. It's gonna be great fun!
 
 <span class="fs-6">
-[Previous: Intro to Serial](serial-intro.md){: .btn .btn-outline }
-[Next: Using p5js with Web Serial](p5js-serial.md){: .btn .btn-outline }
+{% include tlink.html id='communication-serial-intro' text='Previous: Intro to Serial' %}{: .btn .btn-outline }
+{% include tlink.html id='communication-p5js-serial' text='Next: Using p5js with Web Serial' %}{: .btn .btn-outline }
 <!-- [Next: Using potentiometers](potentiometers.md){: .btn .btn-outline } -->
 </span>

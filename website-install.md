@@ -1,4 +1,6 @@
 ---
+permalink: /website-install/
+page_id: website-install
 layout: default
 title: Website Dev Installation
 has_toc: false # on by default
@@ -232,4 +234,4 @@ To resolve this error, simply restart your machine, reopen VSCode, and try again
 1. Download [VS Code](https://code.visualstudio.com/Download)
 2. Open the `physcomp` folder in VS Code
 3. Use markdown to build new pages. We are using the ['Just the Docs'](https://pmarsceill.github.io/just-the-docs/) Jekyll template.
-4. Read more about website dev [here](website-dev.md)
+4. Read more about website dev {% include tlink.html id='website-dev' text='here' %}

@@ -1,4 +1,6 @@
 ---
+permalink: /arduino/debouncing/
+page_id: arduino-debouncing
 layout: default
 title: L3&#58; Debouncing
 nav_order: 3
@@ -121,7 +123,7 @@ Let's build the following test circuit and then walk through some possible softw
 
 ### Materials
 
-Just like with the [buttons](buttons.md) lesson, we'll need the following materials:
+Just like with the {% include tlink.html id='arduino-buttons' text='buttons' %} lesson, we'll need the following materials:
 
 | Breadboard | Arduino | LED | Resistor | Button |
 |:-----:|:-----:|:-----:|:-----:|:-----:|
@@ -179,7 +181,7 @@ This [source code](https://github.com/makeabilitylab/arduino/blob/master/Basics/
 
 ### Debouncing solution 2: using timestamps
 
-Just as we did for our [rate blinking LEDs](led-blink3.md) lesson, we can modify the above program to **eliminate delays** and simply use timestamps to track state transitions. Indeed, this is how the official Arduino debounce tutorial works ([link](https://www.arduino.cc/en/Tutorial/BuiltInExamples/Debounce)). Before looking at our solution, can you come up with your own?
+Just as we did for our {% include tlink.html id='arduino-led-blink3' text='rate blinking LEDs' %} lesson, we can modify the above program to **eliminate delays** and simply use timestamps to track state transitions. Indeed, this is how the official Arduino debounce tutorial works ([link](https://www.arduino.cc/en/Tutorial/BuiltInExamples/Debounce)). Before looking at our solution, can you come up with your own?
 
 <!-- gist-it is down, so now using emgithub -->
 <!-- <script src="https://gist-it.appspot.com/https://github.com/makeabilitylab/arduino/blob/master/Basics/digitalRead/DebounceWithTimestamps/DebounceWithTimestamps.ino?footer=minimal"></script> -->
@@ -262,7 +264,7 @@ This solution is less robust but works well for human input in environments with
 
 Debouncing a single button is relatively simple but our state tracking code does not scale well to multiple buttons (it would look very messy). So, what should we do?
 
-This problem is very similar to our state tracking issue for [rate blinking LEDs](led-blink3.md). For that, we developed an object-oriented approach called [`Blinker`](led-blink3.md##multi-rate-blinking-an-object-oriented-approach). Similarly, we could develop a `Button` class that works largely the same way—and could even have special features like tracking *double clicks*, *long presses*, etc.
+This problem is very similar to our state tracking issue for {% include tlink.html id='arduino-led-blink3' text='rate blinking LEDs' %}. For that, we developed an object-oriented approach called {% include tlink.html id='arduino-led-blink3' text='`Blinker`' %}##multi-rate-blinking-an-object-oriented-approach. Similarly, we could develop a `Button` class that works largely the same way—and could even have special features like tracking *double clicks*, *long presses*, etc.
 
 Indeed, there are a number of custom `Button` classes online for Arduino, including:
 
@@ -280,7 +282,7 @@ There are many other software debouncing solutions, including using [interrupts]
 
 ## Activity
 
-For your prototyping journals, modify your [piano code](https://github.com/makeabilitylab/arduino/blob/master/Basics/digitalRead/SimplePiano/SimplePiano.ino) from the [previous activity](piano.md) to use debouncing. You can use one of the aforementioned button classes or roll your own solution. Do you notice anything different? Why or why not?
+For your prototyping journals, modify your [piano code](https://github.com/makeabilitylab/arduino/blob/master/Basics/digitalRead/SimplePiano/SimplePiano.ino) from the {% include tlink.html id='arduino-piano' text='previous activity' %} to use debouncing. You can use one of the aforementioned button classes or roll your own solution. Do you notice anything different? Why or why not?
 
 <!-- ## Solution 3
 Uses interrupts. Assumes any initial state change is not spurious but due to human input.
@@ -322,9 +324,9 @@ There are lots of debouncing resources and various solutions covered online and 
 
 ## Next Lesson
 
-In the [next lesson](potentiometers.md), we'll move beyond digital input to the far more exciting and flexible world of analog input!
+In the {% include tlink.html id='arduino-potentiometers' text='next lesson' %}, we'll move beyond digital input to the far more exciting and flexible world of analog input!
 
 <span class="fs-6">
-[Previous: Building a piano](piano.md){: .btn .btn-outline }
-[Next: Using potentiometers](potentiometers.md){: .btn .btn-outline }
+{% include tlink.html id='arduino-piano' text='Previous: Building a piano' %}{: .btn .btn-outline }
+{% include tlink.html id='arduino-potentiometers' text='Next: Using potentiometers' %}{: .btn .btn-outline }
 </span>

@@ -1,4 +1,6 @@
 ---
+permalink: /advancedio/oled-libraries/
+page_id: advancedio-oled-libraries
 layout: default
 title: Installing Adafruit OLED libraries
 # nav_order: 1
@@ -75,4 +77,4 @@ You'll note that the `libraries` folder contains raw source and **not** pre-comp
 
 ## Return to OLED lesson
 
-Now, return to the [OLED lesson](oled.md) and work on wiring up your display!
+Now, return to the {% include tlink.html id='advancedio-oled' text='OLED lesson' %} and work on wiring up your display!

@@ -1,4 +1,6 @@
 ---
+permalink: /arduino/led-fade/
+page_id: arduino-led-fade
 layout: default
 title: L4&#58; Fading an LED
 nav_order: 4
@@ -19,7 +21,7 @@ usetocbot: true
 {:toc}
 ---
 
-In the [previous lesson](led-blink.md), we learned how to turn on and off an LED using [`digitalWrite`](https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/)—which worked by alternatively setting Pin 3 to 5V (`HIGH`) and 0V (`LOW`). In this lesson, we'll learn how to programmatically control the output voltage at finer gradations using [`analogWrite`](https://www.arduino.cc/reference/en/language/functions/analog-io/analogwrite/). More specifically, we will gradually fade an LED on and off like the animation below illustrates.
+In the {% include tlink.html id='arduino-led-blink' text='previous lesson' %}, we learned how to turn on and off an LED using [`digitalWrite`](https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/)—which worked by alternatively setting Pin 3 to 5V (`HIGH`) and 0V (`LOW`). In this lesson, we'll learn how to programmatically control the output voltage at finer gradations using [`analogWrite`](https://www.arduino.cc/reference/en/language/functions/analog-io/analogwrite/). More specifically, we will gradually fade an LED on and off like the animation below illustrates.
 
 ![Animation showing the LED on Pin 3 gradually fading on and off](assets/movies/Arduino_LEDFade_Pin3.gif)
 This illustrative animation doesn't show current (the yellow circles) only due to my limited animation skills. But hopefully you can visualize (in your mind) how the LED varies in brightness with current just the same. :)
@@ -27,7 +29,7 @@ This illustrative animation doesn't show current (the yellow circles) only due t
 
 ## Materials
 
-You will use the same materials as [before](led-blink.md), including the [Arduino IDE](https://www.arduino.cc/en/main/software) and a USB cable to upload your program from your computer to your Arduino.
+You will use the same materials as {% include tlink.html id='arduino-led-blink' text='before' %}, including the [Arduino IDE](https://www.arduino.cc/en/main/software) and a USB cable to upload your program from your computer to your Arduino.
 
 | Arduino | LED | Resistor |
 |:-----:|:-----:|:-----:|
@@ -37,7 +39,7 @@ You will use the same materials as [before](led-blink.md), including the [Arduin
 
 ## Making the circuit
 
-As noted in the ["Intro to Digital Output" lesson](./led-blink.md), the Arduino Uno has **20 general-purpose input/output** ([GPIO](https://en.wikipedia.org/wiki/General-purpose_input/output)) pins that can be used for digital input/output (I/O) using [`digitalRead()`](https://www.arduino.cc/reference/en/language/functions/digital-io/digitalread/) and [`digitalWrite()`](https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/), respectively.
+As noted in the {% include tlink.html id='arduino-led-blink' text='"Intro to Digital Output" lesson' %}, the Arduino Uno has **20 general-purpose input/output** ([GPIO](https://en.wikipedia.org/wiki/General-purpose_input/output)) pins that can be used for digital input/output (I/O) using [`digitalRead()`](https://www.arduino.cc/reference/en/language/functions/digital-io/digitalread/) and [`digitalWrite()`](https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/), respectively.
 
 ![Close-up image of the 20 digital I/O pins on the Arduino Uno](assets/images/ArduinoUno_DigitalIOPins.png)
 
@@ -45,7 +47,7 @@ However, **6** of the 20 I/O pins can **also** be used for **"analog" output**�
 
 ![Close up of the Arduino Uno highlighting the six analog output pins](assets/images/ArduinoUno_CloseUp_AnalogOutputPins.png)
 
-So, for this lesson, we **don't** have to change our circuit at all! You can keep the same circuit as the [LED blink lesson](led-blink.md). Indeed, this is the reason why we selected Pin 3 in the first place.
+So, for this lesson, we **don't** have to change our circuit at all! You can keep the same circuit as the {% include tlink.html id='arduino-led-blink' text='LED blink lesson' %}. Indeed, this is the reason why we selected Pin 3 in the first place.
 
 ![Wiring diagram showing LED cathode wired to GND and LED anode wired to a 220 Ohm resistor and then to Pin 3](assets/images/Arduino_LEDFade_Pin3Circuit.png)
 
@@ -124,7 +126,7 @@ Start a new sketch in the Arduino IDE:
 
 ### Step 2: Write initialization code
 
-Our initialization code is the same as for [LED blink](led-blink.md) except for the addition of `const int MAX_ANALOG_OUT = 255;` and a constant for the delay amount of 5 milliseconds (`const int DELAY_MS = 5;`).
+Our initialization code is the same as for {% include tlink.html id='arduino-led-blink' text='LED blink' %} except for the addition of `const int MAX_ANALOG_OUT = 255;` and a constant for the delay amount of 5 milliseconds (`const int DELAY_MS = 5;`).
 
 {% highlight C %}
 const int LED_OUTPUT_PIN = 3;
@@ -187,7 +189,7 @@ Let's take a look:
 
 <iframe width="736" height="414" src="https://www.youtube.com/embed/h-K0q18BRIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-To create this [program](https://github.com/makeabilitylab/arduino/blob/master/Basics/analogRead/TrimpotLEDSmoothed/TrimpotLEDSmoothed.ino), we had to use both `analogRead` and `analogWrite`. By the end of this lesson, you should have a strong understanding of `analogWrite` and PWM. But we won't learn more about `analogRead` until we get to the [Introduction to Input](intro-input.md) microcontroller lessons.
+To create this [program](https://github.com/makeabilitylab/arduino/blob/master/Basics/analogRead/TrimpotLEDSmoothed/TrimpotLEDSmoothed.ino), we had to use both `analogRead` and `analogWrite`. By the end of this lesson, you should have a strong understanding of `analogWrite` and PWM. But we won't learn more about `analogRead` until we get to the {% include tlink.html id='arduino-intro-input' text='Introduction to Input' %} microcontroller lessons.
 
 ### Visualizing the effective voltage output
 
@@ -220,7 +222,7 @@ See the table below for example 8-bit output values for `analogWrite` on Pin 3 a
 
 ## Improved fading approach: removing for loop
 
-Remember in the [LED blink lesson](led-blink.md) where we mentioned wanting to avoid long `for` loops and long `delays` in our code. Why? Because while we are in a delay, we can't do anything else: we can't read or respond to other input (side note: we could use interrupts but let's defer that point for now). See ["What does delay() actually do?"](inside-arduino.md#what-does-delay-actually-do) in our [Inside Arduino](inside-arduino.md) guide.
+Remember in the {% include tlink.html id='arduino-led-blink' text='LED blink lesson' %} where we mentioned wanting to avoid long `for` loops and long `delays` in our code. Why? Because while we are in a delay, we can't do anything else: we can't read or respond to other input (side note: we could use interrupts but let's defer that point for now). See {% include tlink.html id='arduino-inside-arduino' text='"What does delay() actually do?"' %}#what-does-delay-actually-do in our {% include tlink.html id='arduino-inside-arduino' text='Inside Arduino' %} guide.
 
 So, let's rewrite the fade example but without for loops and, instead, rely on the fact that `loop()` is already a `loop` :). While the code below is different, the resulting LED fade behavior is the same (so you won't notice a difference if you try them both out).
 
@@ -271,10 +273,10 @@ Try writing a solution yourself then look at [ours](https://github.com/makeabili
 
 ## Next Lesson
 
-In the [next lesson](led-blink2.md), we will learn about the difference between **current sources** and **current sinks** to help reinforce our understanding of how microcontrollers can control output.
+In the {% include tlink.html id='arduino-led-blink2' text='next lesson' %}, we will learn about the difference between **current sources** and **current sinks** to help reinforce our understanding of how microcontrollers can control output.
 
 <span class="fs-6">
-<!-- [Previous: LED Blink](led-blink.md){: .btn .btn-outline } -->
-[Previous: Serial Debugging](serial-print.md){: .btn .btn-outline }
-[Next: LED Blink 2](led-blink2.md){: .btn .btn-outline }
+<!-- {% include tlink.html id='arduino-led-blink' text='Previous: LED Blink' %}{: .btn .btn-outline } -->
+{% include tlink.html id='arduino-serial-print' text='Previous: Serial Debugging' %}{: .btn .btn-outline }
+{% include tlink.html id='arduino-led-blink2' text='Next: LED Blink 2' %}{: .btn .btn-outline }
 </span>

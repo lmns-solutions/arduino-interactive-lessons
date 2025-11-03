@@ -1,4 +1,6 @@
 ---
+permalink: /teaching-notes/
+page_id: teaching-notes
 layout: default
 title: Website Dev Notes
 has_toc: false # on by default
