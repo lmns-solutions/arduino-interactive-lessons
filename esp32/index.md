@@ -1,4 +1,5 @@
 ---
+page_id: esp32-index
 layout: default
 title: ESP32
 nav_order: 6

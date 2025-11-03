@@ -1,4 +1,5 @@
 ---
+page_id: esp32-capacitive-touch-sensing
 layout: default
 title: L6&#58; Capacitive touch sensing
 parent: ESP32
