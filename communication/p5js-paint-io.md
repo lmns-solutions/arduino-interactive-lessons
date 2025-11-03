@@ -1,4 +1,5 @@
 ---
+page_id: communication-p5js-paint-io
 layout: default
 title: L5&#58; PaintIO Example
 nav_order: 5

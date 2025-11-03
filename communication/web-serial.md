@@ -1,4 +1,5 @@
 ---
+page_id: communication-web-serial
 layout: default
 title: L2&#58; Web Serial
 nav_order: 2

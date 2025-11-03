@@ -1,4 +1,5 @@
 ---
+page_id: communication-p5js-serial-io
 layout: default
 title: L4&#58; p5.js Serial I/O
 nav_order: 4
