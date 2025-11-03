@@ -1,6 +1,5 @@
 ---
 page_id: sensors-hall-effect
-permalink: /sensors/hall-effect/
 lang: en
 layout: default
 title: Hall Effect Sensors
