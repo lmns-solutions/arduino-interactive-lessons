@@ -6,3 +6,4 @@ gem "jekyll-remote-theme"     # because you use remote_theme
 gem "jekyll-polyglot"
 gem "jekyll-seo-tag"
 gem "jekyll-include-cache"
+gem "jekyll-relative-links"
