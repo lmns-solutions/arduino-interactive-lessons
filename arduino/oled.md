@@ -1,5 +1,4 @@
 ---
-permalink: /arduino/oled/
 page_id: arduino-oled
 layout: default
 title: L1&#58; Turning on an OLED

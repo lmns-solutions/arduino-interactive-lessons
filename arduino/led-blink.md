@@ -1,5 +1,4 @@
 ---
-permalink: /arduino/led-blink/
 page_id: arduino-led-blink
 layout: default
 title: L2&#58; Blinking an LED

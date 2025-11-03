@@ -1,5 +1,4 @@
 ---
-permalink: /arduino/buttons/
 page_id: arduino-buttons
 layout: default
 title: L1&#58; Using buttons

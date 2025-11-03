@@ -1,5 +1,4 @@
 ---
-permalink: /cpx/servo/
 page_id: cpx-servo
 layout: default
 title: LX&#58; CPX and Servo Motors

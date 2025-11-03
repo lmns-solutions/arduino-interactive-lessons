@@ -1,5 +1,4 @@
 ---
-permalink: /communication/serial-intro/
 page_id: communication-serial-intro
 layout: default
 title: L1&#58; Intro to Serial

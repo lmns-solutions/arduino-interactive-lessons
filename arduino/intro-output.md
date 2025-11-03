@@ -1,5 +1,4 @@
 ---
-permalink: /arduino/intro-output/
 page_id: arduino-intro-output
 layout: default
 title: Output

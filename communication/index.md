@@ -1,5 +1,4 @@
 ---
-permalink: /communication/
 page_id: communication-index
 layout: default
 title: Communication

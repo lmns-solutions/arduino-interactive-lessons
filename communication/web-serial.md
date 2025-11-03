@@ -1,5 +1,4 @@
 ---
-permalink: /communication/web-serial/
 page_id: communication-web-serial
 layout: default
 title: L2&#58; Web Serial

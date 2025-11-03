@@ -1,5 +1,4 @@
 ---
-permalink: /cpx/
 page_id: cpx-index
 layout: default
 title: Circuit Playground Express

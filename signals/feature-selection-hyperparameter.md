@@ -1,5 +1,4 @@
 ---
-permalink: /signals/feature-selection-hyperparameter/
 page_id: signals-feature-selection-hyperparameter
 layout: default
 title: L4&#58; Feature Selection and Hyperparameter Tuning

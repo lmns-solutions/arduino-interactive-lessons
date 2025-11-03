@@ -1,5 +1,4 @@
 ---
-permalink: /signals/classification/
 page_id: signals-classification
 layout: default
 title: Classification

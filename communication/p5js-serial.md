@@ -1,5 +1,4 @@
 ---
-permalink: /communication/p5js-serial/
 page_id: communication-p5js-serial
 layout: default
 title: L3&#58; p5.js Serial In

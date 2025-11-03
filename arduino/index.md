@@ -1,6 +1,5 @@
 ---
 page_id: arduino-index
-permalink: /arduino/
 layout: default
 title: Intro to Arduino
 nav_order: 2

@@ -1,5 +1,4 @@
 ---
-permalink: /communication/p5js-paint-io/
 page_id: communication-p5js-paint-io
 layout: default
 title: L5&#58; PaintIO Example

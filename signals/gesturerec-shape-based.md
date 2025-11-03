@@ -1,5 +1,4 @@
 ---
-permalink: /signals/gesturerec-shape-based/
 page_id: signals-gesturerec-shape-based
 layout: default
 title: L2&#58; Shape-Based Classification

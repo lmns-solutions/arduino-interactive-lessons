@@ -1,5 +1,4 @@
 ---
-permalink: /sensors/potentiometers/
 page_id: sensors-potentiometers
 layout: default
 title: Potentiometers

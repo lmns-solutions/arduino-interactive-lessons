@@ -1,5 +1,4 @@
 ---
-permalink: /arduino/led-blink2/
 page_id: arduino-led-blink2
 layout: default
 title: L5&#58; Blinking Two LEDs

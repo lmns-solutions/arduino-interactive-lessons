@@ -1,5 +1,4 @@
 ---
-permalink: /arduino/inside-arduino/
 page_id: arduino-inside-arduino
 layout: default
 title: Inside Arduino

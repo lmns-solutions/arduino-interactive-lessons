@@ -1,5 +1,4 @@
 ---
-permalink: /signals/jupyter-notebook/
 page_id: signals-jupyter-notebook
 layout: default
 title: L1&#58; Jupyter Notebook
@@ -117,5 +116,5 @@ For more tips, see this [dataquest](https://www.dataquest.io/blog/jupyter-notebo
 In the {% include tlink.html id='signals-python' text='next lesson' %}, you will learn about the Python programming language and gain practical experience using Jupyter Notebook.
 
 <span class="fs-6">
-{% include tlink.html id='signals-python' text='Next: Introduction to Python' %}{: .btn .btn-outline }
+[Next: Introduction to Python](python.md){: .btn .btn-outline }
 </span>

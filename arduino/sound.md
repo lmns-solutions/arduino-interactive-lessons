@@ -1,5 +1,4 @@
 ---
-permalink: /arduino/sound/
 page_id: arduino-sound
 layout: default
 title: Sound

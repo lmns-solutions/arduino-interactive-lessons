@@ -1,5 +1,4 @@
 ---
-permalink: /arduino/potentiometers/
 page_id: arduino-potentiometers
 layout: default
 title: L4&#58; Potentiometers

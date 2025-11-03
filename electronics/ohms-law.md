@@ -1,5 +1,4 @@
 ---
-permalink: /electronics/ohms-law/
 page_id: electronics-ohms-law
 layout: default
 title: L3&#58; Ohm's Law

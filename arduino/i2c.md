@@ -1,5 +1,4 @@
 ---
-permalink: /arduino/i2c/
 page_id: arduino-i2c
 layout: default
 title: L1&#58; i2c

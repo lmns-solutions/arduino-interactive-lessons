@@ -1,5 +1,4 @@
 ---
-permalink: /website-dev/
 page_id: website-dev
 layout: default
 title: Website Dev Notes

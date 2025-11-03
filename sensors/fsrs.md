@@ -1,5 +1,4 @@
 ---
-permalink: /sensors/fsrs/
 page_id: sensors-fsrs
 layout: default
 title: Force-Sensitive Resistors

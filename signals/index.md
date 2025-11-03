@@ -1,5 +1,4 @@
 ---
-permalink: /signals/
 page_id: signals-index
 layout: default
 title: Signals

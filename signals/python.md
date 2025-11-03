@@ -1,5 +1,4 @@
 ---
-permalink: /signals/python/
 page_id: signals-python
 layout: default
 title: L2&#58; Python

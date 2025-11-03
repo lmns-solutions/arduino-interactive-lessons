@@ -1,5 +1,4 @@
 ---
-permalink: /sensors/ultrasonic/
 page_id: sensors-ultrasonic
 layout: default
 title: Ultrasonic Distance

@@ -1,5 +1,4 @@
 ---
-permalink: /advancedio/joystick/
 page_id: advancedio-joystick
 layout: default
 title: LX&#58; Joystick

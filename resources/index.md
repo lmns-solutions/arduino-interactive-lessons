@@ -1,5 +1,4 @@
 ---
-permalink: /resources/
 page_id: resources-index
 layout: default
 title: Resources

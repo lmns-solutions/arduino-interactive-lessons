@@ -1,5 +1,4 @@
 ---
-permalink: /signals/frequency-analysis/
 page_id: signals-frequency-analysis
 layout: default
 title: L3&#58; Frequency Analysis

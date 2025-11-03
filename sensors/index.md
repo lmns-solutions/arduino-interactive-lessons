@@ -1,5 +1,4 @@
 ---
-permalink: /sensors/
 page_id: sensors-index
 layout: default
 title: Sensors

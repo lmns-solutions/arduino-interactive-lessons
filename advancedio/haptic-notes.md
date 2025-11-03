@@ -1,5 +1,4 @@
 ---
-permalink: /advancedio/haptic-notes/
 page_id: advancedio-haptic-notes
 layout: default
 title: Haptics

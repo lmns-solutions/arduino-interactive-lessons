@@ -1,5 +1,4 @@
 ---
-permalink: /signals/step-tracker/
 page_id: signals-step-tracker
 layout: default
 title: L1&#58; Heuristic-Based Classification

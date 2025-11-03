@@ -1,5 +1,4 @@
 ---
-permalink: /esp32/iot/
 page_id: esp32-iot
 layout: default
 title: L7&#58; Internet of Things

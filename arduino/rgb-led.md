@@ -1,5 +1,4 @@
 ---
-permalink: /arduino/rgb-led/
 page_id: arduino-rgb-led
 layout: default
 title: L6&#58; RGB LEDs

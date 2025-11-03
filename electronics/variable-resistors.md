@@ -1,5 +1,4 @@
 ---
-permalink: /electronics/variable-resistors/
 page_id: electronics-variable-resistors
 layout: default
 title: L8&#58; Variable Resistors

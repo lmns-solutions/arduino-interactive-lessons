@@ -1,5 +1,4 @@
 ---
-permalink: /website-install/
 page_id: website-install
 layout: default
 title: Website Dev Installation

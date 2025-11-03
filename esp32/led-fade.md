@@ -1,5 +1,4 @@
 ---
-permalink: /esp32/led-fade/
 page_id: esp32-led-fade
 layout: default
 title: L3&#58; Fading an LED with PWM

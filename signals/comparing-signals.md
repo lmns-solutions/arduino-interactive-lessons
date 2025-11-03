@@ -1,5 +1,4 @@
 ---
-permalink: /signals/comparing-signals/
 page_id: signals-comparing-signals
 layout: default
 title: L2&#58; Comparing Signals (Time Domain)

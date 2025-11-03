@@ -1,5 +1,4 @@
 ---
-permalink: /electronics/power-energy/
 page_id: electronics-power-energy
 layout: default
 title: Power and Energy

@@ -1,5 +1,4 @@
 ---
-permalink: /cpx/capacitive-touch/
 page_id: cpx-capacitive-touch
 layout: default
 title: L5&#58; Capacitive Touch

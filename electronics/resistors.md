@@ -1,5 +1,4 @@
 ---
-permalink: /electronics/resistors/
 page_id: electronics-resistors
 layout: default
 title: L5&#58; Using Resistors

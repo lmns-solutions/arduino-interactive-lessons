@@ -1,5 +1,4 @@
 ---
-permalink: /sensors/microphones/
 page_id: sensors-microphones
 layout: default
 title: Microphones

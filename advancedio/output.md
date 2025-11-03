@@ -1,5 +1,4 @@
 ---
-permalink: /advancedio/output/
 page_id: advancedio-output
 layout: default
 title: Output

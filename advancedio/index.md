@@ -1,5 +1,4 @@
 ---
-permalink: /advancedio/
 page_id: advancedio-index
 layout: default
 title: Advanced I/O

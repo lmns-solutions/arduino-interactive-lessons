@@ -1,5 +1,4 @@
 ---
-permalink: /arduino/interrupts/
 page_id: arduino-interrupts
 layout: default
 title: LX&#58; Interrupts

@@ -1,5 +1,4 @@
 ---
-permalink: /resources/inspirations/
 page_id: resources-inspirations
 layout: default
 title: Inspirations
