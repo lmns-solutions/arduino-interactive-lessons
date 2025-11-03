@@ -1,4 +1,5 @@
 ---
+page_id: signals-tools
 layout: default
 title: Tools
 parent: Signals
