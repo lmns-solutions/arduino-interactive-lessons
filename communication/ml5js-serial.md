@@ -1,4 +1,5 @@
 ---
+permalink: /communication/ml5js-serial.html
 page_id: communication-ml5js-serial
 layout: default
 title: L6&#58; ml5.js Serial
