@@ -6,15 +6,34 @@
 * [Install ruby macos](https://jekyllrb.com/docs/installation/macos/)
 
 
-## Local run
-
-* It is important due to Ruby SSL issue to set - export RUBYOPT="-r$HOME/.ruby-no-crl"
-* The content of the `.ruby-no-crl` file is in ./misc/ruby-no-crl
+## Local setup
 
 * Makefile
   * make clean - cleans the build
   * make build - builds the website
   * make run - runs it locally
+
+### Troubleshooting local setup
+
+#### SSL error for Ruby 3.4.7 and potentially others on MacOS Sequoia
+
+* If you experience errors on `make run` which indicates SSL error with CRL verification:
+
+```shell
+ruby -e 'require "net/http"; puts Net::HTTP.get_response(URI("https://rubygems.org")).code'
+...ruby-3.4.7/lib/ruby/3.4.0/net/protocol.rb:46:in 'OpenSSL::SSL::SSLSocket#connect_nonblock': SSL_connect returned=1 errno=0 peeraddr=151.101.1.227:443 state=error: certificate verify failed (unable to get certificate CRL) (OpenSSL::SSL::SSLError)
+```
+
+Then there is quick and dirty fix while they fix it:
+
+* Create a file `~/.ruby-no-crl`. The content of the `.ruby-no-crl` file is in ./misc/ruby-no-crl
+* `export RUBYOPT="-r$HOME/.ruby-no-crl"`
+* `make run`
+* If you want to make it permanent then:
+    * `echo export RUBYOPT="-r$HOME/.ruby-no-crl" > .envrc`
+    * `direnv allow`
+
+
 
 ## Scripts
 
