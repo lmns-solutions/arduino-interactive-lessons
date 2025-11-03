@@ -1,4 +1,5 @@
 ---
+page_id: arduino-index
 layout: default
 title: Intro to Arduino
 nav_order: 2

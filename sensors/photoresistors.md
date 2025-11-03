@@ -1,4 +1,5 @@
 ---
+page_id: sensors-photoresistors
 layout: default
 title: Photoresistors
 parent: Sensors

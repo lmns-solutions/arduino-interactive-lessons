@@ -1,4 +1,5 @@
 ---
+page_id: arduino-oled
 layout: default
 title: L1&#58; Turning on an OLED
 nav_order: 1

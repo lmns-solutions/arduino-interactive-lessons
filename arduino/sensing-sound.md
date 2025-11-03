@@ -1,4 +1,5 @@
 ---
+page_id: arduino-sensing-sound
 layout: default
 title: L3&#58; Sensing sound
 parent: Sound

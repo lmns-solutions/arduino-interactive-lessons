@@ -1,4 +1,5 @@
 ---
+page_id: arduino-i2c
 layout: default
 title: L1&#58; i2c
 nav_order: 1

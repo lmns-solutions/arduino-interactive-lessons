@@ -1,4 +1,5 @@
 ---
+page_id: arduino-force-sensitive-resistors
 layout: default
 title: L5&#58; Force-Sensitive Resistors
 nav_order: 5
