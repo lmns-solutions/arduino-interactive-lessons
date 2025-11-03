@@ -32,3 +32,6 @@ assets/calculations/~$TransistorVibromotorCalculations.xlsx
 
 # logs
 *.log
+
+# direnv
+.envrc
