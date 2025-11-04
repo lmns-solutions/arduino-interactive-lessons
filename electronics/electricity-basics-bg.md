@@ -4,7 +4,7 @@ permalink: /electronics/electricity-basics.html
 layout: default
 title: L1&#58; Напрежение, ток и съпротивление
 nav_order: 1
-parent: Intro to Electronics
+parent: Въведение в електрониката
 has_toc: false # включено по подразбиране
 usemathjax: true
 comments: true

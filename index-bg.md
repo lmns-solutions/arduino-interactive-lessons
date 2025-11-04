@@ -1,7 +1,7 @@
 ---
 page_id: index
 layout: default
-title: Home
+title: Начало
 nav_order: 0
 usemathjax: true
 description: "Website Overview"
