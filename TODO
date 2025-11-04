@@ -7,3 +7,15 @@
   * for ref see (sensors/hall-effect.md)
 * The add each corresponding BG version of the pages next to the original ones and suffix them with -bg and then build
   * Test on prod
+
+
+## Post translation fixes
+* /communication
+* /cpx
+* /electronics
+* /esp32
+* /microcontrollers
+* /resources
+* /sensors
+* /signals
+* /tools
