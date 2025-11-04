@@ -35,3 +35,4 @@ assets/calculations/~$TransistorVibromotorCalculations.xlsx
 
 # direnv
 .envrc
+./scripts/.envrc
