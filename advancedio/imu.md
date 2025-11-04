@@ -26,4 +26,4 @@ Interesting/helpful links:
 
 - [Arduino Digital Level using Nano + MPU6050 Gyroscope/Accelerometer + OLED display](https://youtu.be/232jer4HIZc), Design Build Destroy on YouTube
 
-- [Arduino Guide for MPU-6050 Accelerometer and Gyroscope Sensor](https://randomnerdtutorials.com/arduino-mpu-6050-accelerometer-gyroscope/) 
+- [Arduino Guide for MPU-6050 Accelerometer and Gyroscope Sensor](https://randomnerdtutorials.com/arduino-mpu-6050-accelerometer-gyroscope/)

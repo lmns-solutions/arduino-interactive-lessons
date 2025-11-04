@@ -69,9 +69,6 @@ Leaders:
 - Vehicle feedback (pilot warning)
 - accessibility
 
-### Vibrotactile feedback
-TODO: describe
-
 #### Vibrotactile feedback patterns
 - Maybe look at stephen brewster work? Or our jonggi paper?
 
