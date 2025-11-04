@@ -1,0 +1,11 @@
+---
+lang: bg
+permalink: /arduino/intro-output.html
+page_id: arduino-intro-output
+layout: default
+title: Изход
+parent: Въведение в Arduino
+nav_order: 1
+has_toc: true # on by default
+has_children: true
+---
