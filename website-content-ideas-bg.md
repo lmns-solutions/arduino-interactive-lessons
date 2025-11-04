@@ -10,7 +10,7 @@ usetocbot: true
 search_exclude: true
 ---
 
-# {{ page.title | replace_first:„L“,'Урок '}}
+# {{ page.title | replace_first:"L",'Урок '}}
 {: .no_toc }
 
 ## Съдържание
@@ -23,7 +23,7 @@ search_exclude: true
 ## Задачи:
 
 - Разгледайте моя учебна програма
-- Добавете книги за дизайн и дизайн мислене, като „Sketching User Experiences“?
+- Добавете книги за дизайн и дизайн мислене, като "Sketching User Experiences"?
 - Разгледайте списъка ми с ресурси от [CMSC838f](https://web.archive.org/web/20170605201324/http:/cmsc838f-s15.wikispaces.com/). [Директен линк](https://web.archive.org/web/20150709105051/http://cmsc838f-s15.wikispaces.com/Resources)
 - Виж: http://ladyada.net/learn/arduino/
 - Курс EECS16A на Berkeley: https://www.eecs16a.org/
@@ -45,7 +45,7 @@ search_exclude: true
 - http://fetlab.io/722-spring18/index.html
 - http://fetlab.io/720-fall17/
 - Шон Фолмер (не можах да намеря линк към сайта му за преподаване)
-- Интересно, току-що намерих курса „Modern Mobile” в UW: https://modernmobile.cs.washington.edu/
+- Интересно, току-що намерих курса "Modern Mobile” в UW: https://modernmobile.cs.washington.edu/
 - https://people.eecs.berkeley.edu/~boser/courses/49/
 - https://people.eecs.berkeley.edu/~boser/courses/49_sp_2019/index.html
 - https://people.eecs.berkeley.edu/~boser/courses/49_sp_2019/N_gpio.html#_analog_input_adc
@@ -126,14 +126,14 @@ search_exclude: true
 -
 
 ## Машинно обучение
-- Потопете се в книгата „Deep Learning”: http://d2l.ai/
+- Потопете се в книгата "Deep Learning”: http://d2l.ai/
 - Въведение в усилващото обучение от Дейвид Силвър от DeepMind: https://www.youtube.com/watch?list=PLqYmG7hTraZDM-OYHWgPebj2MfCFzFObQ&time_continue=5&v=2pWv7GOvuf0
 - Grokking Deep Learning от Андрю Траск: https://www.manning.com/books/grokking-deep-learning?a_aid=grokkingdl&a_bid=32715258 
 - Математически основи за ML от UPenn: http://www.cis.upenn.edu/~jean/math-basics.pdf
  
 
 ### Компютърно зрение
-- https://github.com/microsoft/computervision-recipes/blob/master/README.md. „Нашата целева аудитория за това хранилище включва научни работници в областта на данните и инженери по машинно обучение с различни нива на познания по компютърно зрение, тъй като нашето съдържание е само източник и е насочено към моделиране на машинно обучение по поръчка. Предоставените утилити и примери са предназначени да бъдат ускорители на решения за реални проблеми, свързани със зрението.“
+- https://github.com/microsoft/computervision-recipes/blob/master/README.md. "Нашата целева аудитория за това хранилище включва научни работници в областта на данните и инженери по машинно обучение с различни нива на познания по компютърно зрение, тъй като нашето съдържание е само източник и е насочено към моделиране на машинно обучение по поръчка. Предоставените утилити и примери са предназначени да бъдат ускорители на решения за реални проблеми, свързани със зрението."
 
 ## Прототипиране
 
@@ -230,7 +230,7 @@ search_exclude: true
 ### Глава 3: Въведение в изхода
 - Цифров изход, източник и поглъщащ ток
 - Аналогов изход, PWM, DAC
-- За повече информация за PWM: https://provideyourown.com/2011/analogwrite-convert-pwm-to-voltage/. В момента нямаме специална секция за PWM. Може би трябва да имаме? Може да бъде включена в раздел „Микроконтролери” с подраздели „PWM” и „Прекъсвания”
+- За повече информация за PWM: https://provideyourown.com/2011/analogwrite-convert-pwm-to-voltage/. В момента нямаме специална секция за PWM. Може би трябва да имаме? Може да бъде включена в раздел "Микроконтролери” с подраздели "PWM” и "Прекъсвания”
 - (Може би да включим някои неща за човешката психология и интерпретирането на звука, дисплеите и т.н.?)
 
 ### Глава 4: Въведение в входа
@@ -259,10 +259,10 @@ search_exclude: true
 - Шум?
 - Основни принципи на фазовия шум: https://imgur.com/a/T44q4P3
 - Характеристики за описание на сигнали от времеви редове
-- Защо да използваме средноквадратична стойност, а не абсолютна средна стойност: https://www.researchgate.net/publication/283085046_Sensors_and_Signal_Processing_ -_Чернова версия, нередактирана и преди окончателната ревизия на глава 5 от книгата „Основи и приложения на мехатрониката“/link/5629de9008ae518e347eecc6/download
+- Защо да използваме средноквадратична стойност, а не абсолютна средна стойност: https://www.researchgate.net/publication/283085046_Sensors_and_Signal_Processing_ -_Чернова версия, нередактирана и преди окончателната ревизия на глава 5 от книгата "Основи и приложения на мехатрониката"/link/5629de9008ae518e347eecc6/download
 - Хубав график на квантовата грешка тук (раздел 4.2): https://www.researchgate.net/publication/ 283085046_Сензори_и_обработка_на_сигнали_-_Чернова_версия_нередактирана_и_преди_окончателната_ревизия_на_глава_5_от_книгата_Основи_и_приложения_на_мехатрониката/link/5629de9008ae518e347eecc6/download
-- Фурие анализ на изтичане и прозорец и възможни начини за справяне с филтри (раздел 4.3): https://www.researchgate.net/publication/283085046_Sensors_and_Signal_Processing_ -_Чернова_версия_нередактирана_и_преди_окончателната_ревизия_на_глава_5_от_книгата_„Основи_и_приложения_на_мехатрониката“/link/5629de9008ae518e347eecc6/download
-- Конволюция (раздел 4.4): https://www.researchgate.net/publication/283085046_Sensors_and_Signal_Processing_ -_Чернова версия, нередактирана и преди окончателната ревизия на глава 5 от книгата „Основи и приложения на мехатрониката“/link/5629de9008ae518e347eecc6/download
+- Фурие анализ на изтичане и прозорец и възможни начини за справяне с филтри (раздел 4.3): https://www.researchgate.net/publication/283085046_Sensors_and_Signal_Processing_ -_Чернова_версия_нередактирана_и_преди_окончателната_ревизия_на_глава_5_от_книгата_"Основи_и_приложения_на_мехатрониката"/link/5629de9008ae518e347eecc6/download
+- Конволюция (раздел 4.4): https://www.researchgate.net/publication/283085046_Sensors_and_Signal_Processing_ -_Чернова версия, нередактирана и преди окончателната ревизия на глава 5 от книгата "Основи и приложения на мехатрониката"/link/5629de9008ae518e347eecc6/download
 
 ### Глава 7: Приложна машинно обучение
 - Класифициране на тези сигнали!

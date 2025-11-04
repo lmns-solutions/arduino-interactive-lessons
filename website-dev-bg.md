@@ -10,7 +10,7 @@ usemathjax: true
 usetocbot: true
 ---
 
-# {{ page.title | replace_first:„L“,'Урок '}}
+# {{ page.title | replace_first:"L",'Урок '}}
 {: .no_toc }
 
 ## Съдържание
@@ -105,7 +105,7 @@ delay(1000); // изчакване за секунда
 
 
 ## Направете бележка (Call Out Box)
-Има различни начини за създаване на „поле за бележки” в Markdown.
+Има различни начини за създаване на "поле за бележки” в Markdown.
 
 ### Вариант 1: Две хоризонтални линии
 Най-простият и универсален начин, препоръчан в тази [публикация в Stack Overflow](https://stackoverflow.com/a/41449789/388117), е да начертаете две хоризонтални линии около съдържанието, както е показано тук:
@@ -150,7 +150,7 @@ delay(1000); // изчакване за секунда
 ```css
 .test-css{
 font-size: 14 pt;
-font-family: „Courier New“, Courier, monospace;
+font-family: "Courier New", Courier, monospace;
 }
 ```
 
@@ -178,7 +178,7 @@ font-family: „Courier New“, Courier, monospace;
 {% highlight html %}{% raw %}
 {% if page.usemathjax %}
 <script type="text/javascript" async
-src=„https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML“>
+src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 {% endif %}
 {% endraw %}{% endhighlight %}
@@ -207,7 +207,7 @@ SyntaxError: липсва } след тялото на функцията led-on
 бележка: { отворен на ред 1, колона 287 led-on.html:1:287
 ```
 
-Но реших да опитам още веднъж и се натъкнах на [публикация в блог](https://disqus.com/home/discussion/channel-discussdisqus/why_does_the_disqus_not_work_in_jekyll/), която съдържаше решението „Универсалният код”, който Disqus ви кара да вградите в уебсайта си, включва коментари `// single line` и `/* multi-line */`. Когато Jekyll създава уебсайта, обаче, той поставя целия произведен html код на един ред (т.е. не го форматира), така че едноредните коментари нарушават кода. Ето кодът, който **не работи**.
+Но реших да опитам още веднъж и се натъкнах на [публикация в блог](https://disqus.com/home/discussion/channel-discussdisqus/why_does_the_disqus_not_work_in_jekyll/), която съдържаше решението "Универсалният код”, който Disqus ви кара да вградите в уебсайта си, включва коментари `// single line` и `/* multi-line */`. Когато Jekyll създава уебсайта, обаче, той поставя целия произведен html код на един ред (т.е. не го форматира), така че едноредните коментари нарушават кода. Ето кодът, който **не работи**.
 
 {% highlight HTML %}
 <div id="disqus_thread"></div>
@@ -225,9 +225,9 @@ this.page.identifier = document.location.pathname; // Заменете PAGE_IDEN
 
 (function () { // НЕ РЕДАКТИРАЙТЕ ПОД ТАЗИ ЛИНИЯ
 var d = document,
-s = d.createElement(„script“);
-s.src = „https://physical-computing.disqus.com/embed.js“;
-s.setAttribute(„data-timestamp“, +new Date());
+s = d.createElement("script");
+s.src = "https://physical-computing.disqus.com/embed.js";
+s.setAttribute("data-timestamp", +new Date());
 (d.head || d.body).appendChild(s);
 }) ();
 </script>
@@ -254,9 +254,9 @@ this.page.identifier = document.location.pathname; /* Заменете PAGE_IDEN
 
 (function () { /* НЕ РЕДАКТИРАЙТЕ ПОД ТАЗИ ЛИНИЯ */
 var d = document,
-s = d.createElement(„script“);
-s.src = „https://physical-computing.disqus.com/embed.js“;
-s.setAttribute(„data-timestamp“, +new Date());
+s = d.createElement("script");
+s.src = "https://physical-computing.disqus.com/embed.js";
+s.setAttribute("data-timestamp", +new Date());
 (d.head || d.body).appendChild(s);
 })();
 </script>
@@ -272,4 +272,4 @@ Disqus.</a></noscript>
 
 #### Шаблони
 - Minimal Mistakes
-- „Just the Docs“. Вероятно любимият ми шаблон, който съм оценявал досега.
+- "Just the Docs". Вероятно любимият ми шаблон, който съм оценявал досега.

@@ -9,7 +9,7 @@ nav_exclude: true
 search_exclude: true
 ---
 
-# {{ page.title | replace_first:„L“,'Урок '}}
+# {{ page.title | replace_first:"L",'Урок '}}
 {: .no_toc }
 
 ## Съдържание

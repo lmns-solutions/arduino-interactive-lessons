@@ -9,7 +9,7 @@ nav_exclude: true
 usetocbot: true
 ---
 
-# {{ page.title | replace_first:„L“,'Урок '}}
+# {{ page.title | replace_first:"L",'Урок '}}
 {: .no_toc }
 
 ## Съдържание
@@ -19,7 +19,7 @@ usetocbot: true
 {:toc}
 ---
 
-Този уебсайт е създаден в [Jekyll](https://jekyllrb.com/), който е генератор на статични сайтове, създаден на езика [Ruby](https://www.ruby-lang.org/en/). Не е необходимо да знаете Ruby, за да създавате сайтове с Jekyll, но трябва да знаете [markdown](https://www.markdownguide.org/) и html/css. Ние използваме Jekyll шаблон, наречен [„Just the Docs“](https://pmarsceill.github.io/just-the-docs/).
+Този уебсайт е създаден в [Jekyll](https://jekyllrb.com/), който е генератор на статични сайтове, създаден на езика [Ruby](https://www.ruby-lang.org/en/). Не е необходимо да знаете Ruby, за да създавате сайтове с Jekyll, но трябва да знаете [markdown](https://www.markdownguide.org/) и html/css. Ние използваме Jekyll шаблон, наречен ["Just the Docs"](https://pmarsceill.github.io/just-the-docs/).
 
 ## Настройка на средата за разработка
 По-долу ще ви разведем през настройката на средата за разработка както на Mac, така и на Windows. 
@@ -40,10 +40,10 @@ usetocbot: true
 
 Следвайте инструкциите за инсталиране внимателно. Аз изпълних всички стъпки, с изключение на [rbenv частта](https://jekyllrb.com/docs/installation/macos/#rbenv) (тъй като използвам Ruby само за Jekyll, няма нужда да избирам между няколко версии на Ruby в моята среда за разработка).
 
-#### Изпълнете „bundle install“ в директорията physcomp
+#### Изпълнете "bundle install" в директорията physcomp
 След като завършите последната стъпка в [ръководството за инсталиране на MacOS](https://jekyllrb.com/docs/installation/macos/), която е изпълнение на командата `> sudo gem install -n /usr/local/bin/ jekyll`, отидете в папката `physcomp` и въведете `> bundle install`. Забележка: Аз обикновено правя това от терминала на VSCode.
 
-#### Изпълнете „bundle exec jekyll serve“ в директорията physcomp
+#### Изпълнете "bundle exec jekyll serve" в директорията physcomp
 Накрая въведете `> bundle exec jekyll serve` в папката `physcomp`. Отново, аз обикновено правя това от терминала на VSCode.
 
 И това е всичко! Надяваме се, че сървърът ще работи на [http://127.0.0.1:4000/physcomp/](http://127.0.0.1:4000/physcomp/).
@@ -61,7 +61,7 @@ jonf-macbook:physcomp jonf$ bundle exec jekyll serve
  
 Отдалечена тема: Използване на тема pmarsceill/just-the-docs
 завършено за 17,425 секунди.
-Автоматично регенериране: активирано за „/Users/jonf/Git/physcomp“
+Автоматично регенериране: активирано за "/Users/jonf/Git/physcomp"
 bundler: не успя да зареди командата: jekyll (/usr/local/lib/ruby/gems/3.0.0/bin/jekyll)
 
 /usr/local/lib/ruby/gems/3.0.0/gems/jekyll-3.9.0/lib/jekyll/commands/serve/servlet.rb:3:in `require': не може да се зареди такъв файл -- webrick (LoadError)
@@ -81,15 +81,15 @@ bundler: не успя да зареди командата: jekyll (/usr/local/
 **Първо**, въпреки че тази документация е стара, аз започнах с това ръководство [Run Jekyll on Windows](https://jekyll-windows.juthilo.com/). Първата стъпка гласи да инсталирате Ruby чрез уебсайта [rubyinstaller.org](http://rubyinstaller.org/downloads/) и след това да инсталирате Ruby Devkit; обаче най-новите версии на Ruby Installer за Windows също ви позволяват да инсталирате Devkit. Ето какво направих.
  
 
-По-конкретно, изтеглих и инсталирах [Ruby+Devkit 2.7.X (x64) инсталатора](https://rubyinstaller.org/downloads/), който според уебсайта RubyInstaller „предоставя най-голям брой съвместими gems и инсталира MSYS2 Devkit заедно с Ruby, така че gems с C-разширения могат да бъдат компилирани веднага“.
+По-конкретно, изтеглих и инсталирах [Ruby+Devkit 2.7.X (x64) инсталатора](https://rubyinstaller.org/downloads/), който според уебсайта RubyInstaller "предоставя най-голям брой съвместими gems и инсталира MSYS2 Devkit заедно с Ruby, така че gems с C-разширения могат да бъдат компилирани веднага".
 
-Когато командният прозорец на Ruby Installer ви попита коя опция да инсталирате (вижте екранната снимка по-долу), просто натиснете „Enter“.
+Когато командният прозорец на Ruby Installer ви попита коя опция да инсталирате (вижте екранната снимка по-долу), просто натиснете "Enter".
 
 ![Показва прозорец от Ruby Installer. Просто натиснете Enter](assets/images/RubyInstaller_JustHitEnter.png)
 **Фигура.** Когато се появи прозорецът, просто натиснете Enter, за да приемете настройките по подразбиране.
 {: .fs-1 }
 
-Възможно е да ви бъде зададен въпрос за втори път. Отново натиснете „Enter“.
+Възможно е да ви бъде зададен въпрос за втори път. Отново натиснете "Enter".
 
 ![Показва подкана от Ruby Installer. Просто натиснете Enter](assets/images/RubyInstaller_Question2_JustHitEnter.png)
 **Фигура.** Ако ви бъде зададен въпрос за втори път, просто натиснете Enter, за да приемете настройките по подразбиране.
@@ -97,7 +97,7 @@ bundler: не успя да зареди командата: jekyll (/usr/local/
 
 Когато Ruby Installer приключи, той просто изчезва. Така че, преминаваме към следващата стъпка!
 
-#### Изпълнете „gem install jekyll“
+#### Изпълнете "gem install jekyll"
 **Второ**, след това отворих `Windows Powershell` и въведох `gem install jekyll`:
 
 ```
@@ -120,7 +120,7 @@ gem install jekyll
 **Фигура.** Снимка на PowerShell, изпълняващ командата `gem install jekyll`.
 {: .fs-1 }
 
-#### Изпълнете „gem install github-pages“
+#### Изпълнете "gem install github-pages"
 **Трето**, след това опитах да инсталирам `github-pages` чрез: `gem install github-pages`. Изпълнете:
 
 ```
@@ -172,7 +172,7 @@ nokogiri изисква Ruby версия >= 2.3, < 2.7.dev. Текущата в
 
 Така че просто прескочих до последната стъпка и изпълних `bundle install` и нещата заработиха. Надявам се да помогне и на вас!
 
-#### Изпълнете „bundle install“
+#### Изпълнете "bundle install"
 ![Снимка на командата bundle install](assets/images/BundleInstallScreenshot.png)
 
 От командния ред променете директориите на `physcomp`. На моя компютър:
@@ -222,7 +222,7 @@ C:\git\physcomp> bundle install
 Опитайте новата мултиплатформена PowerShell https://aka.ms/pscore6
 
 PS D:\Git\physcomp> bundle exec jekyll serve 
-bundle : Терминът „bundle” не се разпознава като име на cmdlet, функция, скрипт файл или оперативна програма. Проверете 
+bundle : Терминът "bundle” не се разпознава като име на cmdlet, функция, скрипт файл или оперативна програма. Проверете 
 правописа на името или, ако е включен път, проверете дали пътят е правилен и опитайте отново.
 В ред:1 символ:1
 + bundle exec jekyll serve
@@ -236,5 +236,5 @@ bundle : Терминът „bundle” не се разпознава като �
 ## Разработване на уебсайта
 1. Изтеглете [VS Code](https://code.visualstudio.com/Download)
 2. Отворете папката `physcomp` в VS Code
-3. Използвайте markdown, за да създадете нови страници. Ние използваме шаблона Jekyll [„Just the Docs“](https://pmarsceill.github.io/just-the-docs/).
+3. Използвайте markdown, за да създадете нови страници. Ние използваме шаблона Jekyll ["Just the Docs"](https://pmarsceill.github.io/just-the-docs/).
 4. Прочетете повече за разработката на уебсайтове [тук](website-dev.md)
