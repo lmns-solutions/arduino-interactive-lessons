@@ -38,6 +38,7 @@ parallel_localization: false
 # - https://pmarsceill.github.io/just-the-docs/docs/configuration/
 
 title: Arduino Interactive Lessons
+
 description: A learning resource for prototyping interactive digital-physical systems
 
 # Turn on incremental building to reduce overall build time (still in beta)
@@ -120,3 +121,11 @@ footer_content: '© 2017–2025 Luminous Ltd. Unless otherwise noted, all educat
 # Google Analytics Tracking (optional)
 # e.g, UA-1234567-89
 ga_tracking: G-2M632VWSRH
+
+# sass deprecation warnings
+sass:
+  quiet_deps: true
+  silence_deprecations:
+    - import
+    - color-functions
+    - global-builtin
