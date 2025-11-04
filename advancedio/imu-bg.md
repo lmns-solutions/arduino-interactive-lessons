@@ -3,7 +3,7 @@ lang: bg
 permalink: /advancedio/imu.html
 page_id: advancedio-imu
 layout: default
-title: L1&#58; IMUs
+title: L1&#58; (ИМИ) Инерциален модул за измерване
 # nav_order: 1
 # parent: Изход
 # grand_parent: Разширени входно-изходни устройства

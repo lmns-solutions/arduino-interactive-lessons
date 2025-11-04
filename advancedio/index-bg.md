@@ -3,7 +3,7 @@ lang: bg
 permalink: /advancedio/index.html
 page_id: advancedio-index
 layout: default
-title: Разширени входно-изходни операции
+title: Разширени входно-изходни устройства
 nav_order: 3
 has_toc: false # включено по подразбиране
 has_children: true

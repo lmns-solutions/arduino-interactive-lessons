@@ -8,7 +8,7 @@ nav_order: 2
 # родител: Вход
 # прародител: Разширени входно-изходни устройства
 has_toc: true # (по подразбиране)
-коментари: true
+comments: true
 usemathjax: true
 usetocbot: true
 nav_exclude: true

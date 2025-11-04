@@ -8,7 +8,7 @@ title: Хаптика
 # parent: Изход
 # grand_parent: Разширени входно-изходни устройства
 has_toc: true # (по подразбиране)
-коментари: false
+comments: false
 usemathjax: true
 usetocbot: true
 nav_exclude: true
