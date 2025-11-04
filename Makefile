@@ -2,7 +2,7 @@ default: run
 
 
 run:
-	@bundle exec jekyll serve --livereload
+	@bundle exec jekyll serve
 
 install:
 	@bundle install
