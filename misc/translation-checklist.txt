@@ -1,0 +1,8 @@
+- language - lang: bg
+- permalink - the same
+- parent - match translated title of the parent
+- %s/,,/"/g - hyphens replace
+- %s/''/"/g - hyphens replace
+- code indent in codeblocks - search for highlight
+- check for missing images
+- check for broken UI elements link button at the bottom
