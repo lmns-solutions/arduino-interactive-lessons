@@ -142,8 +142,8 @@ _curReadIndex = _curReadIndex + 1;
 
 // ако сме в края на масива...
 if (_curReadIndex >= SMOOTHING_WINDOW_SIZE) {
-// ...завъртете обратно в началото:
-_curReadIndex = 0;
+    // ...завъртете обратно в началото:
+    _curReadIndex = 0;
 }
 {% endhighlight C %}
 
@@ -236,21 +236,21 @@ double _ewma = 0; // резултатът от EWMA (Si), инициализир
 
 void setup()
 {
-Serial.begin(9600); // за отпечатване на стойности в конзолата
-_ewma = analogRead(SENSOR_INPUT_PIN); //задаване на EWMA (S1) за индекс 1
+    Serial.begin(9600); // за отпечатване на стойности в конзолата
+    _ewma = analogRead(SENSOR_INPUT_PIN); //задаване на EWMA (S1) за индекс 1
 }
 
 void loop()
 {
-int sensorVal = analogRead(A0); // връща 0 - 1023 (поради 10-битов ADC)
+    int sensorVal = analogRead(A0); // връща 0 - 1023 (поради 10-битов ADC)
 
-// Прилагане на формулата EWMA
-_ewma = (_ewmaAlpha * sensorVal) + (1 - _ewmaAlpha) * _ewma;
+    // Прилагане на формулата EWMA
+    _ewma = (_ewmaAlpha * sensorVal) + (1 - _ewmaAlpha) * _ewma;
 
-Serial.print(sensorVal); 
-Serial.print(","); 
-Serial.println(_ewma); 
-delay(50); // Четене на нови стойности при ~20Hz
+    Serial.print(sensorVal); 
+    Serial.print(","); 
+    Serial.println(_ewma); 
+    delay(50); // Четене на нови стойности при ~20Hz
 }
 {% endhighlight C %}
 

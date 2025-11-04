@@ -198,28 +198,28 @@ _disp.display(); // Рендиране на буфера извън екрана
 Adafruit_SSD1306 _display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 void setup(){
-Serial.begin(9600);
+    Serial.begin(9600);
 
-// Инициализиране на дисплея с begin () 
-// Първият параметър е изборът на VCC. Обикновено се предава SSD1306_SWITCHCAPVCC.
-// Вторият е адресът на дисплея за i2c. Дори ако дисплеят е конфигуриран
-// за SPI (който не използва адреси), все пак трябва да предадете параметър тук (може да бъде 0)
-if (!_display.begin(SSD1306_SWITCHCAPVCC, 0x3D)) { // Адрес 0x3D за 128x64
-Serial.println(F("SSD1306 allocation failed"));
-for (;;); // Не продължавайте, цикъл завинаги
-}
+    // Инициализиране на дисплея с begin () 
+    // Първият параметър е изборът на VCC. Обикновено се предава SSD1306_SWITCHCAPVCC.
+    // Вторият е адресът на дисплея за i2c. Дори ако дисплеят е конфигуриран
+    // за SPI (който не използва адреси), все пак трябва да предадете параметър тук (може да бъде 0)
+    if (!_display.begin(SSD1306_SWITCHCAPVCC, 0x3D)) { // Адрес 0x3D за 128x64
+        Serial.println(F("SSD1306 allocation failed"));
+        for (;;); // Не продължавайте, цикъл завинаги
+    }
 }
 
 void loop(){
-// Изчистете дисплея
-_display.clearDisplay();
+    // Изчистете дисплея
+    _display.clearDisplay();
 
-// Поставете рутинни процедури за рисуване
-// В този случай нарисувайте кръг в точка x,y с координати 50,20 и радиус 10
-_display.fillCircle(50, 20, 10, SSD1306_WHITE);
+    // Поставете рутинни процедури за рисуване
+    // В този случай нарисувайте кръг в точка x,y с координати 50,20 и радиус 10
+    _display.fillCircle(50, 20, 10, SSD1306_WHITE);
 
-// Рендирайте графичния буфер на екрана
-_display.display();
+    // Рендирайте графичния буфер на екрана
+    _display.display();
 }
 {% endhighlight C++ %}
 
@@ -230,28 +230,28 @@ _display.display();
 Adafruit_SSD1306 _display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 void setup(){
-Serial.begin(9600);
+    Serial.begin(9600);
 
-// Инициализирайте дисплея. Ако се провали, отпечатайте грешката в Serial
-// и влезте в безкраен цикъл
-if (!_display.begin(SSD1306_SWITCHCAPVCC, 0x3D)) { // Адрес 0x3D за 128x64
-Serial.println(F("SSD1306 allocation failed"));
-for (;;); // Не продължавайте, цикъл завинаги
-}
+    // Инициализирайте дисплея. Ако се провали, отпечатайте грешката в Serial
+    // и влезте в безкраен цикъл
+    if (!_display.begin(SSD1306_SWITCHCAPVCC, 0x3D)) { // Адрес 0x3D за 128x64
+        Serial.println(F("SSD1306 allocation failed"));
+        for (;;); // Не продължавайте, цикъл завинаги
+    }
 
-// Изчистете дисплея
-_display.clearDisplay();
+    // Изчистете дисплея
+    _display.clearDisplay();
 
-// Нарисувайте кръг в точка x,y с координати 50,20 и радиус 10
-_display.fillCircle (50, 20, 10, SSD1306_WHITE);
+    // Нарисувайте кръг в точка x,y с координати 50,20 и радиус 10
+    _display.fillCircle (50, 20, 10, SSD1306_WHITE);
 
-// Рендиране на графичния буфер на екрана
-_display.display();
+    // Рендиране на графичния буфер на екрана
+    _display.display();
 }
 
 void loop(){
-// Умишлено празен, за да се подчертае как графичното съдържание остава
-// на екрана
+    // Умишлено празен, за да се подчертае как графичното съдържание остава
+    // на екрана
 }
 {% endhighlight C++ %}
 
@@ -485,7 +485,7 @@ _display.display();
 Направих версия, наречена [SimpleDrawingDemo.ino](https://github.com/makeabilitylab/arduino/blob/master/OLED/SimpleDrawingDemo/SimpleDrawingDemo.ino), която рисува фигури с произволни размери и местоположения на **всеки кадър**, но можете да направите нещо още по-просто (или по-сложно)!
 
 <video autoplay loop muted playsinline style="margin:0px">
-<source src="assets/videos/OLEDSimpleDrawingDemo -IMG_6188-TrimmedAndOptimized720p.mp4" type="video/mp4" />
+<source src="assets/videos/OLEDSimpleDrawingDemo-IMG_6188-TrimmedAndOptimized720p.mp4" type="video/mp4" />
 </video>
 **Видео** Демонстрация на [SimpleDrawingDemo.ino](https://github.com/makeabilitylab/arduino/blob/master/OLED/SimpleDrawingDemo/SimpleDrawingDemo.ino).
 {: .fs-1 }
@@ -546,38 +546,38 @@ int _xSpeed = 0; // x скорост на топката (в пиксели на
 int _ySpeed = 0; // y скорост на топката (в пиксели на кадър)
 
 void setup() {
-// Инициализирайте дисплея
-_display.begin(SSD1306_SWITCHCAPVCC, 0x3D)
+    // Инициализирайте дисплея
+    _display.begin(SSD1306_SWITCHCAPVCC, 0x3D)
 
-// Получава случайно число между min и max - 1
-// https://www.arduino.cc/reference/en/language/functions/random-numbers/random/
-_xSpeed = random(1, 4);
-_ySpeed = random(1, 4);
+    // Получава случайно число между min и max - 1
+    // https://www.arduino.cc/reference/en/language/functions/random-numbers/random/
+    _xSpeed = random(1, 4);
+    _ySpeed = random(1, 4);
 }
 
 void loop() {
-// Изчиства дисплея
-_display.clearDisplay();
+    // Изчиства дисплея
+    _display.clearDisplay();
 
-// Актуализира топката въз основа на скоростта и местоположението
-_xBall += _xSpeed;
-_yBall += _ySpeed;
+    // Актуализира топката въз основа на скоростта и местоположението
+    _xBall += _xSpeed;
+    _yBall += _ySpeed;
 
-// Проверява за отскачане на топката. Първо проверява дали излиза от лявата или дясната страна на екрана
-if(_xBall - _ballRadius <= 0 || _xBall + _ballRadius >= _display.width()){
-_xSpeed = _xSpeed * -1; // обръща посоката по x
-}
+    // Проверява за отскачане на топката. Първо проверява дали излиза от лявата или дясната страна на екрана
+    if(_xBall - _ballRadius <= 0 || _xBall + _ballRadius >= _display.width()){
+        _xSpeed = _xSpeed * -1; // обръща посоката по x
+    }
 
-// Сега провери за отскачане от пода или тавана
-if(_yBall - _ballRadius <= 0 || _yBall + _ballRadius >= _display.height()){
-_ySpeed = _ySpeed * -1; // обърни посоката y
-}
+    // Сега провери за отскачане от пода или тавана
+    if(_yBall - _ballRadius <= 0 || _yBall + _ballRadius >= _display.height()){
+        _ySpeed = _ySpeed * -1; // обърни посоката y
+    }
 
-// Нарисувай кръг
-_display.drawCircle(_xBall, _yBall, _ballRadius, SSD1306_WHITE);
+    // Нарисувай кръг
+    _display.drawCircle(_xBall, _yBall, _ballRadius, SSD1306_WHITE);
 
-// Рендиране на буфера на екрана
-_display.display();
+    // Рендиране на буфера на екрана
+    _display.display();
 }
 {% endhighlight C++ %}
 
@@ -621,30 +621,30 @@ _display.display();
 
 {% highlight C++ %}
 void loop() {
-// При всеки цикъл ще искаме да изчистим дисплея, за да не записваме върху
-// предишно начертани данни
-_display.clearDisplay(); 
+    // При всеки цикъл ще искаме да изчистим дисплея, за да не записваме върху
+    // предишно начертани данни
+    _display.clearDisplay(); 
 
-// Прочетете стойността на аналоговия вход
-int sensorVal = analogRead(ANALOG_INPUT_PIN);
+    // Прочетете стойността на аналоговия вход
+    int sensorVal = analogRead(ANALOG_INPUT_PIN);
 
-// Максималният радиус е или ширината, или височината на дисплея, в зависимост от това коя е по-малка
-int maxRadius = min(_display.width(), _display.height());
+    // Максималният радиус е или ширината, или височината на дисплея, в зависимост от това коя е по-малка
+    int maxRadius = min(_display.width(), _display.height());
 
-// Сега изчислете радиуса въз основа на стойността на сензора
-int radius = map(sensorVal, 0, MAX_ANALOG_INPUT, 0, maxRadius);
+    // Сега изчислете радиуса въз основа на стойността на сензора
+    int radius = map(sensorVal, 0, MAX_ANALOG_INPUT, 0, maxRadius);
 
-// Центриране на кръга
-int xCircle = _display.width() / 2;
-int yCircle = _display.height() / 2;
+    // Центриране на кръга
+    int xCircle = _display.width() / 2;
+    int yCircle = _display.height() / 2;
 
-// Изчертаване на екрана
-_display.fillCircle(xCircle, yCircle, radius, SSD1306_WHITE);
+    // Изчертаване на екрана
+    _display.fillCircle(xCircle, yCircle, radius, SSD1306_WHITE);
 
-// Рендиране на графичния буфер на екрана
-_display.display(); 
+    // Рендиране на графичния буфер на екрана
+    _display.display(); 
 
-delay(50);
+    delay(50);
 }
 {% endhighlight C++ %}
 
@@ -668,26 +668,26 @@ delay(50);
 
 {% highlight C++ %}
 void loop() {
-// При всеки цикъл ще искаме да изчистим дисплея, за да не записваме върху
-// предишно изчертани данни
-_display.clearDisplay();
+    // При всеки цикъл ще искаме да изчистим дисплея, за да не записваме върху
+    // предишно изчертани данни
+    _display.clearDisplay();
 
-// Четем стойността на аналоговия вход
-int xSensorVal = analogRead(X_ANALOG_INPUT_PIN);
-delay(1); // дайте време на ADC
-int ySensorVal = analogRead(Y_ANALOG_INPUT_PIN);
+    // Четем стойността на аналоговия вход
+    int xSensorVal = analogRead(X_ANALOG_INPUT_PIN);
+    delay(1); // дайте време на ADC
+    int ySensorVal = analogRead(Y_ANALOG_INPUT_PIN);
 
-// Преобразувайте показанията на сензора в x, y пикселни местоположения
-int xLoc = map(xSensorVal, 0, MAX_ANALOG_INPUT, 0, _display.width());
-int yLoc = map(ySensorVal, 0, MAX_ANALOG_INPUT, 0, _display.height());
+    // Преобразувайте показанията на сензора в x, y пикселни местоположения
+    int xLoc = map(xSensorVal, 0, MAX_ANALOG_INPUT, 0, _display.width());
+    int yLoc = map(ySensorVal, 0, MAX_ANALOG_INPUT, 0, _display.height());
 
-// Нарисувайте го на екрана
-_display.fillCircle(xLoc, yLoc, BALL_RADIUS, SSD1306_WHITE);
+    // Нарисувайте го на екрана
+    _display.fillCircle(xLoc, yLoc, BALL_RADIUS, SSD1306_WHITE);
 
-// Рендиране на графичния буфер на екрана
-_display.display(); 
+    // Рендиране на графичния буфер на екрана
+    _display.display(); 
 
-delay(50);
+    delay(50);
 }
 {% endhighlight C++ %}
 
@@ -712,26 +712,26 @@ delay(50);
 {% highlight C++ %}
 void loop() {
 
-// Чете аналоговата стойност на напрежението
-int analogVal = analogRead(ANALOG_INPUT_PIN);
+    // Чете аналоговата стойност на напрежението
+    int analogVal = analogRead(ANALOG_INPUT_PIN);
 
-// Рисува линията за дадената стойност на сензора
-int lineHeight = map(analogVal, MIN_ANALOG_INPUT, MAX_ANALOG_INPUT, 0, _graphHeight);
-int yPos = _display.height() - lineHeight;
+    // Рисува линията за дадената стойност на сензора
+    int lineHeight = map(analogVal, MIN_ANALOG_INPUT, MAX_ANALOG_INPUT, 0, _graphHeight);
+    int yPos = _display.height() - lineHeight;
 
-// За чисто хоризонтални или вертикални линии има оптимизирани функции за рисуване на линии
-//, които избягват скъпи ъглови изчисления
-_display.drawFastVLine(_xPos++, yPos, lineHeight, SSD1306_WHITE);
-_display.display();
+    // За чисто хоризонтални или вертикални линии има оптимизирани функции за рисуване на линии
+    //, които избягват скъпи ъглови изчисления
+    _display.drawFastVLine(_xPos++, yPos, lineHeight, SSD1306_WHITE);
+    _display.display();
 
-// Ако x-позицията е извън дясната страна на екрана, изчистете дисплея
-// и започнете графиката отначало
-if (_xPos >= _display.width()) {
-_xPos = 0;
-_display.clearDisplay();
-}
+    // Ако x-позицията е извън дясната страна на екрана, изчистете дисплея
+    // и започнете графиката отначало
+    if (_xPos >= _display.width()) {
+        _xPos = 0;
+        _display.clearDisplay();
+    }
 
-delay(10);
+    delay(10);
 }
 {% endhighlight C++ %}
 
@@ -754,38 +754,38 @@ int _circularBuffer[SCREEN_WIDTH]; //бърз начин за съхранени
 int _curWriteIndex = 0; // проследява къде се намираме в кръговия буфер
 
 void loop() {
-// Изчистваме дисплея на всеки кадър. Рисуваме цялата графика на всеки кадър 
-// от _circularBuffer
-_display.clearDisplay ();
+    // Изчистваме дисплея на всеки кадър. Рисуваме цялата графика на всеки кадър 
+    // от _circularBuffer
+    _display.clearDisplay ();
 
-// Четете и съхранявайте аналоговите данни в цикличен буфер
-int analogVal = analogRead(ANALOG_INPUT_PIN);
-Serial.println(analogVal);
-_circularBuffer[_curWriteIndex++] = analogVal;
+    // Четете и съхранявайте аналоговите данни в цикличен буфер
+    int analogVal = analogRead(ANALOG_INPUT_PIN);
+    Serial.println(analogVal);
+    _circularBuffer[_curWriteIndex++] = analogVal;
 
-// Върнете индекса на цикличния буфер обратно на нула, когато достигне 
-// дясната страна на екрана
-if(_curWriteIndex >= _display.width()){
-_curWriteIndex = 0;
-}
+    // Върнете индекса на цикличния буфер обратно на нула, когато достигне 
+    // дясната страна на екрана
+    if(_curWriteIndex >= _display.width()){
+        _curWriteIndex = 0;
+    }
 
-// Начертайте линейната графика въз основа на данните в _circularBuffer
-int xPos = 0;
-for (int i = _curWriteIndex; i < _display.width(); i++){
-int analogVal = _circularBuffer[i];
-drawLine(xPos, analogVal);
-xPos++;
-}
+    // Начертайте линейната графика въз основа на данните в _circularBuffer
+    int xPos = 0;
+    for (int i = _curWriteIndex; i < _display.width(); i++){
+        int analogVal = _circularBuffer[i];
+        drawLine(xPos, analogVal);
+        xPos++;
+    }
 
-for(int i = 0; i < _curWriteIndex; i++){
-int analogVal = _circularBuffer[i];
-drawLine(xPos, analogVal);
-xPos++;;
-}
+    for(int i = 0; i < _curWriteIndex; i++){
+        int analogVal = _circularBuffer[i];
+        drawLine(xPos, analogVal);
+        xPos++;;
+    }
 
-_display.display();
+    _display.display();
 
-delay(10);
+    delay(10);
 }
 {% endhighlight C++ %}
 
@@ -851,6 +851,6 @@ delay(10);
 <!-- В [следващия урок](resistors.md) ще разширим знанията си за [резистори](resistors.md) – специално проектирани електрически компоненти, които *устойчиви* на протичането на ток – преди да покажем как те са полезни с [LED диоди](leds.md). -->
 
 <span class="fs-6">
-[Следващо: Вибрационни мотори](vibromotor.md) {: .btn .btn-outline }
+[Следващо: Вибрационни мотори](vibromotor.md){: .btn .btn-outline }
 <!-- [Следващо: Резистори](resistors.md){: .btn .btn-outline } -->
 </span>
